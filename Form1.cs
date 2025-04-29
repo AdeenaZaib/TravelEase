@@ -130,5 +130,13 @@ namespace dbproject
             cmd.Dispose();
             con.Close();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form3 form3 = new Form3();  // Create an instance of Form2
+            form3.Show();
+            this.Hide();
+
+        }
     }
 }
