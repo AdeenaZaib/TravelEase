@@ -70,5 +70,10 @@ namespace dbproject
         {
 
         }
+
+        private void Sign_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

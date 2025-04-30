@@ -64,5 +64,12 @@ namespace dbproject
         {
 
         }
+
+        private void Login_Click_1(object sender, EventArgs e)
+        {
+            Destination des = new Destination();
+            des.Show();
+            this.Hide();
+        }
     }
 }

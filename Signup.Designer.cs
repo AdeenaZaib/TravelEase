@@ -287,6 +287,7 @@
             this.Controls.Add(this.translucentRoundedPanel1);
             this.Name = "Sign";
             this.Text = "Signup";
+            this.Load += new System.EventHandler(this.Sign_Load);
             this.translucentRoundedPanel1.ResumeLayout(false);
             this.translucentRoundedPanel1.PerformLayout();
             this.ResumeLayout(false);
