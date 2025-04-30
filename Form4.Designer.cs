@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.roundedButton1 = new RoundedButton();
-            this.roundedButton3 = new RoundedButton();
-            this.roundedButton4 = new RoundedButton();
-            this.label4 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.roundedButton4 = new RoundedButton();
+            this.roundedButton3 = new RoundedButton();
+            this.roundedButton1 = new RoundedButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.translucentRoundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,55 +56,19 @@
             this.translucentRoundedPanel1.Size = new System.Drawing.Size(410, 426);
             this.translucentRoundedPanel1.TabIndex = 0;
             // 
-            // label1
+            // linkLabel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(109, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 48);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "SIGN UP";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // roundedButton1
-            // 
-            this.roundedButton1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.roundedButton1.Font = new System.Drawing.Font("Unageo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton1.Location = new System.Drawing.Point(89, 156);
-            this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.Size = new System.Drawing.Size(250, 41);
-            this.roundedButton1.TabIndex = 3;
-            this.roundedButton1.Text = "AS TRAVELLER";
-            this.roundedButton1.UseVisualStyleBackColor = false;
-            this.roundedButton1.Click += new System.EventHandler(this.roundedButton1_Click);
-            // 
-            // roundedButton3
-            // 
-            this.roundedButton3.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.roundedButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.roundedButton3.Font = new System.Drawing.Font("Unageo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton3.Location = new System.Drawing.Point(89, 234);
-            this.roundedButton3.Name = "roundedButton3";
-            this.roundedButton3.Size = new System.Drawing.Size(250, 41);
-            this.roundedButton3.TabIndex = 5;
-            this.roundedButton3.Text = "AS TOUR OPERATOR";
-            this.roundedButton3.UseVisualStyleBackColor = false;
-            this.roundedButton3.Click += new System.EventHandler(this.roundedButton3_Click);
-            // 
-            // roundedButton4
-            // 
-            this.roundedButton4.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.roundedButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.roundedButton4.Font = new System.Drawing.Font("Unageo", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton4.Location = new System.Drawing.Point(89, 308);
-            this.roundedButton4.Name = "roundedButton4";
-            this.roundedButton4.Size = new System.Drawing.Size(250, 41);
-            this.roundedButton4.TabIndex = 6;
-            this.roundedButton4.Text = "AS SERVICE PROVIDER";
-            this.roundedButton4.UseVisualStyleBackColor = false;
-            this.roundedButton4.Click += new System.EventHandler(this.roundedButton4_Click);
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Unageo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.ForeColor = System.Drawing.Color.Yellow;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Peru;
+            this.linkLabel1.Location = new System.Drawing.Point(259, 364);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(38, 17);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Login";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label4
             // 
@@ -117,19 +81,59 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Already have an account?";
             // 
-            // linkLabel1
+            // roundedButton4
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Unageo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.ForeColor = System.Drawing.Color.Yellow;
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.linkLabel1.Location = new System.Drawing.Point(259, 364);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(38, 17);
-            this.linkLabel1.TabIndex = 8;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Login";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.roundedButton4.BackColor = System.Drawing.Color.DarkKhaki;
+            this.roundedButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.roundedButton4.Font = new System.Drawing.Font("Creato Display Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton4.ForeColor = System.Drawing.Color.GhostWhite;
+            this.roundedButton4.Location = new System.Drawing.Point(89, 308);
+            this.roundedButton4.Name = "roundedButton4";
+            this.roundedButton4.Size = new System.Drawing.Size(250, 41);
+            this.roundedButton4.TabIndex = 6;
+            this.roundedButton4.Text = "AS SERVICE PROVIDER";
+            this.roundedButton4.UseVisualStyleBackColor = false;
+            this.roundedButton4.Click += new System.EventHandler(this.roundedButton4_Click);
+            // 
+            // roundedButton3
+            // 
+            this.roundedButton3.BackColor = System.Drawing.Color.DarkKhaki;
+            this.roundedButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.roundedButton3.Font = new System.Drawing.Font("Creato Display Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton3.ForeColor = System.Drawing.Color.GhostWhite;
+            this.roundedButton3.Location = new System.Drawing.Point(89, 234);
+            this.roundedButton3.Name = "roundedButton3";
+            this.roundedButton3.Size = new System.Drawing.Size(250, 41);
+            this.roundedButton3.TabIndex = 5;
+            this.roundedButton3.Text = "AS TOUR OPERATOR";
+            this.roundedButton3.UseVisualStyleBackColor = false;
+            this.roundedButton3.Click += new System.EventHandler(this.roundedButton3_Click);
+            // 
+            // roundedButton1
+            // 
+            this.roundedButton1.BackColor = System.Drawing.Color.DarkKhaki;
+            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.roundedButton1.Font = new System.Drawing.Font("Creato Display Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton1.ForeColor = System.Drawing.Color.GhostWhite;
+            this.roundedButton1.Location = new System.Drawing.Point(89, 156);
+            this.roundedButton1.Name = "roundedButton1";
+            this.roundedButton1.Size = new System.Drawing.Size(250, 41);
+            this.roundedButton1.TabIndex = 3;
+            this.roundedButton1.Text = "AS TRAVELLER";
+            this.roundedButton1.UseVisualStyleBackColor = false;
+            this.roundedButton1.Click += new System.EventHandler(this.roundedButton1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(109, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(211, 48);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "SIGN UP";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // SignUp
             // 
@@ -139,6 +143,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.translucentRoundedPanel1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.Name = "SignUp";
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.Form4_Load);
