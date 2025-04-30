@@ -103,6 +103,9 @@
     <Compile Include="IconGroupBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="LabelButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="MenuColorTable.cs" />
     <Compile Include="MenuRenderer.cs" />
     <Compile Include="PanelGradientRounded.cs">
@@ -138,8 +141,29 @@
     <Compile Include="TranslucentRoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="TransparentButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TransparentPanel.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TravelHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TravelHistory.Designer.cs">
+      <DependentUpon>TravelHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TravellerHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TravellerHome.Designer.cs">
+      <DependentUpon>TravellerHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TripSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TripSearch.Designer.cs">
+      <DependentUpon>TripSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="WhiteTranslucentPanel.cs">
       <SubType>Component</SubType>
@@ -170,6 +194,15 @@
     </Compile>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TravelHistory.resx">
+      <DependentUpon>TravelHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TravellerHome.resx">
+      <DependentUpon>TravellerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TripSearch.resx">
+      <DependentUpon>TripSearch.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

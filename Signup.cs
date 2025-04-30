@@ -68,7 +68,9 @@ namespace dbproject
 
         private void roundedButton1_Click(object sender, EventArgs e)
         {
-
+            Destination des = new Destination();
+            des.Show();
+            this.Hide();
         }
 
         private void Sign_Load(object sender, EventArgs e)

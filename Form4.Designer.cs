@@ -87,9 +87,9 @@
             this.roundedButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.roundedButton4.Font = new System.Drawing.Font("Creato Display Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedButton4.ForeColor = System.Drawing.Color.GhostWhite;
-            this.roundedButton4.Location = new System.Drawing.Point(89, 308);
+            this.roundedButton4.Location = new System.Drawing.Point(80, 307);
             this.roundedButton4.Name = "roundedButton4";
-            this.roundedButton4.Size = new System.Drawing.Size(250, 41);
+            this.roundedButton4.Size = new System.Drawing.Size(259, 41);
             this.roundedButton4.TabIndex = 6;
             this.roundedButton4.Text = "AS SERVICE PROVIDER";
             this.roundedButton4.UseVisualStyleBackColor = false;
@@ -101,9 +101,9 @@
             this.roundedButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.roundedButton3.Font = new System.Drawing.Font("Creato Display Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedButton3.ForeColor = System.Drawing.Color.GhostWhite;
-            this.roundedButton3.Location = new System.Drawing.Point(89, 234);
+            this.roundedButton3.Location = new System.Drawing.Point(80, 233);
             this.roundedButton3.Name = "roundedButton3";
-            this.roundedButton3.Size = new System.Drawing.Size(250, 41);
+            this.roundedButton3.Size = new System.Drawing.Size(259, 41);
             this.roundedButton3.TabIndex = 5;
             this.roundedButton3.Text = "AS TOUR OPERATOR";
             this.roundedButton3.UseVisualStyleBackColor = false;
@@ -115,9 +115,9 @@
             this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.roundedButton1.Font = new System.Drawing.Font("Creato Display Medium", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedButton1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.roundedButton1.Location = new System.Drawing.Point(89, 156);
+            this.roundedButton1.Location = new System.Drawing.Point(80, 159);
             this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.Size = new System.Drawing.Size(250, 41);
+            this.roundedButton1.Size = new System.Drawing.Size(259, 41);
             this.roundedButton1.TabIndex = 3;
             this.roundedButton1.Text = "AS TRAVELLER";
             this.roundedButton1.UseVisualStyleBackColor = false;
@@ -128,7 +128,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(109, 66);
+            this.label1.Location = new System.Drawing.Point(98, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 48);
             this.label1.TabIndex = 2;

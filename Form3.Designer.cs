@@ -30,11 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
-<<<<<<< HEAD
-            
-=======
             this.Login = new RoundedButton();
->>>>>>> bcc68764717aaa19e4ae4b15574b2c1d66e1f3bf
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new Components.TextBox();
@@ -66,16 +62,10 @@
             // 
             // Login
             // 
-<<<<<<< HEAD
-            this.Login.BackColor = System.Drawing.Color.IndianRed;
-            this.Login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Login.Font = new System.Drawing.Font("Unageo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-=======
             this.Login.BackColor = System.Drawing.Color.DarkKhaki;
             this.Login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Login.ForeColor = System.Drawing.SystemColors.ControlLightLight;
->>>>>>> bcc68764717aaa19e4ae4b15574b2c1d66e1f3bf
             this.Login.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Login.Location = new System.Drawing.Point(143, 317);
             this.Login.Name = "Login";
@@ -83,10 +73,6 @@
             this.Login.TabIndex = 6;
             this.Login.Text = "LOGIN";
             this.Login.UseVisualStyleBackColor = false;
-<<<<<<< HEAD
-            this.Login.Click += new System.EventHandler(this.Login_Click_1);
-=======
->>>>>>> bcc68764717aaa19e4ae4b15574b2c1d66e1f3bf
             // 
             // linkLabel1
             // 
