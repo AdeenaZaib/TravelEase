@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.circularPictureBox1 = new Components.CircularPictureBox();
             this.labelButton1 = new LabelButton();
-            this.labelButton2 = new LabelButton();
             this.labelButton3 = new LabelButton();
             this.labelButton4 = new LabelButton();
             this.labelButton5 = new LabelButton();
@@ -61,9 +60,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(20, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 24);
+            this.label1.Size = new System.Drawing.Size(161, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "TravelEase";
+            this.label1.Text = "TRAVELEASE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label2
@@ -71,7 +70,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.ForeColor = System.Drawing.Color.DarkKhaki;
             this.label2.Location = new System.Drawing.Point(257, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(306, 29);
@@ -125,21 +124,6 @@
             this.labelButton1.Text = "HOME";
             this.labelButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton1.UseVisualStyleBackColor = false;
-            // 
-            // labelButton2
-            // 
-            this.labelButton2.BackColor = System.Drawing.Color.Transparent;
-            this.labelButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.labelButton2.BorderThickness = 2;
-            this.labelButton2.CornerRadius = 10;
-            this.labelButton2.FillColor = System.Drawing.Color.Transparent;
-            this.labelButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelButton2.ForeColor = System.Drawing.Color.Black;
-            this.labelButton2.Location = new System.Drawing.Point(0, 0);
-            this.labelButton2.Name = "labelButton2";
-            this.labelButton2.Size = new System.Drawing.Size(75, 23);
-            this.labelButton2.TabIndex = 14;
-            this.labelButton2.UseVisualStyleBackColor = false;
             // 
             // labelButton3
             // 
@@ -208,7 +192,6 @@
             this.Controls.Add(this.labelButton5);
             this.Controls.Add(this.labelButton4);
             this.Controls.Add(this.labelButton3);
-            this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.labelButton1);
             this.Controls.Add(this.circularPictureBox1);
             this.Controls.Add(this.label3);
@@ -231,7 +214,6 @@
         private System.Windows.Forms.Label label3;
         private Components.CircularPictureBox circularPictureBox1;
         private LabelButton labelButton1;
-        private LabelButton labelButton2;
         private LabelButton labelButton3;
         private LabelButton labelButton4;
         private LabelButton labelButton5;

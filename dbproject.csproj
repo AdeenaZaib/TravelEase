@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addReview.Designer.cs">
+      <DependentUpon>addReview.cs</DependentUpon>
+    </Compile>
     <Compile Include="CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -96,6 +102,42 @@
     </Compile>
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="guides.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="guides.Designer.cs">
+      <DependentUpon>guides.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hotels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotels.Designer.cs">
+      <DependentUpon>Hotels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="meals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="meals.Designer.cs">
+      <DependentUpon>meals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transport.Designer.cs">
+      <DependentUpon>transport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reviews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reviews.Designer.cs">
+      <DependentUpon>reviews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services.Designer.cs">
+      <DependentUpon>Services.cs</DependentUpon>
     </Compile>
     <Compile Include="FullScreenForm.cs">
       <SubType>Form</SubType>
@@ -168,6 +210,9 @@
     <Compile Include="WhiteTranslucentPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="addReview.resx">
+      <DependentUpon>addReview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Destination.resx">
       <DependentUpon>Destination.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +227,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="guides.resx">
+      <DependentUpon>guides.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotels.resx">
+      <DependentUpon>Hotels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="meals.resx">
+      <DependentUpon>meals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transport.resx">
+      <DependentUpon>transport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reviews.resx">
+      <DependentUpon>reviews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

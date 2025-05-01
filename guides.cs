@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace dbproject
 {
-    public partial class TravellerHome : Form
+    public partial class guides : Form
     {
-        public TravellerHome()
+        public guides()
         {
             InitializeComponent();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
