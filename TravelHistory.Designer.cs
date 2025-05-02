@@ -48,9 +48,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(20, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 24);
+            this.label1.Size = new System.Drawing.Size(161, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "TravelEase";
+            this.label1.Text = "TRAVELEASE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label2
@@ -58,7 +58,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+=======
+            this.label2.ForeColor = System.Drawing.Color.DarkKhaki;
+>>>>>>> 39f978c60d480a2da6d5cbe87c5181f2b5b45767
             this.label2.Location = new System.Drawing.Point(257, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(306, 29);
