@@ -103,6 +103,7 @@
             this.labelButton1.Text = "HOME";
             this.labelButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton1.UseVisualStyleBackColor = false;
+            this.labelButton1.Click += new System.EventHandler(this.labelButton1_Click);
             // 
             // labelButton3
             // 
@@ -122,6 +123,7 @@
             this.labelButton3.Text = "SERVICES";
             this.labelButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton3.UseVisualStyleBackColor = false;
+            this.labelButton3.Click += new System.EventHandler(this.labelButton3_Click);
             // 
             // labelButton4
             // 
@@ -141,6 +143,7 @@
             this.labelButton4.Text = "TRIPS";
             this.labelButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton4.UseVisualStyleBackColor = false;
+            this.labelButton4.Click += new System.EventHandler(this.labelButton4_Click);
             // 
             // labelButton5
             // 
@@ -160,6 +163,7 @@
             this.labelButton5.Text = "BOOKINGS";
             this.labelButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton5.UseVisualStyleBackColor = false;
+            this.labelButton5.Click += new System.EventHandler(this.labelButton5_Click);
             // 
             // labelButton6
             // 
@@ -179,6 +183,7 @@
             this.labelButton6.Text = "ANALYTICS";
             this.labelButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton6.UseVisualStyleBackColor = false;
+            this.labelButton6.Click += new System.EventHandler(this.labelButton6_Click);
             // 
             // translucentRoundedPanel1
             // 
@@ -223,6 +228,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Operator";
             this.Text = "Operator";
+            this.Load += new System.EventHandler(this.Operator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.translucentRoundedPanel1.ResumeLayout(false);
             this.translucentRoundedPanel1.PerformLayout();

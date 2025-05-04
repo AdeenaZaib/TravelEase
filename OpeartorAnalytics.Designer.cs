@@ -76,6 +76,7 @@
             this.label3.Text = "_________________________________________________________________________________" +
     "_____________________________________________________";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // circularPictureBox1
             // 
@@ -111,6 +112,7 @@
             this.labelButton1.Text = "HOME";
             this.labelButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton1.UseVisualStyleBackColor = false;
+            this.labelButton1.Click += new System.EventHandler(this.labelButton1_Click);
             // 
             // labelButton3
             // 
@@ -130,6 +132,7 @@
             this.labelButton3.Text = "SERVICES";
             this.labelButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton3.UseVisualStyleBackColor = false;
+            this.labelButton3.Click += new System.EventHandler(this.labelButton3_Click);
             // 
             // labelButton4
             // 
@@ -149,6 +152,7 @@
             this.labelButton4.Text = "TRIPS";
             this.labelButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton4.UseVisualStyleBackColor = false;
+            this.labelButton4.Click += new System.EventHandler(this.labelButton4_Click_1);
             // 
             // labelButton5
             // 
@@ -168,6 +172,7 @@
             this.labelButton5.Text = "BOOKINGS";
             this.labelButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton5.UseVisualStyleBackColor = false;
+            this.labelButton5.Click += new System.EventHandler(this.labelButton5_Click);
             // 
             // labelButton6
             // 
@@ -187,6 +192,7 @@
             this.labelButton6.Text = "ANALYTICS";
             this.labelButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton6.UseVisualStyleBackColor = false;
+            this.labelButton6.Click += new System.EventHandler(this.labelButton6_Click);
             // 
             // label5
             // 

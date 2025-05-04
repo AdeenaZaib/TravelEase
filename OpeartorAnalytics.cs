@@ -21,5 +21,51 @@ namespace dbproject
         {
 
         }
+        private void labelButton1_Click(object sender, EventArgs e)
+        {
+            Operator op = new Operator();
+            op.Show();
+            this.Hide();
+        }
+
+        private void labelButton4_Click(object sender, EventArgs e)
+        {
+            OpeartorTrip ot = new OpeartorTrip();
+            ot.Show();
+            this.Hide();
+        }
+
+        private void labelButton4_Click_1(object sender, EventArgs e)
+        {
+            OpeartorTrip ot = new OpeartorTrip();
+            ot.Show();
+            this.Hide();
+        }
+
+        private void labelButton3_Click(object sender, EventArgs e)
+        {
+            AssignServices ass = new AssignServices();
+            ass.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelButton5_Click(object sender, EventArgs e)
+        {
+            OperatorBookings ob = new OperatorBookings();
+            ob.Show();
+            this.Hide();
+        }
+
+        private void labelButton6_Click(object sender, EventArgs e)
+        {
+            OpeartorAnalytics oa = new OpeartorAnalytics();
+            oa.Show();
+            this.Hide();
+        }
     }
 }

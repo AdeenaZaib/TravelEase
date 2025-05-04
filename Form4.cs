@@ -70,8 +70,8 @@ namespace dbproject
 
         private void roundedButton3_Click(object sender, EventArgs e)
         {
-            OpeartorTrip opt = new OpeartorTrip();
-            opt.Show();
+            Operator op = new Operator();
+            op.Show();
             this.Hide();
         }
 
