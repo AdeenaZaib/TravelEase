@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TravellerBooking));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -63,7 +64,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(341, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 29);
@@ -118,6 +119,7 @@
             this.labelButton1.Text = "HOME";
             this.labelButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton1.UseVisualStyleBackColor = false;
+            this.labelButton1.Click += new System.EventHandler(this.labelButton1_Click);
             // 
             // labelButton3
             // 
@@ -137,6 +139,7 @@
             this.labelButton3.Text = "BOOKINGS";
             this.labelButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton3.UseVisualStyleBackColor = false;
+            this.labelButton3.Click += new System.EventHandler(this.labelButton3_Click);
             // 
             // labelButton4
             // 
@@ -156,6 +159,7 @@
             this.labelButton4.Text = "TRIP SEARCH";
             this.labelButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton4.UseVisualStyleBackColor = false;
+            this.labelButton4.Click += new System.EventHandler(this.labelButton4_Click);
             // 
             // labelButton5
             // 
@@ -175,9 +179,11 @@
             this.labelButton5.Text = "TRAVEL HISTORY";
             this.labelButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton5.UseVisualStyleBackColor = false;
+            this.labelButton5.Click += new System.EventHandler(this.labelButton5_Click);
             // 
             // bookingsView
             // 
+            this.bookingsView.BackColor = System.Drawing.Color.LightSteelBlue;
             this.bookingsView.HideSelection = false;
             this.bookingsView.Location = new System.Drawing.Point(24, 171);
             this.bookingsView.Name = "bookingsView";
@@ -204,6 +210,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(497, 220);
             this.label5.Name = "label5";
@@ -214,6 +221,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(506, 282);
             this.label4.Name = "label4";
@@ -223,17 +231,22 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.DarkKhaki;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(580, 335);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 29;
             this.button1.Text = "ENTER";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TravellerBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);

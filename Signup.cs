@@ -68,8 +68,8 @@ namespace dbproject
 
         private void roundedButton1_Click(object sender, EventArgs e)
         {
-            Destination des = new Destination();
-            des.Show();
+            TravellerHome home = new TravellerHome();
+            home.Show();
             this.Hide();
         }
 

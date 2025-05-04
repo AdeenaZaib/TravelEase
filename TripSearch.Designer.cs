@@ -138,6 +138,7 @@
             this.labelButton1.Text = "HOME";
             this.labelButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton1.UseVisualStyleBackColor = false;
+            this.labelButton1.Click += new System.EventHandler(this.labelButton1_Click);
             // 
             // labelButton3
             // 
@@ -157,6 +158,7 @@
             this.labelButton3.Text = "BOOKINGS";
             this.labelButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton3.UseVisualStyleBackColor = false;
+            this.labelButton3.Click += new System.EventHandler(this.labelButton3_Click_1);
             // 
             // labelButton4
             // 
@@ -176,6 +178,7 @@
             this.labelButton4.Text = "TRIP SEARCH";
             this.labelButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton4.UseVisualStyleBackColor = false;
+            this.labelButton4.Click += new System.EventHandler(this.labelButton4_Click_1);
             // 
             // labelButton5
             // 
@@ -195,6 +198,7 @@
             this.labelButton5.Text = "TRAVEL HISTORY";
             this.labelButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton5.UseVisualStyleBackColor = false;
+            this.labelButton5.Click += new System.EventHandler(this.labelButton5_Click_1);
             // 
             // destinationComboBox
             // 
