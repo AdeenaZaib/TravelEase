@@ -67,6 +67,12 @@
     <Compile Include="AssignServices.Designer.cs">
       <DependentUpon>AssignServices.cs</DependentUpon>
     </Compile>
+    <Compile Include="BookTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookTrip.Designer.cs">
+      <DependentUpon>BookTrip.cs</DependentUpon>
+    </Compile>
     <Compile Include="CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -150,6 +156,12 @@
     </Compile>
     <Compile Include="OperatorBookings.Designer.cs">
       <DependentUpon>OperatorBookings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payments.Designer.cs">
+      <DependentUpon>payments.cs</DependentUpon>
     </Compile>
     <Compile Include="transport.cs">
       <SubType>Form</SubType>
@@ -237,6 +249,12 @@
     <Compile Include="TravelHistory.Designer.cs">
       <DependentUpon>TravelHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="TravellerBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TravellerBooking.Designer.cs">
+      <DependentUpon>TravellerBooking.cs</DependentUpon>
+    </Compile>
     <Compile Include="TravellerHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,6 +324,9 @@
     <EmbeddedResource Include="TravelHistory.resx">
       <DependentUpon>TravelHistory.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TravellerBooking.resx">
+      <DependentUpon>TravellerBooking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TravellerHome.resx">
       <DependentUpon>TravellerHome.cs</DependentUpon>

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OperatorBookings));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.circularPictureBox1 = new Components.CircularPictureBox();
             this.labelButton1 = new LabelButton();
@@ -56,17 +56,10 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(20, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 24);
+            this.label1.Size = new System.Drawing.Size(161, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "TravelEase";
+            this.label1.Text = "TRAVELEASE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
-            this.label2.TabIndex = 17;
             // 
             // label3
             // 
@@ -200,7 +193,7 @@
             this.translucentRoundedPanel2.BorderWidth = 1;
             this.translucentRoundedPanel2.Controls.Add(this.listView1);
             this.translucentRoundedPanel2.CornerRadius = 10;
-            this.translucentRoundedPanel2.Location = new System.Drawing.Point(497, 146);
+            this.translucentRoundedPanel2.Location = new System.Drawing.Point(497, 164);
             this.translucentRoundedPanel2.Name = "translucentRoundedPanel2";
             this.translucentRoundedPanel2.Size = new System.Drawing.Size(266, 220);
             this.translucentRoundedPanel2.TabIndex = 42;
@@ -220,18 +213,19 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(563, 104);
+            this.label5.Location = new System.Drawing.Point(548, 117);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(156, 29);
             this.label5.TabIndex = 41;
             this.label5.Text = "INQUIRIES";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(509, 390);
+            this.label6.Location = new System.Drawing.Point(509, 399);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 18);
             this.label6.TabIndex = 44;
@@ -240,7 +234,7 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(626, 390);
+            this.richTextBox1.Location = new System.Drawing.Point(626, 399);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(64, 29);
             this.richTextBox1.TabIndex = 43;
@@ -249,7 +243,7 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(712, 396);
+            this.button1.Location = new System.Drawing.Point(712, 405);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(42, 23);
             this.button1.TabIndex = 45;
@@ -262,7 +256,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(82, 104);
+            this.label4.Location = new System.Drawing.Point(82, 117);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(182, 29);
             this.label4.TabIndex = 46;
@@ -272,6 +266,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
@@ -286,7 +282,6 @@
             this.Controls.Add(this.labelButton1);
             this.Controls.Add(this.circularPictureBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "OperatorBookings";
             this.Text = "OperatorBookings";
@@ -300,7 +295,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Components.CircularPictureBox circularPictureBox1;
         private LabelButton labelButton1;

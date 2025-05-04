@@ -1,6 +1,6 @@
 ﻿namespace dbproject
 {
-    partial class TravellerHome
+    partial class TravellerBooking
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.circularPictureBox1 = new Components.CircularPictureBox();
             this.labelButton1 = new LabelButton();
             this.labelButton3 = new LabelButton();
             this.labelButton4 = new LabelButton();
             this.labelButton5 = new LabelButton();
+            this.bookingsView = new System.Windows.Forms.ListView();
+            this.actionComboBox = new System.Windows.Forms.ComboBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.translucentRoundedPanel1.SuspendLayout();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +58,19 @@
             this.label1.Text = "TravelEase";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(341, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(139, 29);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Bookings";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -68,43 +83,6 @@
             this.label3.Text = "_________________________________________________________________________________" +
     "_____________________________________________________";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(19, 112);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 29);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Upcoming Trips";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // translucentRoundedPanel1
-            // 
-            this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.translucentRoundedPanel1.BorderWidth = 1;
-            this.translucentRoundedPanel1.Controls.Add(this.label4);
-            this.translucentRoundedPanel1.CornerRadius = 10;
-            this.translucentRoundedPanel1.Location = new System.Drawing.Point(544, 112);
-            this.translucentRoundedPanel1.Name = "translucentRoundedPanel1";
-            this.translucentRoundedPanel1.Size = new System.Drawing.Size(235, 315);
-            this.translucentRoundedPanel1.TabIndex = 16;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(56, 28);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 29);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Updates";
             // 
             // circularPictureBox1
             // 
@@ -198,37 +176,82 @@
             this.labelButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton5.UseVisualStyleBackColor = false;
             // 
+            // bookingsView
+            // 
+            this.bookingsView.HideSelection = false;
+            this.bookingsView.Location = new System.Drawing.Point(24, 171);
+            this.bookingsView.Name = "bookingsView";
+            this.bookingsView.Size = new System.Drawing.Size(379, 239);
+            this.bookingsView.TabIndex = 14;
+            this.bookingsView.UseCompatibleStateImageBehavior = false;
+            // 
+            // actionComboBox
+            // 
+            this.actionComboBox.FormattingEnabled = true;
+            this.actionComboBox.Location = new System.Drawing.Point(613, 277);
+            this.actionComboBox.Name = "actionComboBox";
+            this.actionComboBox.Size = new System.Drawing.Size(121, 21);
+            this.actionComboBox.TabIndex = 15;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(613, 219);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(121, 24);
+            this.richTextBox1.TabIndex = 16;
+            this.richTextBox1.Text = "";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(19, 311);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(497, 220);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(178, 29);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Our Policies";
+            this.label5.Size = new System.Drawing.Size(110, 16);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Enter Booking ID:";
             // 
-            // TravellerHome
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(506, 282);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 16);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Select Action:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(580, 335);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "ENTER";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // TravellerBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.actionComboBox);
+            this.Controls.Add(this.bookingsView);
             this.Controls.Add(this.labelButton5);
             this.Controls.Add(this.labelButton4);
             this.Controls.Add(this.labelButton3);
             this.Controls.Add(this.labelButton1);
             this.Controls.Add(this.circularPictureBox1);
-            this.Controls.Add(this.translucentRoundedPanel1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Name = "TravellerHome";
-            this.Text = "TravellerHome";
-            this.translucentRoundedPanel1.ResumeLayout(false);
-            this.translucentRoundedPanel1.PerformLayout();
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Name = "TravellerBooking";
+            this.Text = "TravellerBooking";
+            this.Load += new System.EventHandler(this.TravellerBooking_Load);
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -238,15 +261,18 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private Components.TranslucentRoundedPanel translucentRoundedPanel1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
         private Components.CircularPictureBox circularPictureBox1;
         private LabelButton labelButton1;
         private LabelButton labelButton3;
         private LabelButton labelButton4;
         private LabelButton labelButton5;
+        private System.Windows.Forms.ListView bookingsView;
+        private System.Windows.Forms.ComboBox actionComboBox;
+        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }

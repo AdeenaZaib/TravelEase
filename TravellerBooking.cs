@@ -10,17 +10,24 @@ using System.Windows.Forms;
 
 namespace dbproject
 {
-    public partial class TravellerHome : Form
+    public partial class TravellerBooking : Form
     {
-        public TravellerHome()
+        public TravellerBooking()
         {
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void LoadFilters()
         {
-
+            actionComboBox.Items.AddRange(new string[] { "Cancel", "Confirm", "Refund" });
         }
+
+        private void TravellerBooking_Load(object sender, EventArgs e)
+        {
+            LoadFilters();
+        }
+
+
 
         private void label2_Click(object sender, EventArgs e)
         {
