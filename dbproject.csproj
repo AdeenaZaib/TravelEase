@@ -55,6 +55,18 @@
     <Compile Include="addReview.Designer.cs">
       <DependentUpon>addReview.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddTrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTrip.Designer.cs">
+      <DependentUpon>AddTrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssignServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignServices.Designer.cs">
+      <DependentUpon>AssignServices.cs</DependentUpon>
+    </Compile>
     <Compile Include="CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -115,11 +127,29 @@
     <Compile Include="Hotels.Designer.cs">
       <DependentUpon>Hotels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inquiries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiries.Designer.cs">
+      <DependentUpon>Inquiries.cs</DependentUpon>
+    </Compile>
     <Compile Include="meals.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="meals.Designer.cs">
       <DependentUpon>meals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpeartorAnalytics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpeartorAnalytics.Designer.cs">
+      <DependentUpon>OpeartorAnalytics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperatorBookings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperatorBookings.Designer.cs">
+      <DependentUpon>OperatorBookings.cs</DependentUpon>
     </Compile>
     <Compile Include="transport.cs">
       <SubType>Form</SubType>
@@ -225,6 +255,12 @@
     <EmbeddedResource Include="addReview.resx">
       <DependentUpon>addReview.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddTrip.resx">
+      <DependentUpon>AddTrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignServices.resx">
+      <DependentUpon>AssignServices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Destination.resx">
       <DependentUpon>Destination.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,31 +276,20 @@
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
+    <EmbeddedResource Include="Inquiries.resx">
+      <DependentUpon>Inquiries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpeartorAnalytics.resx">
+      <DependentUpon>OpeartorAnalytics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OpeartorTrip.resx">
       <DependentUpon>OpeartorTrip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Operator.resx">
       <DependentUpon>Operator.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="guides.resx">
-      <DependentUpon>guides.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hotels.resx">
-      <DependentUpon>Hotels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="meals.resx">
-      <DependentUpon>meals.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="transport.resx">
-      <DependentUpon>transport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="reviews.resx">
-      <DependentUpon>reviews.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Services.resx">
-      <DependentUpon>Services.cs</DependentUpon>
->>>>>>> 39f978c60d480a2da6d5cbe87c5181f2b5b45767
+    <EmbeddedResource Include="OperatorBookings.resx">
+      <DependentUpon>OperatorBookings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

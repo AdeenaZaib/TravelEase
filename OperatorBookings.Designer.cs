@@ -1,6 +1,6 @@
 ﻿namespace dbproject
 {
-    partial class OpeartorTrip
+    partial class OperatorBookings
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.circularPictureBox1 = new Components.CircularPictureBox();
             this.labelButton1 = new LabelButton();
@@ -36,10 +37,15 @@
             this.labelButton4 = new LabelButton();
             this.labelButton5 = new LabelButton();
             this.labelButton6 = new LabelButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.roundedButton1 = new RoundedButton();
+            this.translucentRoundedPanel2 = new Components.TranslucentRoundedPanel();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
+            this.translucentRoundedPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -54,6 +60,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "TravelEase";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 17;
             // 
             // label3
             // 
@@ -178,6 +191,70 @@
             this.labelButton6.Text = "ANALYTICS";
             this.labelButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton6.UseVisualStyleBackColor = false;
+            this.labelButton6.Click += new System.EventHandler(this.labelButton6_Click);
+            // 
+            // translucentRoundedPanel2
+            // 
+            this.translucentRoundedPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.translucentRoundedPanel2.BorderColor = System.Drawing.Color.Transparent;
+            this.translucentRoundedPanel2.BorderWidth = 1;
+            this.translucentRoundedPanel2.Controls.Add(this.listView1);
+            this.translucentRoundedPanel2.CornerRadius = 10;
+            this.translucentRoundedPanel2.Location = new System.Drawing.Point(497, 146);
+            this.translucentRoundedPanel2.Name = "translucentRoundedPanel2";
+            this.translucentRoundedPanel2.Size = new System.Drawing.Size(266, 220);
+            this.translucentRoundedPanel2.TabIndex = 42;
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(3, 3);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(254, 206);
+            this.listView1.TabIndex = 39;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(563, 104);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(156, 29);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "INQUIRIES";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.Location = new System.Drawing.Point(509, 390);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 18);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Enter Inquiry ID:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(626, 390);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(64, 29);
+            this.richTextBox1.TabIndex = 43;
+            this.richTextBox1.Text = "";
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(712, 396);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(42, 23);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "GO!";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -185,44 +262,23 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(25, 114);
+            this.label4.Location = new System.Drawing.Point(82, 104);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 29);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Trips";
+            this.label4.Size = new System.Drawing.Size(182, 29);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "REMINDERS";
             // 
-            // roundedButton1
-            // 
-            this.roundedButton1.BackColor = System.Drawing.Color.DarkKhaki;
-            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.roundedButton1.Location = new System.Drawing.Point(516, 146);
-            this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.Size = new System.Drawing.Size(75, 23);
-            this.roundedButton1.TabIndex = 19;
-            this.roundedButton1.Text = "List ";
-            this.roundedButton1.UseVisualStyleBackColor = false;
-            this.roundedButton1.Click += new System.EventHandler(this.roundedButton1_Click);
-            // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(30, 146);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(388, 275);
-            this.listView1.TabIndex = 21;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // OpeartorTrip
+            // OperatorBookings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.roundedButton1);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.translucentRoundedPanel2);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.labelButton6);
             this.Controls.Add(this.labelButton5);
             this.Controls.Add(this.labelButton4);
@@ -230,10 +286,12 @@
             this.Controls.Add(this.labelButton1);
             this.Controls.Add(this.circularPictureBox1);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "OpeartorTrip";
-            this.Text = "OpeartorTrip";
+            this.Name = "OperatorBookings";
+            this.Text = "OperatorBookings";
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
+            this.translucentRoundedPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,6 +300,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Components.CircularPictureBox circularPictureBox1;
         private LabelButton labelButton1;
@@ -249,8 +308,12 @@
         private LabelButton labelButton4;
         private LabelButton labelButton5;
         private LabelButton labelButton6;
-        private System.Windows.Forms.Label label4;
-        private RoundedButton roundedButton1;
+        private Components.TranslucentRoundedPanel translucentRoundedPanel2;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -58,11 +58,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-=======
-            this.label2.ForeColor = System.Drawing.Color.DarkKhaki;
->>>>>>> 39f978c60d480a2da6d5cbe87c5181f2b5b45767
             this.label2.Location = new System.Drawing.Point(257, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(306, 29);

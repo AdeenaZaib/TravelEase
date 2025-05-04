@@ -72,5 +72,10 @@ namespace dbproject
             //con.Close();
 
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

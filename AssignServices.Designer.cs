@@ -1,6 +1,6 @@
 ﻿namespace dbproject
 {
-    partial class OpeartorTrip
+    partial class AssignServices
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.circularPictureBox1 = new Components.CircularPictureBox();
             this.labelButton1 = new LabelButton();
@@ -37,9 +38,19 @@
             this.labelButton5 = new LabelButton();
             this.labelButton6 = new LabelButton();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.roundedButton1 = new RoundedButton();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.translucentRoundedPanel2 = new Components.TranslucentRoundedPanel();
             this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
+            this.translucentRoundedPanel1.SuspendLayout();
+            this.translucentRoundedPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -54,6 +65,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "TravelEase";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 17;
             // 
             // label3
             // 
@@ -185,43 +203,129 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(25, 114);
+            this.label4.Location = new System.Drawing.Point(79, 109);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 29);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Trips";
+            this.label4.Size = new System.Drawing.Size(130, 29);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Services";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(576, 109);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(145, 29);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Travellers";
             // 
             // roundedButton1
             // 
             this.roundedButton1.BackColor = System.Drawing.Color.DarkKhaki;
             this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.roundedButton1.Location = new System.Drawing.Point(516, 146);
+            this.roundedButton1.Location = new System.Drawing.Point(363, 331);
             this.roundedButton1.Name = "roundedButton1";
             this.roundedButton1.Size = new System.Drawing.Size(75, 23);
-            this.roundedButton1.TabIndex = 19;
-            this.roundedButton1.Text = "List ";
+            this.roundedButton1.TabIndex = 22;
+            this.roundedButton1.Text = "ASSIGN";
             this.roundedButton1.UseVisualStyleBackColor = false;
-            this.roundedButton1.Click += new System.EventHandler(this.roundedButton1_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(423, 201);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(81, 28);
+            this.richTextBox1.TabIndex = 23;
+            this.richTextBox1.Text = "";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(423, 256);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(81, 28);
+            this.richTextBox2.TabIndex = 24;
+            this.richTextBox2.Text = "";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.Location = new System.Drawing.Point(299, 201);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 18);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Enter Service ID:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label7.Location = new System.Drawing.Point(292, 256);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(125, 18);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "Enter Traveller ID:";
+            // 
+            // translucentRoundedPanel1
+            // 
+            this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.translucentRoundedPanel1.BorderWidth = 1;
+            this.translucentRoundedPanel1.Controls.Add(this.listView3);
+            this.translucentRoundedPanel1.CornerRadius = 10;
+            this.translucentRoundedPanel1.Location = new System.Drawing.Point(20, 151);
+            this.translucentRoundedPanel1.Name = "translucentRoundedPanel1";
+            this.translucentRoundedPanel1.Size = new System.Drawing.Size(266, 271);
+            this.translucentRoundedPanel1.TabIndex = 38;
+            this.translucentRoundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.translucentRoundedPanel1_Paint);
+            // 
+            // listView3
+            // 
+            this.listView3.HideSelection = false;
+            this.listView3.Location = new System.Drawing.Point(4, 3);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(254, 260);
+            this.listView3.TabIndex = 39;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            // 
+            // translucentRoundedPanel2
+            // 
+            this.translucentRoundedPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.translucentRoundedPanel2.BorderColor = System.Drawing.Color.Transparent;
+            this.translucentRoundedPanel2.BorderWidth = 1;
+            this.translucentRoundedPanel2.Controls.Add(this.listView1);
+            this.translucentRoundedPanel2.CornerRadius = 10;
+            this.translucentRoundedPanel2.Location = new System.Drawing.Point(510, 151);
+            this.translucentRoundedPanel2.Name = "translucentRoundedPanel2";
+            this.translucentRoundedPanel2.Size = new System.Drawing.Size(266, 271);
+            this.translucentRoundedPanel2.TabIndex = 40;
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(30, 146);
+            this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(388, 275);
-            this.listView1.TabIndex = 21;
+            this.listView1.Size = new System.Drawing.Size(254, 260);
+            this.listView1.TabIndex = 39;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // OpeartorTrip
+            // AssignServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.translucentRoundedPanel2);
+            this.Controls.Add(this.translucentRoundedPanel1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.roundedButton1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelButton6);
             this.Controls.Add(this.labelButton5);
@@ -230,10 +334,13 @@
             this.Controls.Add(this.labelButton1);
             this.Controls.Add(this.circularPictureBox1);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "OpeartorTrip";
-            this.Text = "OpeartorTrip";
+            this.Name = "AssignServices";
+            this.Text = "AssignServices";
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
+            this.translucentRoundedPanel1.ResumeLayout(false);
+            this.translucentRoundedPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,6 +349,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Components.CircularPictureBox circularPictureBox1;
         private LabelButton labelButton1;
@@ -250,7 +358,15 @@
         private LabelButton labelButton5;
         private LabelButton labelButton6;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
         private RoundedButton roundedButton1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private Components.TranslucentRoundedPanel translucentRoundedPanel1;
+        private System.Windows.Forms.ListView listView3;
+        private Components.TranslucentRoundedPanel translucentRoundedPanel2;
         private System.Windows.Forms.ListView listView1;
     }
 }
