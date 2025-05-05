@@ -10,24 +10,17 @@ using System.Windows.Forms;
 
 namespace dbproject
 {
-    public partial class Admin : Form
+    public partial class ManageUsers : Form
     {
-        public Admin()
+        public ManageUsers()
         {
             InitializeComponent();
         }
 
         private void labelButton2_Click(object sender, EventArgs e)
         {
-            ManageUsers home = new ManageUsers();
-            home.Show();
-            this.Hide();
-        }
-
-        private void labelButton1_Click(object sender, EventArgs e)
-        {
-            Admin users = new Admin();
-            users.Show();
+            ManageUsers us = new ManageUsers();
+            us.Show();
             this.Hide();
         }
 
@@ -35,6 +28,13 @@ namespace dbproject
         {
             ManageDestinations ds = new ManageDestinations();
             ds.Show();
+            this.Hide();
+        }
+
+        private void labelButton1_Click(object sender, EventArgs e)
+        {
+            Admin home = new Admin();
+            home.Show();
             this.Hide();
         }
     }

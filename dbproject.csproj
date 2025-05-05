@@ -151,6 +151,18 @@
     <Compile Include="Inquiries.Designer.cs">
       <DependentUpon>Inquiries.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageDestinations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageDestinations.Designer.cs">
+      <DependentUpon>ManageDestinations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageUsers.Designer.cs">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="meals.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inquiries.resx">
       <DependentUpon>Inquiries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsers.resx">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="meals.resx">
       <DependentUpon>meals.cs</DependentUpon>
