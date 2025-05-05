@@ -7,16 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+
 namespace dbproject
 {
-    public partial class Form2 : Form
+    public partial class ProviderSignup : Form
     {
-        public Form2()
+        public ProviderSignup()
         {
             InitializeComponent();
-            
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            SignUp signUp = new SignUp();
+            signUp.Show();
+            this.Hide();
         }
     }
 }

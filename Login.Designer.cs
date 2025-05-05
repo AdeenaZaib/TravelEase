@@ -1,6 +1,6 @@
 ﻿namespace dbproject
 {
-    partial class Form3
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
-            this.Login = new RoundedButton();
+            this.Loginn = new RoundedButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new Components.TextBox();
@@ -46,7 +46,7 @@
             this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderWidth = 1;
-            this.translucentRoundedPanel1.Controls.Add(this.Login);
+            this.translucentRoundedPanel1.Controls.Add(this.Loginn);
             this.translucentRoundedPanel1.Controls.Add(this.linkLabel1);
             this.translucentRoundedPanel1.Controls.Add(this.label4);
             this.translucentRoundedPanel1.Controls.Add(this.textBox2);
@@ -55,24 +55,24 @@
             this.translucentRoundedPanel1.Controls.Add(this.label1);
             this.translucentRoundedPanel1.Controls.Add(this.textBox1);
             this.translucentRoundedPanel1.CornerRadius = 10;
-            this.translucentRoundedPanel1.Location = new System.Drawing.Point(216, 0);
+            this.translucentRoundedPanel1.Location = new System.Drawing.Point(216, 12);
             this.translucentRoundedPanel1.Name = "translucentRoundedPanel1";
-            this.translucentRoundedPanel1.Size = new System.Drawing.Size(369, 453);
+            this.translucentRoundedPanel1.Size = new System.Drawing.Size(369, 415);
             this.translucentRoundedPanel1.TabIndex = 0;
             // 
             // Login
             // 
-            this.Login.BackColor = System.Drawing.Color.DarkKhaki;
-            this.Login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Login.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.Login.Location = new System.Drawing.Point(143, 317);
-            this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(102, 36);
-            this.Login.TabIndex = 6;
-            this.Login.Text = "LOGIN";
-            this.Login.UseVisualStyleBackColor = false;
+            this.Loginn.BackColor = System.Drawing.Color.DarkKhaki;
+            this.Loginn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Loginn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Loginn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Loginn.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.Loginn.Location = new System.Drawing.Point(143, 317);
+            this.Loginn.Name = "Login";
+            this.Loginn.Size = new System.Drawing.Size(102, 36);
+            this.Loginn.TabIndex = 6;
+            this.Loginn.Text = "LOGIN";
+            this.Loginn.UseVisualStyleBackColor = false;
             // 
             // linkLabel1
             // 
@@ -205,6 +205,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label4;
-        private RoundedButton Login;
+        private RoundedButton Loginn;
     }
 }

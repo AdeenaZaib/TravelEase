@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace dbproject
 {
-    public partial class TravelHistory : Form
+    public partial class TravellerPass : Form
     {
-        public TravelHistory()
+        public TravellerPass()
         {
             InitializeComponent();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void labelButton1_Click(object sender, EventArgs e)
@@ -33,34 +38,15 @@ namespace dbproject
 
         private void labelButton3_Click(object sender, EventArgs e)
         {
-            TravellerBooking book = new TravellerBooking();
-            book.Show();
+            TravellerBooking tb = new TravellerBooking();
+            tb.Show();
             this.Hide();
         }
 
         private void labelButton5_Click(object sender, EventArgs e)
         {
-            TravelHistory history = new TravelHistory();
-            history.Show();
-            this.Hide();
-        }
-
-        private void TravelHistory_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelButton3_Click_1(object sender, EventArgs e)
-        {
-            TravellerBooking book = new TravellerBooking();
-            book.Show();
-            this.Hide();
-        }
-
-        private void labelButton5_Click_1(object sender, EventArgs e)
-        {
-            TravelHistory history = new TravelHistory();
-            history.Show();
+            TravelHistory th = new TravelHistory();
+            th.Show();
             this.Hide();
         }
 

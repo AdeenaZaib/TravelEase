@@ -1,6 +1,6 @@
 ﻿namespace dbproject
 {
-    partial class Sign
+    partial class ProviderSignup
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sign));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProviderSignup));
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.roundedRichTextBox8 = new RoundedRichTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.roundedButton1 = new RoundedButton();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,10 +49,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.roundedRichTextBox1 = new RoundedRichTextBox();
-            this.roundedRichTextBox8 = new RoundedRichTextBox();
-            this.roundedRichTextBox9 = new RoundedRichTextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.translucentRoundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,9 +57,7 @@
             this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderWidth = 1;
-            this.translucentRoundedPanel1.Controls.Add(this.label11);
             this.translucentRoundedPanel1.Controls.Add(this.label10);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox9);
             this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox8);
             this.translucentRoundedPanel1.Controls.Add(this.label9);
             this.translucentRoundedPanel1.Controls.Add(this.roundedButton1);
@@ -81,10 +77,33 @@
             this.translucentRoundedPanel1.Controls.Add(this.label1);
             this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox1);
             this.translucentRoundedPanel1.CornerRadius = 10;
-            this.translucentRoundedPanel1.Location = new System.Drawing.Point(40, 12);
+            this.translucentRoundedPanel1.Location = new System.Drawing.Point(41, 14);
             this.translucentRoundedPanel1.Name = "translucentRoundedPanel1";
             this.translucentRoundedPanel1.Size = new System.Drawing.Size(719, 423);
-            this.translucentRoundedPanel1.TabIndex = 0;
+            this.translucentRoundedPanel1.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Unageo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Location = new System.Drawing.Point(517, 278);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 22);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Commision";
+            // 
+            // roundedRichTextBox8
+            // 
+            this.roundedRichTextBox8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.roundedRichTextBox8.BorderColor = System.Drawing.Color.Transparent;
+            this.roundedRichTextBox8.BorderWidth = 1;
+            this.roundedRichTextBox8.CornerRadius = 15;
+            this.roundedRichTextBox8.Location = new System.Drawing.Point(512, 303);
+            this.roundedRichTextBox8.Name = "roundedRichTextBox8";
+            this.roundedRichTextBox8.Padding = new System.Windows.Forms.Padding(3);
+            this.roundedRichTextBox8.Size = new System.Drawing.Size(187, 29);
+            this.roundedRichTextBox8.TabIndex = 19;
             // 
             // label9
             // 
@@ -110,7 +129,6 @@
             this.roundedButton1.TabIndex = 17;
             this.roundedButton1.Text = "SIGN UP";
             this.roundedButton1.UseVisualStyleBackColor = false;
-            this.roundedButton1.Click += new System.EventHandler(this.roundedButton1_Click);
             // 
             // label8
             // 
@@ -237,7 +255,6 @@
             this.label3.Size = new System.Drawing.Size(50, 22);
             this.label3.TabIndex = 6;
             this.label3.Text = "Email";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // roundedRichTextBox2
             // 
@@ -245,7 +262,7 @@
             this.roundedRichTextBox2.BorderColor = System.Drawing.Color.Transparent;
             this.roundedRichTextBox2.BorderWidth = 1;
             this.roundedRichTextBox2.CornerRadius = 15;
-            this.roundedRichTextBox2.Location = new System.Drawing.Point(275, 121);
+            this.roundedRichTextBox2.Location = new System.Drawing.Point(399, 121);
             this.roundedRichTextBox2.Name = "roundedRichTextBox2";
             this.roundedRichTextBox2.Padding = new System.Windows.Forms.Padding(3);
             this.roundedRichTextBox2.Size = new System.Drawing.Size(187, 29);
@@ -256,7 +273,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Unageo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(283, 96);
+            this.label2.Location = new System.Drawing.Point(404, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 22);
             this.label2.TabIndex = 4;
@@ -267,12 +284,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Unageo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(39, 96);
+            this.label1.Location = new System.Drawing.Point(151, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 22);
             this.label1.TabIndex = 3;
             this.label1.Text = "First Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // roundedRichTextBox1
             // 
@@ -280,59 +296,13 @@
             this.roundedRichTextBox1.BorderColor = System.Drawing.Color.Transparent;
             this.roundedRichTextBox1.BorderWidth = 1;
             this.roundedRichTextBox1.CornerRadius = 15;
-            this.roundedRichTextBox1.Location = new System.Drawing.Point(31, 121);
+            this.roundedRichTextBox1.Location = new System.Drawing.Point(142, 121);
             this.roundedRichTextBox1.Name = "roundedRichTextBox1";
             this.roundedRichTextBox1.Padding = new System.Windows.Forms.Padding(3);
             this.roundedRichTextBox1.Size = new System.Drawing.Size(187, 29);
             this.roundedRichTextBox1.TabIndex = 2;
             // 
-            // roundedRichTextBox8
-            // 
-            this.roundedRichTextBox8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.roundedRichTextBox8.BorderColor = System.Drawing.Color.Transparent;
-            this.roundedRichTextBox8.BorderWidth = 1;
-            this.roundedRichTextBox8.CornerRadius = 15;
-            this.roundedRichTextBox8.Location = new System.Drawing.Point(512, 303);
-            this.roundedRichTextBox8.Name = "roundedRichTextBox8";
-            this.roundedRichTextBox8.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox8.Size = new System.Drawing.Size(187, 29);
-            this.roundedRichTextBox8.TabIndex = 19;
-            // 
-            // roundedRichTextBox9
-            // 
-            this.roundedRichTextBox9.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.roundedRichTextBox9.BorderColor = System.Drawing.Color.Transparent;
-            this.roundedRichTextBox9.BorderWidth = 1;
-            this.roundedRichTextBox9.CornerRadius = 15;
-            this.roundedRichTextBox9.Location = new System.Drawing.Point(512, 121);
-            this.roundedRichTextBox9.Name = "roundedRichTextBox9";
-            this.roundedRichTextBox9.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox9.Size = new System.Drawing.Size(187, 29);
-            this.roundedRichTextBox9.TabIndex = 20;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Unageo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(517, 96);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 22);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Age";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Unageo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label11.Location = new System.Drawing.Point(517, 278);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 22);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "Budget";
-            // 
-            // Sign
+            // ProviderSignup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -340,9 +310,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.translucentRoundedPanel1);
-            this.Name = "Sign";
-            this.Text = "Signup";
-            this.Load += new System.EventHandler(this.Sign_Load);
+            this.Name = "ProviderSignup";
+            this.Text = "ProviderSignup";
             this.translucentRoundedPanel1.ResumeLayout(false);
             this.translucentRoundedPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -352,12 +321,11 @@
         #endregion
 
         private Components.TranslucentRoundedPanel translucentRoundedPanel1;
-        private System.Windows.Forms.Label label1;
-        private RoundedRichTextBox roundedRichTextBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private RoundedRichTextBox roundedRichTextBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label10;
+        private RoundedRichTextBox roundedRichTextBox8;
+        private System.Windows.Forms.Label label9;
+        private RoundedButton roundedButton1;
+        private System.Windows.Forms.Label label8;
         private RoundedRichTextBox roundedRichTextBox7;
         private RoundedRichTextBox roundedRichTextBox6;
         private System.Windows.Forms.Label label7;
@@ -366,12 +334,11 @@
         private RoundedRichTextBox roundedRichTextBox5;
         private RoundedRichTextBox roundedRichTextBox4;
         private RoundedRichTextBox roundedRichTextBox3;
-        private RoundedButton roundedButton1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private RoundedRichTextBox roundedRichTextBox8;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private RoundedRichTextBox roundedRichTextBox9;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private RoundedRichTextBox roundedRichTextBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private RoundedRichTextBox roundedRichTextBox1;
     }
 }

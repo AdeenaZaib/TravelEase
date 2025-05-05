@@ -50,6 +50,7 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.tripIdComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.labelButton2 = new LabelButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minPriceUpDown)).BeginInit();
@@ -301,11 +302,32 @@
             this.label5.TabIndex = 26;
             this.label5.Text = "Select Trip ID:";
             // 
+            // labelButton2
+            // 
+            this.labelButton2.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton2.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton2.BorderThickness = 2;
+            this.labelButton2.CornerRadius = 10;
+            this.labelButton2.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton2.FlatAppearance.BorderSize = 0;
+            this.labelButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton2.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelButton2.Location = new System.Drawing.Point(487, 64);
+            this.labelButton2.Name = "labelButton2";
+            this.labelButton2.Size = new System.Drawing.Size(120, 23);
+            this.labelButton2.TabIndex = 29;
+            this.labelButton2.Text = "DIGITAL PASSES";
+            this.labelButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton2.UseVisualStyleBackColor = false;
+            this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
+            // 
             // TripSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tripIdComboBox);
             this.Controls.Add(this.listView1);
@@ -361,5 +383,6 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ComboBox tripIdComboBox;
         private System.Windows.Forms.Label label5;
+        private LabelButton labelButton2;
     }
 }

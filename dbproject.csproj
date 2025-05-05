@@ -100,6 +100,12 @@
     <Compile Include="CustomRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="des1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="des1.Designer.cs">
+      <DependentUpon>des1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Destination.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,29 +115,29 @@
     <Compile Include="DropDownMenu.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="OperatorSignup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="OperatorSignup.Designer.cs">
+      <DependentUpon>OperatorSignup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="ProviderSignup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="ProviderSignup.Designer.cs">
+      <DependentUpon>ProviderSignup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="SignupAs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="SignupAs.Designer.cs">
+      <DependentUpon>SignupAs.cs</DependentUpon>
     </Compile>
     <Compile Include="guides.cs">
       <SubType>Form</SubType>
@@ -285,6 +291,12 @@
     <Compile Include="TravellerHome.Designer.cs">
       <DependentUpon>TravellerHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="TravellerPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TravellerPass.Designer.cs">
+      <DependentUpon>TravellerPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="TripSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,23 +321,28 @@
     <EmbeddedResource Include="AssignServices.resx">
       <DependentUpon>AssignServices.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="des1.resx">
+      <DependentUpon>des1.cs</DependentUpon>
+=======
     <EmbeddedResource Include="BookTrip.resx">
       <DependentUpon>BookTrip.cs</DependentUpon>
+>>>>>>> e7c1eb9dcc23cedfdd88205fc2ccb9f3ee1ade59
     </EmbeddedResource>
     <EmbeddedResource Include="Destination.resx">
       <DependentUpon>Destination.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="OperatorSignup.resx">
+      <DependentUpon>OperatorSignup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="ProviderSignup.resx">
+      <DependentUpon>ProviderSignup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="SignupAs.resx">
+      <DependentUpon>SignupAs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="guides.resx">
       <DependentUpon>guides.cs</DependentUpon>
@@ -385,8 +402,12 @@
     <EmbeddedResource Include="TravellerHome.resx">
       <DependentUpon>TravellerHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TravellerPass.resx">
+      <DependentUpon>TravellerPass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TripSearch.resx">
       <DependentUpon>TripSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
