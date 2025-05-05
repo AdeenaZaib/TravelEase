@@ -56,7 +56,7 @@ namespace dbproject
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form3 login = new Form3();
+            Login login = new Login();
             login.Show();
             this.Hide();
         }
@@ -70,14 +70,14 @@ namespace dbproject
 
         private void roundedButton3_Click(object sender, EventArgs e)
         {
-            Operator op = new Operator();
+            OperatorSignup op = new OperatorSignup();
             op.Show();
             this.Hide();
         }
 
         private void roundedButton4_Click(object sender, EventArgs e)
         {
-            Sign sign = new Sign();
+            ProviderSignup sign = new ProviderSignup();
             sign.Show();
             this.Hide();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace dbproject
 {
-    public partial class Form3 : Form
+    public partial class Login : Form
     {
-        public Form3()
+        public Login()
         {
             InitializeComponent();
             this.Resize += Form1_Resize;

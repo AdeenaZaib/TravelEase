@@ -54,5 +54,12 @@ namespace dbproject
             history.Show();
             this.Hide();
         }
+
+        private void labelButton2_Click(object sender, EventArgs e)
+        {
+            TravellerPass tp = new TravellerPass();
+            tp.Show();
+            this.Hide();
+        }
     }
 }

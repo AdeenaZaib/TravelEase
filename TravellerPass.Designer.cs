@@ -1,6 +1,6 @@
 ﻿namespace dbproject
 {
-    partial class TravellerBooking
+    partial class TravellerPass
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TravellerBooking));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.circularPictureBox1 = new Components.CircularPictureBox();
             this.labelButton1 = new LabelButton();
+            this.labelButton2 = new LabelButton();
             this.labelButton3 = new LabelButton();
             this.labelButton4 = new LabelButton();
             this.labelButton5 = new LabelButton();
-            this.bookingsView = new System.Windows.Forms.ListView();
-            this.actionComboBox = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.labelButton2 = new LabelButton();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,12 +60,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(341, 124);
+            this.label2.Location = new System.Drawing.Point(324, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 29);
+            this.label2.Size = new System.Drawing.Size(205, 29);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Bookings";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Text = "Digital Passes";
             // 
             // label3
             // 
@@ -120,6 +114,26 @@
             this.labelButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton1.UseVisualStyleBackColor = false;
             this.labelButton1.Click += new System.EventHandler(this.labelButton1_Click);
+            // 
+            // labelButton2
+            // 
+            this.labelButton2.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton2.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton2.BorderThickness = 2;
+            this.labelButton2.CornerRadius = 10;
+            this.labelButton2.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton2.FlatAppearance.BorderSize = 0;
+            this.labelButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton2.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelButton2.Location = new System.Drawing.Point(487, 64);
+            this.labelButton2.Name = "labelButton2";
+            this.labelButton2.Size = new System.Drawing.Size(120, 23);
+            this.labelButton2.TabIndex = 29;
+            this.labelButton2.Text = "DIGITAL PASSES";
+            this.labelButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton2.UseVisualStyleBackColor = false;
+            this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
             // 
             // labelButton3
             // 
@@ -181,98 +195,37 @@
             this.labelButton5.UseVisualStyleBackColor = false;
             this.labelButton5.Click += new System.EventHandler(this.labelButton5_Click);
             // 
-            // bookingsView
-            // 
-            this.bookingsView.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.bookingsView.HideSelection = false;
-            this.bookingsView.Location = new System.Drawing.Point(24, 171);
-            this.bookingsView.Name = "bookingsView";
-            this.bookingsView.Size = new System.Drawing.Size(379, 239);
-            this.bookingsView.TabIndex = 14;
-            this.bookingsView.UseCompatibleStateImageBehavior = false;
-            // 
-            // actionComboBox
-            // 
-            this.actionComboBox.FormattingEnabled = true;
-            this.actionComboBox.Location = new System.Drawing.Point(613, 277);
-            this.actionComboBox.Name = "actionComboBox";
-            this.actionComboBox.Size = new System.Drawing.Size(121, 21);
-            this.actionComboBox.TabIndex = 15;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(613, 219);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(121, 24);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(497, 220);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 16);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Enter Booking ID:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(506, 282);
+            this.label4.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(192, 204);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 16);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Select Action:";
+            this.label4.Size = new System.Drawing.Size(469, 116);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "You don\'t have any Digital Passes\r\n                   right now.\r\n      Kindly Bo" +
+    "ok a Trip to gain\r\n        access to Travel Passes";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // labelButton2
-            // 
-            this.labelButton2.BackColor = System.Drawing.Color.Transparent;
-            this.labelButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.labelButton2.BorderThickness = 2;
-            this.labelButton2.CornerRadius = 10;
-            this.labelButton2.FillColor = System.Drawing.Color.Transparent;
-            this.labelButton2.FlatAppearance.BorderSize = 0;
-            this.labelButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelButton2.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelButton2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelButton2.Location = new System.Drawing.Point(487, 64);
-            this.labelButton2.Name = "labelButton2";
-            this.labelButton2.Size = new System.Drawing.Size(120, 23);
-            this.labelButton2.TabIndex = 29;
-            this.labelButton2.Text = "DIGITAL PASSES";
-            this.labelButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.labelButton2.UseVisualStyleBackColor = false;
-            this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
-            // 
-            // TravellerBooking
+            // TravellerPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.actionComboBox);
-            this.Controls.Add(this.bookingsView);
             this.Controls.Add(this.labelButton5);
             this.Controls.Add(this.labelButton4);
             this.Controls.Add(this.labelButton3);
+            this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.labelButton1);
             this.Controls.Add(this.circularPictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "TravellerBooking";
-            this.Text = "TravellerBooking";
-            this.Load += new System.EventHandler(this.TravellerBooking_Load);
+            this.Name = "TravellerPass";
+            this.Text = "TravellerPass";
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -286,14 +239,10 @@
         private System.Windows.Forms.Label label3;
         private Components.CircularPictureBox circularPictureBox1;
         private LabelButton labelButton1;
+        private LabelButton labelButton2;
         private LabelButton labelButton3;
         private LabelButton labelButton4;
         private LabelButton labelButton5;
-        private System.Windows.Forms.ListView bookingsView;
-        private System.Windows.Forms.ComboBox actionComboBox;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private LabelButton labelButton2;
     }
 }

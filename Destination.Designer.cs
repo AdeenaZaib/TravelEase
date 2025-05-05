@@ -29,20 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Destination));
-            this.panelGradientRounded1 = new Components.PanelGradientRounded();
+            this.transparentButton3 = new TransparentButton();
+            this.transparentButton1 = new TransparentButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelButton5 = new LabelButton();
+            this.labelButton4 = new LabelButton();
+            this.labelButton3 = new LabelButton();
+            this.labelButton1 = new LabelButton();
             this.label2 = new System.Windows.Forms.Label();
             this.circularPictureBox1 = new Components.CircularPictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelButton1 = new LabelButton();
-            this.labelButton3 = new LabelButton();
-            this.labelButton4 = new LabelButton();
-            this.labelButton5 = new LabelButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.transparentButton1 = new TransparentButton();
-            this.transparentButton3 = new TransparentButton();
-            this.panelGradientRounded1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
