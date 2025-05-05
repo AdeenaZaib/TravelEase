@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace dbproject
 {
-    public partial class transport : Form
+    public partial class AddDestination : Form
     {
-        public transport()
+        public AddDestination()
         {
             InitializeComponent();
-        }
-
-        private void labelButton3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

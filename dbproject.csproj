@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddDestination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDestination.Designer.cs">
+      <DependentUpon>AddDestination.cs</DependentUpon>
+    </Compile>
     <Compile Include="addReview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,12 @@
     </Compile>
     <Compile Include="AddTrip.Designer.cs">
       <DependentUpon>AddTrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="AssignServices.cs">
       <SubType>Form</SubType>
@@ -282,17 +294,28 @@
     <Compile Include="WhiteTranslucentPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="AddDestination.resx">
+      <DependentUpon>AddDestination.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addReview.resx">
       <DependentUpon>addReview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddTrip.resx">
       <DependentUpon>AddTrip.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AssignServices.resx">
       <DependentUpon>AssignServices.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="des1.resx">
       <DependentUpon>des1.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="BookTrip.resx">
+      <DependentUpon>BookTrip.cs</DependentUpon>
+>>>>>>> e7c1eb9dcc23cedfdd88205fc2ccb9f3ee1ade59
     </EmbeddedResource>
     <EmbeddedResource Include="Destination.resx">
       <DependentUpon>Destination.cs</DependentUpon>
@@ -309,8 +332,17 @@
     <EmbeddedResource Include="SignupAs.resx">
       <DependentUpon>SignupAs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="guides.resx">
+      <DependentUpon>guides.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotels.resx">
+      <DependentUpon>Hotels.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inquiries.resx">
       <DependentUpon>Inquiries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="meals.resx">
+      <DependentUpon>meals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OpeartorAnalytics.resx">
       <DependentUpon>OpeartorAnalytics.cs</DependentUpon>
@@ -333,8 +365,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="reviews.resx">
+      <DependentUpon>reviews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transport.resx">
+      <DependentUpon>transport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TravelHistory.resx">
       <DependentUpon>TravelHistory.cs</DependentUpon>
