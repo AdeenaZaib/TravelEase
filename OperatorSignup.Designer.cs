@@ -30,25 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OperatorSignup));
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.commision = new RoundedRichTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.roundedButton1 = new RoundedButton();
+            this.signup = new RoundedButton();
             this.label8 = new System.Windows.Forms.Label();
-            this.roundedRichTextBox7 = new RoundedRichTextBox();
-            this.roundedRichTextBox6 = new RoundedRichTextBox();
+            this.country = new RoundedRichTextBox();
+            this.city = new RoundedRichTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.roundedRichTextBox5 = new RoundedRichTextBox();
-            this.roundedRichTextBox4 = new RoundedRichTextBox();
-            this.roundedRichTextBox3 = new RoundedRichTextBox();
+            this.contact = new RoundedRichTextBox();
+            this.pwd = new RoundedRichTextBox();
+            this.email = new RoundedRichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.roundedRichTextBox2 = new RoundedRichTextBox();
+            this.lname = new RoundedRichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.roundedRichTextBox1 = new RoundedRichTextBox();
-            this.roundedRichTextBox8 = new RoundedRichTextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.fname = new RoundedRichTextBox();
             this.translucentRoundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,29 +58,52 @@
             this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderWidth = 1;
             this.translucentRoundedPanel1.Controls.Add(this.label10);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox8);
+            this.translucentRoundedPanel1.Controls.Add(this.commision);
             this.translucentRoundedPanel1.Controls.Add(this.label9);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedButton1);
+            this.translucentRoundedPanel1.Controls.Add(this.signup);
             this.translucentRoundedPanel1.Controls.Add(this.label8);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox7);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox6);
+            this.translucentRoundedPanel1.Controls.Add(this.country);
+            this.translucentRoundedPanel1.Controls.Add(this.city);
             this.translucentRoundedPanel1.Controls.Add(this.label7);
             this.translucentRoundedPanel1.Controls.Add(this.label6);
             this.translucentRoundedPanel1.Controls.Add(this.label5);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox5);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox4);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox3);
+            this.translucentRoundedPanel1.Controls.Add(this.contact);
+            this.translucentRoundedPanel1.Controls.Add(this.pwd);
+            this.translucentRoundedPanel1.Controls.Add(this.email);
             this.translucentRoundedPanel1.Controls.Add(this.label4);
             this.translucentRoundedPanel1.Controls.Add(this.label3);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox2);
+            this.translucentRoundedPanel1.Controls.Add(this.lname);
             this.translucentRoundedPanel1.Controls.Add(this.label2);
             this.translucentRoundedPanel1.Controls.Add(this.label1);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox1);
+            this.translucentRoundedPanel1.Controls.Add(this.fname);
             this.translucentRoundedPanel1.CornerRadius = 10;
             this.translucentRoundedPanel1.Location = new System.Drawing.Point(41, 14);
             this.translucentRoundedPanel1.Name = "translucentRoundedPanel1";
             this.translucentRoundedPanel1.Size = new System.Drawing.Size(719, 423);
             this.translucentRoundedPanel1.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Unageo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Location = new System.Drawing.Point(517, 278);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 22);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Commision";
+            // 
+            // commision
+            // 
+            this.commision.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.commision.BorderColor = System.Drawing.Color.Transparent;
+            this.commision.BorderWidth = 1;
+            this.commision.CornerRadius = 15;
+            this.commision.Location = new System.Drawing.Point(512, 303);
+            this.commision.Name = "commision";
+            this.commision.Padding = new System.Windows.Forms.Padding(3);
+            this.commision.Size = new System.Drawing.Size(187, 29);
+            this.commision.TabIndex = 19;
             // 
             // label9
             // 
@@ -94,19 +117,19 @@
             this.label9.Text = "< back";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // roundedButton1
+            // signup
             // 
-            this.roundedButton1.BackColor = System.Drawing.Color.DarkKhaki;
-            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.roundedButton1.Font = new System.Drawing.Font("Unageo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roundedButton1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.roundedButton1.Location = new System.Drawing.Point(310, 355);
-            this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.Size = new System.Drawing.Size(106, 34);
-            this.roundedButton1.TabIndex = 17;
-            this.roundedButton1.Text = "SIGN UP";
-            this.roundedButton1.UseVisualStyleBackColor = false;
-            this.roundedButton1.Click += new System.EventHandler(this.roundedButton1_Click);
+            this.signup.BackColor = System.Drawing.Color.DarkKhaki;
+            this.signup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.signup.Font = new System.Drawing.Font("Unageo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signup.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.signup.Location = new System.Drawing.Point(310, 355);
+            this.signup.Name = "signup";
+            this.signup.Size = new System.Drawing.Size(106, 34);
+            this.signup.TabIndex = 17;
+            this.signup.Text = "SIGN UP";
+            this.signup.UseVisualStyleBackColor = false;
+            this.signup.Click += new System.EventHandler(this.roundedButton1_Click);
             // 
             // label8
             // 
@@ -119,29 +142,29 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "FILL THE DETAILS";
             // 
-            // roundedRichTextBox7
+            // country
             // 
-            this.roundedRichTextBox7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.roundedRichTextBox7.BorderColor = System.Drawing.Color.Transparent;
-            this.roundedRichTextBox7.BorderWidth = 1;
-            this.roundedRichTextBox7.CornerRadius = 15;
-            this.roundedRichTextBox7.Location = new System.Drawing.Point(275, 303);
-            this.roundedRichTextBox7.Name = "roundedRichTextBox7";
-            this.roundedRichTextBox7.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox7.Size = new System.Drawing.Size(187, 29);
-            this.roundedRichTextBox7.TabIndex = 15;
+            this.country.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.country.BorderColor = System.Drawing.Color.Transparent;
+            this.country.BorderWidth = 1;
+            this.country.CornerRadius = 15;
+            this.country.Location = new System.Drawing.Point(275, 303);
+            this.country.Name = "country";
+            this.country.Padding = new System.Windows.Forms.Padding(3);
+            this.country.Size = new System.Drawing.Size(187, 29);
+            this.country.TabIndex = 15;
             // 
-            // roundedRichTextBox6
+            // city
             // 
-            this.roundedRichTextBox6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.roundedRichTextBox6.BorderColor = System.Drawing.Color.Transparent;
-            this.roundedRichTextBox6.BorderWidth = 1;
-            this.roundedRichTextBox6.CornerRadius = 15;
-            this.roundedRichTextBox6.Location = new System.Drawing.Point(31, 303);
-            this.roundedRichTextBox6.Name = "roundedRichTextBox6";
-            this.roundedRichTextBox6.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox6.Size = new System.Drawing.Size(187, 29);
-            this.roundedRichTextBox6.TabIndex = 14;
+            this.city.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.city.BorderColor = System.Drawing.Color.Transparent;
+            this.city.BorderWidth = 1;
+            this.city.CornerRadius = 15;
+            this.city.Location = new System.Drawing.Point(31, 303);
+            this.city.Name = "city";
+            this.city.Padding = new System.Windows.Forms.Padding(3);
+            this.city.Size = new System.Drawing.Size(187, 29);
+            this.city.TabIndex = 14;
             // 
             // label7
             // 
@@ -177,41 +200,41 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Contact";
             // 
-            // roundedRichTextBox5
+            // contact
             // 
-            this.roundedRichTextBox5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.roundedRichTextBox5.BorderColor = System.Drawing.Color.Transparent;
-            this.roundedRichTextBox5.BorderWidth = 1;
-            this.roundedRichTextBox5.CornerRadius = 15;
-            this.roundedRichTextBox5.Location = new System.Drawing.Point(512, 210);
-            this.roundedRichTextBox5.Name = "roundedRichTextBox5";
-            this.roundedRichTextBox5.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox5.Size = new System.Drawing.Size(187, 29);
-            this.roundedRichTextBox5.TabIndex = 10;
+            this.contact.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.contact.BorderColor = System.Drawing.Color.Transparent;
+            this.contact.BorderWidth = 1;
+            this.contact.CornerRadius = 15;
+            this.contact.Location = new System.Drawing.Point(512, 210);
+            this.contact.Name = "contact";
+            this.contact.Padding = new System.Windows.Forms.Padding(3);
+            this.contact.Size = new System.Drawing.Size(187, 29);
+            this.contact.TabIndex = 10;
             // 
-            // roundedRichTextBox4
+            // pwd
             // 
-            this.roundedRichTextBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.roundedRichTextBox4.BorderColor = System.Drawing.Color.Transparent;
-            this.roundedRichTextBox4.BorderWidth = 1;
-            this.roundedRichTextBox4.CornerRadius = 15;
-            this.roundedRichTextBox4.Location = new System.Drawing.Point(275, 210);
-            this.roundedRichTextBox4.Name = "roundedRichTextBox4";
-            this.roundedRichTextBox4.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox4.Size = new System.Drawing.Size(187, 29);
-            this.roundedRichTextBox4.TabIndex = 9;
+            this.pwd.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pwd.BorderColor = System.Drawing.Color.Transparent;
+            this.pwd.BorderWidth = 1;
+            this.pwd.CornerRadius = 15;
+            this.pwd.Location = new System.Drawing.Point(275, 210);
+            this.pwd.Name = "pwd";
+            this.pwd.Padding = new System.Windows.Forms.Padding(3);
+            this.pwd.Size = new System.Drawing.Size(187, 29);
+            this.pwd.TabIndex = 9;
             // 
-            // roundedRichTextBox3
+            // email
             // 
-            this.roundedRichTextBox3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.roundedRichTextBox3.BorderColor = System.Drawing.Color.Transparent;
-            this.roundedRichTextBox3.BorderWidth = 1;
-            this.roundedRichTextBox3.CornerRadius = 15;
-            this.roundedRichTextBox3.Location = new System.Drawing.Point(31, 210);
-            this.roundedRichTextBox3.Name = "roundedRichTextBox3";
-            this.roundedRichTextBox3.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox3.Size = new System.Drawing.Size(187, 29);
-            this.roundedRichTextBox3.TabIndex = 8;
+            this.email.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.email.BorderColor = System.Drawing.Color.Transparent;
+            this.email.BorderWidth = 1;
+            this.email.CornerRadius = 15;
+            this.email.Location = new System.Drawing.Point(31, 210);
+            this.email.Name = "email";
+            this.email.Padding = new System.Windows.Forms.Padding(3);
+            this.email.Size = new System.Drawing.Size(187, 29);
+            this.email.TabIndex = 8;
             // 
             // label4
             // 
@@ -235,17 +258,17 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Email";
             // 
-            // roundedRichTextBox2
+            // lname
             // 
-            this.roundedRichTextBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.roundedRichTextBox2.BorderColor = System.Drawing.Color.Transparent;
-            this.roundedRichTextBox2.BorderWidth = 1;
-            this.roundedRichTextBox2.CornerRadius = 15;
-            this.roundedRichTextBox2.Location = new System.Drawing.Point(399, 121);
-            this.roundedRichTextBox2.Name = "roundedRichTextBox2";
-            this.roundedRichTextBox2.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox2.Size = new System.Drawing.Size(187, 29);
-            this.roundedRichTextBox2.TabIndex = 5;
+            this.lname.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lname.BorderColor = System.Drawing.Color.Transparent;
+            this.lname.BorderWidth = 1;
+            this.lname.CornerRadius = 15;
+            this.lname.Location = new System.Drawing.Point(399, 121);
+            this.lname.Name = "lname";
+            this.lname.Padding = new System.Windows.Forms.Padding(3);
+            this.lname.Size = new System.Drawing.Size(187, 29);
+            this.lname.TabIndex = 5;
             // 
             // label2
             // 
@@ -269,40 +292,17 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "First Name";
             // 
-            // roundedRichTextBox1
+            // fname
             // 
-            this.roundedRichTextBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.roundedRichTextBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.roundedRichTextBox1.BorderWidth = 1;
-            this.roundedRichTextBox1.CornerRadius = 15;
-            this.roundedRichTextBox1.Location = new System.Drawing.Point(142, 121);
-            this.roundedRichTextBox1.Name = "roundedRichTextBox1";
-            this.roundedRichTextBox1.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox1.Size = new System.Drawing.Size(187, 29);
-            this.roundedRichTextBox1.TabIndex = 2;
-            // 
-            // roundedRichTextBox8
-            // 
-            this.roundedRichTextBox8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.roundedRichTextBox8.BorderColor = System.Drawing.Color.Transparent;
-            this.roundedRichTextBox8.BorderWidth = 1;
-            this.roundedRichTextBox8.CornerRadius = 15;
-            this.roundedRichTextBox8.Location = new System.Drawing.Point(512, 303);
-            this.roundedRichTextBox8.Name = "roundedRichTextBox8";
-            this.roundedRichTextBox8.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox8.Size = new System.Drawing.Size(187, 29);
-            this.roundedRichTextBox8.TabIndex = 19;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Unageo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(517, 278);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 22);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Commision";
+            this.fname.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.fname.BorderColor = System.Drawing.Color.Transparent;
+            this.fname.BorderWidth = 1;
+            this.fname.CornerRadius = 15;
+            this.fname.Location = new System.Drawing.Point(142, 121);
+            this.fname.Name = "fname";
+            this.fname.Padding = new System.Windows.Forms.Padding(3);
+            this.fname.Size = new System.Drawing.Size(187, 29);
+            this.fname.TabIndex = 2;
             // 
             // OperatorSignup
             // 
@@ -324,23 +324,23 @@
 
         private Components.TranslucentRoundedPanel translucentRoundedPanel1;
         private System.Windows.Forms.Label label9;
-        private RoundedButton roundedButton1;
+        private RoundedButton signup;
         private System.Windows.Forms.Label label8;
-        private RoundedRichTextBox roundedRichTextBox7;
-        private RoundedRichTextBox roundedRichTextBox6;
+        private RoundedRichTextBox country;
+        private RoundedRichTextBox city;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private RoundedRichTextBox roundedRichTextBox5;
-        private RoundedRichTextBox roundedRichTextBox4;
-        private RoundedRichTextBox roundedRichTextBox3;
+        private RoundedRichTextBox contact;
+        private RoundedRichTextBox pwd;
+        private RoundedRichTextBox email;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private RoundedRichTextBox roundedRichTextBox2;
+        private RoundedRichTextBox lname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private RoundedRichTextBox roundedRichTextBox1;
+        private RoundedRichTextBox fname;
         private System.Windows.Forms.Label label10;
-        private RoundedRichTextBox roundedRichTextBox8;
+        private RoundedRichTextBox commision;
     }
 }

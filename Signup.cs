@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace dbproject
 {
@@ -68,6 +70,63 @@ namespace dbproject
 
         private void roundedButton1_Click(object sender, EventArgs e)
         {
+
+            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True"))
+            {
+                try
+                {
+                    con.Open();
+
+                    // First insert into Users table and get generated ID
+                    string userQuery = @"INSERT INTO Users 
+                                (FirstName, LastName, Email, UserPassword, Contact, City, Country, RegistrationDate)
+                                VALUES (@fname, @lname, @email, @pwd, @contact, @city, @country, @regDate);
+                                SELECT SCOPE_IDENTITY();"; // Get the auto-generated UserID
+
+                    SqlCommand userCmd = new SqlCommand(userQuery, con);
+                    userCmd.Parameters.AddWithValue("@fname", fname.Text);
+                    userCmd.Parameters.AddWithValue("@lname", lname.Text);
+                    userCmd.Parameters.AddWithValue("@email", email.Text);
+                    userCmd.Parameters.AddWithValue("@pwd", pwd.Text);
+                    userCmd.Parameters.AddWithValue("@contact", contact.Text);
+                    userCmd.Parameters.AddWithValue("@city", city.Text);
+                    userCmd.Parameters.AddWithValue("@country", country.Text);
+                    userCmd.Parameters.AddWithValue("@regDate", DateTime.Now);
+
+                    int newUserId = Convert.ToInt32(userCmd.ExecuteScalar()); // Get the inserted UserID
+
+                    // Now insert into Traveller table using the new UserID
+                    string travellerQuery = @"INSERT INTO Traveller 
+                                     (TravellerID, Age, Budget) 
+                                     VALUES (@id, @age, @budget)";
+
+                    SqlCommand travellerCmd = new SqlCommand(travellerQuery, con);
+                    travellerCmd.Parameters.AddWithValue("@id", newUserId);
+                    travellerCmd.Parameters.AddWithValue("@age", age.Text);
+                    travellerCmd.Parameters.AddWithValue("@budget", budget.Text);
+
+                    travellerCmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Traveller Signed Up Successfully!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+            // Clear fields
+            fname.Text = "";
+            lname.Text = "";
+            age.Text = "";
+            email.Text = "";
+            pwd.Text = "";
+            contact.Text = "";
+            city.Text = "";
+            country.Text = "";
+            budget.Text = "";
+
+            // Navigate to traveller home
             TravellerHome home = new TravellerHome();
             home.Show();
             this.Hide();
