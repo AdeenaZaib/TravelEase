@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TravellerHome));
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,6 +41,8 @@
             this.labelButton5 = new LabelButton();
             this.label5 = new System.Windows.Forms.Label();
             this.labelButton2 = new LabelButton();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.label6 = new System.Windows.Forms.Label();
             this.translucentRoundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -235,11 +238,31 @@
             this.labelButton2.UseVisualStyleBackColor = false;
             this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(24, 154);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(466, 142);
+            this.listView1.TabIndex = 30;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(21, 340);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(495, 104);
+            this.label6.TabIndex = 31;
+            this.label6.Text = resources.GetString("label6.Text");
+            // 
             // TravellerHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.labelButton5);
@@ -253,6 +276,7 @@
             this.Controls.Add(this.label3);
             this.Name = "TravellerHome";
             this.Text = "TravellerHome";
+            this.Load += new System.EventHandler(this.TravellerHome_Load);
             this.translucentRoundedPanel1.ResumeLayout(false);
             this.translucentRoundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
@@ -275,5 +299,7 @@
         private LabelButton labelButton5;
         private System.Windows.Forms.Label label5;
         private LabelButton labelButton2;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Label label6;
     }
 }

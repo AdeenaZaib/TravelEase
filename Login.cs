@@ -78,7 +78,7 @@ namespace dbproject
             string email = emailtxt.Text;
             string password = pwd.Text;
 
-            //MessageBox.Show($"Email: '{email}'\nPassword: '{password}'");
+            MessageBox.Show($"Email: '{email}'\nPassword: '{password}'");
 
             if (email == "" || password == "")
             {
@@ -107,7 +107,7 @@ namespace dbproject
                         Program.CurrentUser.lastName = reader.GetString(2);
                         Program.CurrentUser.email = reader.GetString(3);
                         Program.CurrentUser.password = password;
-                        //MessageBox.Show("Login successful!");
+                        MessageBox.Show("Login successful!");
 
                         reader.Close();
 
