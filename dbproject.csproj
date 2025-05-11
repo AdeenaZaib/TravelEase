@@ -321,13 +321,13 @@
     <EmbeddedResource Include="AssignServices.resx">
       <DependentUpon>AssignServices.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-    <EmbeddedResource Include="des1.resx">
+    <EmbeddedResource Include="des1.cs">
       <DependentUpon>des1.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="BookTrip.resx">
+      <SubType>Form</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookTrip.cs">
       <DependentUpon>BookTrip.cs</DependentUpon>
->>>>>>> e7c1eb9dcc23cedfdd88205fc2ccb9f3ee1ade59
+      <SubType>Form</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Destination.resx">
       <DependentUpon>Destination.cs</DependentUpon>
