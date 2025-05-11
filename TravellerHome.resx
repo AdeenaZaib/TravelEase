@@ -117,4 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label6.Text" xml:space="preserve">
+    <value>1. Cancellation &amp; Refund Policy
+Cancellations made at least 48 hours before the travel date are eligible for a full refund.
+
+2. Rescheduling Policy
+Bookings can be rescheduled once, up to 24 hours before the original travel date, subject to availability.
+
+3. Payment Policy
+We accept credit/debit cards and secure online payment methods.</value>
+  </data>
 </root>

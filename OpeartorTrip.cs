@@ -112,5 +112,10 @@ namespace dbproject
             oa.Show();
             this.Hide();
         }
+
+        private void OpeartorTrip_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

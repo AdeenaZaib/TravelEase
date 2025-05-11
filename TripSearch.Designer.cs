@@ -47,7 +47,7 @@
             this.activityListBox = new System.Windows.Forms.CheckedListBox();
             this.apply = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.tripview = new System.Windows.Forms.ListView();
             this.tripIdComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.labelButton2 = new LabelButton();
@@ -275,14 +275,14 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "Filters";
             // 
-            // listView1
+            // tripview
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(44, 175);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(402, 203);
-            this.listView1.TabIndex = 24;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.tripview.HideSelection = false;
+            this.tripview.Location = new System.Drawing.Point(44, 175);
+            this.tripview.Name = "tripview";
+            this.tripview.Size = new System.Drawing.Size(402, 203);
+            this.tripview.TabIndex = 24;
+            this.tripview.UseCompatibleStateImageBehavior = false;
             // 
             // tripIdComboBox
             // 
@@ -330,7 +330,7 @@
             this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tripIdComboBox);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.tripview);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.apply);
             this.Controls.Add(this.activityListBox);
@@ -380,7 +380,7 @@
         private System.Windows.Forms.CheckedListBox activityListBox;
         private System.Windows.Forms.Button apply;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView tripview;
         private System.Windows.Forms.ComboBox tripIdComboBox;
         private System.Windows.Forms.Label label5;
         private LabelButton labelButton2;

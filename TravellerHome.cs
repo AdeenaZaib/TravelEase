@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -60,6 +61,48 @@ namespace dbproject
             TravellerPass tp = new TravellerPass();
             tp.Show();
             this.Hide();
+        }
+
+        private void TravellerHome_Load(object sender, EventArgs e)
+        {
+            string con = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
+
+            string query = @"SELECT TripID, TripTitle, Destination.DestinationName FROM Trip JOIN Destination ON Trip.DestinationID = Destination.DestinationID WHERE Trip.StartDate > GETDATE()";
+
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                try
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Clear previous content
+                    listView1.Items.Clear();
+                    listView1.View = View.Details;
+                    listView1.Columns.Clear();
+
+                    // Add columns (only once)
+                    listView1.Columns.Add("Trip ID", 100);
+                    listView1.Columns.Add("Trip Title", 150);
+                    listView1.Columns.Add("Destination", 150);
+
+                    // Populate the list view
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        ListViewItem item = new ListViewItem(row["TripID"].ToString());
+                        item.SubItems.Add(row["TripTitle"].ToString());
+                        item.SubItems.Add(row["DestinationName"].ToString());
+                        listView1.Items.Add(item);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+
         }
     }
 }

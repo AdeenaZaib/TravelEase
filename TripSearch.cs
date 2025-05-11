@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace dbproject
 {
@@ -19,6 +21,43 @@ namespace dbproject
 
         private void TripSearch_Load(object sender, EventArgs e)
         {
+            string con = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
+
+            string query = @"SELECT TripID, TripTitle, Destination.DestinationName FROM Trip JOIN Destination ON Trip.DestinationID = Destination.DestinationID WHERE Trip.StartDate > GETDATE()";
+
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                try
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Clear previous content
+                    tripview.Items.Clear();
+                    tripview.View = View.Details;
+                    tripview.Columns.Clear();
+
+                    // Add columns (only once)
+                    tripview.Columns.Add("Trip ID", 100);
+                    tripview.Columns.Add("Trip Title", 150);
+                    tripview.Columns.Add("Destination", 150);
+
+                    // Populate the list view
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        ListViewItem item = new ListViewItem(row["TripID"].ToString());
+                        item.SubItems.Add(row["TripTitle"].ToString());
+                        item.SubItems.Add(row["DestinationName"].ToString());
+                        tripview.Items.Add(item);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
             filterOptions.Items.Add("Destination");
             filterOptions.Items.Add("Price");
             filterOptions.Items.Add("Date");

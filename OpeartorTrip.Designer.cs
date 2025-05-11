@@ -238,6 +238,7 @@
             this.Controls.Add(this.label1);
             this.Name = "OpeartorTrip";
             this.Text = "OpeartorTrip";
+            this.Load += new System.EventHandler(this.OpeartorTrip_Load);
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
