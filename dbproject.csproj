@@ -309,13 +309,11 @@
     <EmbeddedResource Include="AssignServices.resx">
       <DependentUpon>AssignServices.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="des1.resx">
       <DependentUpon>des1.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="BookTrip.resx">
       <DependentUpon>BookTrip.cs</DependentUpon>
->>>>>>> e7c1eb9dcc23cedfdd88205fc2ccb9f3ee1ade59
     </EmbeddedResource>
     <EmbeddedResource Include="Destination.resx">
       <DependentUpon>Destination.cs</DependentUpon>
