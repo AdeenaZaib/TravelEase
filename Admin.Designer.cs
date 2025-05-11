@@ -55,6 +55,7 @@
             this.labelButton2.Text = "MANAGE USERS";
             this.labelButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton2.UseVisualStyleBackColor = false;
+            this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
             // 
             // label3
             // 
@@ -80,13 +81,14 @@
             this.labelButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelButton5.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelButton5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelButton5.Location = new System.Drawing.Point(298, 64);
+            this.labelButton5.Location = new System.Drawing.Point(287, 64);
             this.labelButton5.Name = "labelButton5";
-            this.labelButton5.Size = new System.Drawing.Size(120, 23);
+            this.labelButton5.Size = new System.Drawing.Size(199, 23);
             this.labelButton5.TabIndex = 42;
-            this.labelButton5.Text = "MANAGE USERS";
+            this.labelButton5.Text = "MANAGE DESTINATIONS";
             this.labelButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton5.UseVisualStyleBackColor = false;
+            this.labelButton5.Click += new System.EventHandler(this.labelButton5_Click);
             // 
             // labelButton1
             // 
@@ -106,6 +108,7 @@
             this.labelButton1.Text = "HOME";
             this.labelButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton1.UseVisualStyleBackColor = false;
+            this.labelButton1.Click += new System.EventHandler(this.labelButton1_Click);
             // 
             // label1
             // 

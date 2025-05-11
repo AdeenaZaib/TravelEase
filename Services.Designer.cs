@@ -57,6 +57,7 @@
             this.labelButton5.Text = "MEALS";
             this.labelButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton5.UseVisualStyleBackColor = false;
+            this.labelButton5.Click += new System.EventHandler(this.labelButton5_Click);
             // 
             // labelButton4
             // 
@@ -96,6 +97,7 @@
             this.labelButton3.Text = "HOTELS";
             this.labelButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton3.UseVisualStyleBackColor = false;
+            this.labelButton3.Click += new System.EventHandler(this.labelButton3_Click);
             // 
             // labelButton1
             // 
@@ -115,6 +117,7 @@
             this.labelButton1.Text = "HOME";
             this.labelButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton1.UseVisualStyleBackColor = false;
+            this.labelButton1.Click += new System.EventHandler(this.labelButton1_Click);
             // 
             // label1
             // 
@@ -172,6 +175,7 @@
             this.labelButton2.Text = "GUIDES";
             this.labelButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton2.UseVisualStyleBackColor = false;
+            this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
             // 
             // Services
             // 
