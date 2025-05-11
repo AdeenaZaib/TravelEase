@@ -78,7 +78,7 @@ namespace dbproject
             string email = emailtxt.Text;
             string password = pwd.Text;
 
-            MessageBox.Show($"Email: '{email}'\nPassword: '{password}'");
+            //MessageBox.Show($"Email: '{email}'\nPassword: '{password}'");
 
             if (email == "" || password == "")
             {
@@ -93,7 +93,7 @@ namespace dbproject
                 try
                 {
                     con.Open();
-                    string query = "SELECT UserID, FirstName, LastName, Email FROM Users WHERE Email = @Email AND Password = @Password";
+                    string query = "SELECT UserID, FirstName, LastName, Email FROM Users WHERE Email = @Email AND UserPassword = @Password";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@Email", email);
                     cmd.Parameters.AddWithValue("@Password", password);
@@ -106,15 +106,18 @@ namespace dbproject
                         Program.CurrentUser.fisrtName = reader.GetString(1);
                         Program.CurrentUser.lastName = reader.GetString(2);
                         Program.CurrentUser.email = reader.GetString(3);
-                        MessageBox.Show("Login successful!");
+                        Program.CurrentUser.password = password;
+                        //MessageBox.Show("Login successful!");
+
+                        reader.Close();
 
                         string usertype = "";
                         string typeQuery = @"
-                            SELECT 'Traveller' AS Role FROM Traveller WHERE UserID = @UserID
+                            SELECT 'Traveller' AS Role FROM Traveller WHERE TravellerID = @UserID
                             UNION
-                            SELECT 'TourOperator' FROM TourOperator WHERE UserID = @UserID
+                            SELECT 'TourOperator' FROM TourOperator WHERE TourOperatorID = @UserID
                             UNION
-                            SELECT 'ServiceProvider' FROM ServiceProvider WHERE UserID = @UserID;";
+                            SELECT 'ServiceProvider' FROM ServiceProvider WHERE ServiceProviderID = @UserID;";
                         SqlCommand typeCmd = new SqlCommand(typeQuery, con);
                         typeCmd.Parameters.AddWithValue("@UserID", Program.CurrentUser.userid);
 
@@ -154,6 +157,11 @@ namespace dbproject
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
