@@ -338,6 +338,9 @@
     <EmbeddedResource Include="OperatorSignup.resx">
       <DependentUpon>OperatorSignup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="payments.resx">
+      <DependentUpon>payments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProviderSignup.resx">
       <DependentUpon>ProviderSignup.cs</DependentUpon>
     </EmbeddedResource>

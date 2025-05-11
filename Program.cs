@@ -10,6 +10,7 @@ namespace dbproject
     public struct UserInfo
     {
         public int userid;
+        public int bookingid;
         public string fisrtName;
         public string lastName;
         public string email;
@@ -27,7 +28,7 @@ namespace dbproject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            CurrentUser = new UserInfo { userid = 0, fisrtName = "", lastName = "", email = "", password = "" };
+            CurrentUser = new UserInfo { userid = 0, bookingid = 0, fisrtName = "", lastName = "", email = "", password = "" };
             Application.Run(new Login());
         }
     }

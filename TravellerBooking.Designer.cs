@@ -34,10 +34,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.bookingsView = new System.Windows.Forms.ListView();
             this.actionComboBox = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.ppl = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.apply = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.noppl = new System.Windows.Forms.RichTextBox();
             this.combo = new System.Windows.Forms.ComboBox();
             this.labelButton2 = new LabelButton();
             this.labelButton5 = new LabelButton();
@@ -45,6 +45,8 @@
             this.labelButton3 = new LabelButton();
             this.labelButton1 = new LabelButton();
             this.circularPictureBox1 = new Components.CircularPictureBox();
+            this.change = new System.Windows.Forms.Button();
+            this.chg = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,16 +108,16 @@
             this.actionComboBox.Size = new System.Drawing.Size(121, 21);
             this.actionComboBox.TabIndex = 15;
             // 
-            // label5
+            // ppl
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(547, 219);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(171, 16);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Enter the Number of People";
+            this.ppl.AutoSize = true;
+            this.ppl.BackColor = System.Drawing.Color.Transparent;
+            this.ppl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ppl.Location = new System.Drawing.Point(547, 226);
+            this.ppl.Name = "ppl";
+            this.ppl.Size = new System.Drawing.Size(171, 16);
+            this.ppl.TabIndex = 27;
+            this.ppl.Text = "Enter the Number of People";
             // 
             // label4
             // 
@@ -134,22 +136,22 @@
             this.apply.Name = "apply";
             this.apply.Size = new System.Drawing.Size(86, 31);
             this.apply.TabIndex = 30;
-            this.apply.Text = "APPLY";
+            this.apply.Text = " APPLY";
             this.apply.UseVisualStyleBackColor = true;
             this.apply.Click += new System.EventHandler(this.apply_Click);
             // 
-            // richTextBox1
+            // noppl
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(568, 238);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(121, 24);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
+            this.noppl.Location = new System.Drawing.Point(570, 255);
+            this.noppl.Name = "noppl";
+            this.noppl.Size = new System.Drawing.Size(121, 24);
+            this.noppl.TabIndex = 16;
+            this.noppl.Text = "";
             // 
             // combo
             // 
             this.combo.FormattingEnabled = true;
-            this.combo.Location = new System.Drawing.Point(626, 389);
+            this.combo.Location = new System.Drawing.Point(570, 281);
             this.combo.Name = "combo";
             this.combo.Size = new System.Drawing.Size(121, 21);
             this.combo.TabIndex = 31;
@@ -270,6 +272,27 @@
             this.circularPictureBox1.TabIndex = 1;
             this.circularPictureBox1.TabStop = false;
             // 
+            // change
+            // 
+            this.change.Location = new System.Drawing.Point(583, 301);
+            this.change.Name = "change";
+            this.change.Size = new System.Drawing.Size(86, 23);
+            this.change.TabIndex = 32;
+            this.change.Text = "CHANGE";
+            this.change.UseVisualStyleBackColor = true;
+            this.change.Click += new System.EventHandler(this.change_Click);
+            // 
+            // chg
+            // 
+            this.chg.AutoSize = true;
+            this.chg.BackColor = System.Drawing.Color.Transparent;
+            this.chg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chg.Location = new System.Drawing.Point(538, 242);
+            this.chg.Name = "chg";
+            this.chg.Size = new System.Drawing.Size(196, 16);
+            this.chg.TabIndex = 33;
+            this.chg.Text = "Make Changes to Your Booking";
+            // 
             // TravellerBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,12 +300,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.chg);
+            this.Controls.Add(this.change);
             this.Controls.Add(this.combo);
             this.Controls.Add(this.apply);
             this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.ppl);
+            this.Controls.Add(this.noppl);
             this.Controls.Add(this.actionComboBox);
             this.Controls.Add(this.bookingsView);
             this.Controls.Add(this.labelButton5);
@@ -314,11 +339,13 @@
         private LabelButton labelButton5;
         private System.Windows.Forms.ListView bookingsView;
         private System.Windows.Forms.ComboBox actionComboBox;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label ppl;
         private System.Windows.Forms.Label label4;
         private LabelButton labelButton2;
         private System.Windows.Forms.Button apply;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox noppl;
         private System.Windows.Forms.ComboBox combo;
+        private System.Windows.Forms.Button change;
+        private System.Windows.Forms.Label chg;
     }
 }

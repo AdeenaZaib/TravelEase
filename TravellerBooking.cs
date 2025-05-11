@@ -15,13 +15,54 @@ namespace dbproject
 {
     public partial class TravellerBooking : Form
     {
+        private bool comboBoxUserChange = false;
+
         public TravellerBooking()
         {
             InitializeComponent();
         }
 
+        private void combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!comboBoxUserChange)
+                return;
+
+            string selectedAction = combo.SelectedItem.ToString();
+
+            // Hide all by default
+
+            comboBoxUserChange = false; // Prevent the event from being triggered again
+
+            switch (selectedAction)
+            {
+                case "No of People":
+                    ppl.Visible = true;
+                    noppl.Visible = true;
+                    change.Visible = true;
+                    actionComboBox.Visible = false;
+                    label4.Visible = false;
+                    apply.Visible = false;
+                    combo.Visible = false; // Show the action combo box again
+                    chg.Visible = false; // Show the change button again
+                    break;
+
+                case "Status":
+                    actionComboBox.Visible = true;
+                    label4.Visible = true;
+                    apply.Visible = true;
+                    combo.Visible = false; // Show the action combo box again
+                    chg.Visible = false; // Show the change button again
+                    ppl.Visible = false;
+                    noppl.Visible = false;
+                    change.Visible = false;
+                    break;
+            }
+        }
+
+
         private void LoadFilters()
         {
+            combo.Items.AddRange(new string[] { "No of People", "Status" });
             actionComboBox.Items.AddRange(new string[] { "Cancel", "Confirm", "Refund", "InProgress" });
         }
 
@@ -77,7 +118,17 @@ namespace dbproject
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
-
+                ppl.Visible = false;
+                noppl.Visible = false;
+                change.Visible = false;
+                actionComboBox.Visible = false;
+                label4.Visible = false;
+                apply.Visible = false;
+                chg.Visible = true;
+                combo.Visible = true; // Show the action combo box again
+                combo.SelectedIndex = -1; // Reset the selected index
+                comboBoxUserChange = true; // Allow the event to be triggered
+                combo.SelectedIndexChanged += combo_SelectedIndexChanged;
             }
         }
 
@@ -142,7 +193,7 @@ namespace dbproject
         private void apply_Click(object sender, EventArgs e)
         {
             string con = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
-
+            Program.CurrentUser.bookingid = Convert.ToInt32(bookingsView.SelectedItems[0].SubItems[0].Text);
             string query = @"UPDATE TripBooking SET BookingStatus = @BookingStatus WHERE BookingID = @BookingID";
             using (SqlConnection conn = new SqlConnection(con))
             {
@@ -161,7 +212,10 @@ namespace dbproject
                         }
                         else if (actionComboBox.SelectedItem.ToString() == "Confirm")
                         {
-                            MessageBox.Show("Booking confirmed successfully.");
+                            payments pay = new payments();
+                            pay.Show();
+                            this.Hide();
+                            //MessageBox.Show("Booking confirmed successfully.");
                         }
                         else if (actionComboBox.SelectedItem.ToString() == "Refund")
                         {
@@ -172,6 +226,12 @@ namespace dbproject
                             MessageBox.Show("Booking status updated successfully.");
                         }
                         LoadTravellerBooking();
+                        actionComboBox.Visible = false; // Hide the action combo box after updating
+                        label4.Visible = false; // Hide the label after updating
+                        apply.Visible = false; // Hide the apply button after updating
+                        combo.Visible = true; // Show the action combo box again
+                        chg.Visible = true; // Show the change button again
+                        
                     }
                     else
                     {
@@ -184,6 +244,58 @@ namespace dbproject
                 }
             }
 
+        }
+
+        private void chgbut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void change_Click(object sender, EventArgs e)
+        {
+            string con = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
+
+            string query = @"UPDATE TripBooking SET NoOfPeople = @NoOfPeople WHERE BookingID = @BookingID";
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    int people;
+                    if (int.TryParse(noppl.Text, out people))
+                    {
+                        cmd.Parameters.AddWithValue("@NoOfPeople", people);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter a valid number.");
+                        return;
+                    }
+                    cmd.Parameters.AddWithValue("@BookingID", bookingsView.SelectedItems[0].SubItems[0].Text);
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Booking status updated successfully.");
+                        LoadTravellerBooking();
+                        noppl.Text = ""; // Reset the numeric up down value
+                        noppl.Visible = false; // Hide the numeric up down after updating
+                        ppl.Visible = false; // Hide the label after updating
+                        change.Visible = false; // Hide the button after updating
+                        combo.Visible = true; // Show the action combo box again
+                        chg.Visible = true; // Show the change button again
+                       
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error updating booking status.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
     }
 }
