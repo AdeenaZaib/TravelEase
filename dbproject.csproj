@@ -55,11 +55,35 @@
     <Compile Include="AddDestination.Designer.cs">
       <DependentUpon>AddDestination.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddGuide.Designer.cs">
+      <DependentUpon>AddGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddHotel.Designer.cs">
+      <DependentUpon>AddHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMeal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMeal.Designer.cs">
+      <DependentUpon>AddMeal.cs</DependentUpon>
+    </Compile>
     <Compile Include="addReview.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="addReview.Designer.cs">
       <DependentUpon>addReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTransport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTransport.Designer.cs">
+      <DependentUpon>AddTransport.cs</DependentUpon>
     </Compile>
     <Compile Include="AddTrip.cs">
       <SubType>Form</SubType>
@@ -315,8 +339,20 @@
     <EmbeddedResource Include="AddDestination.resx">
       <DependentUpon>AddDestination.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddGuide.resx">
+      <DependentUpon>AddGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddHotel.resx">
+      <DependentUpon>AddHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMeal.resx">
+      <DependentUpon>AddMeal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addReview.resx">
       <DependentUpon>addReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTransport.resx">
+      <DependentUpon>AddTransport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddTrip.resx">
       <DependentUpon>AddTrip.cs</DependentUpon>
