@@ -37,6 +37,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelButton2 = new LabelButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.combo = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt = new System.Windows.Forms.RichTextBox();
+            this.delete = new System.Windows.Forms.Button();
+            this.update = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // label3
@@ -177,6 +184,75 @@
             this.labelButton2.UseVisualStyleBackColor = false;
             this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Peru;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(614, 336);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 34);
+            this.button1.TabIndex = 49;
+            this.button1.Text = "ADD TRIP";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // combo
+            // 
+            this.combo.FormattingEnabled = true;
+            this.combo.Location = new System.Drawing.Point(584, 203);
+            this.combo.Name = "combo";
+            this.combo.Size = new System.Drawing.Size(163, 21);
+            this.combo.TabIndex = 48;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(635, 173);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 18);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Update:";
+            // 
+            // txt
+            // 
+            this.txt.Location = new System.Drawing.Point(584, 230);
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(163, 36);
+            this.txt.TabIndex = 46;
+            this.txt.Text = "";
+            // 
+            // delete
+            // 
+            this.delete.BackColor = System.Drawing.Color.Peru;
+            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.delete.Location = new System.Drawing.Point(614, 386);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(92, 34);
+            this.delete.TabIndex = 45;
+            this.delete.Text = "DELETE";
+            this.delete.UseVisualStyleBackColor = false;
+            // 
+            // update
+            // 
+            this.update.BackColor = System.Drawing.Color.Peru;
+            this.update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.update.Location = new System.Drawing.Point(614, 284);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(92, 34);
+            this.update.TabIndex = 44;
+            this.update.Text = "UPDATE";
+            this.update.UseVisualStyleBackColor = false;
+            // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.Color.Moccasin;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(34, 164);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(452, 256);
+            this.listView1.TabIndex = 43;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // Hotels
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +260,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.combo);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txt);
+            this.Controls.Add(this.delete);
+            this.Controls.Add(this.update);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelButton5);
@@ -209,5 +292,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private LabelButton labelButton2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox combo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox txt;
+        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.Button update;
+        private System.Windows.Forms.ListView listView1;
     }
 }
