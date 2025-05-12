@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddGuide));
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
+            this.contact = new System.Windows.Forms.RichTextBox();
+            this.guideName = new System.Windows.Forms.RichTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.experience = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.experience = new System.Windows.Forms.RichTextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.guideName = new System.Windows.Forms.RichTextBox();
-            this.contact = new System.Windows.Forms.RichTextBox();
             this.rate = new System.Windows.Forms.RichTextBox();
             this.translucentRoundedPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +67,41 @@
             this.translucentRoundedPanel1.Size = new System.Drawing.Size(505, 386);
             this.translucentRoundedPanel1.TabIndex = 20;
             // 
+            // contact
+            // 
+            this.contact.Location = new System.Drawing.Point(26, 171);
+            this.contact.Name = "contact";
+            this.contact.Size = new System.Drawing.Size(291, 31);
+            this.contact.TabIndex = 41;
+            this.contact.Text = "";
+            // 
+            // guideName
+            // 
+            this.guideName.Location = new System.Drawing.Point(30, 103);
+            this.guideName.Name = "guideName";
+            this.guideName.Size = new System.Drawing.Size(291, 31);
+            this.guideName.TabIndex = 40;
+            this.guideName.Text = "";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label8.Location = new System.Drawing.Point(26, 218);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(88, 20);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Experience";
+            // 
+            // experience
+            // 
+            this.experience.Location = new System.Drawing.Point(30, 241);
+            this.experience.Name = "experience";
+            this.experience.Size = new System.Drawing.Size(287, 127);
+            this.experience.TabIndex = 38;
+            this.experience.Text = "";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -89,10 +125,10 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Peru;
+            this.button1.BackColor = System.Drawing.Color.NavajoWhite;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("DejaVu Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(352, 287);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(109, 38);
@@ -100,6 +136,17 @@
             this.button1.Text = "ADD GUIDE";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(26, 148);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 20);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Contact";
             // 
             // label1
             // 
@@ -146,52 +193,6 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "Address";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(26, 148);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 20);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Contact";
-            // 
-            // experience
-            // 
-            this.experience.Location = new System.Drawing.Point(30, 241);
-            this.experience.Name = "experience";
-            this.experience.Size = new System.Drawing.Size(287, 127);
-            this.experience.TabIndex = 38;
-            this.experience.Text = "";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(26, 218);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 20);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Experience";
-            // 
-            // guideName
-            // 
-            this.guideName.Location = new System.Drawing.Point(30, 103);
-            this.guideName.Name = "guideName";
-            this.guideName.Size = new System.Drawing.Size(291, 31);
-            this.guideName.TabIndex = 40;
-            this.guideName.Text = "";
-            // 
-            // contact
-            // 
-            this.contact.Location = new System.Drawing.Point(26, 171);
-            this.contact.Name = "contact";
-            this.contact.Size = new System.Drawing.Size(291, 31);
-            this.contact.TabIndex = 41;
-            this.contact.Text = "";
-            // 
             // rate
             // 
             this.rate.Location = new System.Drawing.Point(500, 135);
@@ -204,6 +205,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.rate);
             this.Controls.Add(this.translucentRoundedPanel1);

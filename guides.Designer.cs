@@ -37,6 +37,13 @@
             this.labelButton1 = new LabelButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.combo = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt = new System.Windows.Forms.RichTextBox();
+            this.delete = new System.Windows.Forms.Button();
+            this.update = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // labelButton2
@@ -177,6 +184,76 @@
             this.label2.TabIndex = 36;
             this.label2.Text = "GUIDE SERVICES";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(624, 345);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 34);
+            this.button1.TabIndex = 50;
+            this.button1.Text = "ADD GUIDE";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // combo
+            // 
+            this.combo.FormattingEnabled = true;
+            this.combo.Location = new System.Drawing.Point(594, 212);
+            this.combo.Name = "combo";
+            this.combo.Size = new System.Drawing.Size(163, 21);
+            this.combo.TabIndex = 49;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(645, 182);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 18);
+            this.label4.TabIndex = 48;
+            this.label4.Text = "Update:";
+            // 
+            // txt
+            // 
+            this.txt.Location = new System.Drawing.Point(594, 239);
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(163, 36);
+            this.txt.TabIndex = 47;
+            this.txt.Text = "";
+            // 
+            // delete
+            // 
+            this.delete.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.delete.Location = new System.Drawing.Point(624, 395);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(92, 34);
+            this.delete.TabIndex = 46;
+            this.delete.Text = "DELETE";
+            this.delete.UseVisualStyleBackColor = false;
+            // 
+            // update
+            // 
+            this.update.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.update.Location = new System.Drawing.Point(624, 293);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(92, 34);
+            this.update.TabIndex = 45;
+            this.update.Text = "UPDATE";
+            this.update.UseVisualStyleBackColor = false;
+            // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.Color.Wheat;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(44, 173);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(452, 256);
+            this.listView1.TabIndex = 44;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // guides
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +261,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.combo);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txt);
+            this.Controls.Add(this.delete);
+            this.Controls.Add(this.update);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelButton5);
@@ -209,5 +293,12 @@
         private LabelButton labelButton1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox combo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox txt;
+        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.Button update;
+        private System.Windows.Forms.ListView listView1;
     }
 }
