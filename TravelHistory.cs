@@ -20,6 +20,58 @@ namespace dbproject
             InitializeComponent();
         }
 
+        private void travellerhistory()
+        {
+            string con = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
+
+            int id = Program.CurrentUser.userid;
+
+            string query = @"SELECT TripBooking.TripID, Trip.TripTitle, Destination.DestinationName, Trip.StartDate, Trip.EndDate FROM TripBooking
+            JOIN Trip ON Trip.TripID = TripBooking.TripID JOIN Destination ON Trip.DestinationID = Destination.DestinationID WHERE TripBooking.TravellerID = @UserID AND TripBooking.BookingStatus = 'Booked'" ;
+
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@UserID", id);
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Clear previous content
+                    history.Items.Clear();
+                    history.View = View.Details;
+                    history.Columns.Clear();
+
+                    // Add columns (only once)
+                    history.Columns.Add("Trip ID", 100);
+                    history.Columns.Add("Trip Title", 150);
+                    history.Columns.Add("Destination", 150);
+                    history.Columns.Add("Start Date", 100);
+                    history.Columns.Add("End Date", 100);
+
+                    // Populate the list view
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        ListViewItem item = new ListViewItem(row["TripID"].ToString());
+                        item.SubItems.Add(row["TripTitle"].ToString());
+                        item.SubItems.Add(row["DestinationName"].ToString());
+                        item.SubItems.Add(Convert.ToDateTime(row["StartDate"]).ToString("yyyy-MM-dd"));
+                        item.SubItems.Add(Convert.ToDateTime(row["EndDate"]).ToString("yyyy-MM-dd"));
+                        history.Items.Add(item);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+
+        }
+
         private void labelButton1_Click(object sender, EventArgs e)
         {
             TravellerHome home = new TravellerHome();
@@ -50,7 +102,7 @@ namespace dbproject
 
         private void TravelHistory_Load(object sender, EventArgs e)
         {
-
+            travellerhistory();
         }
 
         private void labelButton3_Click_1(object sender, EventArgs e)
@@ -76,9 +128,24 @@ namespace dbproject
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void add_Click(object sender, EventArgs e)
+        {
+            addReview rev = new addReview();
+            rev.Show();
+            this.Hide();
+        }
+
+        private void viewbut_Click(object sender, EventArgs e)
+        {
             //string con = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
 
-            //string query = @"SELECT TripID, TripTitle, Destination.DestinationName FROM Trip JOIN Destination ON Trip.DestinationID = Destination.DestinationID WHERE Trip.StartDate > GETDATE()";
+            //int id = Program.CurrentUser.userid;
+
+            //string query = @"SELECT TripBooking.TripID, Trip.TripTitle, Destination.DestinationName, Trip.StartDate, Trip.EndDate FROM TripBooking
+            //JOIN Trip ON Trip.TripID = TripBooking.TripID JOIN Destination ON Trip.DestinationID = Destination.DestinationID WHERE Trip.TravellerID = @UserID";
 
         }
     }

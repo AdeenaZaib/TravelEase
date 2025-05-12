@@ -39,19 +39,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.roundedRichTextBox10 = new RoundedRichTextBox();
-            this.roundedRichTextBox9 = new RoundedRichTextBox();
-            this.roundedRichTextBox5 = new RoundedRichTextBox();
-            this.roundedRichTextBox4 = new RoundedRichTextBox();
-            this.roundedRichTextBox3 = new RoundedRichTextBox();
-            this.roundedRichTextBox2 = new RoundedRichTextBox();
-            this.roundedRichTextBox8 = new RoundedRichTextBox();
-            this.roundedRichTextBox7 = new RoundedRichTextBox();
-            this.roundedRichTextBox6 = new RoundedRichTextBox();
-            this.roundedRichTextBox1 = new RoundedRichTextBox();
+            this.tripTitle = new RoundedRichTextBox();
+            this.price = new RoundedRichTextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.destinationCombo = new System.Windows.Forms.ComboBox();
+            this.typecombo = new System.Windows.Forms.ComboBox();
+            this.capcombo = new System.Windows.Forms.ComboBox();
+            this.accecombo = new System.Windows.Forms.ComboBox();
+            this.start = new System.Windows.Forms.DateTimePicker();
+            this.end = new System.Windows.Forms.DateTimePicker();
+            this.cap = new System.Windows.Forms.NumericUpDown();
             this.translucentRoundedPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cap)).BeginInit();
             this.SuspendLayout();
             // 
             // translucentRoundedPanel1
@@ -59,6 +58,13 @@
             this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderWidth = 1;
+            this.translucentRoundedPanel1.Controls.Add(this.cap);
+            this.translucentRoundedPanel1.Controls.Add(this.end);
+            this.translucentRoundedPanel1.Controls.Add(this.start);
+            this.translucentRoundedPanel1.Controls.Add(this.accecombo);
+            this.translucentRoundedPanel1.Controls.Add(this.capcombo);
+            this.translucentRoundedPanel1.Controls.Add(this.typecombo);
+            this.translucentRoundedPanel1.Controls.Add(this.destinationCombo);
             this.translucentRoundedPanel1.Controls.Add(this.roundedButton1);
             this.translucentRoundedPanel1.Controls.Add(this.label11);
             this.translucentRoundedPanel1.Controls.Add(this.label10);
@@ -69,17 +75,8 @@
             this.translucentRoundedPanel1.Controls.Add(this.label5);
             this.translucentRoundedPanel1.Controls.Add(this.label2);
             this.translucentRoundedPanel1.Controls.Add(this.label1);
-            this.translucentRoundedPanel1.Controls.Add(this.label3);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox10);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox9);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox5);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox4);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox3);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox2);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox8);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox7);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox6);
-            this.translucentRoundedPanel1.Controls.Add(this.roundedRichTextBox1);
+            this.translucentRoundedPanel1.Controls.Add(this.tripTitle);
+            this.translucentRoundedPanel1.Controls.Add(this.price);
             this.translucentRoundedPanel1.Controls.Add(this.label4);
             this.translucentRoundedPanel1.CornerRadius = 10;
             this.translucentRoundedPanel1.Location = new System.Drawing.Point(113, 12);
@@ -98,6 +95,7 @@
             this.roundedButton1.TabIndex = 46;
             this.roundedButton1.Text = "ADD TRIP";
             this.roundedButton1.UseVisualStyleBackColor = false;
+            this.roundedButton1.Click += new System.EventHandler(this.roundedButton1_Click);
             // 
             // label11
             // 
@@ -181,7 +179,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(344, 69);
+            this.label2.Location = new System.Drawing.Point(243, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 18);
             this.label2.TabIndex = 37;
@@ -198,138 +196,29 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "Destination";
             // 
-            // label3
+            // tripTitle
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(36, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 18);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Trip ID";
+            this.tripTitle.BackColor = System.Drawing.Color.White;
+            this.tripTitle.BorderColor = System.Drawing.Color.Gray;
+            this.tripTitle.BorderWidth = 1;
+            this.tripTitle.CornerRadius = 15;
+            this.tripTitle.Location = new System.Drawing.Point(173, 97);
+            this.tripTitle.Name = "tripTitle";
+            this.tripTitle.Padding = new System.Windows.Forms.Padding(3);
+            this.tripTitle.Size = new System.Drawing.Size(219, 26);
+            this.tripTitle.TabIndex = 34;
             // 
-            // roundedRichTextBox10
+            // price
             // 
-            this.roundedRichTextBox10.BackColor = System.Drawing.Color.White;
-            this.roundedRichTextBox10.BorderColor = System.Drawing.Color.Gray;
-            this.roundedRichTextBox10.BorderWidth = 1;
-            this.roundedRichTextBox10.CornerRadius = 15;
-            this.roundedRichTextBox10.Location = new System.Drawing.Point(333, 90);
-            this.roundedRichTextBox10.Name = "roundedRichTextBox10";
-            this.roundedRichTextBox10.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox10.Size = new System.Drawing.Size(219, 26);
-            this.roundedRichTextBox10.TabIndex = 34;
-            // 
-            // roundedRichTextBox9
-            // 
-            this.roundedRichTextBox9.BackColor = System.Drawing.Color.White;
-            this.roundedRichTextBox9.BorderColor = System.Drawing.Color.Gray;
-            this.roundedRichTextBox9.BorderWidth = 1;
-            this.roundedRichTextBox9.CornerRadius = 15;
-            this.roundedRichTextBox9.Location = new System.Drawing.Point(333, 147);
-            this.roundedRichTextBox9.Name = "roundedRichTextBox9";
-            this.roundedRichTextBox9.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox9.Size = new System.Drawing.Size(219, 26);
-            this.roundedRichTextBox9.TabIndex = 33;
-            // 
-            // roundedRichTextBox5
-            // 
-            this.roundedRichTextBox5.BackColor = System.Drawing.Color.White;
-            this.roundedRichTextBox5.BorderColor = System.Drawing.Color.Gray;
-            this.roundedRichTextBox5.BorderWidth = 1;
-            this.roundedRichTextBox5.CornerRadius = 15;
-            this.roundedRichTextBox5.Location = new System.Drawing.Point(333, 259);
-            this.roundedRichTextBox5.Name = "roundedRichTextBox5";
-            this.roundedRichTextBox5.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox5.Size = new System.Drawing.Size(219, 26);
-            this.roundedRichTextBox5.TabIndex = 32;
-            // 
-            // roundedRichTextBox4
-            // 
-            this.roundedRichTextBox4.BackColor = System.Drawing.Color.White;
-            this.roundedRichTextBox4.BorderColor = System.Drawing.Color.Gray;
-            this.roundedRichTextBox4.BorderWidth = 1;
-            this.roundedRichTextBox4.CornerRadius = 15;
-            this.roundedRichTextBox4.Location = new System.Drawing.Point(333, 311);
-            this.roundedRichTextBox4.Name = "roundedRichTextBox4";
-            this.roundedRichTextBox4.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox4.Size = new System.Drawing.Size(219, 26);
-            this.roundedRichTextBox4.TabIndex = 31;
-            // 
-            // roundedRichTextBox3
-            // 
-            this.roundedRichTextBox3.BackColor = System.Drawing.Color.White;
-            this.roundedRichTextBox3.BorderColor = System.Drawing.Color.Gray;
-            this.roundedRichTextBox3.BorderWidth = 1;
-            this.roundedRichTextBox3.CornerRadius = 15;
-            this.roundedRichTextBox3.Location = new System.Drawing.Point(333, 204);
-            this.roundedRichTextBox3.Name = "roundedRichTextBox3";
-            this.roundedRichTextBox3.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox3.Size = new System.Drawing.Size(219, 26);
-            this.roundedRichTextBox3.TabIndex = 30;
-            // 
-            // roundedRichTextBox2
-            // 
-            this.roundedRichTextBox2.BackColor = System.Drawing.Color.White;
-            this.roundedRichTextBox2.BorderColor = System.Drawing.Color.Gray;
-            this.roundedRichTextBox2.BorderWidth = 1;
-            this.roundedRichTextBox2.CornerRadius = 15;
-            this.roundedRichTextBox2.Location = new System.Drawing.Point(28, 311);
-            this.roundedRichTextBox2.Name = "roundedRichTextBox2";
-            this.roundedRichTextBox2.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox2.Size = new System.Drawing.Size(219, 26);
-            this.roundedRichTextBox2.TabIndex = 29;
-            // 
-            // roundedRichTextBox8
-            // 
-            this.roundedRichTextBox8.BackColor = System.Drawing.Color.White;
-            this.roundedRichTextBox8.BorderColor = System.Drawing.Color.Gray;
-            this.roundedRichTextBox8.BorderWidth = 1;
-            this.roundedRichTextBox8.CornerRadius = 15;
-            this.roundedRichTextBox8.Location = new System.Drawing.Point(28, 204);
-            this.roundedRichTextBox8.Name = "roundedRichTextBox8";
-            this.roundedRichTextBox8.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox8.Size = new System.Drawing.Size(219, 26);
-            this.roundedRichTextBox8.TabIndex = 28;
-            this.roundedRichTextBox8.Load += new System.EventHandler(this.roundedRichTextBox8_Load);
-            // 
-            // roundedRichTextBox7
-            // 
-            this.roundedRichTextBox7.BackColor = System.Drawing.Color.White;
-            this.roundedRichTextBox7.BorderColor = System.Drawing.Color.Gray;
-            this.roundedRichTextBox7.BorderWidth = 1;
-            this.roundedRichTextBox7.CornerRadius = 15;
-            this.roundedRichTextBox7.Location = new System.Drawing.Point(28, 259);
-            this.roundedRichTextBox7.Name = "roundedRichTextBox7";
-            this.roundedRichTextBox7.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox7.Size = new System.Drawing.Size(219, 26);
-            this.roundedRichTextBox7.TabIndex = 27;
-            // 
-            // roundedRichTextBox6
-            // 
-            this.roundedRichTextBox6.BackColor = System.Drawing.Color.White;
-            this.roundedRichTextBox6.BorderColor = System.Drawing.Color.Gray;
-            this.roundedRichTextBox6.BorderWidth = 1;
-            this.roundedRichTextBox6.CornerRadius = 15;
-            this.roundedRichTextBox6.Location = new System.Drawing.Point(28, 147);
-            this.roundedRichTextBox6.Name = "roundedRichTextBox6";
-            this.roundedRichTextBox6.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox6.Size = new System.Drawing.Size(219, 26);
-            this.roundedRichTextBox6.TabIndex = 26;
-            this.roundedRichTextBox6.Load += new System.EventHandler(this.roundedRichTextBox6_Load);
-            // 
-            // roundedRichTextBox1
-            // 
-            this.roundedRichTextBox1.BackColor = System.Drawing.Color.White;
-            this.roundedRichTextBox1.BorderColor = System.Drawing.Color.Gray;
-            this.roundedRichTextBox1.BorderWidth = 1;
-            this.roundedRichTextBox1.CornerRadius = 15;
-            this.roundedRichTextBox1.Location = new System.Drawing.Point(28, 90);
-            this.roundedRichTextBox1.Name = "roundedRichTextBox1";
-            this.roundedRichTextBox1.Padding = new System.Windows.Forms.Padding(3);
-            this.roundedRichTextBox1.Size = new System.Drawing.Size(219, 26);
-            this.roundedRichTextBox1.TabIndex = 21;
+            this.price.BackColor = System.Drawing.Color.White;
+            this.price.BorderColor = System.Drawing.Color.Gray;
+            this.price.BorderWidth = 1;
+            this.price.CornerRadius = 15;
+            this.price.Location = new System.Drawing.Point(28, 259);
+            this.price.Name = "price";
+            this.price.Padding = new System.Windows.Forms.Padding(3);
+            this.price.Size = new System.Drawing.Size(219, 26);
+            this.price.TabIndex = 27;
             // 
             // label4
             // 
@@ -342,6 +231,59 @@
             this.label4.Size = new System.Drawing.Size(177, 29);
             this.label4.TabIndex = 16;
             this.label4.Text = "ADD A TRIP";
+            // 
+            // destinationCombo
+            // 
+            this.destinationCombo.FormattingEnabled = true;
+            this.destinationCombo.Location = new System.Drawing.Point(28, 152);
+            this.destinationCombo.Name = "destinationCombo";
+            this.destinationCombo.Size = new System.Drawing.Size(219, 21);
+            this.destinationCombo.TabIndex = 47;
+            // 
+            // typecombo
+            // 
+            this.typecombo.FormattingEnabled = true;
+            this.typecombo.Location = new System.Drawing.Point(333, 152);
+            this.typecombo.Name = "typecombo";
+            this.typecombo.Size = new System.Drawing.Size(219, 21);
+            this.typecombo.TabIndex = 48;
+            // 
+            // capcombo
+            // 
+            this.capcombo.FormattingEnabled = true;
+            this.capcombo.Location = new System.Drawing.Point(333, 214);
+            this.capcombo.Name = "capcombo";
+            this.capcombo.Size = new System.Drawing.Size(219, 21);
+            this.capcombo.TabIndex = 49;
+            // 
+            // accecombo
+            // 
+            this.accecombo.FormattingEnabled = true;
+            this.accecombo.Location = new System.Drawing.Point(333, 264);
+            this.accecombo.Name = "accecombo";
+            this.accecombo.Size = new System.Drawing.Size(219, 21);
+            this.accecombo.TabIndex = 50;
+            // 
+            // start
+            // 
+            this.start.Location = new System.Drawing.Point(28, 311);
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(219, 20);
+            this.start.TabIndex = 51;
+            // 
+            // end
+            // 
+            this.end.Location = new System.Drawing.Point(333, 311);
+            this.end.Name = "end";
+            this.end.Size = new System.Drawing.Size(219, 20);
+            this.end.TabIndex = 52;
+            // 
+            // cap
+            // 
+            this.cap.Location = new System.Drawing.Point(28, 214);
+            this.cap.Name = "cap";
+            this.cap.Size = new System.Drawing.Size(219, 20);
+            this.cap.TabIndex = 53;
             // 
             // AddTrip
             // 
@@ -356,6 +298,7 @@
             this.Load += new System.EventHandler(this.AddTrip_Load);
             this.translucentRoundedPanel1.ResumeLayout(false);
             this.translucentRoundedPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cap)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -364,19 +307,10 @@
 
         private Components.TranslucentRoundedPanel translucentRoundedPanel1;
         private System.Windows.Forms.Label label4;
-        private RoundedRichTextBox roundedRichTextBox2;
-        private RoundedRichTextBox roundedRichTextBox8;
-        private RoundedRichTextBox roundedRichTextBox7;
-        private RoundedRichTextBox roundedRichTextBox6;
-        private RoundedRichTextBox roundedRichTextBox1;
-        private RoundedRichTextBox roundedRichTextBox10;
-        private RoundedRichTextBox roundedRichTextBox9;
-        private RoundedRichTextBox roundedRichTextBox5;
-        private RoundedRichTextBox roundedRichTextBox4;
-        private RoundedRichTextBox roundedRichTextBox3;
+        private RoundedRichTextBox price;
+        private RoundedRichTextBox tripTitle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -385,5 +319,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private RoundedButton roundedButton1;
+        private System.Windows.Forms.DateTimePicker end;
+        private System.Windows.Forms.DateTimePicker start;
+        private System.Windows.Forms.ComboBox accecombo;
+        private System.Windows.Forms.ComboBox capcombo;
+        private System.Windows.Forms.ComboBox typecombo;
+        private System.Windows.Forms.ComboBox destinationCombo;
+        private System.Windows.Forms.NumericUpDown cap;
     }
 }

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
+            this.response = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.inqui = new System.Windows.Forms.RichTextBox();
+            this.det = new System.Windows.Forms.RichTextBox();
             this.translucentRoundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,9 +45,9 @@
             this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderWidth = 1;
-            this.translucentRoundedPanel1.Controls.Add(this.richTextBox1);
-            this.translucentRoundedPanel1.Controls.Add(this.listView2);
-            this.translucentRoundedPanel1.Controls.Add(this.listView1);
+            this.translucentRoundedPanel1.Controls.Add(this.det);
+            this.translucentRoundedPanel1.Controls.Add(this.inqui);
+            this.translucentRoundedPanel1.Controls.Add(this.response);
             this.translucentRoundedPanel1.Controls.Add(this.button1);
             this.translucentRoundedPanel1.Controls.Add(this.label6);
             this.translucentRoundedPanel1.Controls.Add(this.label2);
@@ -58,6 +58,14 @@
             this.translucentRoundedPanel1.Name = "translucentRoundedPanel1";
             this.translucentRoundedPanel1.Size = new System.Drawing.Size(505, 386);
             this.translucentRoundedPanel1.TabIndex = 18;
+            // 
+            // response
+            // 
+            this.response.Location = new System.Drawing.Point(24, 220);
+            this.response.Name = "response";
+            this.response.Size = new System.Drawing.Size(456, 112);
+            this.response.TabIndex = 34;
+            this.response.Text = "";
             // 
             // button1
             // 
@@ -71,6 +79,7 @@
             this.button1.TabIndex = 32;
             this.button1.Text = "RESPOND";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -117,31 +126,21 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "INQUIRY RESPONSE";
             // 
-            // listView1
+            // inqui
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(24, 87);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(456, 31);
-            this.listView1.TabIndex = 19;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.inqui.Location = new System.Drawing.Point(24, 153);
+            this.inqui.Name = "inqui";
+            this.inqui.Size = new System.Drawing.Size(456, 32);
+            this.inqui.TabIndex = 35;
+            this.inqui.Text = "";
             // 
-            // listView2
+            // det
             // 
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(24, 153);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(456, 31);
-            this.listView2.TabIndex = 33;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(24, 220);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(456, 112);
-            this.richTextBox1.TabIndex = 34;
-            this.richTextBox1.Text = "";
+            this.det.Location = new System.Drawing.Point(24, 84);
+            this.det.Name = "det";
+            this.det.Size = new System.Drawing.Size(456, 32);
+            this.det.TabIndex = 36;
+            this.det.Text = "";
             // 
             // Inquiries
             // 
@@ -166,8 +165,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.RichTextBox response;
+        private System.Windows.Forms.RichTextBox det;
+        private System.Windows.Forms.RichTextBox inqui;
     }
 }

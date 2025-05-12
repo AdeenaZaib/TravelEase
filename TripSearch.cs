@@ -19,8 +19,49 @@ namespace dbproject
             InitializeComponent();
         }
 
+        string con = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
+
+        void LoadFilterOptions()
+        {
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                conn.Open();
+
+                // Populate Destination comboBox
+                string destQuery = "SELECT DISTINCT DestinationName FROM Destination";
+                SqlCommand destCmd = new SqlCommand(destQuery, conn);
+                SqlDataReader destReader = destCmd.ExecuteReader();
+                while (destReader.Read())
+                {
+                    destinationComboBox.Items.Add(destReader["DestinationName"].ToString());
+                }
+                destReader.Close();
+
+                // Populate Trip Type comboBox
+                string typeQuery = "SELECT DISTINCT TripType FROM Trip";
+                SqlCommand typeCmd = new SqlCommand(typeQuery, conn);
+                SqlDataReader typeReader = typeCmd.ExecuteReader();
+                while (typeReader.Read())
+                {
+                    typecombo.Items.Add(typeReader["TripType"].ToString());
+                }
+                typeReader.Close();
+
+                // You can also add for price range or group size etc.
+            }
+        }
+
+
         private void TripSearch_Load(object sender, EventArgs e)
         {
+            //filterOptions.Items.Add("Destination");
+            //filterOptions.Items.Add("Trip Type");
+            //filterOptions.Items.Add("Price Range");
+            //filterOptions.Items.Add("Group Size");
+            //filterOptions.Items.Add("Date Range");
+            //filterOptions.Items.Add("Accessibility");
+            LoadFilterOptions();
+
             string con = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
 
             string query = @"SELECT TripID, TripTitle, Destination.DestinationName FROM Trip JOIN Destination ON Trip.DestinationID = Destination.DestinationID WHERE Trip.StartDate > GETDATE()";
@@ -58,76 +99,8 @@ namespace dbproject
                 }
 
             }
-            filterOptions.Items.Add("Destination");
-            filterOptions.Items.Add("Price");
-            filterOptions.Items.Add("Date");
-            filterOptions.Items.Add("Activity Type");
-
-            // Hide all controls initially
-            destinationComboBox.Visible = false;
-            minPriceUpDown.Visible = maxPriceUpDown.Visible = false;
-            startDatePicker.Visible = endDatePicker.Visible = false;
-            activityListBox.Visible = false;
+            
         }
-
-        private void filterOptions_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            // Delay visibility change until item is actually checked
-            this.BeginInvoke((MethodInvoker)(() =>
-            {
-                string selected = filterOptions.Items[e.Index].ToString();
-                bool isChecked = filterOptions.GetItemChecked(e.Index);
-
-                switch (selected)
-                {
-                    case "Destination":
-                        destinationComboBox.Visible = !isChecked;
-                        break;
-                    case "Price":
-                        minPriceUpDown.Visible = maxPriceUpDown.Visible = !isChecked;
-                        break;
-                    case "Date":
-                        startDatePicker.Visible = endDatePicker.Visible = !isChecked;
-                        break;
-                    case "Activity Type":
-                        activityListBox.Visible = !isChecked;
-                        break;
-                }
-            }));
-        }
-
-        private void applyFilterButton_Click(object sender, EventArgs e)
-        {
-            string query = "SELECT * FROM Trips WHERE 1=1";
-
-            if (destinationComboBox.Visible && destinationComboBox.SelectedItem != null)
-                query += $" AND Destination = '{destinationComboBox.SelectedItem}'";
-
-            if (minPriceUpDown.Visible)
-                query += $" AND Price >= {minPriceUpDown.Value}";
-
-            if (maxPriceUpDown.Visible)
-                query += $" AND Price <= {maxPriceUpDown.Value}";
-
-            if (startDatePicker.Visible)
-                query += $" AND TripDate >= '{startDatePicker.Value.ToShortDateString()}'";
-
-            if (endDatePicker.Visible)
-                query += $" AND TripDate <= '{endDatePicker.Value.ToShortDateString()}'";
-
-            if (activityListBox.Visible)
-            {
-                List<string> activities = new List<string>();
-                foreach (var item in activityListBox.CheckedItems)
-                    activities.Add($"'{item.ToString()}'");
-
-                if (activities.Any())
-                    query += $" AND ActivityType IN ({string.Join(",", activities)})";
-            }
-
-            MessageBox.Show("Generated Query:\n" + query);
-        }
-
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {

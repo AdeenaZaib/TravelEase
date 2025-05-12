@@ -39,6 +39,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.history = new System.Windows.Forms.ListView();
             this.labelButton2 = new LabelButton();
+            this.add = new System.Windows.Forms.Button();
+            this.viewbut = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,7 +181,7 @@
             // history
             // 
             this.history.HideSelection = false;
-            this.history.Location = new System.Drawing.Point(154, 194);
+            this.history.Location = new System.Drawing.Point(44, 188);
             this.history.Name = "history";
             this.history.Size = new System.Drawing.Size(493, 227);
             this.history.TabIndex = 14;
@@ -205,6 +208,35 @@
             this.labelButton2.UseVisualStyleBackColor = false;
             this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
             // 
+            // add
+            // 
+            this.add.Location = new System.Drawing.Point(558, 204);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(109, 42);
+            this.add.TabIndex = 30;
+            this.add.Text = "ADD REVIEW";
+            this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
+            // 
+            // viewbut
+            // 
+            this.viewbut.Location = new System.Drawing.Point(673, 204);
+            this.viewbut.Name = "viewbut";
+            this.viewbut.Size = new System.Drawing.Size(109, 42);
+            this.viewbut.TabIndex = 31;
+            this.viewbut.Text = "VIEW REVIEW";
+            this.viewbut.UseVisualStyleBackColor = true;
+            this.viewbut.Click += new System.EventHandler(this.viewbut_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(558, 272);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(230, 143);
+            this.listView1.TabIndex = 32;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // TravelHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +244,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.viewbut);
+            this.Controls.Add(this.add);
             this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.history);
             this.Controls.Add(this.labelButton5);
@@ -242,5 +277,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView history;
         private LabelButton labelButton2;
+        private System.Windows.Forms.Button add;
+        private System.Windows.Forms.Button viewbut;
+        private System.Windows.Forms.ListView listView1;
     }
 }

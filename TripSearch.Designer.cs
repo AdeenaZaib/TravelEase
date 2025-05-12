@@ -39,29 +39,31 @@
             this.labelButton4 = new LabelButton();
             this.labelButton5 = new LabelButton();
             this.destinationComboBox = new System.Windows.Forms.ComboBox();
-            this.filterOptions = new System.Windows.Forms.CheckedListBox();
             this.minPriceUpDown = new System.Windows.Forms.NumericUpDown();
-            this.maxPriceUpDown = new System.Windows.Forms.NumericUpDown();
-            this.startDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.endDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.activityListBox = new System.Windows.Forms.CheckedListBox();
             this.apply = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.tripview = new System.Windows.Forms.ListView();
-            this.tripIdComboBox = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.labelButton2 = new LabelButton();
+            this.typecombo = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minPriceUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maxPriceUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(502, 116);
+            this.pictureBox1.Location = new System.Drawing.Point(328, 106);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(52, 48);
             this.pictureBox1.TabIndex = 14;
@@ -86,7 +88,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(258, 125);
+            this.label2.Location = new System.Drawing.Point(84, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(238, 29);
             this.label2.TabIndex = 5;
@@ -204,103 +206,36 @@
             // destinationComboBox
             // 
             this.destinationComboBox.FormattingEnabled = true;
-            this.destinationComboBox.Location = new System.Drawing.Point(586, 207);
+            this.destinationComboBox.Location = new System.Drawing.Point(599, 167);
             this.destinationComboBox.Name = "destinationComboBox";
             this.destinationComboBox.Size = new System.Drawing.Size(177, 21);
             this.destinationComboBox.TabIndex = 15;
             this.destinationComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // filterOptions
-            // 
-            this.filterOptions.FormattingEnabled = true;
-            this.filterOptions.Location = new System.Drawing.Point(621, 276);
-            this.filterOptions.Name = "filterOptions";
-            this.filterOptions.Size = new System.Drawing.Size(120, 94);
-            this.filterOptions.TabIndex = 16;
-            // 
             // minPriceUpDown
             // 
-            this.minPriceUpDown.Location = new System.Drawing.Point(621, 323);
+            this.minPriceUpDown.Location = new System.Drawing.Point(634, 354);
             this.minPriceUpDown.Name = "minPriceUpDown";
             this.minPriceUpDown.Size = new System.Drawing.Size(120, 20);
             this.minPriceUpDown.TabIndex = 17;
             // 
-            // maxPriceUpDown
-            // 
-            this.maxPriceUpDown.Location = new System.Drawing.Point(621, 276);
-            this.maxPriceUpDown.Name = "maxPriceUpDown";
-            this.maxPriceUpDown.Size = new System.Drawing.Size(120, 20);
-            this.maxPriceUpDown.TabIndex = 18;
-            // 
-            // startDatePicker
-            // 
-            this.startDatePicker.Location = new System.Drawing.Point(573, 295);
-            this.startDatePicker.Name = "startDatePicker";
-            this.startDatePicker.Size = new System.Drawing.Size(200, 20);
-            this.startDatePicker.TabIndex = 19;
-            // 
-            // endDatePicker
-            // 
-            this.endDatePicker.Location = new System.Drawing.Point(563, 333);
-            this.endDatePicker.Name = "endDatePicker";
-            this.endDatePicker.Size = new System.Drawing.Size(200, 20);
-            this.endDatePicker.TabIndex = 20;
-            // 
-            // activityListBox
-            // 
-            this.activityListBox.FormattingEnabled = true;
-            this.activityListBox.Location = new System.Drawing.Point(621, 276);
-            this.activityListBox.Name = "activityListBox";
-            this.activityListBox.Size = new System.Drawing.Size(120, 94);
-            this.activityListBox.TabIndex = 21;
-            // 
             // apply
             // 
-            this.apply.Location = new System.Drawing.Point(644, 389);
+            this.apply.Location = new System.Drawing.Point(576, 395);
             this.apply.Name = "apply";
-            this.apply.Size = new System.Drawing.Size(75, 23);
+            this.apply.Size = new System.Drawing.Size(96, 31);
             this.apply.TabIndex = 22;
             this.apply.Text = "APPLY";
             this.apply.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(640, 175);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 19);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Filters";
             // 
             // tripview
             // 
             this.tripview.HideSelection = false;
             this.tripview.Location = new System.Drawing.Point(44, 175);
             this.tripview.Name = "tripview";
-            this.tripview.Size = new System.Drawing.Size(402, 203);
+            this.tripview.Size = new System.Drawing.Size(402, 212);
             this.tripview.TabIndex = 24;
             this.tripview.UseCompatibleStateImageBehavior = false;
-            // 
-            // tripIdComboBox
-            // 
-            this.tripIdComboBox.FormattingEnabled = true;
-            this.tripIdComboBox.Location = new System.Drawing.Point(187, 403);
-            this.tripIdComboBox.Name = "tripIdComboBox";
-            this.tripIdComboBox.Size = new System.Drawing.Size(218, 21);
-            this.tripIdComboBox.TabIndex = 25;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(90, 403);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 16);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "Select Trip ID:";
             // 
             // labelButton2
             // 
@@ -322,23 +257,136 @@
             this.labelButton2.UseVisualStyleBackColor = false;
             this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
             // 
+            // typecombo
+            // 
+            this.typecombo.FormattingEnabled = true;
+            this.typecombo.Location = new System.Drawing.Point(599, 209);
+            this.typecombo.Name = "typecombo";
+            this.typecombo.Size = new System.Drawing.Size(177, 21);
+            this.typecombo.TabIndex = 31;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(488, 172);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 16);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Destination:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(496, 210);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 16);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Trip Type:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(505, 287);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 16);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Duration:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(505, 354);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 16);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "Group Size:";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(621, 320);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(142, 25);
+            this.richTextBox1.TabIndex = 37;
+            this.richTextBox1.Text = "";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(594, 116);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 29);
+            this.label10.TabIndex = 38;
+            this.label10.Text = "Filters";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(496, 320);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 16);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "Price Range:";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(621, 286);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(142, 25);
+            this.richTextBox2.TabIndex = 40;
+            this.richTextBox2.Text = "";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(599, 247);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(177, 21);
+            this.comboBox1.TabIndex = 41;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(488, 248);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(85, 16);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Accessibility:";
+            // 
             // TripSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.labelButton2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.tripIdComboBox);
-            this.Controls.Add(this.tripview);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.typecombo);
+            this.Controls.Add(this.labelButton2);
+            this.Controls.Add(this.tripview);
             this.Controls.Add(this.apply);
-            this.Controls.Add(this.activityListBox);
-            this.Controls.Add(this.endDatePicker);
-            this.Controls.Add(this.startDatePicker);
-            this.Controls.Add(this.maxPriceUpDown);
             this.Controls.Add(this.minPriceUpDown);
-            this.Controls.Add(this.filterOptions);
             this.Controls.Add(this.destinationComboBox);
             this.Controls.Add(this.labelButton5);
             this.Controls.Add(this.labelButton4);
@@ -355,7 +403,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minPriceUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maxPriceUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,17 +419,20 @@
         private LabelButton labelButton4;
         private LabelButton labelButton5;
         private System.Windows.Forms.ComboBox destinationComboBox;
-        private System.Windows.Forms.CheckedListBox filterOptions;
         private System.Windows.Forms.NumericUpDown minPriceUpDown;
-        private System.Windows.Forms.NumericUpDown maxPriceUpDown;
-        private System.Windows.Forms.DateTimePicker startDatePicker;
-        private System.Windows.Forms.DateTimePicker endDatePicker;
-        private System.Windows.Forms.CheckedListBox activityListBox;
         private System.Windows.Forms.Button apply;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListView tripview;
-        private System.Windows.Forms.ComboBox tripIdComboBox;
-        private System.Windows.Forms.Label label5;
         private LabelButton labelButton2;
+        private System.Windows.Forms.ComboBox typecombo;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -314,6 +314,7 @@
             this.Controls.Add(this.translucentRoundedPanel1);
             this.Name = "OperatorSignup";
             this.Text = "OperatorSignup";
+            this.Load += new System.EventHandler(this.OperatorSignup_Load);
             this.translucentRoundedPanel1.ResumeLayout(false);
             this.translucentRoundedPanel1.PerformLayout();
             this.ResumeLayout(false);
