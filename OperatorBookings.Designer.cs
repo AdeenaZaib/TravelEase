@@ -38,10 +38,8 @@
             this.labelButton5 = new LabelButton();
             this.labelButton6 = new LabelButton();
             this.translucentRoundedPanel2 = new Components.TranslucentRoundedPanel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.inq = new System.Windows.Forms.ListView();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
@@ -195,21 +193,21 @@
             this.translucentRoundedPanel2.BackColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel2.BorderWidth = 1;
-            this.translucentRoundedPanel2.Controls.Add(this.listView1);
+            this.translucentRoundedPanel2.Controls.Add(this.inq);
             this.translucentRoundedPanel2.CornerRadius = 10;
             this.translucentRoundedPanel2.Location = new System.Drawing.Point(497, 164);
             this.translucentRoundedPanel2.Name = "translucentRoundedPanel2";
             this.translucentRoundedPanel2.Size = new System.Drawing.Size(266, 220);
             this.translucentRoundedPanel2.TabIndex = 42;
             // 
-            // listView1
+            // inq
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(254, 206);
-            this.listView1.TabIndex = 39;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.inq.HideSelection = false;
+            this.inq.Location = new System.Drawing.Point(3, 3);
+            this.inq.Name = "inq";
+            this.inq.Size = new System.Drawing.Size(254, 206);
+            this.inq.TabIndex = 39;
+            this.inq.UseCompatibleStateImageBehavior = false;
             // 
             // label5
             // 
@@ -224,35 +222,16 @@
             this.label5.Text = "INQUIRIES";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(509, 399);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 18);
-            this.label6.TabIndex = 44;
-            this.label6.Text = "Enter Inquiry ID:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(626, 399);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(64, 29);
-            this.richTextBox1.TabIndex = 43;
-            this.richTextBox1.Text = "";
-            // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(712, 405);
+            this.button1.Location = new System.Drawing.Point(596, 399);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 23);
+            this.button1.Size = new System.Drawing.Size(81, 28);
             this.button1.TabIndex = 45;
-            this.button1.Text = "GO!";
+            this.button1.Text = "RESPOND";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 
@@ -275,8 +254,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.translucentRoundedPanel2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.labelButton6);
@@ -289,6 +266,7 @@
             this.Controls.Add(this.label1);
             this.Name = "OperatorBookings";
             this.Text = "OperatorBookings";
+            this.Load += new System.EventHandler(this.OperatorBookings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.translucentRoundedPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -307,10 +285,8 @@
         private LabelButton labelButton5;
         private LabelButton labelButton6;
         private Components.TranslucentRoundedPanel translucentRoundedPanel2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView inq;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
     }

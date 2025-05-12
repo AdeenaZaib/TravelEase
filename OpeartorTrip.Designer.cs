@@ -37,8 +37,13 @@
             this.labelButton5 = new LabelButton();
             this.labelButton6 = new LabelButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.roundedButton1 = new RoundedButton();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.update = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
+            this.txt = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.combo = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,34 +195,78 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(25, 114);
+            this.label4.Location = new System.Drawing.Point(170, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 29);
             this.label4.TabIndex = 18;
             this.label4.Text = "Trips";
             // 
-            // roundedButton1
-            // 
-            this.roundedButton1.BackColor = System.Drawing.Color.DarkKhaki;
-            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.roundedButton1.Location = new System.Drawing.Point(516, 146);
-            this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.Size = new System.Drawing.Size(75, 23);
-            this.roundedButton1.TabIndex = 19;
-            this.roundedButton1.Text = "List ";
-            this.roundedButton1.UseVisualStyleBackColor = false;
-            this.roundedButton1.Click += new System.EventHandler(this.roundedButton1_Click);
-            // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.listView1.BackColor = System.Drawing.Color.Linen;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(30, 146);
+            this.listView1.Location = new System.Drawing.Point(30, 165);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(388, 275);
+            this.listView1.Size = new System.Drawing.Size(452, 256);
             this.listView1.TabIndex = 21;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // update
+            // 
+            this.update.Location = new System.Drawing.Point(610, 285);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(92, 34);
+            this.update.TabIndex = 22;
+            this.update.Text = "UPDATE";
+            this.update.UseVisualStyleBackColor = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
+            // 
+            // delete
+            // 
+            this.delete.Location = new System.Drawing.Point(610, 387);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(92, 34);
+            this.delete.TabIndex = 24;
+            this.delete.Text = "DELETE";
+            this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
+            // 
+            // txt
+            // 
+            this.txt.Location = new System.Drawing.Point(580, 231);
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(163, 36);
+            this.txt.TabIndex = 25;
+            this.txt.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(631, 174);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 18);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Update:";
+            // 
+            // combo
+            // 
+            this.combo.FormattingEnabled = true;
+            this.combo.Location = new System.Drawing.Point(580, 204);
+            this.combo.Name = "combo";
+            this.combo.Size = new System.Drawing.Size(163, 21);
+            this.combo.TabIndex = 27;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(610, 337);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 34);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "ADD TRIP";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // OpeartorTrip
             // 
@@ -225,8 +274,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.combo);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txt);
+            this.Controls.Add(this.delete);
+            this.Controls.Add(this.update);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.roundedButton1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelButton6);
             this.Controls.Add(this.labelButton5);
@@ -256,7 +310,12 @@
         private LabelButton labelButton5;
         private LabelButton labelButton6;
         private System.Windows.Forms.Label label4;
-        private RoundedButton roundedButton1;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button update;
+        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.RichTextBox txt;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox combo;
+        private System.Windows.Forms.Button button1;
     }
 }

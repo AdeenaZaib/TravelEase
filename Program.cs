@@ -11,6 +11,7 @@ namespace dbproject
     {
         public int userid;
         public int bookingid;
+        public int inqid;
         public string fisrtName;
         public string lastName;
         public string email;
@@ -28,7 +29,7 @@ namespace dbproject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            CurrentUser = new UserInfo { userid = 0, bookingid = 0, fisrtName = "", lastName = "", email = "", password = "" };
+            CurrentUser = new UserInfo { userid = 0, bookingid = 0, inqid = 0, fisrtName = "", lastName = "", email = "", password = "" };
             Application.Run(new Login());
         }
     }

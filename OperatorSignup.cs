@@ -73,5 +73,10 @@ namespace dbproject
             signUp.Show();
             this.Hide();
         }
+
+        private void OperatorSignup_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
