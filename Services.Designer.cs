@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labelButton2 = new LabelButton();
+            this.servicesView = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // labelButton5
@@ -138,7 +139,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.label2.Location = new System.Drawing.Point(376, 112);
+            this.label2.Location = new System.Drawing.Point(308, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(223, 29);
             this.label2.TabIndex = 14;
@@ -177,6 +178,15 @@
             this.labelButton2.UseVisualStyleBackColor = false;
             this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
             // 
+            // servicesView
+            // 
+            this.servicesView.HideSelection = false;
+            this.servicesView.Location = new System.Drawing.Point(70, 148);
+            this.servicesView.Name = "servicesView";
+            this.servicesView.Size = new System.Drawing.Size(411, 247);
+            this.servicesView.TabIndex = 37;
+            this.servicesView.UseCompatibleStateImageBehavior = false;
+            // 
             // Services
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,6 +195,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.servicesView);
             this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelButton5);
@@ -210,5 +221,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private LabelButton labelButton2;
+        private System.Windows.Forms.ListView servicesView;
     }
 }

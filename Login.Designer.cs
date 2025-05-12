@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
+            this.pwd = new System.Windows.Forms.RichTextBox();
             this.Loginn = new RoundedButton();
+            this.emailtxt = new System.Windows.Forms.RichTextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.emailtxt = new System.Windows.Forms.RichTextBox();
-            this.pwd = new System.Windows.Forms.RichTextBox();
             this.translucentRoundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,14 @@
             this.translucentRoundedPanel1.Size = new System.Drawing.Size(369, 415);
             this.translucentRoundedPanel1.TabIndex = 0;
             // 
+            // pwd
+            // 
+            this.pwd.Location = new System.Drawing.Point(60, 258);
+            this.pwd.Name = "pwd";
+            this.pwd.Size = new System.Drawing.Size(259, 31);
+            this.pwd.TabIndex = 7;
+            this.pwd.Text = "";
+            // 
             // Loginn
             // 
             this.Loginn.BackColor = System.Drawing.Color.DarkKhaki;
@@ -74,6 +82,14 @@
             this.Loginn.Text = "LOGIN";
             this.Loginn.UseVisualStyleBackColor = false;
             this.Loginn.Click += new System.EventHandler(this.Loginn_Click);
+            // 
+            // emailtxt
+            // 
+            this.emailtxt.Location = new System.Drawing.Point(60, 188);
+            this.emailtxt.Name = "emailtxt";
+            this.emailtxt.Size = new System.Drawing.Size(259, 31);
+            this.emailtxt.TabIndex = 1;
+            this.emailtxt.Text = "";
             // 
             // linkLabel1
             // 
@@ -135,22 +151,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "LOGIN";
             // 
-            // emailtxt
-            // 
-            this.emailtxt.Location = new System.Drawing.Point(60, 188);
-            this.emailtxt.Name = "emailtxt";
-            this.emailtxt.Size = new System.Drawing.Size(259, 31);
-            this.emailtxt.TabIndex = 1;
-            this.emailtxt.Text = "";
-            // 
-            // pwd
-            // 
-            this.pwd.Location = new System.Drawing.Point(60, 258);
-            this.pwd.Name = "pwd";
-            this.pwd.Size = new System.Drawing.Size(259, 31);
-            this.pwd.TabIndex = 7;
-            this.pwd.Text = "";
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,7 +161,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.translucentRoundedPanel1);
             this.Name = "Login";
-            this.Text = "Form3";
+            this.Text = "lol";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.translucentRoundedPanel1.ResumeLayout(false);
             this.translucentRoundedPanel1.PerformLayout();
