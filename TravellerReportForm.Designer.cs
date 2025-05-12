@@ -33,10 +33,10 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(126, 111);
+            this.reportViewer1.Location = new System.Drawing.Point(12, 89);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer1.Size = new System.Drawing.Size(762, 358);
             this.reportViewer1.TabIndex = 0;
             // 
             // TravellerReportForm

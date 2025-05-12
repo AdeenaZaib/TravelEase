@@ -1,16 +1,141 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<xs:schema id="ABookingDataSet" 
-                  targetNamespace="http://tempuri.org/ABookingDataSet.xsd"
-                  elementFormDefault="qualified"
-                  attributeFormDefault="qualified"
-                  xmlns="http://tempuri.org/ABookingDataSet.xsd"
-                  xmlns:mstns="http://tempuri.org/ABookingDataSet.xsd"
-                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
-                  xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
-    <xs:element name="ABookingDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true">
-        <xs:complexType>
-            <xs:choice minOccurs="0" maxOccurs="unbounded"></xs:choice>
-        </xs:complexType>
-    </xs:element>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ABookingDataSet" targetNamespace="http://tempuri.org/ABookingDataSet.xsd" xmlns:mstns="http://tempuri.org/ABookingDataSet.xsd" xmlns="http://tempuri.org/ABookingDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TravelEaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TravelEaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.dbproject.Properties.Settings.GlobalReference.Default.TravelEaseConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_IncompleteBookingsTableAdapter" GeneratorDataComponentClassName="View_IncompleteBookingsTableAdapter" Name="View_IncompleteBookings" UserDataComponentName="View_IncompleteBookingsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TravelEaseConnectionString (Settings)" DbObjectName="TravelEase.dbo.View_IncompleteBookings" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM View_IncompleteBookings</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IncompleteBookings" DataSetColumn="IncompleteBookings" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_PaymentFailureTableAdapter" GeneratorDataComponentClassName="View_PaymentFailureTableAdapter" Name="View_PaymentFailure" UserDataComponentName="View_PaymentFailureTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TravelEaseConnectionString (Settings)" DbObjectName="TravelEase.dbo.View_PaymentFailure" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM View_PaymentFailure</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PaymentFailure" DataSetColumn="PaymentFailure" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_HighPriceTableAdapter" GeneratorDataComponentClassName="View_HighPriceTableAdapter" Name="View_HighPrice" UserDataComponentName="View_HighPriceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TravelEaseConnectionString (Settings)" DbObjectName="TravelEase.dbo.View_HighPrice" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM View_HighPrice</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="HighPrice" DataSetColumn="HighPrice" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_RecoveryRateTableAdapter" GeneratorDataComponentClassName="View_RecoveryRateTableAdapter" Name="View_RecoveryRate" UserDataComponentName="View_RecoveryRateTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TravelEaseConnectionString (Settings)" DbObjectName="TravelEase.dbo.View_RecoveryRate" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM View_RecoveryRate</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RecoveryRate" DataSetColumn="RecoveryRate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_RevenueLossTableAdapter" GeneratorDataComponentClassName="View_RevenueLossTableAdapter" Name="View_RevenueLoss" UserDataComponentName="View_RevenueLossTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TravelEaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT SUM(Trip.PriceRange) AS RevenueLoss
+FROM TripBooking
+JOIN Trip ON Trip.TripID = TripBooking.TripID
+WHERE TripBooking.BookingStatus = 'InProcess'
+OR TripBooking.BookingStatus = 'Cancelled'
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RevenueLoss" DataSetColumn="RevenueLoss" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ABookingDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="ABookingDataSet" msprop:Generator_DataSetName="ABookingDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_IncompleteBookings" msprop:Generator_RowEvHandlerName="View_IncompleteBookingsRowChangeEventHandler" msprop:Generator_RowDeletedName="View_IncompleteBookingsRowDeleted" msprop:Generator_RowDeletingName="View_IncompleteBookingsRowDeleting" msprop:Generator_RowEvArgName="View_IncompleteBookingsRowChangeEvent" msprop:Generator_TablePropName="View_IncompleteBookings" msprop:Generator_RowChangedName="View_IncompleteBookingsRowChanged" msprop:Generator_RowChangingName="View_IncompleteBookingsRowChanging" msprop:Generator_TableClassName="View_IncompleteBookingsDataTable" msprop:Generator_RowClassName="View_IncompleteBookingsRow" msprop:Generator_TableVarName="tableView_IncompleteBookings" msprop:Generator_UserTableName="View_IncompleteBookings">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IncompleteBookings" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="IncompleteBookings" msprop:Generator_ColumnPropNameInTable="IncompleteBookingsColumn" msprop:Generator_ColumnVarNameInTable="columnIncompleteBookings" msprop:Generator_UserColumnName="IncompleteBookings" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_PaymentFailure" msprop:Generator_RowEvHandlerName="View_PaymentFailureRowChangeEventHandler" msprop:Generator_RowDeletedName="View_PaymentFailureRowDeleted" msprop:Generator_RowDeletingName="View_PaymentFailureRowDeleting" msprop:Generator_RowEvArgName="View_PaymentFailureRowChangeEvent" msprop:Generator_TablePropName="View_PaymentFailure" msprop:Generator_RowChangedName="View_PaymentFailureRowChanged" msprop:Generator_RowChangingName="View_PaymentFailureRowChanging" msprop:Generator_TableClassName="View_PaymentFailureDataTable" msprop:Generator_RowClassName="View_PaymentFailureRow" msprop:Generator_TableVarName="tableView_PaymentFailure" msprop:Generator_UserTableName="View_PaymentFailure">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PaymentFailure" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="PaymentFailure" msprop:Generator_ColumnPropNameInTable="PaymentFailureColumn" msprop:Generator_ColumnVarNameInTable="columnPaymentFailure" msprop:Generator_UserColumnName="PaymentFailure" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_HighPrice" msprop:Generator_RowEvHandlerName="View_HighPriceRowChangeEventHandler" msprop:Generator_RowDeletedName="View_HighPriceRowDeleted" msprop:Generator_RowDeletingName="View_HighPriceRowDeleting" msprop:Generator_RowEvArgName="View_HighPriceRowChangeEvent" msprop:Generator_TablePropName="View_HighPrice" msprop:Generator_RowChangedName="View_HighPriceRowChanged" msprop:Generator_RowChangingName="View_HighPriceRowChanging" msprop:Generator_TableClassName="View_HighPriceDataTable" msprop:Generator_RowClassName="View_HighPriceRow" msprop:Generator_TableVarName="tableView_HighPrice" msprop:Generator_UserTableName="View_HighPrice">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HighPrice" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="HighPrice" msprop:Generator_ColumnPropNameInTable="HighPriceColumn" msprop:Generator_ColumnVarNameInTable="columnHighPrice" msprop:Generator_UserColumnName="HighPrice" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_RecoveryRate" msprop:Generator_RowEvHandlerName="View_RecoveryRateRowChangeEventHandler" msprop:Generator_RowDeletedName="View_RecoveryRateRowDeleted" msprop:Generator_RowDeletingName="View_RecoveryRateRowDeleting" msprop:Generator_RowEvArgName="View_RecoveryRateRowChangeEvent" msprop:Generator_TablePropName="View_RecoveryRate" msprop:Generator_RowChangedName="View_RecoveryRateRowChanged" msprop:Generator_RowChangingName="View_RecoveryRateRowChanging" msprop:Generator_TableClassName="View_RecoveryRateDataTable" msprop:Generator_RowClassName="View_RecoveryRateRow" msprop:Generator_TableVarName="tableView_RecoveryRate" msprop:Generator_UserTableName="View_RecoveryRate">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RecoveryRate" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="RecoveryRate" msprop:Generator_ColumnPropNameInTable="RecoveryRateColumn" msprop:Generator_ColumnVarNameInTable="columnRecoveryRate" msprop:Generator_UserColumnName="RecoveryRate" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_RevenueLoss" msprop:Generator_RowEvHandlerName="View_RevenueLossRowChangeEventHandler" msprop:Generator_RowDeletedName="View_RevenueLossRowDeleted" msprop:Generator_RowDeletingName="View_RevenueLossRowDeleting" msprop:Generator_RowEvArgName="View_RevenueLossRowChangeEvent" msprop:Generator_TablePropName="View_RevenueLoss" msprop:Generator_RowChangedName="View_RevenueLossRowChanged" msprop:Generator_RowChangingName="View_RevenueLossRowChanging" msprop:Generator_TableClassName="View_RevenueLossDataTable" msprop:Generator_RowClassName="View_RevenueLossRow" msprop:Generator_TableVarName="tableView_RevenueLoss" msprop:Generator_UserTableName="View_RevenueLoss">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RevenueLoss" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="RevenueLoss" msprop:Generator_ColumnPropNameInTable="RevenueLossColumn" msprop:Generator_ColumnVarNameInTable="columnRevenueLoss" msprop:Generator_UserColumnName="RevenueLoss" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
