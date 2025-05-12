@@ -1,0 +1,171 @@
+﻿namespace dbproject
+{
+    partial class AddMeal
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
+            this.description = new System.Windows.Forms.RichTextBox();
+            this.timing = new System.Windows.Forms.RichTextBox();
+            this.Mname = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.translucentRoundedPanel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // translucentRoundedPanel1
+            // 
+            this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.translucentRoundedPanel1.BorderWidth = 1;
+            this.translucentRoundedPanel1.Controls.Add(this.description);
+            this.translucentRoundedPanel1.Controls.Add(this.timing);
+            this.translucentRoundedPanel1.Controls.Add(this.Mname);
+            this.translucentRoundedPanel1.Controls.Add(this.button1);
+            this.translucentRoundedPanel1.Controls.Add(this.label6);
+            this.translucentRoundedPanel1.Controls.Add(this.label2);
+            this.translucentRoundedPanel1.Controls.Add(this.label1);
+            this.translucentRoundedPanel1.Controls.Add(this.label4);
+            this.translucentRoundedPanel1.CornerRadius = 10;
+            this.translucentRoundedPanel1.Location = new System.Drawing.Point(148, 32);
+            this.translucentRoundedPanel1.Name = "translucentRoundedPanel1";
+            this.translucentRoundedPanel1.Size = new System.Drawing.Size(505, 386);
+            this.translucentRoundedPanel1.TabIndex = 20;
+            // 
+            // description
+            // 
+            this.description.Location = new System.Drawing.Point(103, 238);
+            this.description.Name = "description";
+            this.description.Size = new System.Drawing.Size(286, 86);
+            this.description.TabIndex = 40;
+            this.description.Text = "";
+            // 
+            // timing
+            // 
+            this.timing.Location = new System.Drawing.Point(104, 169);
+            this.timing.Name = "timing";
+            this.timing.Size = new System.Drawing.Size(286, 31);
+            this.timing.TabIndex = 39;
+            this.timing.Text = "";
+            // 
+            // Mname
+            // 
+            this.Mname.Location = new System.Drawing.Point(104, 96);
+            this.Mname.Name = "Mname";
+            this.Mname.Size = new System.Drawing.Size(286, 31);
+            this.Mname.TabIndex = 38;
+            this.Mname.Text = "";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Peru;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("DejaVu Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(167, 340);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 25);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "ADD MEAL";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(99, 215);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 20);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Description";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(99, 146);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 20);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Timing";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(99, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 20);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Meal Name";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(150, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(165, 29);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "ADD MEAL";
+            // 
+            // AddMeal
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.translucentRoundedPanel1);
+            this.Name = "AddMeal";
+            this.Text = "AddMeal";
+            this.translucentRoundedPanel1.ResumeLayout(false);
+            this.translucentRoundedPanel1.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private Components.TranslucentRoundedPanel translucentRoundedPanel1;
+        private System.Windows.Forms.RichTextBox description;
+        private System.Windows.Forms.RichTextBox timing;
+        private System.Windows.Forms.RichTextBox Mname;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+    }
+}
