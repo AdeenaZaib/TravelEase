@@ -42,6 +42,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.reservation = new System.Windows.Forms.ListView();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.translucentRoundedPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -239,11 +241,30 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(82, 117);
+            this.label4.Location = new System.Drawing.Point(54, 117);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 29);
+            this.label4.Size = new System.Drawing.Size(336, 29);
             this.label4.TabIndex = 46;
-            this.label4.Text = "REMINDERS";
+            this.label4.Text = "TRACK RESERVATIONS";
+            // 
+            // reservation
+            // 
+            this.reservation.HideSelection = false;
+            this.reservation.Location = new System.Drawing.Point(24, 164);
+            this.reservation.Name = "reservation";
+            this.reservation.Size = new System.Drawing.Size(399, 220);
+            this.reservation.TabIndex = 40;
+            this.reservation.UseCompatibleStateImageBehavior = false;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Location = new System.Drawing.Point(148, 399);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(126, 28);
+            this.button2.TabIndex = 47;
+            this.button2.Text = "SEND REMINDER";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // OperatorBookings
             // 
@@ -252,6 +273,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.reservation);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.translucentRoundedPanel2);
@@ -289,5 +312,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListView reservation;
+        private System.Windows.Forms.Button button2;
     }
 }

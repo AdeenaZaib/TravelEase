@@ -40,14 +40,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.roundedButton1 = new RoundedButton();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.sid = new System.Windows.Forms.RichTextBox();
+            this.tid = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.serv = new System.Windows.Forms.ListView();
             this.translucentRoundedPanel2 = new Components.TranslucentRoundedPanel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.trav = new System.Windows.Forms.ListView();
+            this.combo = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.translucentRoundedPanel1.SuspendLayout();
             this.translucentRoundedPanel2.SuspendLayout();
@@ -230,35 +232,36 @@
             // 
             this.roundedButton1.BackColor = System.Drawing.Color.DarkKhaki;
             this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.roundedButton1.Location = new System.Drawing.Point(363, 331);
+            this.roundedButton1.Location = new System.Drawing.Point(363, 352);
             this.roundedButton1.Name = "roundedButton1";
             this.roundedButton1.Size = new System.Drawing.Size(75, 23);
             this.roundedButton1.TabIndex = 22;
             this.roundedButton1.Text = "ASSIGN";
             this.roundedButton1.UseVisualStyleBackColor = false;
+            this.roundedButton1.Click += new System.EventHandler(this.roundedButton1_Click);
             // 
-            // richTextBox1
+            // sid
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(423, 201);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(81, 28);
-            this.richTextBox1.TabIndex = 23;
-            this.richTextBox1.Text = "";
+            this.sid.Location = new System.Drawing.Point(425, 242);
+            this.sid.Name = "sid";
+            this.sid.Size = new System.Drawing.Size(81, 28);
+            this.sid.TabIndex = 23;
+            this.sid.Text = "";
             // 
-            // richTextBox2
+            // tid
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(423, 256);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(81, 28);
-            this.richTextBox2.TabIndex = 24;
-            this.richTextBox2.Text = "";
+            this.tid.Location = new System.Drawing.Point(425, 297);
+            this.tid.Name = "tid";
+            this.tid.Size = new System.Drawing.Size(81, 28);
+            this.tid.TabIndex = 24;
+            this.tid.Text = "";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label6.Location = new System.Drawing.Point(299, 201);
+            this.label6.Location = new System.Drawing.Point(294, 242);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 18);
             this.label6.TabIndex = 36;
@@ -269,7 +272,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(292, 256);
+            this.label7.Location = new System.Drawing.Point(294, 297);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(125, 18);
             this.label7.TabIndex = 37;
@@ -280,7 +283,7 @@
             this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderWidth = 1;
-            this.translucentRoundedPanel1.Controls.Add(this.listView3);
+            this.translucentRoundedPanel1.Controls.Add(this.serv);
             this.translucentRoundedPanel1.CornerRadius = 10;
             this.translucentRoundedPanel1.Location = new System.Drawing.Point(20, 151);
             this.translucentRoundedPanel1.Name = "translucentRoundedPanel1";
@@ -288,47 +291,69 @@
             this.translucentRoundedPanel1.TabIndex = 38;
             this.translucentRoundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.translucentRoundedPanel1_Paint);
             // 
-            // listView3
+            // serv
             // 
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(4, 3);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(254, 260);
-            this.listView3.TabIndex = 39;
-            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.serv.HideSelection = false;
+            this.serv.Location = new System.Drawing.Point(4, 3);
+            this.serv.Name = "serv";
+            this.serv.Size = new System.Drawing.Size(254, 260);
+            this.serv.TabIndex = 39;
+            this.serv.UseCompatibleStateImageBehavior = false;
             // 
             // translucentRoundedPanel2
             // 
             this.translucentRoundedPanel2.BackColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel2.BorderWidth = 1;
-            this.translucentRoundedPanel2.Controls.Add(this.listView1);
+            this.translucentRoundedPanel2.Controls.Add(this.trav);
             this.translucentRoundedPanel2.CornerRadius = 10;
             this.translucentRoundedPanel2.Location = new System.Drawing.Point(510, 151);
             this.translucentRoundedPanel2.Name = "translucentRoundedPanel2";
             this.translucentRoundedPanel2.Size = new System.Drawing.Size(266, 271);
             this.translucentRoundedPanel2.TabIndex = 40;
             // 
-            // listView1
+            // trav
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(254, 260);
-            this.listView1.TabIndex = 39;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.trav.HideSelection = false;
+            this.trav.Location = new System.Drawing.Point(3, 3);
+            this.trav.Name = "trav";
+            this.trav.Size = new System.Drawing.Size(254, 260);
+            this.trav.TabIndex = 39;
+            this.trav.UseCompatibleStateImageBehavior = false;
+            // 
+            // combo
+            // 
+            this.combo.FormattingEnabled = true;
+            this.combo.Location = new System.Drawing.Point(385, 195);
+            this.combo.Name = "combo";
+            this.combo.Size = new System.Drawing.Size(121, 21);
+            this.combo.TabIndex = 41;
+            this.combo.SelectedIndexChanged += new System.EventHandler(this.combo_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label8.Location = new System.Drawing.Point(292, 195);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 18);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Service Type";
             // 
             // AssignServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.combo);
             this.Controls.Add(this.translucentRoundedPanel2);
             this.Controls.Add(this.translucentRoundedPanel1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.tid);
+            this.Controls.Add(this.sid);
             this.Controls.Add(this.roundedButton1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -343,6 +368,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AssignServices";
             this.Text = "AssignServices";
+            this.Load += new System.EventHandler(this.AssignServices_Load);
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.translucentRoundedPanel1.ResumeLayout(false);
             this.translucentRoundedPanel2.ResumeLayout(false);
@@ -365,13 +391,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private RoundedButton roundedButton1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox sid;
+        private System.Windows.Forms.RichTextBox tid;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private Components.TranslucentRoundedPanel translucentRoundedPanel1;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView serv;
         private Components.TranslucentRoundedPanel translucentRoundedPanel2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView trav;
+        private System.Windows.Forms.ComboBox combo;
+        private System.Windows.Forms.Label label8;
     }
 }

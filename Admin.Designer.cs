@@ -36,6 +36,7 @@
             this.labelButton5 = new LabelButton();
             this.labelButton1 = new LabelButton();
             this.labelButton3 = new LabelButton();
+            this.labelButton4 = new LabelButton();
             this.SuspendLayout();
             // 
             // label3
@@ -149,12 +150,32 @@
             this.labelButton3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelButton3.Location = new System.Drawing.Point(492, 64);
             this.labelButton3.Name = "labelButton3";
-            this.labelButton3.Size = new System.Drawing.Size(199, 23);
+            this.labelButton3.Size = new System.Drawing.Size(167, 23);
             this.labelButton3.TabIndex = 45;
             this.labelButton3.Text = "MANAGE REVIEWS";
             this.labelButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton3.UseVisualStyleBackColor = false;
             this.labelButton3.Click += new System.EventHandler(this.labelButton3_Click);
+            // 
+            // labelButton4
+            // 
+            this.labelButton4.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton4.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton4.BorderThickness = 2;
+            this.labelButton4.CornerRadius = 10;
+            this.labelButton4.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton4.FlatAppearance.BorderSize = 0;
+            this.labelButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton4.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelButton4.Location = new System.Drawing.Point(632, 64);
+            this.labelButton4.Name = "labelButton4";
+            this.labelButton4.Size = new System.Drawing.Size(167, 23);
+            this.labelButton4.TabIndex = 46;
+            this.labelButton4.Text = "ANALYTICS";
+            this.labelButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton4.UseVisualStyleBackColor = false;
+            this.labelButton4.Click += new System.EventHandler(this.labelButton4_Click);
             // 
             // Admin
             // 
@@ -163,6 +184,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelButton4);
             this.Controls.Add(this.labelButton3);
             this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.label3);
@@ -186,5 +208,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private LabelButton labelButton3;
+        private LabelButton labelButton4;
     }
 }

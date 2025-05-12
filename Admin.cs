@@ -44,5 +44,12 @@ namespace dbproject
             mr.Show();
             this.Hide();
         }
+
+        private void labelButton4_Click(object sender, EventArgs e)
+        {
+            BookingReportForm brf = new BookingReportForm();
+            brf.Show();
+            this.Hide();
+        }
     }
 }
