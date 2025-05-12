@@ -129,6 +129,7 @@ namespace dbproject
                 combo.SelectedIndex = -1; // Reset the selected index
                 comboBoxUserChange = true; // Allow the event to be triggered
                 combo.SelectedIndexChanged += combo_SelectedIndexChanged;
+
             }
         }
 

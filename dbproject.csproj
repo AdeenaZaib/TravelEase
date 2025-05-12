@@ -121,6 +121,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageReviews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageReviews.Designer.cs">
+      <DependentUpon>ManageReviews.cs</DependentUpon>
+    </Compile>
     <Compile Include="OperatorSignup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,19 +327,23 @@
     <EmbeddedResource Include="AssignServices.resx">
       <DependentUpon>AssignServices.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="des1.resx">
-		<DependentUpon>des1.cs</DependentUpon>
-	</EmbeddedResource>
-
-	<EmbeddedResource Include="BookTrip.resx">
-		<DependentUpon>BookTrip.cs</DependentUpon>
-	</EmbeddedResource>
-	  
+    <EmbeddedResource Include="des1.resx">
+      <DependentUpon>des1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookTrip.resx">
+      <DependentUpon>BookTrip.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Destination.resx">
       <DependentUpon>Destination.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageDestinations.resx">
+      <DependentUpon>ManageDestinations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageReviews.resx">
+      <DependentUpon>ManageReviews.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OperatorSignup.resx">
       <DependentUpon>OperatorSignup.cs</DependentUpon>

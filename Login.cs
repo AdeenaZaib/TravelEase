@@ -117,7 +117,10 @@ namespace dbproject
                             UNION
                             SELECT 'TourOperator' FROM TourOperator WHERE TourOperatorID = @UserID
                             UNION
-                            SELECT 'ServiceProvider' FROM ServiceProvider WHERE ServiceProviderID = @UserID;";
+                            SELECT 'ServiceProvider' FROM ServiceProvider WHERE ServiceProviderID = @UserID
+                            UNION
+                            SELECT 'SystemAdmin' FROM SystemAdmin WHERE AdminID = @UserID
+                            ";
                         SqlCommand typeCmd = new SqlCommand(typeQuery, con);
                         typeCmd.Parameters.AddWithValue("@UserID", Program.CurrentUser.userid);
 
@@ -139,6 +142,11 @@ namespace dbproject
                             else if (usertype == "ServiceProvider")
                             {
                                 Services home = new Services();
+                                home.Show();
+                            }
+                            else if (usertype == "SystemAdmin")
+                            {
+                                Admin home = new Admin();
                                 home.Show();
                             }
                         }

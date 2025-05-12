@@ -37,5 +37,12 @@ namespace dbproject
             ds.Show();
             this.Hide();
         }
+
+        private void labelButton3_Click(object sender, EventArgs e)
+        {
+            ManageReviews mr = new ManageReviews();
+            mr.Show();
+            this.Hide();
+        }
     }
 }

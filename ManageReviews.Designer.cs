@@ -1,6 +1,6 @@
 ﻿namespace dbproject
 {
-    partial class ManageUsers
+    partial class ManageReviews
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageUsers));
-            this.labelButton2 = new LabelButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageReviews));
             this.label3 = new System.Windows.Forms.Label();
-            this.labelButton5 = new LabelButton();
-            this.labelButton1 = new LabelButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pendingView = new System.Windows.Forms.ListView();
-            this.approve = new System.Windows.Forms.Button();
-            this.reject = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
+            this.RatingView = new System.Windows.Forms.ListView();
+            this.labelButton3 = new LabelButton();
+            this.labelButton2 = new LabelButton();
+            this.labelButton5 = new LabelButton();
+            this.labelButton1 = new LabelButton();
             this.SuspendLayout();
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(12, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(161, 24);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "TRAVELEASE";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(-3, 78);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(811, 13);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "_________________________________________________________________________________" +
+    "_____________________________________________________";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Chocolate;
+            this.label2.Location = new System.Drawing.Point(293, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(279, 29);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "MANAGE REVIEWS";
+            // 
+            // delete
+            // 
+            this.delete.BackColor = System.Drawing.Color.Chocolate;
+            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delete.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.delete.Location = new System.Drawing.Point(358, 415);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(95, 23);
+            this.delete.TabIndex = 59;
+            this.delete.Text = "DELETE";
+            this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
+            // 
+            // RatingView
+            // 
+            this.RatingView.HideSelection = false;
+            this.RatingView.Location = new System.Drawing.Point(198, 143);
+            this.RatingView.Name = "RatingView";
+            this.RatingView.Size = new System.Drawing.Size(477, 251);
+            this.RatingView.TabIndex = 58;
+            this.RatingView.UseCompatibleStateImageBehavior = false;
+            // 
+            // labelButton3
+            // 
+            this.labelButton3.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton3.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton3.BorderThickness = 2;
+            this.labelButton3.CornerRadius = 10;
+            this.labelButton3.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton3.FlatAppearance.BorderSize = 0;
+            this.labelButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton3.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelButton3.Location = new System.Drawing.Point(492, 64);
+            this.labelButton3.Name = "labelButton3";
+            this.labelButton3.Size = new System.Drawing.Size(199, 23);
+            this.labelButton3.TabIndex = 60;
+            this.labelButton3.Text = "MANAGE REVIEWS";
+            this.labelButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton3.UseVisualStyleBackColor = false;
+            this.labelButton3.Click += new System.EventHandler(this.labelButton3_Click);
             // 
             // labelButton2
             // 
@@ -54,24 +134,11 @@
             this.labelButton2.Location = new System.Drawing.Point(141, 64);
             this.labelButton2.Name = "labelButton2";
             this.labelButton2.Size = new System.Drawing.Size(120, 23);
-            this.labelButton2.TabIndex = 50;
+            this.labelButton2.TabIndex = 56;
             this.labelButton2.Text = "MANAGE USERS";
             this.labelButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton2.UseVisualStyleBackColor = false;
             this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(12, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 24);
-            this.label3.TabIndex = 49;
-            this.label3.Text = "TRAVELEASE";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // labelButton5
             // 
@@ -87,7 +154,7 @@
             this.labelButton5.Location = new System.Drawing.Point(298, 64);
             this.labelButton5.Name = "labelButton5";
             this.labelButton5.Size = new System.Drawing.Size(188, 23);
-            this.labelButton5.TabIndex = 48;
+            this.labelButton5.TabIndex = 54;
             this.labelButton5.Text = "MANAGE DESTINATIONS";
             this.labelButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton5.UseVisualStyleBackColor = false;
@@ -107,92 +174,31 @@
             this.labelButton1.Location = new System.Drawing.Point(44, 64);
             this.labelButton1.Name = "labelButton1";
             this.labelButton1.Size = new System.Drawing.Size(60, 23);
-            this.labelButton1.TabIndex = 47;
+            this.labelButton1.TabIndex = 53;
             this.labelButton1.Text = "HOME";
             this.labelButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton1.UseVisualStyleBackColor = false;
             this.labelButton1.Click += new System.EventHandler(this.labelButton1_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(-3, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(811, 13);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "_________________________________________________________________________________" +
-    "_____________________________________________________";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Chocolate;
-            this.label2.Location = new System.Drawing.Point(293, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(243, 29);
-            this.label2.TabIndex = 45;
-            this.label2.Text = "MANAGE USERS";
-            // 
-            // pendingView
-            // 
-            this.pendingView.HideSelection = false;
-            this.pendingView.Location = new System.Drawing.Point(29, 154);
-            this.pendingView.Name = "pendingView";
-            this.pendingView.Size = new System.Drawing.Size(410, 272);
-            this.pendingView.TabIndex = 51;
-            this.pendingView.UseCompatibleStateImageBehavior = false;
-            this.pendingView.SelectedIndexChanged += new System.EventHandler(this.pendingView_SelectedIndexChanged);
-            // 
-            // approve
-            // 
-            this.approve.BackColor = System.Drawing.Color.Chocolate;
-            this.approve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.approve.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.approve.Location = new System.Drawing.Point(540, 233);
-            this.approve.Name = "approve";
-            this.approve.Size = new System.Drawing.Size(95, 23);
-            this.approve.TabIndex = 53;
-            this.approve.Text = "APPROVE";
-            this.approve.UseVisualStyleBackColor = false;
-            this.approve.Click += new System.EventHandler(this.apply_Click);
-            // 
-            // reject
-            // 
-            this.reject.BackColor = System.Drawing.Color.Chocolate;
-            this.reject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reject.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.reject.Location = new System.Drawing.Point(540, 300);
-            this.reject.Name = "reject";
-            this.reject.Size = new System.Drawing.Size(95, 23);
-            this.reject.TabIndex = 54;
-            this.reject.Text = "REJECT";
-            this.reject.UseVisualStyleBackColor = false;
-            this.reject.Click += new System.EventHandler(this.reject_Click);
-            // 
-            // ManageUsers
+            // ManageReviews
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reject);
-            this.Controls.Add(this.approve);
-            this.Controls.Add(this.pendingView);
+            this.Controls.Add(this.labelButton3);
+            this.Controls.Add(this.delete);
+            this.Controls.Add(this.RatingView);
             this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelButton5);
             this.Controls.Add(this.labelButton1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Name = "ManageUsers";
-            this.Text = "ManageUsers";
-            this.Load += new System.EventHandler(this.ManageUsers_Load);
+            this.Name = "ManageReviews";
+            this.Text = "ManageReviews";
+            this.Load += new System.EventHandler(this.ManageReviews_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,8 +212,8 @@
         private LabelButton labelButton1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListView pendingView;
-        private System.Windows.Forms.Button approve;
-        private System.Windows.Forms.Button reject;
+        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.ListView RatingView;
+        private LabelButton labelButton3;
     }
 }

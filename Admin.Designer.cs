@@ -29,13 +29,52 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
-            this.labelButton2 = new LabelButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.labelButton5 = new LabelButton();
-            this.labelButton1 = new LabelButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.labelButton2 = new LabelButton();
+            this.labelButton5 = new LabelButton();
+            this.labelButton1 = new LabelButton();
+            this.labelButton3 = new LabelButton();
             this.SuspendLayout();
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(12, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(161, 24);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "TRAVELEASE";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(-3, 78);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(811, 13);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "_________________________________________________________________________________" +
+    "_____________________________________________________";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Orange;
+            this.label2.Location = new System.Drawing.Point(376, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 29);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "ADMIN";
             // 
             // labelButton2
             // 
@@ -56,19 +95,6 @@
             this.labelButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton2.UseVisualStyleBackColor = false;
             this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(12, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 24);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "TRAVELEASE";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // labelButton5
             // 
@@ -110,30 +136,25 @@
             this.labelButton1.UseVisualStyleBackColor = false;
             this.labelButton1.Click += new System.EventHandler(this.labelButton1_Click);
             // 
-            // label1
+            // labelButton3
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(-3, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(811, 13);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "_________________________________________________________________________________" +
-    "_____________________________________________________";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Orange;
-            this.label2.Location = new System.Drawing.Point(376, 112);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 29);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "ADMIN";
+            this.labelButton3.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton3.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton3.BorderThickness = 2;
+            this.labelButton3.CornerRadius = 10;
+            this.labelButton3.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton3.FlatAppearance.BorderSize = 0;
+            this.labelButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton3.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelButton3.Location = new System.Drawing.Point(492, 64);
+            this.labelButton3.Name = "labelButton3";
+            this.labelButton3.Size = new System.Drawing.Size(199, 23);
+            this.labelButton3.TabIndex = 45;
+            this.labelButton3.Text = "MANAGE REVIEWS";
+            this.labelButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton3.UseVisualStyleBackColor = false;
+            this.labelButton3.Click += new System.EventHandler(this.labelButton3_Click);
             // 
             // Admin
             // 
@@ -142,6 +163,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelButton3);
             this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelButton5);
@@ -163,5 +185,6 @@
         private LabelButton labelButton1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private LabelButton labelButton3;
     }
 }
