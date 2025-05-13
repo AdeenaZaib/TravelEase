@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TravellerDataSet" targetNamespace="http://tempuri.org/TravellerDataSet.xsd" xmlns:mstns="http://tempuri.org/TravellerDataSet.xsd" xmlns="http://tempuri.org/TravellerDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TravelEaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TravelEaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.dbproject.Properties.Settings.GlobalReference.Default.TravelEaseConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_NationalityTableAdapter" GeneratorDataComponentClassName="View_NationalityTableAdapter" Name="View_Nationality" UserDataComponentName="View_NationalityTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TravelEaseConnectionString (Settings)" DbObjectName="TravelEase.dbo.View_Nationality" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM View_Nationality</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Country" DataSetColumn="Country" />
+              <Mapping SourceColumn="NoOfTravllers" DataSetColumn="NoOfTravllers" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_AvgBudgetTableAdapter" GeneratorDataComponentClassName="View_AvgBudgetTableAdapter" Name="View_AvgBudget" UserDataComponentName="View_AvgBudgetTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TravelEaseConnectionString (Settings)" DbObjectName="TravelEase.dbo.View_AvgBudget" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM View_AvgBudget</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AverageBudget" DataSetColumn="AverageBudget" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_AgeGroupTableAdapter" GeneratorDataComponentClassName="View_AgeGroupTableAdapter" Name="View_AgeGroup" UserDataComponentName="View_AgeGroupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TravelEaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT 
+    CASE 
+        WHEN Age BETWEEN 18 AND 25 THEN '18-25'
+        WHEN Age BETWEEN 26 AND 35 THEN '26-35'
+        WHEN Age BETWEEN 36 AND 45 THEN '36-45'
+        WHEN Age BETWEEN 46 AND 60 THEN '46-60'
+        ELSE '60+' 
+    END AS AgeGroup,
+    COUNT(*) AS NoOfTravellers
+FROM Traveller
+GROUP BY CASE 
+        WHEN age BETWEEN 18 AND 25 THEN '18-25'
+        WHEN age BETWEEN 26 AND 35 THEN '26-35'
+        WHEN age BETWEEN 36 AND 45 THEN '36-45'
+        WHEN age BETWEEN 46 AND 60 THEN '46-60'
+        ELSE '60+' 
+    END
+ORDER BY CASE 
+        WHEN age BETWEEN 18 AND 25 THEN '18-25'
+        WHEN age BETWEEN 26 AND 35 THEN '26-35'
+        WHEN age BETWEEN 36 AND 45 THEN '36-45'
+        WHEN age BETWEEN 46 AND 60 THEN '46-60'
+        ELSE '60+' 
+    END;</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AgeGroup" DataSetColumn="AgeGroup" />
+              <Mapping SourceColumn="NoOfTravellers" DataSetColumn="NoOfTravellers" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TravellerDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="TravellerDataSet" msprop:Generator_DataSetName="TravellerDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_Nationality" msprop:Generator_RowEvHandlerName="View_NationalityRowChangeEventHandler" msprop:Generator_RowDeletedName="View_NationalityRowDeleted" msprop:Generator_RowDeletingName="View_NationalityRowDeleting" msprop:Generator_RowEvArgName="View_NationalityRowChangeEvent" msprop:Generator_TablePropName="View_Nationality" msprop:Generator_RowChangedName="View_NationalityRowChanged" msprop:Generator_RowChangingName="View_NationalityRowChanging" msprop:Generator_TableClassName="View_NationalityDataTable" msprop:Generator_RowClassName="View_NationalityRow" msprop:Generator_TableVarName="tableView_Nationality" msprop:Generator_UserTableName="View_Nationality">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Country" msprop:Generator_ColumnPropNameInRow="Country" msprop:Generator_ColumnPropNameInTable="CountryColumn" msprop:Generator_ColumnVarNameInTable="columnCountry" msprop:Generator_UserColumnName="Country" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NoOfTravllers" msprop:Generator_ColumnPropNameInRow="NoOfTravllers" msprop:Generator_ColumnPropNameInTable="NoOfTravllersColumn" msprop:Generator_ColumnVarNameInTable="columnNoOfTravllers" msprop:Generator_UserColumnName="NoOfTravllers" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_AvgBudget" msprop:Generator_RowEvHandlerName="View_AvgBudgetRowChangeEventHandler" msprop:Generator_RowDeletedName="View_AvgBudgetRowDeleted" msprop:Generator_RowDeletingName="View_AvgBudgetRowDeleting" msprop:Generator_RowEvArgName="View_AvgBudgetRowChangeEvent" msprop:Generator_TablePropName="View_AvgBudget" msprop:Generator_RowChangedName="View_AvgBudgetRowChanged" msprop:Generator_RowChangingName="View_AvgBudgetRowChanging" msprop:Generator_TableClassName="View_AvgBudgetDataTable" msprop:Generator_RowClassName="View_AvgBudgetRow" msprop:Generator_TableVarName="tableView_AvgBudget" msprop:Generator_UserTableName="View_AvgBudget">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AverageBudget" msprop:Generator_ColumnPropNameInRow="AverageBudget" msprop:Generator_ColumnPropNameInTable="AverageBudgetColumn" msprop:Generator_ColumnVarNameInTable="columnAverageBudget" msprop:Generator_UserColumnName="AverageBudget" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_AgeGroup" msprop:Generator_RowEvHandlerName="View_AgeGroupRowChangeEventHandler" msprop:Generator_RowDeletedName="View_AgeGroupRowDeleted" msprop:Generator_RowDeletingName="View_AgeGroupRowDeleting" msprop:Generator_RowEvArgName="View_AgeGroupRowChangeEvent" msprop:Generator_TablePropName="View_AgeGroup" msprop:Generator_RowChangedName="View_AgeGroupRowChanged" msprop:Generator_RowChangingName="View_AgeGroupRowChanging" msprop:Generator_TableClassName="View_AgeGroupDataTable" msprop:Generator_RowClassName="View_AgeGroupRow" msprop:Generator_TableVarName="tableView_AgeGroup" msprop:Generator_UserTableName="View_AgeGroup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AgeGroup" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="AgeGroup" msprop:Generator_ColumnPropNameInTable="AgeGroupColumn" msprop:Generator_ColumnVarNameInTable="columnAgeGroup" msprop:Generator_UserColumnName="AgeGroup" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NoOfTravellers" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="NoOfTravellers" msprop:Generator_ColumnPropNameInTable="NoOfTravellersColumn" msprop:Generator_ColumnVarNameInTable="columnNoOfTravellers" msprop:Generator_UserColumnName="NoOfTravellers" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

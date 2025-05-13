@@ -67,6 +67,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABookingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ABookingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ABReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABReportForm.Designer.cs">
+      <DependentUpon>ABReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddDestination.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,8 +171,30 @@
     <Compile Include="Destination.Designer.cs">
       <DependentUpon>Destination.cs</DependentUpon>
     </Compile>
+    <Compile Include="DestinationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DestinationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DestinationReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DestinationReportForm.Designer.cs">
+      <DependentUpon>DestinationReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DropDownMenu.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GrowthDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GrowthDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GrowthReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrowthReportForm.Designer.cs">
+      <DependentUpon>GrowthReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -175,17 +208,45 @@
     <Compile Include="ManageReviews.Designer.cs">
       <DependentUpon>ManageReviews.cs</DependentUpon>
     </Compile>
+    <Compile Include="OperatorReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperatorReportForm.Designer.cs">
+      <DependentUpon>OperatorReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OperatorSignup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OperatorSignup.Designer.cs">
       <DependentUpon>OperatorSignup.cs</DependentUpon>
     </Compile>
+    <Compile Include="PaymentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaymentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentReportForm.Designer.cs">
+      <DependentUpon>PaymentReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProviderReportForm.Designer.cs">
+      <DependentUpon>ProviderReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProviderSignup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ProviderSignup.Designer.cs">
       <DependentUpon>ProviderSignup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceProviderDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceProviderDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SignupAs.cs">
       <SubType>Form</SubType>
@@ -248,6 +309,11 @@
       <DependentUpon>payments.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TourOperatorDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TourOperatorDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="transport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -340,6 +406,11 @@
     <Compile Include="TravellerBooking.Designer.cs">
       <DependentUpon>TravellerBooking.cs</DependentUpon>
     </Compile>
+    <Compile Include="TravellerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TravellerDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TravellerHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,6 +422,12 @@
     </Compile>
     <Compile Include="TravellerPass.Designer.cs">
       <DependentUpon>TravellerPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TravellerReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TravellerReportForm.Designer.cs">
+      <DependentUpon>TravellerReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="TripBookingDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -366,6 +443,10 @@
     <Compile Include="WhiteTranslucentPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="ABReport.rdlc" />
+    <EmbeddedResource Include="ABReportForm.resx">
+      <DependentUpon>ABReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddDestination.resx">
       <DependentUpon>AddDestination.cs</DependentUpon>
     </EmbeddedResource>
@@ -405,6 +486,14 @@
     <EmbeddedResource Include="Destination.resx">
       <DependentUpon>Destination.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DestinationReportForm.resx">
+      <DependentUpon>DestinationReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DReport.rdlc" />
+    <EmbeddedResource Include="GReport.rdlc" />
+    <EmbeddedResource Include="GrowthReportForm.resx">
+      <DependentUpon>GrowthReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -414,11 +503,21 @@
     <EmbeddedResource Include="ManageReviews.resx">
       <DependentUpon>ManageReviews.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OperatorReportForm.resx">
+      <DependentUpon>OperatorReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OperatorSignup.resx">
       <DependentUpon>OperatorSignup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PaymentReportForm.resx">
+      <DependentUpon>PaymentReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="payments.resx">
       <DependentUpon>payments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PReport.rdlc" />
+    <EmbeddedResource Include="ProviderReportForm.resx">
+      <DependentUpon>ProviderReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProviderSignup.resx">
       <DependentUpon>ProviderSignup.cs</DependentUpon>
@@ -471,9 +570,11 @@
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SPReport.rdlc" />
     <EmbeddedResource Include="TBReport.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="TOReport.rdlc" />
     <EmbeddedResource Include="transport.resx">
       <DependentUpon>transport.cs</DependentUpon>
     </EmbeddedResource>
@@ -490,11 +591,59 @@
     <EmbeddedResource Include="TravellerPass.resx">
       <DependentUpon>TravellerPass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TravellerReportForm.resx">
+      <DependentUpon>TravellerReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TReport.rdlc" />
     <EmbeddedResource Include="TripSearch.resx">
       <DependentUpon>TripSearch.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="ABookingDataSet.xsc">
+      <DependentUpon>ABookingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ABookingDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ABookingDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ABookingDataSet.xss">
+      <DependentUpon>ABookingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DestinationDataSet.xsc">
+      <DependentUpon>DestinationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DestinationDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DestinationDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DestinationDataSet.xss">
+      <DependentUpon>DestinationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GrowthDataSet.xsc">
+      <DependentUpon>GrowthDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GrowthDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GrowthDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GrowthDataSet.xss">
+      <DependentUpon>GrowthDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
+    <None Include="PaymentDataSet.xsc">
+      <DependentUpon>PaymentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PaymentDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PaymentDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PaymentDataSet.xss">
+      <DependentUpon>PaymentDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -504,6 +653,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ServiceProviderDataSet.xsc">
+      <DependentUpon>ServiceProviderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceProviderDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServiceProviderDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ServiceProviderDataSet.xss">
+      <DependentUpon>ServiceProviderDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TourOperatorDataSet.xsc">
+      <DependentUpon>TourOperatorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TourOperatorDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TourOperatorDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TourOperatorDataSet.xss">
+      <DependentUpon>TourOperatorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TravellerDataSet.xsc">
+      <DependentUpon>TravellerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TravellerDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TravellerDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TravellerDataSet.xss">
+      <DependentUpon>TravellerDataSet.xsd</DependentUpon>
+    </None>
     <None Include="TripBookingDataSet.xsc">
       <DependentUpon>TripBookingDataSet.xsd</DependentUpon>
     </None>

@@ -47,9 +47,20 @@ namespace dbproject
 
         private void labelButton4_Click(object sender, EventArgs e)
         {
-            BookingReportForm brf = new BookingReportForm();
-            brf.Show();
+            //BookingReportForm brf = new BookingReportForm();
+            //brf.Show();
+            //TravellerReportForm trf = new TravellerReportForm();
+            //trf.Show();
+            //OperatorReportForm orf = new OperatorReportForm();
+            //orf.Show();
+            ABReportForm abf = new ABReportForm();
+            abf.Show();
             this.Hide();
+        }
+
+        private void Admin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

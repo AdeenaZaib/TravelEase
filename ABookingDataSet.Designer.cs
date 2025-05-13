@@ -20,27 +20,25 @@ namespace dbproject {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("TripBookingDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ABookingDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class TripBookingDataSet : global::System.Data.DataSet {
+    public partial class ABookingDataSet : global::System.Data.DataSet {
         
-        private View_TotalBookingsDataTable tableView_TotalBookings;
+        private View_IncompleteBookingsDataTable tableView_IncompleteBookings;
         
-        private View_CategoryRevenueDataTable tableView_CategoryRevenue;
+        private View_PaymentFailureDataTable tableView_PaymentFailure;
         
-        private View_CapacityRevenueDataTable tableView_CapacityRevenue;
+        private View_HighPriceDataTable tableView_HighPrice;
         
-        private View_CancellationRateDataTable tableView_CancellationRate;
+        private View_RecoveryRateDataTable tableView_RecoveryRate;
         
-        private View_AvgRevenueDataTable tableView_AvgRevenue;
-        
-        private View_BookingPeriodDataTable tableView_BookingPeriod;
+        private View_RevenueLossDataTable tableView_RevenueLoss;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public TripBookingDataSet() {
+        public ABookingDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -51,7 +49,7 @@ namespace dbproject {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected TripBookingDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ABookingDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -64,23 +62,20 @@ namespace dbproject {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["View_TotalBookings"] != null)) {
-                    base.Tables.Add(new View_TotalBookingsDataTable(ds.Tables["View_TotalBookings"]));
+                if ((ds.Tables["View_IncompleteBookings"] != null)) {
+                    base.Tables.Add(new View_IncompleteBookingsDataTable(ds.Tables["View_IncompleteBookings"]));
                 }
-                if ((ds.Tables["View_CategoryRevenue"] != null)) {
-                    base.Tables.Add(new View_CategoryRevenueDataTable(ds.Tables["View_CategoryRevenue"]));
+                if ((ds.Tables["View_PaymentFailure"] != null)) {
+                    base.Tables.Add(new View_PaymentFailureDataTable(ds.Tables["View_PaymentFailure"]));
                 }
-                if ((ds.Tables["View_CapacityRevenue"] != null)) {
-                    base.Tables.Add(new View_CapacityRevenueDataTable(ds.Tables["View_CapacityRevenue"]));
+                if ((ds.Tables["View_HighPrice"] != null)) {
+                    base.Tables.Add(new View_HighPriceDataTable(ds.Tables["View_HighPrice"]));
                 }
-                if ((ds.Tables["View_CancellationRate"] != null)) {
-                    base.Tables.Add(new View_CancellationRateDataTable(ds.Tables["View_CancellationRate"]));
+                if ((ds.Tables["View_RecoveryRate"] != null)) {
+                    base.Tables.Add(new View_RecoveryRateDataTable(ds.Tables["View_RecoveryRate"]));
                 }
-                if ((ds.Tables["View_AvgRevenue"] != null)) {
-                    base.Tables.Add(new View_AvgRevenueDataTable(ds.Tables["View_AvgRevenue"]));
-                }
-                if ((ds.Tables["View_BookingPeriod"] != null)) {
-                    base.Tables.Add(new View_BookingPeriodDataTable(ds.Tables["View_BookingPeriod"]));
+                if ((ds.Tables["View_RevenueLoss"] != null)) {
+                    base.Tables.Add(new View_RevenueLossDataTable(ds.Tables["View_RevenueLoss"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -104,9 +99,9 @@ namespace dbproject {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public View_TotalBookingsDataTable View_TotalBookings {
+        public View_IncompleteBookingsDataTable View_IncompleteBookings {
             get {
-                return this.tableView_TotalBookings;
+                return this.tableView_IncompleteBookings;
             }
         }
         
@@ -114,9 +109,9 @@ namespace dbproject {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public View_CategoryRevenueDataTable View_CategoryRevenue {
+        public View_PaymentFailureDataTable View_PaymentFailure {
             get {
-                return this.tableView_CategoryRevenue;
+                return this.tableView_PaymentFailure;
             }
         }
         
@@ -124,9 +119,9 @@ namespace dbproject {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public View_CapacityRevenueDataTable View_CapacityRevenue {
+        public View_HighPriceDataTable View_HighPrice {
             get {
-                return this.tableView_CapacityRevenue;
+                return this.tableView_HighPrice;
             }
         }
         
@@ -134,9 +129,9 @@ namespace dbproject {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public View_CancellationRateDataTable View_CancellationRate {
+        public View_RecoveryRateDataTable View_RecoveryRate {
             get {
-                return this.tableView_CancellationRate;
+                return this.tableView_RecoveryRate;
             }
         }
         
@@ -144,19 +139,9 @@ namespace dbproject {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public View_AvgRevenueDataTable View_AvgRevenue {
+        public View_RevenueLossDataTable View_RevenueLoss {
             get {
-                return this.tableView_AvgRevenue;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public View_BookingPeriodDataTable View_BookingPeriod {
-            get {
-                return this.tableView_BookingPeriod;
+                return this.tableView_RevenueLoss;
             }
         }
         
@@ -202,7 +187,7 @@ namespace dbproject {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            TripBookingDataSet cln = ((TripBookingDataSet)(base.Clone()));
+            ABookingDataSet cln = ((ABookingDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -227,23 +212,20 @@ namespace dbproject {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["View_TotalBookings"] != null)) {
-                    base.Tables.Add(new View_TotalBookingsDataTable(ds.Tables["View_TotalBookings"]));
+                if ((ds.Tables["View_IncompleteBookings"] != null)) {
+                    base.Tables.Add(new View_IncompleteBookingsDataTable(ds.Tables["View_IncompleteBookings"]));
                 }
-                if ((ds.Tables["View_CategoryRevenue"] != null)) {
-                    base.Tables.Add(new View_CategoryRevenueDataTable(ds.Tables["View_CategoryRevenue"]));
+                if ((ds.Tables["View_PaymentFailure"] != null)) {
+                    base.Tables.Add(new View_PaymentFailureDataTable(ds.Tables["View_PaymentFailure"]));
                 }
-                if ((ds.Tables["View_CapacityRevenue"] != null)) {
-                    base.Tables.Add(new View_CapacityRevenueDataTable(ds.Tables["View_CapacityRevenue"]));
+                if ((ds.Tables["View_HighPrice"] != null)) {
+                    base.Tables.Add(new View_HighPriceDataTable(ds.Tables["View_HighPrice"]));
                 }
-                if ((ds.Tables["View_CancellationRate"] != null)) {
-                    base.Tables.Add(new View_CancellationRateDataTable(ds.Tables["View_CancellationRate"]));
+                if ((ds.Tables["View_RecoveryRate"] != null)) {
+                    base.Tables.Add(new View_RecoveryRateDataTable(ds.Tables["View_RecoveryRate"]));
                 }
-                if ((ds.Tables["View_AvgRevenue"] != null)) {
-                    base.Tables.Add(new View_AvgRevenueDataTable(ds.Tables["View_AvgRevenue"]));
-                }
-                if ((ds.Tables["View_BookingPeriod"] != null)) {
-                    base.Tables.Add(new View_BookingPeriodDataTable(ds.Tables["View_BookingPeriod"]));
+                if ((ds.Tables["View_RevenueLoss"] != null)) {
+                    base.Tables.Add(new View_RevenueLossDataTable(ds.Tables["View_RevenueLoss"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -278,40 +260,34 @@ namespace dbproject {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableView_TotalBookings = ((View_TotalBookingsDataTable)(base.Tables["View_TotalBookings"]));
+            this.tableView_IncompleteBookings = ((View_IncompleteBookingsDataTable)(base.Tables["View_IncompleteBookings"]));
             if ((initTable == true)) {
-                if ((this.tableView_TotalBookings != null)) {
-                    this.tableView_TotalBookings.InitVars();
+                if ((this.tableView_IncompleteBookings != null)) {
+                    this.tableView_IncompleteBookings.InitVars();
                 }
             }
-            this.tableView_CategoryRevenue = ((View_CategoryRevenueDataTable)(base.Tables["View_CategoryRevenue"]));
+            this.tableView_PaymentFailure = ((View_PaymentFailureDataTable)(base.Tables["View_PaymentFailure"]));
             if ((initTable == true)) {
-                if ((this.tableView_CategoryRevenue != null)) {
-                    this.tableView_CategoryRevenue.InitVars();
+                if ((this.tableView_PaymentFailure != null)) {
+                    this.tableView_PaymentFailure.InitVars();
                 }
             }
-            this.tableView_CapacityRevenue = ((View_CapacityRevenueDataTable)(base.Tables["View_CapacityRevenue"]));
+            this.tableView_HighPrice = ((View_HighPriceDataTable)(base.Tables["View_HighPrice"]));
             if ((initTable == true)) {
-                if ((this.tableView_CapacityRevenue != null)) {
-                    this.tableView_CapacityRevenue.InitVars();
+                if ((this.tableView_HighPrice != null)) {
+                    this.tableView_HighPrice.InitVars();
                 }
             }
-            this.tableView_CancellationRate = ((View_CancellationRateDataTable)(base.Tables["View_CancellationRate"]));
+            this.tableView_RecoveryRate = ((View_RecoveryRateDataTable)(base.Tables["View_RecoveryRate"]));
             if ((initTable == true)) {
-                if ((this.tableView_CancellationRate != null)) {
-                    this.tableView_CancellationRate.InitVars();
+                if ((this.tableView_RecoveryRate != null)) {
+                    this.tableView_RecoveryRate.InitVars();
                 }
             }
-            this.tableView_AvgRevenue = ((View_AvgRevenueDataTable)(base.Tables["View_AvgRevenue"]));
+            this.tableView_RevenueLoss = ((View_RevenueLossDataTable)(base.Tables["View_RevenueLoss"]));
             if ((initTable == true)) {
-                if ((this.tableView_AvgRevenue != null)) {
-                    this.tableView_AvgRevenue.InitVars();
-                }
-            }
-            this.tableView_BookingPeriod = ((View_BookingPeriodDataTable)(base.Tables["View_BookingPeriod"]));
-            if ((initTable == true)) {
-                if ((this.tableView_BookingPeriod != null)) {
-                    this.tableView_BookingPeriod.InitVars();
+                if ((this.tableView_RevenueLoss != null)) {
+                    this.tableView_RevenueLoss.InitVars();
                 }
             }
         }
@@ -319,58 +295,50 @@ namespace dbproject {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "TripBookingDataSet";
+            this.DataSetName = "ABookingDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/TripBookingDataSet.xsd";
+            this.Namespace = "http://tempuri.org/ABookingDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableView_TotalBookings = new View_TotalBookingsDataTable();
-            base.Tables.Add(this.tableView_TotalBookings);
-            this.tableView_CategoryRevenue = new View_CategoryRevenueDataTable();
-            base.Tables.Add(this.tableView_CategoryRevenue);
-            this.tableView_CapacityRevenue = new View_CapacityRevenueDataTable();
-            base.Tables.Add(this.tableView_CapacityRevenue);
-            this.tableView_CancellationRate = new View_CancellationRateDataTable();
-            base.Tables.Add(this.tableView_CancellationRate);
-            this.tableView_AvgRevenue = new View_AvgRevenueDataTable();
-            base.Tables.Add(this.tableView_AvgRevenue);
-            this.tableView_BookingPeriod = new View_BookingPeriodDataTable();
-            base.Tables.Add(this.tableView_BookingPeriod);
+            this.tableView_IncompleteBookings = new View_IncompleteBookingsDataTable();
+            base.Tables.Add(this.tableView_IncompleteBookings);
+            this.tableView_PaymentFailure = new View_PaymentFailureDataTable();
+            base.Tables.Add(this.tableView_PaymentFailure);
+            this.tableView_HighPrice = new View_HighPriceDataTable();
+            base.Tables.Add(this.tableView_HighPrice);
+            this.tableView_RecoveryRate = new View_RecoveryRateDataTable();
+            base.Tables.Add(this.tableView_RecoveryRate);
+            this.tableView_RevenueLoss = new View_RevenueLossDataTable();
+            base.Tables.Add(this.tableView_RevenueLoss);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeView_TotalBookings() {
+        private bool ShouldSerializeView_IncompleteBookings() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeView_CategoryRevenue() {
+        private bool ShouldSerializeView_PaymentFailure() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeView_CapacityRevenue() {
+        private bool ShouldSerializeView_HighPrice() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeView_CancellationRate() {
+        private bool ShouldSerializeView_RecoveryRate() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeView_AvgRevenue() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeView_BookingPeriod() {
+        private bool ShouldSerializeView_RevenueLoss() {
             return false;
         }
         
@@ -385,7 +353,7 @@ namespace dbproject {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            TripBookingDataSet ds = new TripBookingDataSet();
+            ABookingDataSet ds = new ABookingDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -430,36 +398,33 @@ namespace dbproject {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void View_TotalBookingsRowChangeEventHandler(object sender, View_TotalBookingsRowChangeEvent e);
+        public delegate void View_IncompleteBookingsRowChangeEventHandler(object sender, View_IncompleteBookingsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void View_CategoryRevenueRowChangeEventHandler(object sender, View_CategoryRevenueRowChangeEvent e);
+        public delegate void View_PaymentFailureRowChangeEventHandler(object sender, View_PaymentFailureRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void View_CapacityRevenueRowChangeEventHandler(object sender, View_CapacityRevenueRowChangeEvent e);
+        public delegate void View_HighPriceRowChangeEventHandler(object sender, View_HighPriceRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void View_CancellationRateRowChangeEventHandler(object sender, View_CancellationRateRowChangeEvent e);
+        public delegate void View_RecoveryRateRowChangeEventHandler(object sender, View_RecoveryRateRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void View_AvgRevenueRowChangeEventHandler(object sender, View_AvgRevenueRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void View_BookingPeriodRowChangeEventHandler(object sender, View_BookingPeriodRowChangeEvent e);
+        public delegate void View_RevenueLossRowChangeEventHandler(object sender, View_RevenueLossRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class View_TotalBookingsDataTable : global::System.Data.TypedTableBase<View_TotalBookingsRow> {
+        public partial class View_IncompleteBookingsDataTable : global::System.Data.TypedTableBase<View_IncompleteBookingsRow> {
             
-            private global::System.Data.DataColumn columnTotalBookings;
+            private global::System.Data.DataColumn columnIncompleteBookings;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_TotalBookingsDataTable() {
-                this.TableName = "View_TotalBookings";
+            public View_IncompleteBookingsDataTable() {
+                this.TableName = "View_IncompleteBookings";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -467,7 +432,7 @@ namespace dbproject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_TotalBookingsDataTable(global::System.Data.DataTable table) {
+            internal View_IncompleteBookingsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -484,16 +449,16 @@ namespace dbproject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected View_TotalBookingsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected View_IncompleteBookingsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TotalBookingsColumn {
+            public global::System.Data.DataColumn IncompleteBookingsColumn {
                 get {
-                    return this.columnTotalBookings;
+                    return this.columnIncompleteBookings;
                 }
             }
             
@@ -508,45 +473,45 @@ namespace dbproject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_TotalBookingsRow this[int index] {
+            public View_IncompleteBookingsRow this[int index] {
                 get {
-                    return ((View_TotalBookingsRow)(this.Rows[index]));
+                    return ((View_IncompleteBookingsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_TotalBookingsRowChangeEventHandler View_TotalBookingsRowChanging;
+            public event View_IncompleteBookingsRowChangeEventHandler View_IncompleteBookingsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_TotalBookingsRowChangeEventHandler View_TotalBookingsRowChanged;
+            public event View_IncompleteBookingsRowChangeEventHandler View_IncompleteBookingsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_TotalBookingsRowChangeEventHandler View_TotalBookingsRowDeleting;
+            public event View_IncompleteBookingsRowChangeEventHandler View_IncompleteBookingsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_TotalBookingsRowChangeEventHandler View_TotalBookingsRowDeleted;
+            public event View_IncompleteBookingsRowChangeEventHandler View_IncompleteBookingsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddView_TotalBookingsRow(View_TotalBookingsRow row) {
+            public void AddView_IncompleteBookingsRow(View_IncompleteBookingsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_TotalBookingsRow AddView_TotalBookingsRow(int TotalBookings) {
-                View_TotalBookingsRow rowView_TotalBookingsRow = ((View_TotalBookingsRow)(this.NewRow()));
+            public View_IncompleteBookingsRow AddView_IncompleteBookingsRow(decimal IncompleteBookings) {
+                View_IncompleteBookingsRow rowView_IncompleteBookingsRow = ((View_IncompleteBookingsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        TotalBookings};
-                rowView_TotalBookingsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowView_TotalBookingsRow);
-                return rowView_TotalBookingsRow;
+                        IncompleteBookings};
+                rowView_IncompleteBookingsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowView_IncompleteBookingsRow);
+                return rowView_IncompleteBookingsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                View_TotalBookingsDataTable cln = ((View_TotalBookingsDataTable)(base.Clone()));
+                View_IncompleteBookingsDataTable cln = ((View_IncompleteBookingsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -554,46 +519,47 @@ namespace dbproject {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new View_TotalBookingsDataTable();
+                return new View_IncompleteBookingsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnTotalBookings = base.Columns["TotalBookings"];
+                this.columnIncompleteBookings = base.Columns["IncompleteBookings"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnTotalBookings = new global::System.Data.DataColumn("TotalBookings", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotalBookings);
+                this.columnIncompleteBookings = new global::System.Data.DataColumn("IncompleteBookings", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIncompleteBookings);
+                this.columnIncompleteBookings.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_TotalBookingsRow NewView_TotalBookingsRow() {
-                return ((View_TotalBookingsRow)(this.NewRow()));
+            public View_IncompleteBookingsRow NewView_IncompleteBookingsRow() {
+                return ((View_IncompleteBookingsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new View_TotalBookingsRow(builder);
+                return new View_IncompleteBookingsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(View_TotalBookingsRow);
+                return typeof(View_IncompleteBookingsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.View_TotalBookingsRowChanged != null)) {
-                    this.View_TotalBookingsRowChanged(this, new View_TotalBookingsRowChangeEvent(((View_TotalBookingsRow)(e.Row)), e.Action));
+                if ((this.View_IncompleteBookingsRowChanged != null)) {
+                    this.View_IncompleteBookingsRowChanged(this, new View_IncompleteBookingsRowChangeEvent(((View_IncompleteBookingsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -601,8 +567,8 @@ namespace dbproject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.View_TotalBookingsRowChanging != null)) {
-                    this.View_TotalBookingsRowChanging(this, new View_TotalBookingsRowChangeEvent(((View_TotalBookingsRow)(e.Row)), e.Action));
+                if ((this.View_IncompleteBookingsRowChanging != null)) {
+                    this.View_IncompleteBookingsRowChanging(this, new View_IncompleteBookingsRowChangeEvent(((View_IncompleteBookingsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -610,8 +576,8 @@ namespace dbproject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.View_TotalBookingsRowDeleted != null)) {
-                    this.View_TotalBookingsRowDeleted(this, new View_TotalBookingsRowChangeEvent(((View_TotalBookingsRow)(e.Row)), e.Action));
+                if ((this.View_IncompleteBookingsRowDeleted != null)) {
+                    this.View_IncompleteBookingsRowDeleted(this, new View_IncompleteBookingsRowChangeEvent(((View_IncompleteBookingsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -619,14 +585,14 @@ namespace dbproject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.View_TotalBookingsRowDeleting != null)) {
-                    this.View_TotalBookingsRowDeleting(this, new View_TotalBookingsRowChangeEvent(((View_TotalBookingsRow)(e.Row)), e.Action));
+                if ((this.View_IncompleteBookingsRowDeleting != null)) {
+                    this.View_IncompleteBookingsRowDeleting(this, new View_IncompleteBookingsRowChangeEvent(((View_IncompleteBookingsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveView_TotalBookingsRow(View_TotalBookingsRow row) {
+            public void RemoveView_IncompleteBookingsRow(View_IncompleteBookingsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -635,7 +601,7 @@ namespace dbproject {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TripBookingDataSet ds = new TripBookingDataSet();
+                ABookingDataSet ds = new ABookingDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -653,7 +619,7 @@ namespace dbproject {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "View_TotalBookingsDataTable";
+                attribute2.FixedValue = "View_IncompleteBookingsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -699,16 +665,14 @@ namespace dbproject {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class View_CategoryRevenueDataTable : global::System.Data.TypedTableBase<View_CategoryRevenueRow> {
+        public partial class View_PaymentFailureDataTable : global::System.Data.TypedTableBase<View_PaymentFailureRow> {
             
-            private global::System.Data.DataColumn columnTripType;
-            
-            private global::System.Data.DataColumn columnRevenue;
+            private global::System.Data.DataColumn columnPaymentFailure;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CategoryRevenueDataTable() {
-                this.TableName = "View_CategoryRevenue";
+            public View_PaymentFailureDataTable() {
+                this.TableName = "View_PaymentFailure";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -716,7 +680,7 @@ namespace dbproject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_CategoryRevenueDataTable(global::System.Data.DataTable table) {
+            internal View_PaymentFailureDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -733,24 +697,16 @@ namespace dbproject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected View_CategoryRevenueDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected View_PaymentFailureDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TripTypeColumn {
+            public global::System.Data.DataColumn PaymentFailureColumn {
                 get {
-                    return this.columnTripType;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn RevenueColumn {
-                get {
-                    return this.columnRevenue;
+                    return this.columnPaymentFailure;
                 }
             }
             
@@ -765,46 +721,45 @@ namespace dbproject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CategoryRevenueRow this[int index] {
+            public View_PaymentFailureRow this[int index] {
                 get {
-                    return ((View_CategoryRevenueRow)(this.Rows[index]));
+                    return ((View_PaymentFailureRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_CategoryRevenueRowChangeEventHandler View_CategoryRevenueRowChanging;
+            public event View_PaymentFailureRowChangeEventHandler View_PaymentFailureRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_CategoryRevenueRowChangeEventHandler View_CategoryRevenueRowChanged;
+            public event View_PaymentFailureRowChangeEventHandler View_PaymentFailureRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_CategoryRevenueRowChangeEventHandler View_CategoryRevenueRowDeleting;
+            public event View_PaymentFailureRowChangeEventHandler View_PaymentFailureRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_CategoryRevenueRowChangeEventHandler View_CategoryRevenueRowDeleted;
+            public event View_PaymentFailureRowChangeEventHandler View_PaymentFailureRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddView_CategoryRevenueRow(View_CategoryRevenueRow row) {
+            public void AddView_PaymentFailureRow(View_PaymentFailureRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CategoryRevenueRow AddView_CategoryRevenueRow(string TripType, decimal Revenue) {
-                View_CategoryRevenueRow rowView_CategoryRevenueRow = ((View_CategoryRevenueRow)(this.NewRow()));
+            public View_PaymentFailureRow AddView_PaymentFailureRow(decimal PaymentFailure) {
+                View_PaymentFailureRow rowView_PaymentFailureRow = ((View_PaymentFailureRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        TripType,
-                        Revenue};
-                rowView_CategoryRevenueRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowView_CategoryRevenueRow);
-                return rowView_CategoryRevenueRow;
+                        PaymentFailure};
+                rowView_PaymentFailureRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowView_PaymentFailureRow);
+                return rowView_PaymentFailureRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                View_CategoryRevenueDataTable cln = ((View_CategoryRevenueDataTable)(base.Clone()));
+                View_PaymentFailureDataTable cln = ((View_PaymentFailureDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -812,50 +767,47 @@ namespace dbproject {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new View_CategoryRevenueDataTable();
+                return new View_PaymentFailureDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnTripType = base.Columns["TripType"];
-                this.columnRevenue = base.Columns["Revenue"];
+                this.columnPaymentFailure = base.Columns["PaymentFailure"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnTripType = new global::System.Data.DataColumn("TripType", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTripType);
-                this.columnRevenue = new global::System.Data.DataColumn("Revenue", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRevenue);
-                this.columnTripType.MaxLength = 50;
+                this.columnPaymentFailure = new global::System.Data.DataColumn("PaymentFailure", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPaymentFailure);
+                this.columnPaymentFailure.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CategoryRevenueRow NewView_CategoryRevenueRow() {
-                return ((View_CategoryRevenueRow)(this.NewRow()));
+            public View_PaymentFailureRow NewView_PaymentFailureRow() {
+                return ((View_PaymentFailureRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new View_CategoryRevenueRow(builder);
+                return new View_PaymentFailureRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(View_CategoryRevenueRow);
+                return typeof(View_PaymentFailureRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.View_CategoryRevenueRowChanged != null)) {
-                    this.View_CategoryRevenueRowChanged(this, new View_CategoryRevenueRowChangeEvent(((View_CategoryRevenueRow)(e.Row)), e.Action));
+                if ((this.View_PaymentFailureRowChanged != null)) {
+                    this.View_PaymentFailureRowChanged(this, new View_PaymentFailureRowChangeEvent(((View_PaymentFailureRow)(e.Row)), e.Action));
                 }
             }
             
@@ -863,8 +815,8 @@ namespace dbproject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.View_CategoryRevenueRowChanging != null)) {
-                    this.View_CategoryRevenueRowChanging(this, new View_CategoryRevenueRowChangeEvent(((View_CategoryRevenueRow)(e.Row)), e.Action));
+                if ((this.View_PaymentFailureRowChanging != null)) {
+                    this.View_PaymentFailureRowChanging(this, new View_PaymentFailureRowChangeEvent(((View_PaymentFailureRow)(e.Row)), e.Action));
                 }
             }
             
@@ -872,8 +824,8 @@ namespace dbproject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.View_CategoryRevenueRowDeleted != null)) {
-                    this.View_CategoryRevenueRowDeleted(this, new View_CategoryRevenueRowChangeEvent(((View_CategoryRevenueRow)(e.Row)), e.Action));
+                if ((this.View_PaymentFailureRowDeleted != null)) {
+                    this.View_PaymentFailureRowDeleted(this, new View_PaymentFailureRowChangeEvent(((View_PaymentFailureRow)(e.Row)), e.Action));
                 }
             }
             
@@ -881,14 +833,14 @@ namespace dbproject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.View_CategoryRevenueRowDeleting != null)) {
-                    this.View_CategoryRevenueRowDeleting(this, new View_CategoryRevenueRowChangeEvent(((View_CategoryRevenueRow)(e.Row)), e.Action));
+                if ((this.View_PaymentFailureRowDeleting != null)) {
+                    this.View_PaymentFailureRowDeleting(this, new View_PaymentFailureRowChangeEvent(((View_PaymentFailureRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveView_CategoryRevenueRow(View_CategoryRevenueRow row) {
+            public void RemoveView_PaymentFailureRow(View_PaymentFailureRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -897,7 +849,7 @@ namespace dbproject {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TripBookingDataSet ds = new TripBookingDataSet();
+                ABookingDataSet ds = new ABookingDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -915,7 +867,7 @@ namespace dbproject {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "View_CategoryRevenueDataTable";
+                attribute2.FixedValue = "View_PaymentFailureDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -961,16 +913,14 @@ namespace dbproject {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class View_CapacityRevenueDataTable : global::System.Data.TypedTableBase<View_CapacityRevenueRow> {
+        public partial class View_HighPriceDataTable : global::System.Data.TypedTableBase<View_HighPriceRow> {
             
-            private global::System.Data.DataColumn columnCapacityType;
-            
-            private global::System.Data.DataColumn columnRevenue;
+            private global::System.Data.DataColumn columnHighPrice;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CapacityRevenueDataTable() {
-                this.TableName = "View_CapacityRevenue";
+            public View_HighPriceDataTable() {
+                this.TableName = "View_HighPrice";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -978,7 +928,7 @@ namespace dbproject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_CapacityRevenueDataTable(global::System.Data.DataTable table) {
+            internal View_HighPriceDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -995,24 +945,16 @@ namespace dbproject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected View_CapacityRevenueDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected View_HighPriceDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CapacityTypeColumn {
+            public global::System.Data.DataColumn HighPriceColumn {
                 get {
-                    return this.columnCapacityType;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn RevenueColumn {
-                get {
-                    return this.columnRevenue;
+                    return this.columnHighPrice;
                 }
             }
             
@@ -1027,46 +969,45 @@ namespace dbproject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CapacityRevenueRow this[int index] {
+            public View_HighPriceRow this[int index] {
                 get {
-                    return ((View_CapacityRevenueRow)(this.Rows[index]));
+                    return ((View_HighPriceRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_CapacityRevenueRowChangeEventHandler View_CapacityRevenueRowChanging;
+            public event View_HighPriceRowChangeEventHandler View_HighPriceRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_CapacityRevenueRowChangeEventHandler View_CapacityRevenueRowChanged;
+            public event View_HighPriceRowChangeEventHandler View_HighPriceRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_CapacityRevenueRowChangeEventHandler View_CapacityRevenueRowDeleting;
+            public event View_HighPriceRowChangeEventHandler View_HighPriceRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_CapacityRevenueRowChangeEventHandler View_CapacityRevenueRowDeleted;
+            public event View_HighPriceRowChangeEventHandler View_HighPriceRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddView_CapacityRevenueRow(View_CapacityRevenueRow row) {
+            public void AddView_HighPriceRow(View_HighPriceRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CapacityRevenueRow AddView_CapacityRevenueRow(string CapacityType, decimal Revenue) {
-                View_CapacityRevenueRow rowView_CapacityRevenueRow = ((View_CapacityRevenueRow)(this.NewRow()));
+            public View_HighPriceRow AddView_HighPriceRow(decimal HighPrice) {
+                View_HighPriceRow rowView_HighPriceRow = ((View_HighPriceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        CapacityType,
-                        Revenue};
-                rowView_CapacityRevenueRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowView_CapacityRevenueRow);
-                return rowView_CapacityRevenueRow;
+                        HighPrice};
+                rowView_HighPriceRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowView_HighPriceRow);
+                return rowView_HighPriceRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                View_CapacityRevenueDataTable cln = ((View_CapacityRevenueDataTable)(base.Clone()));
+                View_HighPriceDataTable cln = ((View_HighPriceDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1074,50 +1015,47 @@ namespace dbproject {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new View_CapacityRevenueDataTable();
+                return new View_HighPriceDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnCapacityType = base.Columns["CapacityType"];
-                this.columnRevenue = base.Columns["Revenue"];
+                this.columnHighPrice = base.Columns["HighPrice"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnCapacityType = new global::System.Data.DataColumn("CapacityType", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCapacityType);
-                this.columnRevenue = new global::System.Data.DataColumn("Revenue", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRevenue);
-                this.columnCapacityType.MaxLength = 50;
+                this.columnHighPrice = new global::System.Data.DataColumn("HighPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHighPrice);
+                this.columnHighPrice.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CapacityRevenueRow NewView_CapacityRevenueRow() {
-                return ((View_CapacityRevenueRow)(this.NewRow()));
+            public View_HighPriceRow NewView_HighPriceRow() {
+                return ((View_HighPriceRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new View_CapacityRevenueRow(builder);
+                return new View_HighPriceRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(View_CapacityRevenueRow);
+                return typeof(View_HighPriceRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.View_CapacityRevenueRowChanged != null)) {
-                    this.View_CapacityRevenueRowChanged(this, new View_CapacityRevenueRowChangeEvent(((View_CapacityRevenueRow)(e.Row)), e.Action));
+                if ((this.View_HighPriceRowChanged != null)) {
+                    this.View_HighPriceRowChanged(this, new View_HighPriceRowChangeEvent(((View_HighPriceRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1125,8 +1063,8 @@ namespace dbproject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.View_CapacityRevenueRowChanging != null)) {
-                    this.View_CapacityRevenueRowChanging(this, new View_CapacityRevenueRowChangeEvent(((View_CapacityRevenueRow)(e.Row)), e.Action));
+                if ((this.View_HighPriceRowChanging != null)) {
+                    this.View_HighPriceRowChanging(this, new View_HighPriceRowChangeEvent(((View_HighPriceRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1134,8 +1072,8 @@ namespace dbproject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.View_CapacityRevenueRowDeleted != null)) {
-                    this.View_CapacityRevenueRowDeleted(this, new View_CapacityRevenueRowChangeEvent(((View_CapacityRevenueRow)(e.Row)), e.Action));
+                if ((this.View_HighPriceRowDeleted != null)) {
+                    this.View_HighPriceRowDeleted(this, new View_HighPriceRowChangeEvent(((View_HighPriceRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1143,14 +1081,14 @@ namespace dbproject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.View_CapacityRevenueRowDeleting != null)) {
-                    this.View_CapacityRevenueRowDeleting(this, new View_CapacityRevenueRowChangeEvent(((View_CapacityRevenueRow)(e.Row)), e.Action));
+                if ((this.View_HighPriceRowDeleting != null)) {
+                    this.View_HighPriceRowDeleting(this, new View_HighPriceRowChangeEvent(((View_HighPriceRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveView_CapacityRevenueRow(View_CapacityRevenueRow row) {
+            public void RemoveView_HighPriceRow(View_HighPriceRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1159,7 +1097,7 @@ namespace dbproject {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TripBookingDataSet ds = new TripBookingDataSet();
+                ABookingDataSet ds = new ABookingDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1177,7 +1115,7 @@ namespace dbproject {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "View_CapacityRevenueDataTable";
+                attribute2.FixedValue = "View_HighPriceDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1223,14 +1161,14 @@ namespace dbproject {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class View_CancellationRateDataTable : global::System.Data.TypedTableBase<View_CancellationRateRow> {
+        public partial class View_RecoveryRateDataTable : global::System.Data.TypedTableBase<View_RecoveryRateRow> {
             
-            private global::System.Data.DataColumn columnCancellationRate;
+            private global::System.Data.DataColumn columnRecoveryRate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CancellationRateDataTable() {
-                this.TableName = "View_CancellationRate";
+            public View_RecoveryRateDataTable() {
+                this.TableName = "View_RecoveryRate";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1238,7 +1176,7 @@ namespace dbproject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_CancellationRateDataTable(global::System.Data.DataTable table) {
+            internal View_RecoveryRateDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1255,16 +1193,16 @@ namespace dbproject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected View_CancellationRateDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected View_RecoveryRateDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CancellationRateColumn {
+            public global::System.Data.DataColumn RecoveryRateColumn {
                 get {
-                    return this.columnCancellationRate;
+                    return this.columnRecoveryRate;
                 }
             }
             
@@ -1279,45 +1217,45 @@ namespace dbproject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CancellationRateRow this[int index] {
+            public View_RecoveryRateRow this[int index] {
                 get {
-                    return ((View_CancellationRateRow)(this.Rows[index]));
+                    return ((View_RecoveryRateRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_CancellationRateRowChangeEventHandler View_CancellationRateRowChanging;
+            public event View_RecoveryRateRowChangeEventHandler View_RecoveryRateRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_CancellationRateRowChangeEventHandler View_CancellationRateRowChanged;
+            public event View_RecoveryRateRowChangeEventHandler View_RecoveryRateRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_CancellationRateRowChangeEventHandler View_CancellationRateRowDeleting;
+            public event View_RecoveryRateRowChangeEventHandler View_RecoveryRateRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_CancellationRateRowChangeEventHandler View_CancellationRateRowDeleted;
+            public event View_RecoveryRateRowChangeEventHandler View_RecoveryRateRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddView_CancellationRateRow(View_CancellationRateRow row) {
+            public void AddView_RecoveryRateRow(View_RecoveryRateRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CancellationRateRow AddView_CancellationRateRow(double CancellationRate) {
-                View_CancellationRateRow rowView_CancellationRateRow = ((View_CancellationRateRow)(this.NewRow()));
+            public View_RecoveryRateRow AddView_RecoveryRateRow(decimal RecoveryRate) {
+                View_RecoveryRateRow rowView_RecoveryRateRow = ((View_RecoveryRateRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        CancellationRate};
-                rowView_CancellationRateRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowView_CancellationRateRow);
-                return rowView_CancellationRateRow;
+                        RecoveryRate};
+                rowView_RecoveryRateRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowView_RecoveryRateRow);
+                return rowView_RecoveryRateRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                View_CancellationRateDataTable cln = ((View_CancellationRateDataTable)(base.Clone()));
+                View_RecoveryRateDataTable cln = ((View_RecoveryRateDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1325,47 +1263,47 @@ namespace dbproject {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new View_CancellationRateDataTable();
+                return new View_RecoveryRateDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnCancellationRate = base.Columns["CancellationRate"];
+                this.columnRecoveryRate = base.Columns["RecoveryRate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnCancellationRate = new global::System.Data.DataColumn("CancellationRate", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCancellationRate);
-                this.columnCancellationRate.ReadOnly = true;
+                this.columnRecoveryRate = new global::System.Data.DataColumn("RecoveryRate", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRecoveryRate);
+                this.columnRecoveryRate.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CancellationRateRow NewView_CancellationRateRow() {
-                return ((View_CancellationRateRow)(this.NewRow()));
+            public View_RecoveryRateRow NewView_RecoveryRateRow() {
+                return ((View_RecoveryRateRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new View_CancellationRateRow(builder);
+                return new View_RecoveryRateRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(View_CancellationRateRow);
+                return typeof(View_RecoveryRateRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.View_CancellationRateRowChanged != null)) {
-                    this.View_CancellationRateRowChanged(this, new View_CancellationRateRowChangeEvent(((View_CancellationRateRow)(e.Row)), e.Action));
+                if ((this.View_RecoveryRateRowChanged != null)) {
+                    this.View_RecoveryRateRowChanged(this, new View_RecoveryRateRowChangeEvent(((View_RecoveryRateRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1373,8 +1311,8 @@ namespace dbproject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.View_CancellationRateRowChanging != null)) {
-                    this.View_CancellationRateRowChanging(this, new View_CancellationRateRowChangeEvent(((View_CancellationRateRow)(e.Row)), e.Action));
+                if ((this.View_RecoveryRateRowChanging != null)) {
+                    this.View_RecoveryRateRowChanging(this, new View_RecoveryRateRowChangeEvent(((View_RecoveryRateRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1382,8 +1320,8 @@ namespace dbproject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.View_CancellationRateRowDeleted != null)) {
-                    this.View_CancellationRateRowDeleted(this, new View_CancellationRateRowChangeEvent(((View_CancellationRateRow)(e.Row)), e.Action));
+                if ((this.View_RecoveryRateRowDeleted != null)) {
+                    this.View_RecoveryRateRowDeleted(this, new View_RecoveryRateRowChangeEvent(((View_RecoveryRateRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1391,14 +1329,14 @@ namespace dbproject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.View_CancellationRateRowDeleting != null)) {
-                    this.View_CancellationRateRowDeleting(this, new View_CancellationRateRowChangeEvent(((View_CancellationRateRow)(e.Row)), e.Action));
+                if ((this.View_RecoveryRateRowDeleting != null)) {
+                    this.View_RecoveryRateRowDeleting(this, new View_RecoveryRateRowChangeEvent(((View_RecoveryRateRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveView_CancellationRateRow(View_CancellationRateRow row) {
+            public void RemoveView_RecoveryRateRow(View_RecoveryRateRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1407,7 +1345,7 @@ namespace dbproject {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TripBookingDataSet ds = new TripBookingDataSet();
+                ABookingDataSet ds = new ABookingDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1425,7 +1363,7 @@ namespace dbproject {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "View_CancellationRateDataTable";
+                attribute2.FixedValue = "View_RecoveryRateDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1471,14 +1409,14 @@ namespace dbproject {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class View_AvgRevenueDataTable : global::System.Data.TypedTableBase<View_AvgRevenueRow> {
+        public partial class View_RevenueLossDataTable : global::System.Data.TypedTableBase<View_RevenueLossRow> {
             
-            private global::System.Data.DataColumn columnAvgBookingValue;
+            private global::System.Data.DataColumn columnRevenueLoss;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_AvgRevenueDataTable() {
-                this.TableName = "View_AvgRevenue";
+            public View_RevenueLossDataTable() {
+                this.TableName = "View_RevenueLoss";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1486,7 +1424,7 @@ namespace dbproject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_AvgRevenueDataTable(global::System.Data.DataTable table) {
+            internal View_RevenueLossDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1503,16 +1441,16 @@ namespace dbproject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected View_AvgRevenueDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected View_RevenueLossDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn AvgBookingValueColumn {
+            public global::System.Data.DataColumn RevenueLossColumn {
                 get {
-                    return this.columnAvgBookingValue;
+                    return this.columnRevenueLoss;
                 }
             }
             
@@ -1527,45 +1465,45 @@ namespace dbproject {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_AvgRevenueRow this[int index] {
+            public View_RevenueLossRow this[int index] {
                 get {
-                    return ((View_AvgRevenueRow)(this.Rows[index]));
+                    return ((View_RevenueLossRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_AvgRevenueRowChangeEventHandler View_AvgRevenueRowChanging;
+            public event View_RevenueLossRowChangeEventHandler View_RevenueLossRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_AvgRevenueRowChangeEventHandler View_AvgRevenueRowChanged;
+            public event View_RevenueLossRowChangeEventHandler View_RevenueLossRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_AvgRevenueRowChangeEventHandler View_AvgRevenueRowDeleting;
+            public event View_RevenueLossRowChangeEventHandler View_RevenueLossRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_AvgRevenueRowChangeEventHandler View_AvgRevenueRowDeleted;
+            public event View_RevenueLossRowChangeEventHandler View_RevenueLossRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddView_AvgRevenueRow(View_AvgRevenueRow row) {
+            public void AddView_RevenueLossRow(View_RevenueLossRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_AvgRevenueRow AddView_AvgRevenueRow(decimal AvgBookingValue) {
-                View_AvgRevenueRow rowView_AvgRevenueRow = ((View_AvgRevenueRow)(this.NewRow()));
+            public View_RevenueLossRow AddView_RevenueLossRow(decimal RevenueLoss) {
+                View_RevenueLossRow rowView_RevenueLossRow = ((View_RevenueLossRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        AvgBookingValue};
-                rowView_AvgRevenueRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowView_AvgRevenueRow);
-                return rowView_AvgRevenueRow;
+                        RevenueLoss};
+                rowView_RevenueLossRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowView_RevenueLossRow);
+                return rowView_RevenueLossRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                View_AvgRevenueDataTable cln = ((View_AvgRevenueDataTable)(base.Clone()));
+                View_RevenueLossDataTable cln = ((View_RevenueLossDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1573,46 +1511,47 @@ namespace dbproject {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new View_AvgRevenueDataTable();
+                return new View_RevenueLossDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnAvgBookingValue = base.Columns["AvgBookingValue"];
+                this.columnRevenueLoss = base.Columns["RevenueLoss"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnAvgBookingValue = new global::System.Data.DataColumn("AvgBookingValue", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAvgBookingValue);
+                this.columnRevenueLoss = new global::System.Data.DataColumn("RevenueLoss", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRevenueLoss);
+                this.columnRevenueLoss.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_AvgRevenueRow NewView_AvgRevenueRow() {
-                return ((View_AvgRevenueRow)(this.NewRow()));
+            public View_RevenueLossRow NewView_RevenueLossRow() {
+                return ((View_RevenueLossRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new View_AvgRevenueRow(builder);
+                return new View_RevenueLossRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(View_AvgRevenueRow);
+                return typeof(View_RevenueLossRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.View_AvgRevenueRowChanged != null)) {
-                    this.View_AvgRevenueRowChanged(this, new View_AvgRevenueRowChangeEvent(((View_AvgRevenueRow)(e.Row)), e.Action));
+                if ((this.View_RevenueLossRowChanged != null)) {
+                    this.View_RevenueLossRowChanged(this, new View_RevenueLossRowChangeEvent(((View_RevenueLossRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1620,8 +1559,8 @@ namespace dbproject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.View_AvgRevenueRowChanging != null)) {
-                    this.View_AvgRevenueRowChanging(this, new View_AvgRevenueRowChangeEvent(((View_AvgRevenueRow)(e.Row)), e.Action));
+                if ((this.View_RevenueLossRowChanging != null)) {
+                    this.View_RevenueLossRowChanging(this, new View_RevenueLossRowChangeEvent(((View_RevenueLossRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1629,8 +1568,8 @@ namespace dbproject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.View_AvgRevenueRowDeleted != null)) {
-                    this.View_AvgRevenueRowDeleted(this, new View_AvgRevenueRowChangeEvent(((View_AvgRevenueRow)(e.Row)), e.Action));
+                if ((this.View_RevenueLossRowDeleted != null)) {
+                    this.View_RevenueLossRowDeleted(this, new View_RevenueLossRowChangeEvent(((View_RevenueLossRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1638,14 +1577,14 @@ namespace dbproject {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.View_AvgRevenueRowDeleting != null)) {
-                    this.View_AvgRevenueRowDeleting(this, new View_AvgRevenueRowChangeEvent(((View_AvgRevenueRow)(e.Row)), e.Action));
+                if ((this.View_RevenueLossRowDeleting != null)) {
+                    this.View_RevenueLossRowDeleting(this, new View_RevenueLossRowChangeEvent(((View_RevenueLossRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveView_AvgRevenueRow(View_AvgRevenueRow row) {
+            public void RemoveView_RevenueLossRow(View_RevenueLossRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1654,7 +1593,7 @@ namespace dbproject {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TripBookingDataSet ds = new TripBookingDataSet();
+                ABookingDataSet ds = new ABookingDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1672,269 +1611,7 @@ namespace dbproject {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "View_AvgRevenueDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class View_BookingPeriodDataTable : global::System.Data.TypedTableBase<View_BookingPeriodRow> {
-            
-            private global::System.Data.DataColumn columnMonth;
-            
-            private global::System.Data.DataColumn columnBookings;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_BookingPeriodDataTable() {
-                this.TableName = "View_BookingPeriod";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_BookingPeriodDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected View_BookingPeriodDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MonthColumn {
-                get {
-                    return this.columnMonth;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn BookingsColumn {
-                get {
-                    return this.columnBookings;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_BookingPeriodRow this[int index] {
-                get {
-                    return ((View_BookingPeriodRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_BookingPeriodRowChangeEventHandler View_BookingPeriodRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_BookingPeriodRowChangeEventHandler View_BookingPeriodRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_BookingPeriodRowChangeEventHandler View_BookingPeriodRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event View_BookingPeriodRowChangeEventHandler View_BookingPeriodRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddView_BookingPeriodRow(View_BookingPeriodRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_BookingPeriodRow AddView_BookingPeriodRow(string Month, int Bookings) {
-                View_BookingPeriodRow rowView_BookingPeriodRow = ((View_BookingPeriodRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        Month,
-                        Bookings};
-                rowView_BookingPeriodRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowView_BookingPeriodRow);
-                return rowView_BookingPeriodRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                View_BookingPeriodDataTable cln = ((View_BookingPeriodDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new View_BookingPeriodDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnMonth = base.Columns["Month"];
-                this.columnBookings = base.Columns["Bookings"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnMonth = new global::System.Data.DataColumn("Month", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMonth);
-                this.columnBookings = new global::System.Data.DataColumn("Bookings", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBookings);
-                this.columnMonth.MaxLength = 4000;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_BookingPeriodRow NewView_BookingPeriodRow() {
-                return ((View_BookingPeriodRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new View_BookingPeriodRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(View_BookingPeriodRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.View_BookingPeriodRowChanged != null)) {
-                    this.View_BookingPeriodRowChanged(this, new View_BookingPeriodRowChangeEvent(((View_BookingPeriodRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.View_BookingPeriodRowChanging != null)) {
-                    this.View_BookingPeriodRowChanging(this, new View_BookingPeriodRowChangeEvent(((View_BookingPeriodRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.View_BookingPeriodRowDeleted != null)) {
-                    this.View_BookingPeriodRowDeleted(this, new View_BookingPeriodRowChangeEvent(((View_BookingPeriodRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.View_BookingPeriodRowDeleting != null)) {
-                    this.View_BookingPeriodRowDeleting(this, new View_BookingPeriodRowChangeEvent(((View_BookingPeriodRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveView_BookingPeriodRow(View_BookingPeriodRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                TripBookingDataSet ds = new TripBookingDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "View_BookingPeriodDataTable";
+                attribute2.FixedValue = "View_RevenueLossDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1978,343 +1655,216 @@ namespace dbproject {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class View_TotalBookingsRow : global::System.Data.DataRow {
+        public partial class View_IncompleteBookingsRow : global::System.Data.DataRow {
             
-            private View_TotalBookingsDataTable tableView_TotalBookings;
+            private View_IncompleteBookingsDataTable tableView_IncompleteBookings;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_TotalBookingsRow(global::System.Data.DataRowBuilder rb) : 
+            internal View_IncompleteBookingsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableView_TotalBookings = ((View_TotalBookingsDataTable)(this.Table));
+                this.tableView_IncompleteBookings = ((View_IncompleteBookingsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int TotalBookings {
+            public decimal IncompleteBookings {
                 get {
                     try {
-                        return ((int)(this[this.tableView_TotalBookings.TotalBookingsColumn]));
+                        return ((decimal)(this[this.tableView_IncompleteBookings.IncompleteBookingsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalBookings\' in table \'View_TotalBookings\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'IncompleteBookings\' in table \'View_IncompleteBookings\' is D" +
+                                "BNull.", e);
                     }
                 }
                 set {
-                    this[this.tableView_TotalBookings.TotalBookingsColumn] = value;
+                    this[this.tableView_IncompleteBookings.IncompleteBookingsColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTotalBookingsNull() {
-                return this.IsNull(this.tableView_TotalBookings.TotalBookingsColumn);
+            public bool IsIncompleteBookingsNull() {
+                return this.IsNull(this.tableView_IncompleteBookings.IncompleteBookingsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTotalBookingsNull() {
-                this[this.tableView_TotalBookings.TotalBookingsColumn] = global::System.Convert.DBNull;
+            public void SetIncompleteBookingsNull() {
+                this[this.tableView_IncompleteBookings.IncompleteBookingsColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class View_CategoryRevenueRow : global::System.Data.DataRow {
+        public partial class View_PaymentFailureRow : global::System.Data.DataRow {
             
-            private View_CategoryRevenueDataTable tableView_CategoryRevenue;
+            private View_PaymentFailureDataTable tableView_PaymentFailure;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_CategoryRevenueRow(global::System.Data.DataRowBuilder rb) : 
+            internal View_PaymentFailureRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableView_CategoryRevenue = ((View_CategoryRevenueDataTable)(this.Table));
+                this.tableView_PaymentFailure = ((View_PaymentFailureDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string TripType {
+            public decimal PaymentFailure {
                 get {
                     try {
-                        return ((string)(this[this.tableView_CategoryRevenue.TripTypeColumn]));
+                        return ((decimal)(this[this.tableView_PaymentFailure.PaymentFailureColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TripType\' in table \'View_CategoryRevenue\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PaymentFailure\' in table \'View_PaymentFailure\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableView_CategoryRevenue.TripTypeColumn] = value;
+                    this[this.tableView_PaymentFailure.PaymentFailureColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal Revenue {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableView_CategoryRevenue.RevenueColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Revenue\' in table \'View_CategoryRevenue\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableView_CategoryRevenue.RevenueColumn] = value;
-                }
+            public bool IsPaymentFailureNull() {
+                return this.IsNull(this.tableView_PaymentFailure.PaymentFailureColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTripTypeNull() {
-                return this.IsNull(this.tableView_CategoryRevenue.TripTypeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTripTypeNull() {
-                this[this.tableView_CategoryRevenue.TripTypeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsRevenueNull() {
-                return this.IsNull(this.tableView_CategoryRevenue.RevenueColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetRevenueNull() {
-                this[this.tableView_CategoryRevenue.RevenueColumn] = global::System.Convert.DBNull;
+            public void SetPaymentFailureNull() {
+                this[this.tableView_PaymentFailure.PaymentFailureColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class View_CapacityRevenueRow : global::System.Data.DataRow {
+        public partial class View_HighPriceRow : global::System.Data.DataRow {
             
-            private View_CapacityRevenueDataTable tableView_CapacityRevenue;
+            private View_HighPriceDataTable tableView_HighPrice;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_CapacityRevenueRow(global::System.Data.DataRowBuilder rb) : 
+            internal View_HighPriceRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableView_CapacityRevenue = ((View_CapacityRevenueDataTable)(this.Table));
+                this.tableView_HighPrice = ((View_HighPriceDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string CapacityType {
+            public decimal HighPrice {
                 get {
                     try {
-                        return ((string)(this[this.tableView_CapacityRevenue.CapacityTypeColumn]));
+                        return ((decimal)(this[this.tableView_HighPrice.HighPriceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CapacityType\' in table \'View_CapacityRevenue\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'HighPrice\' in table \'View_HighPrice\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableView_CapacityRevenue.CapacityTypeColumn] = value;
+                    this[this.tableView_HighPrice.HighPriceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal Revenue {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableView_CapacityRevenue.RevenueColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Revenue\' in table \'View_CapacityRevenue\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableView_CapacityRevenue.RevenueColumn] = value;
-                }
+            public bool IsHighPriceNull() {
+                return this.IsNull(this.tableView_HighPrice.HighPriceColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCapacityTypeNull() {
-                return this.IsNull(this.tableView_CapacityRevenue.CapacityTypeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCapacityTypeNull() {
-                this[this.tableView_CapacityRevenue.CapacityTypeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsRevenueNull() {
-                return this.IsNull(this.tableView_CapacityRevenue.RevenueColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetRevenueNull() {
-                this[this.tableView_CapacityRevenue.RevenueColumn] = global::System.Convert.DBNull;
+            public void SetHighPriceNull() {
+                this[this.tableView_HighPrice.HighPriceColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class View_CancellationRateRow : global::System.Data.DataRow {
+        public partial class View_RecoveryRateRow : global::System.Data.DataRow {
             
-            private View_CancellationRateDataTable tableView_CancellationRate;
+            private View_RecoveryRateDataTable tableView_RecoveryRate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_CancellationRateRow(global::System.Data.DataRowBuilder rb) : 
+            internal View_RecoveryRateRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableView_CancellationRate = ((View_CancellationRateDataTable)(this.Table));
+                this.tableView_RecoveryRate = ((View_RecoveryRateDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double CancellationRate {
+            public decimal RecoveryRate {
                 get {
                     try {
-                        return ((double)(this[this.tableView_CancellationRate.CancellationRateColumn]));
+                        return ((decimal)(this[this.tableView_RecoveryRate.RecoveryRateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CancellationRate\' in table \'View_CancellationRate\' is DBNul" +
-                                "l.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RecoveryRate\' in table \'View_RecoveryRate\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableView_CancellationRate.CancellationRateColumn] = value;
+                    this[this.tableView_RecoveryRate.RecoveryRateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCancellationRateNull() {
-                return this.IsNull(this.tableView_CancellationRate.CancellationRateColumn);
+            public bool IsRecoveryRateNull() {
+                return this.IsNull(this.tableView_RecoveryRate.RecoveryRateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCancellationRateNull() {
-                this[this.tableView_CancellationRate.CancellationRateColumn] = global::System.Convert.DBNull;
+            public void SetRecoveryRateNull() {
+                this[this.tableView_RecoveryRate.RecoveryRateColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class View_AvgRevenueRow : global::System.Data.DataRow {
+        public partial class View_RevenueLossRow : global::System.Data.DataRow {
             
-            private View_AvgRevenueDataTable tableView_AvgRevenue;
+            private View_RevenueLossDataTable tableView_RevenueLoss;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_AvgRevenueRow(global::System.Data.DataRowBuilder rb) : 
+            internal View_RevenueLossRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableView_AvgRevenue = ((View_AvgRevenueDataTable)(this.Table));
+                this.tableView_RevenueLoss = ((View_RevenueLossDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal AvgBookingValue {
+            public decimal RevenueLoss {
                 get {
                     try {
-                        return ((decimal)(this[this.tableView_AvgRevenue.AvgBookingValueColumn]));
+                        return ((decimal)(this[this.tableView_RevenueLoss.RevenueLossColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AvgBookingValue\' in table \'View_AvgRevenue\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'RevenueLoss\' in table \'View_RevenueLoss\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableView_AvgRevenue.AvgBookingValueColumn] = value;
+                    this[this.tableView_RevenueLoss.RevenueLossColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsAvgBookingValueNull() {
-                return this.IsNull(this.tableView_AvgRevenue.AvgBookingValueColumn);
+            public bool IsRevenueLossNull() {
+                return this.IsNull(this.tableView_RevenueLoss.RevenueLossColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetAvgBookingValueNull() {
-                this[this.tableView_AvgRevenue.AvgBookingValueColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class View_BookingPeriodRow : global::System.Data.DataRow {
-            
-            private View_BookingPeriodDataTable tableView_BookingPeriod;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal View_BookingPeriodRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableView_BookingPeriod = ((View_BookingPeriodDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Month {
-                get {
-                    try {
-                        return ((string)(this[this.tableView_BookingPeriod.MonthColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Month\' in table \'View_BookingPeriod\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableView_BookingPeriod.MonthColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Bookings {
-                get {
-                    try {
-                        return ((int)(this[this.tableView_BookingPeriod.BookingsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Bookings\' in table \'View_BookingPeriod\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableView_BookingPeriod.BookingsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsMonthNull() {
-                return this.IsNull(this.tableView_BookingPeriod.MonthColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetMonthNull() {
-                this[this.tableView_BookingPeriod.MonthColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsBookingsNull() {
-                return this.IsNull(this.tableView_BookingPeriod.BookingsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetBookingsNull() {
-                this[this.tableView_BookingPeriod.BookingsColumn] = global::System.Convert.DBNull;
+            public void SetRevenueLossNull() {
+                this[this.tableView_RevenueLoss.RevenueLossColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2322,22 +1872,22 @@ namespace dbproject {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class View_TotalBookingsRowChangeEvent : global::System.EventArgs {
+        public class View_IncompleteBookingsRowChangeEvent : global::System.EventArgs {
             
-            private View_TotalBookingsRow eventRow;
+            private View_IncompleteBookingsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_TotalBookingsRowChangeEvent(View_TotalBookingsRow row, global::System.Data.DataRowAction action) {
+            public View_IncompleteBookingsRowChangeEvent(View_IncompleteBookingsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_TotalBookingsRow Row {
+            public View_IncompleteBookingsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2356,22 +1906,22 @@ namespace dbproject {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class View_CategoryRevenueRowChangeEvent : global::System.EventArgs {
+        public class View_PaymentFailureRowChangeEvent : global::System.EventArgs {
             
-            private View_CategoryRevenueRow eventRow;
+            private View_PaymentFailureRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CategoryRevenueRowChangeEvent(View_CategoryRevenueRow row, global::System.Data.DataRowAction action) {
+            public View_PaymentFailureRowChangeEvent(View_PaymentFailureRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CategoryRevenueRow Row {
+            public View_PaymentFailureRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2390,22 +1940,22 @@ namespace dbproject {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class View_CapacityRevenueRowChangeEvent : global::System.EventArgs {
+        public class View_HighPriceRowChangeEvent : global::System.EventArgs {
             
-            private View_CapacityRevenueRow eventRow;
+            private View_HighPriceRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CapacityRevenueRowChangeEvent(View_CapacityRevenueRow row, global::System.Data.DataRowAction action) {
+            public View_HighPriceRowChangeEvent(View_HighPriceRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CapacityRevenueRow Row {
+            public View_HighPriceRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2424,22 +1974,22 @@ namespace dbproject {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class View_CancellationRateRowChangeEvent : global::System.EventArgs {
+        public class View_RecoveryRateRowChangeEvent : global::System.EventArgs {
             
-            private View_CancellationRateRow eventRow;
+            private View_RecoveryRateRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CancellationRateRowChangeEvent(View_CancellationRateRow row, global::System.Data.DataRowAction action) {
+            public View_RecoveryRateRowChangeEvent(View_RecoveryRateRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_CancellationRateRow Row {
+            public View_RecoveryRateRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2458,56 +2008,22 @@ namespace dbproject {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class View_AvgRevenueRowChangeEvent : global::System.EventArgs {
+        public class View_RevenueLossRowChangeEvent : global::System.EventArgs {
             
-            private View_AvgRevenueRow eventRow;
+            private View_RevenueLossRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_AvgRevenueRowChangeEvent(View_AvgRevenueRow row, global::System.Data.DataRowAction action) {
+            public View_RevenueLossRowChangeEvent(View_RevenueLossRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_AvgRevenueRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class View_BookingPeriodRowChangeEvent : global::System.EventArgs {
-            
-            private View_BookingPeriodRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_BookingPeriodRowChangeEvent(View_BookingPeriodRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public View_BookingPeriodRow Row {
+            public View_RevenueLossRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2523,7 +2039,7 @@ namespace dbproject {
         }
     }
 }
-namespace dbproject.TripBookingDataSetTableAdapters {
+namespace dbproject.ABookingDataSetTableAdapters {
     
     
     /// <summary>
@@ -2535,7 +2051,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class View_TotalBookingsTableAdapter : global::System.ComponentModel.Component {
+    public partial class View_IncompleteBookingsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -2549,7 +2065,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public View_TotalBookingsTableAdapter() {
+        public View_IncompleteBookingsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -2646,8 +2162,8 @@ namespace dbproject.TripBookingDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "View_TotalBookings";
-            tableMapping.ColumnMappings.Add("TotalBookings", "TotalBookings");
+            tableMapping.DataSetTable = "View_IncompleteBookings";
+            tableMapping.ColumnMappings.Add("IncompleteBookings", "IncompleteBookings");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -2664,7 +2180,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM View_TotalBookings;";
+            this._commandCollection[0].CommandText = "SELECT * FROM View_IncompleteBookings";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2672,7 +2188,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TripBookingDataSet.View_TotalBookingsDataTable dataTable) {
+        public virtual int Fill(ABookingDataSet.View_IncompleteBookingsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2685,9 +2201,9 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TripBookingDataSet.View_TotalBookingsDataTable GetData() {
+        public virtual ABookingDataSet.View_IncompleteBookingsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TripBookingDataSet.View_TotalBookingsDataTable dataTable = new TripBookingDataSet.View_TotalBookingsDataTable();
+            ABookingDataSet.View_IncompleteBookingsDataTable dataTable = new ABookingDataSet.View_IncompleteBookingsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2702,7 +2218,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class View_CategoryRevenueTableAdapter : global::System.ComponentModel.Component {
+    public partial class View_PaymentFailureTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -2716,7 +2232,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public View_CategoryRevenueTableAdapter() {
+        public View_PaymentFailureTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -2813,9 +2329,8 @@ namespace dbproject.TripBookingDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "View_CategoryRevenue";
-            tableMapping.ColumnMappings.Add("TripType", "TripType");
-            tableMapping.ColumnMappings.Add("Revenue", "Revenue");
+            tableMapping.DataSetTable = "View_PaymentFailure";
+            tableMapping.ColumnMappings.Add("PaymentFailure", "PaymentFailure");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -2832,7 +2347,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM View_CategoryRevenue";
+            this._commandCollection[0].CommandText = "SELECT * FROM View_PaymentFailure";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2840,7 +2355,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TripBookingDataSet.View_CategoryRevenueDataTable dataTable) {
+        public virtual int Fill(ABookingDataSet.View_PaymentFailureDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2853,9 +2368,9 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TripBookingDataSet.View_CategoryRevenueDataTable GetData() {
+        public virtual ABookingDataSet.View_PaymentFailureDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TripBookingDataSet.View_CategoryRevenueDataTable dataTable = new TripBookingDataSet.View_CategoryRevenueDataTable();
+            ABookingDataSet.View_PaymentFailureDataTable dataTable = new ABookingDataSet.View_PaymentFailureDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2870,7 +2385,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class View_CapacityRevenueTableAdapter : global::System.ComponentModel.Component {
+    public partial class View_HighPriceTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -2884,7 +2399,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public View_CapacityRevenueTableAdapter() {
+        public View_HighPriceTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -2981,9 +2496,8 @@ namespace dbproject.TripBookingDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "View_CapacityRevenue";
-            tableMapping.ColumnMappings.Add("CapacityType", "CapacityType");
-            tableMapping.ColumnMappings.Add("Revenue", "Revenue");
+            tableMapping.DataSetTable = "View_HighPrice";
+            tableMapping.ColumnMappings.Add("HighPrice", "HighPrice");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -3000,7 +2514,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM View_CapacityRevenue";
+            this._commandCollection[0].CommandText = "SELECT * FROM View_HighPrice";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3008,7 +2522,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TripBookingDataSet.View_CapacityRevenueDataTable dataTable) {
+        public virtual int Fill(ABookingDataSet.View_HighPriceDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3021,9 +2535,9 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TripBookingDataSet.View_CapacityRevenueDataTable GetData() {
+        public virtual ABookingDataSet.View_HighPriceDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TripBookingDataSet.View_CapacityRevenueDataTable dataTable = new TripBookingDataSet.View_CapacityRevenueDataTable();
+            ABookingDataSet.View_HighPriceDataTable dataTable = new ABookingDataSet.View_HighPriceDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3038,7 +2552,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class View_CancellationRateTableAdapter : global::System.ComponentModel.Component {
+    public partial class View_RecoveryRateTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -3052,7 +2566,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public View_CancellationRateTableAdapter() {
+        public View_RecoveryRateTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -3149,8 +2663,8 @@ namespace dbproject.TripBookingDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "View_CancellationRate";
-            tableMapping.ColumnMappings.Add("CancellationRate", "CancellationRate");
+            tableMapping.DataSetTable = "View_RecoveryRate";
+            tableMapping.ColumnMappings.Add("RecoveryRate", "RecoveryRate");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -3167,7 +2681,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM View_CancellationRate";
+            this._commandCollection[0].CommandText = "SELECT * FROM View_RecoveryRate";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3175,7 +2689,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TripBookingDataSet.View_CancellationRateDataTable dataTable) {
+        public virtual int Fill(ABookingDataSet.View_RecoveryRateDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3188,9 +2702,9 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TripBookingDataSet.View_CancellationRateDataTable GetData() {
+        public virtual ABookingDataSet.View_RecoveryRateDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TripBookingDataSet.View_CancellationRateDataTable dataTable = new TripBookingDataSet.View_CancellationRateDataTable();
+            ABookingDataSet.View_RecoveryRateDataTable dataTable = new ABookingDataSet.View_RecoveryRateDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3205,7 +2719,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class View_AvgRevenueTableAdapter : global::System.ComponentModel.Component {
+    public partial class View_RevenueLossTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -3219,7 +2733,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public View_AvgRevenueTableAdapter() {
+        public View_RevenueLossTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -3316,8 +2830,8 @@ namespace dbproject.TripBookingDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "View_AvgRevenue";
-            tableMapping.ColumnMappings.Add("AvgBookingValue", "AvgBookingValue");
+            tableMapping.DataSetTable = "View_RevenueLoss";
+            tableMapping.ColumnMappings.Add("RevenueLoss", "RevenueLoss");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -3334,7 +2848,9 @@ namespace dbproject.TripBookingDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM View_AvgRevenue";
+            this._commandCollection[0].CommandText = "SELECT SUM(Trip.PriceRange) AS RevenueLoss\r\nFROM TripBooking\r\nJOIN Trip ON Trip.T" +
+                "ripID = TripBooking.TripID\r\nWHERE TripBooking.BookingStatus = \'InProcess\'\r\nOR Tr" +
+                "ipBooking.BookingStatus = \'Cancelled\'\r\n";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3342,7 +2858,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TripBookingDataSet.View_AvgRevenueDataTable dataTable) {
+        public virtual int Fill(ABookingDataSet.View_RevenueLossDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3355,177 +2871,9 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TripBookingDataSet.View_AvgRevenueDataTable GetData() {
+        public virtual ABookingDataSet.View_RevenueLossDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            TripBookingDataSet.View_AvgRevenueDataTable dataTable = new TripBookingDataSet.View_AvgRevenueDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class View_BookingPeriodTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public View_BookingPeriodTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "View_BookingPeriod";
-            tableMapping.ColumnMappings.Add("Month", "Month");
-            tableMapping.ColumnMappings.Add("Bookings", "Bookings");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::dbproject.Properties.Settings.Default.TravelEaseConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM View_BookingPeriod";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(TripBookingDataSet.View_BookingPeriodDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual TripBookingDataSet.View_BookingPeriodDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            TripBookingDataSet.View_BookingPeriodDataTable dataTable = new TripBookingDataSet.View_BookingPeriodDataTable();
+            ABookingDataSet.View_RevenueLossDataTable dataTable = new ABookingDataSet.View_RevenueLossDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3599,7 +2947,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(TripBookingDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ABookingDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -3609,7 +2957,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(TripBookingDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ABookingDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -3619,7 +2967,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(TripBookingDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ABookingDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -3653,7 +3001,7 @@ namespace dbproject.TripBookingDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(TripBookingDataSet dataSet) {
+        public virtual int UpdateAll(ABookingDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
