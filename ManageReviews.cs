@@ -25,11 +25,12 @@ namespace dbproject
             RatingView.GridLines = true;
 
             RatingView.Columns.Clear();
-            RatingView.Columns.Add("User ID", 100);
+            RatingView.Columns.Add("ReviewID", 100);
             RatingView.Columns.Add("First Name", 120);
             RatingView.Columns.Add("Last Name", 120);
-            RatingView.Columns.Add("Email", 180);
-            RatingView.Columns.Add("Role", 120);
+            RatingView.Columns.Add("Category", 180);
+            RatingView.Columns.Add("Rating", 120);
+            RatingView.Columns.Add("Review", 200);
         }
 
         private void LoadLowRatedReviews()

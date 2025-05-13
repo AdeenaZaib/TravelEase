@@ -32,6 +32,11 @@ namespace dbproject
             listView1.Columns.Add("Avaibility", 100);
             listView1.Columns.Add("Hourly Rate", 80);
 
+            combo.Items.Add("Name");
+            combo.Items.Add("Contact");
+            combo.Items.Add("Avaibility");
+            combo.Items.Add("Hourly Rate");
+
         }
 
         private void labelButton1_Click(object sender, EventArgs e)
@@ -117,6 +122,106 @@ namespace dbproject
         {
             InitializelistView();
             LoadGuides();
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0 || combo.SelectedItem == null || string.IsNullOrWhiteSpace(txt.Text))
+            {
+                MessageBox.Show("Please select a guide, field, and provide a new value.");
+                return;
+            }
+
+            var selectedItem = listView1.SelectedItems[0];
+            string guideID = selectedItem.SubItems[0].Text;
+            string selectedColumn = combo.SelectedItem.ToString();
+            string newValue = txt.Text;
+
+            // Map display column to database column
+            string dbColumn = "";
+
+            if (selectedColumn == "Name")
+                dbColumn = "GuideName";
+            else if (selectedColumn == "Contact")
+                dbColumn = "Contact";
+            else if (selectedColumn == "Availability")
+                dbColumn = "GuideAvailability";
+            else if (selectedColumn == "Hourly Rate")
+                dbColumn = "HourlyRate";
+            else
+            {
+                MessageBox.Show("Invalid column selected.");
+                return;
+            }
+
+            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True"))
+            {
+                try
+                {
+                    con.Open();
+                    string query = $"UPDATE TourGuide SET {dbColumn} = @NewValue WHERE GuideID = @GuideID";
+                    SqlCommand cmd = new SqlCommand(query, con);
+
+                    // Handle different data types for the selected columns
+                    if (dbColumn == "HourlyRate")
+                        cmd.Parameters.AddWithValue("@NewValue", float.Parse(newValue));  // Assuming HourlyRate is a float
+                    else
+                        cmd.Parameters.AddWithValue("@NewValue", newValue);
+
+                    cmd.Parameters.AddWithValue("@GuideID", guideID);
+
+                    int rows = cmd.ExecuteNonQuery();
+                    if (rows > 0)
+                    {
+                        MessageBox.Show("Guide updated successfully.");
+                        LoadGuides(); // Refresh the data after updating
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update failed. No matching guide found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating guide: " + ex.Message);
+                }
+            }
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                string guideID = listView1.SelectedItems[0].SubItems[0].Text;
+
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this guide?", "Confirm Delete", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    using (SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True"))
+                    {
+                        string query = @"DELETE FROM TourGuide WHERE GuideID = @GuideID";
+
+                        SqlCommand cmd = new SqlCommand(query, con);
+                        cmd.Parameters.AddWithValue("@GuideID", guideID);
+
+                        try
+                        {
+                            con.Open();
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Guide deleted successfully.");
+                            LoadGuides();  // Reload guides after delete
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error deleting guide: " + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a guide to delete.");
+            }
         }
     }
 }

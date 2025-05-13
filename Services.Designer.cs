@@ -39,6 +39,8 @@
             this.labelButton3 = new LabelButton();
             this.labelButton1 = new LabelButton();
             this.labelButton6 = new LabelButton();
+            this.reject = new System.Windows.Forms.Button();
+            this.approve = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -207,6 +209,32 @@
             this.labelButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.labelButton6.UseVisualStyleBackColor = false;
             // 
+            // reject
+            // 
+            this.reject.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.reject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reject.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.reject.Location = new System.Drawing.Point(545, 292);
+            this.reject.Name = "reject";
+            this.reject.Size = new System.Drawing.Size(95, 23);
+            this.reject.TabIndex = 56;
+            this.reject.Text = "REJECT";
+            this.reject.UseVisualStyleBackColor = false;
+            this.reject.Click += new System.EventHandler(this.reject_Click);
+            // 
+            // approve
+            // 
+            this.approve.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.approve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.approve.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.approve.Location = new System.Drawing.Point(545, 225);
+            this.approve.Name = "approve";
+            this.approve.Size = new System.Drawing.Size(95, 23);
+            this.approve.TabIndex = 55;
+            this.approve.Text = "APPROVE";
+            this.approve.UseVisualStyleBackColor = false;
+            this.approve.Click += new System.EventHandler(this.approve_Click);
+            // 
             // Services
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +243,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.reject);
+            this.Controls.Add(this.approve);
             this.Controls.Add(this.labelButton6);
             this.Controls.Add(this.servicesView);
             this.Controls.Add(this.labelButton2);
@@ -227,6 +257,7 @@
             this.Controls.Add(this.label2);
             this.Name = "Services";
             this.Text = "Form5";
+            this.Load += new System.EventHandler(this.Services_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +275,7 @@
         private LabelButton labelButton2;
         private System.Windows.Forms.ListView servicesView;
         private LabelButton labelButton6;
+        private System.Windows.Forms.Button reject;
+        private System.Windows.Forms.Button approve;
     }
 }

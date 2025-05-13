@@ -64,6 +64,11 @@ namespace dbproject
             listView1.Columns.Add("Contact", 100);
             listView1.Columns.Add("Avaibility", 100);
             listView1.Columns.Add("Rate", 80);
+
+            combo.Items.Add("TransportType");
+            combo.Items.Add("Contact");
+            combo.Items.Add("Availability");
+            combo.Items.Add("Rate");
         }
         private void LoadTransportData()
         {
@@ -112,6 +117,112 @@ namespace dbproject
         {
             InitializelistView();
             LoadTransportData();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Please select a transport to delete.");
+                return;
+            }
+
+            DialogResult confirm = MessageBox.Show("Are you sure you want to delete this transport?",
+                                                   "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirm == DialogResult.Yes)
+            {
+                string regID = listView1.SelectedItems[0].SubItems[0].Text;
+
+                using (SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True"))
+                {
+                    try
+                    {
+                        con.Open();
+                        string query = "DELETE FROM Transport WHERE RegID = @RegID";
+                        SqlCommand cmd = new SqlCommand(query, con);
+                        cmd.Parameters.AddWithValue("@RegID", regID);
+
+                        int rows = cmd.ExecuteNonQuery();
+                        if (rows > 0)
+                        {
+                            MessageBox.Show("Transport deleted successfully.");
+                            LoadTransportData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Deletion failed. Transport not found.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error deleting transport: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0 || combo.SelectedItem == null || string.IsNullOrWhiteSpace(txt.Text))
+            {
+                MessageBox.Show("Please select a transport, choose a field, and enter a new value.");
+                return;
+            }
+
+            var selectedItem = listView1.SelectedItems[0];
+            string regID = selectedItem.SubItems[0].Text;
+            string selectedColumn = combo.SelectedItem.ToString();
+            string newValue = txt.Text;
+
+            // Map displayed column name to actual database column
+            string dbColumn = "";
+
+            if (selectedColumn == "Type")
+                dbColumn = "TransportType";
+            else if (selectedColumn == "Contact")
+                dbColumn = "Contact";
+            else if (selectedColumn == "Avaibility")
+                dbColumn = "TAvailability";
+            else if (selectedColumn == "Rate")
+                dbColumn = "Rate";
+            else
+            {
+                MessageBox.Show("Invalid column selected.");
+                return;
+            }
+
+            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True"))
+            {
+                try
+                {
+                    con.Open();
+                    string query = $"UPDATE Transport SET {dbColumn} = @NewValue WHERE RegID = @RegID";
+                    SqlCommand cmd = new SqlCommand(query, con);
+
+                    if (dbColumn == "Rate")
+                        cmd.Parameters.AddWithValue("@NewValue", float.Parse(newValue));
+                    else
+                        cmd.Parameters.AddWithValue("@NewValue", newValue);
+
+                    cmd.Parameters.AddWithValue("@RegID", regID);
+
+                    int rows = cmd.ExecuteNonQuery();
+                    if (rows > 0)
+                    {
+                        MessageBox.Show("Transport updated successfully.");
+                        LoadTransportData(); // Refresh view
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update failed. No matching transport found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating transport: " + ex.Message);
+                }
+            }
         }
     }
 }
