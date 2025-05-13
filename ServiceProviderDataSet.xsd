@@ -1,16 +1,142 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<xs:schema id="ServiceProviderDataSet" 
-                  targetNamespace="http://tempuri.org/ServiceProviderDataSet.xsd"
-                  elementFormDefault="qualified"
-                  attributeFormDefault="qualified"
-                  xmlns="http://tempuri.org/ServiceProviderDataSet.xsd"
-                  xmlns:mstns="http://tempuri.org/ServiceProviderDataSet.xsd"
-                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
-                  xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
-    <xs:element name="ServiceProviderDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true">
-        <xs:complexType>
-            <xs:choice minOccurs="0" maxOccurs="unbounded"></xs:choice>
-        </xs:complexType>
-    </xs:element>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ServiceProviderDataSet" targetNamespace="http://tempuri.org/ServiceProviderDataSet.xsd" xmlns:mstns="http://tempuri.org/ServiceProviderDataSet.xsd" xmlns="http://tempuri.org/ServiceProviderDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TravelEaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TravelEaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.dbproject.Properties.Settings.GlobalReference.Default.TravelEaseConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_OnTimeTableAdapter" GeneratorDataComponentClassName="View_OnTimeTableAdapter" Name="View_OnTime" UserDataComponentName="View_OnTimeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TravelEaseConnectionString (Settings)" DbObjectName="TravelEase.dbo.View_OnTime" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM View_OnTime</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RegID" DataSetColumn="RegID" />
+              <Mapping SourceColumn="ServiceProviderID" DataSetColumn="ServiceProviderID" />
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="OnTimePercentage" DataSetColumn="OnTimePercentage" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_GuideRatingTableAdapter" GeneratorDataComponentClassName="View_GuideRatingTableAdapter" Name="View_GuideRating" UserDataComponentName="View_GuideRatingTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TravelEaseConnectionString (Settings)" DbObjectName="TravelEase.dbo.View_GuideRating" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM View_GuideRating</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="GuideID" DataSetColumn="GuideID" />
+              <Mapping SourceColumn="GuideName" DataSetColumn="GuideName" />
+              <Mapping SourceColumn="AverageRating" DataSetColumn="AverageRating" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_OccupancyRateTableAdapter" GeneratorDataComponentClassName="View_OccupancyRateTableAdapter" Name="View_OccupancyRate" UserDataComponentName="View_OccupancyRateTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TravelEaseConnectionString (Settings)" DbObjectName="TravelEase.dbo.View_OccupancyRate" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM View_OccupancyRate</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="HotelID" DataSetColumn="HotelID" />
+              <Mapping SourceColumn="HotelName" DataSetColumn="HotelName" />
+              <Mapping SourceColumn="OccupancyRate" DataSetColumn="OccupancyRate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ServiceProviderDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="ServiceProviderDataSet" msprop:Generator_DataSetName="ServiceProviderDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_OnTime" msprop:Generator_RowEvHandlerName="View_OnTimeRowChangeEventHandler" msprop:Generator_RowDeletedName="View_OnTimeRowDeleted" msprop:Generator_RowDeletingName="View_OnTimeRowDeleting" msprop:Generator_RowEvArgName="View_OnTimeRowChangeEvent" msprop:Generator_TablePropName="View_OnTime" msprop:Generator_RowChangedName="View_OnTimeRowChanged" msprop:Generator_RowChangingName="View_OnTimeRowChanging" msprop:Generator_TableClassName="View_OnTimeDataTable" msprop:Generator_RowClassName="View_OnTimeRow" msprop:Generator_TableVarName="tableView_OnTime" msprop:Generator_UserTableName="View_OnTime">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RegID" msprop:Generator_ColumnPropNameInRow="RegID" msprop:Generator_ColumnPropNameInTable="RegIDColumn" msprop:Generator_ColumnVarNameInTable="columnRegID" msprop:Generator_UserColumnName="RegID" type="xs:int" />
+              <xs:element name="ServiceProviderID" msprop:Generator_ColumnPropNameInRow="ServiceProviderID" msprop:Generator_ColumnPropNameInTable="ServiceProviderIDColumn" msprop:Generator_ColumnVarNameInTable="columnServiceProviderID" msprop:Generator_UserColumnName="ServiceProviderID" type="xs:int" />
+              <xs:element name="FirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_UserColumnName="FirstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_UserColumnName="LastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OnTimePercentage" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="OnTimePercentage" msprop:Generator_ColumnPropNameInTable="OnTimePercentageColumn" msprop:Generator_ColumnVarNameInTable="columnOnTimePercentage" msprop:Generator_UserColumnName="OnTimePercentage" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_GuideRating" msprop:Generator_RowEvHandlerName="View_GuideRatingRowChangeEventHandler" msprop:Generator_RowDeletedName="View_GuideRatingRowDeleted" msprop:Generator_RowDeletingName="View_GuideRatingRowDeleting" msprop:Generator_RowEvArgName="View_GuideRatingRowChangeEvent" msprop:Generator_TablePropName="View_GuideRating" msprop:Generator_RowChangedName="View_GuideRatingRowChanged" msprop:Generator_RowChangingName="View_GuideRatingRowChanging" msprop:Generator_TableClassName="View_GuideRatingDataTable" msprop:Generator_RowClassName="View_GuideRatingRow" msprop:Generator_TableVarName="tableView_GuideRating" msprop:Generator_UserTableName="View_GuideRating">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GuideID" msprop:Generator_ColumnPropNameInRow="GuideID" msprop:Generator_ColumnPropNameInTable="GuideIDColumn" msprop:Generator_ColumnVarNameInTable="columnGuideID" msprop:Generator_UserColumnName="GuideID" type="xs:int" />
+              <xs:element name="GuideName" msprop:Generator_ColumnPropNameInRow="GuideName" msprop:Generator_ColumnPropNameInTable="GuideNameColumn" msprop:Generator_ColumnVarNameInTable="columnGuideName" msprop:Generator_UserColumnName="GuideName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AverageRating" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="AverageRating" msprop:Generator_ColumnPropNameInTable="AverageRatingColumn" msprop:Generator_ColumnVarNameInTable="columnAverageRating" msprop:Generator_UserColumnName="AverageRating" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_OccupancyRate" msprop:Generator_RowEvHandlerName="View_OccupancyRateRowChangeEventHandler" msprop:Generator_RowDeletedName="View_OccupancyRateRowDeleted" msprop:Generator_RowDeletingName="View_OccupancyRateRowDeleting" msprop:Generator_RowEvArgName="View_OccupancyRateRowChangeEvent" msprop:Generator_TablePropName="View_OccupancyRate" msprop:Generator_RowChangedName="View_OccupancyRateRowChanged" msprop:Generator_RowChangingName="View_OccupancyRateRowChanging" msprop:Generator_TableClassName="View_OccupancyRateDataTable" msprop:Generator_RowClassName="View_OccupancyRateRow" msprop:Generator_TableVarName="tableView_OccupancyRate" msprop:Generator_UserTableName="View_OccupancyRate">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HotelID" msprop:Generator_ColumnPropNameInRow="HotelID" msprop:Generator_ColumnPropNameInTable="HotelIDColumn" msprop:Generator_ColumnVarNameInTable="columnHotelID" msprop:Generator_UserColumnName="HotelID" type="xs:int" />
+              <xs:element name="HotelName" msprop:Generator_ColumnPropNameInRow="HotelName" msprop:Generator_ColumnPropNameInTable="HotelNameColumn" msprop:Generator_ColumnVarNameInTable="columnHotelName" msprop:Generator_UserColumnName="HotelName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OccupancyRate" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="OccupancyRate" msprop:Generator_ColumnPropNameInTable="OccupancyRateColumn" msprop:Generator_ColumnVarNameInTable="columnOccupancyRate" msprop:Generator_UserColumnName="OccupancyRate" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_OnTime" />
+      <xs:field xpath="mstns:RegID" />
+    </xs:unique>
+    <xs:unique name="View_GuideRating_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_GuideRating" />
+      <xs:field xpath="mstns:GuideID" />
+    </xs:unique>
+    <xs:unique name="View_OccupancyRate_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_OccupancyRate" />
+      <xs:field xpath="mstns:HotelID" />
+    </xs:unique>
+  </xs:element>
 </xs:schema>

@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
+            this.cap = new System.Windows.Forms.NumericUpDown();
+            this.end = new System.Windows.Forms.DateTimePicker();
+            this.start = new System.Windows.Forms.DateTimePicker();
+            this.accecombo = new System.Windows.Forms.ComboBox();
+            this.capcombo = new System.Windows.Forms.ComboBox();
+            this.typecombo = new System.Windows.Forms.ComboBox();
+            this.destinationCombo = new System.Windows.Forms.ComboBox();
             this.roundedButton1 = new RoundedButton();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -39,16 +46,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tripTitle = new RoundedRichTextBox();
-            this.price = new RoundedRichTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.destinationCombo = new System.Windows.Forms.ComboBox();
-            this.typecombo = new System.Windows.Forms.ComboBox();
-            this.capcombo = new System.Windows.Forms.ComboBox();
-            this.accecombo = new System.Windows.Forms.ComboBox();
-            this.start = new System.Windows.Forms.DateTimePicker();
-            this.end = new System.Windows.Forms.DateTimePicker();
-            this.cap = new System.Windows.Forms.NumericUpDown();
+            this.tripTitle = new System.Windows.Forms.RichTextBox();
+            this.price = new System.Windows.Forms.RichTextBox();
             this.translucentRoundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cap)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,8 @@
             this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderWidth = 1;
+            this.translucentRoundedPanel1.Controls.Add(this.price);
+            this.translucentRoundedPanel1.Controls.Add(this.tripTitle);
             this.translucentRoundedPanel1.Controls.Add(this.cap);
             this.translucentRoundedPanel1.Controls.Add(this.end);
             this.translucentRoundedPanel1.Controls.Add(this.start);
@@ -75,14 +77,65 @@
             this.translucentRoundedPanel1.Controls.Add(this.label5);
             this.translucentRoundedPanel1.Controls.Add(this.label2);
             this.translucentRoundedPanel1.Controls.Add(this.label1);
-            this.translucentRoundedPanel1.Controls.Add(this.tripTitle);
-            this.translucentRoundedPanel1.Controls.Add(this.price);
             this.translucentRoundedPanel1.Controls.Add(this.label4);
             this.translucentRoundedPanel1.CornerRadius = 10;
             this.translucentRoundedPanel1.Location = new System.Drawing.Point(113, 12);
             this.translucentRoundedPanel1.Name = "translucentRoundedPanel1";
             this.translucentRoundedPanel1.Size = new System.Drawing.Size(579, 426);
             this.translucentRoundedPanel1.TabIndex = 0;
+            // 
+            // cap
+            // 
+            this.cap.Location = new System.Drawing.Point(28, 214);
+            this.cap.Name = "cap";
+            this.cap.Size = new System.Drawing.Size(219, 20);
+            this.cap.TabIndex = 53;
+            // 
+            // end
+            // 
+            this.end.Location = new System.Drawing.Point(333, 311);
+            this.end.Name = "end";
+            this.end.Size = new System.Drawing.Size(219, 20);
+            this.end.TabIndex = 52;
+            // 
+            // start
+            // 
+            this.start.Location = new System.Drawing.Point(28, 311);
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(219, 20);
+            this.start.TabIndex = 51;
+            // 
+            // accecombo
+            // 
+            this.accecombo.FormattingEnabled = true;
+            this.accecombo.Location = new System.Drawing.Point(333, 264);
+            this.accecombo.Name = "accecombo";
+            this.accecombo.Size = new System.Drawing.Size(219, 21);
+            this.accecombo.TabIndex = 50;
+            // 
+            // capcombo
+            // 
+            this.capcombo.FormattingEnabled = true;
+            this.capcombo.Location = new System.Drawing.Point(333, 214);
+            this.capcombo.Name = "capcombo";
+            this.capcombo.Size = new System.Drawing.Size(219, 21);
+            this.capcombo.TabIndex = 49;
+            // 
+            // typecombo
+            // 
+            this.typecombo.FormattingEnabled = true;
+            this.typecombo.Location = new System.Drawing.Point(333, 152);
+            this.typecombo.Name = "typecombo";
+            this.typecombo.Size = new System.Drawing.Size(219, 21);
+            this.typecombo.TabIndex = 48;
+            // 
+            // destinationCombo
+            // 
+            this.destinationCombo.FormattingEnabled = true;
+            this.destinationCombo.Location = new System.Drawing.Point(28, 152);
+            this.destinationCombo.Name = "destinationCombo";
+            this.destinationCombo.Size = new System.Drawing.Size(219, 21);
+            this.destinationCombo.TabIndex = 47;
             // 
             // roundedButton1
             // 
@@ -196,30 +249,6 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "Destination";
             // 
-            // tripTitle
-            // 
-            this.tripTitle.BackColor = System.Drawing.Color.White;
-            this.tripTitle.BorderColor = System.Drawing.Color.Gray;
-            this.tripTitle.BorderWidth = 1;
-            this.tripTitle.CornerRadius = 15;
-            this.tripTitle.Location = new System.Drawing.Point(173, 97);
-            this.tripTitle.Name = "tripTitle";
-            this.tripTitle.Padding = new System.Windows.Forms.Padding(3);
-            this.tripTitle.Size = new System.Drawing.Size(219, 26);
-            this.tripTitle.TabIndex = 34;
-            // 
-            // price
-            // 
-            this.price.BackColor = System.Drawing.Color.White;
-            this.price.BorderColor = System.Drawing.Color.Gray;
-            this.price.BorderWidth = 1;
-            this.price.CornerRadius = 15;
-            this.price.Location = new System.Drawing.Point(28, 259);
-            this.price.Name = "price";
-            this.price.Padding = new System.Windows.Forms.Padding(3);
-            this.price.Size = new System.Drawing.Size(219, 26);
-            this.price.TabIndex = 27;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -232,58 +261,21 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "ADD A TRIP";
             // 
-            // destinationCombo
+            // tripTitle
             // 
-            this.destinationCombo.FormattingEnabled = true;
-            this.destinationCombo.Location = new System.Drawing.Point(28, 152);
-            this.destinationCombo.Name = "destinationCombo";
-            this.destinationCombo.Size = new System.Drawing.Size(219, 21);
-            this.destinationCombo.TabIndex = 47;
+            this.tripTitle.Location = new System.Drawing.Point(172, 98);
+            this.tripTitle.Name = "tripTitle";
+            this.tripTitle.Size = new System.Drawing.Size(219, 25);
+            this.tripTitle.TabIndex = 54;
+            this.tripTitle.Text = "";
             // 
-            // typecombo
+            // price
             // 
-            this.typecombo.FormattingEnabled = true;
-            this.typecombo.Location = new System.Drawing.Point(333, 152);
-            this.typecombo.Name = "typecombo";
-            this.typecombo.Size = new System.Drawing.Size(219, 21);
-            this.typecombo.TabIndex = 48;
-            // 
-            // capcombo
-            // 
-            this.capcombo.FormattingEnabled = true;
-            this.capcombo.Location = new System.Drawing.Point(333, 214);
-            this.capcombo.Name = "capcombo";
-            this.capcombo.Size = new System.Drawing.Size(219, 21);
-            this.capcombo.TabIndex = 49;
-            // 
-            // accecombo
-            // 
-            this.accecombo.FormattingEnabled = true;
-            this.accecombo.Location = new System.Drawing.Point(333, 264);
-            this.accecombo.Name = "accecombo";
-            this.accecombo.Size = new System.Drawing.Size(219, 21);
-            this.accecombo.TabIndex = 50;
-            // 
-            // start
-            // 
-            this.start.Location = new System.Drawing.Point(28, 311);
-            this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(219, 20);
-            this.start.TabIndex = 51;
-            // 
-            // end
-            // 
-            this.end.Location = new System.Drawing.Point(333, 311);
-            this.end.Name = "end";
-            this.end.Size = new System.Drawing.Size(219, 20);
-            this.end.TabIndex = 52;
-            // 
-            // cap
-            // 
-            this.cap.Location = new System.Drawing.Point(28, 214);
-            this.cap.Name = "cap";
-            this.cap.Size = new System.Drawing.Size(219, 20);
-            this.cap.TabIndex = 53;
+            this.price.Location = new System.Drawing.Point(28, 259);
+            this.price.Name = "price";
+            this.price.Size = new System.Drawing.Size(219, 25);
+            this.price.TabIndex = 55;
+            this.price.Text = "";
             // 
             // AddTrip
             // 
@@ -307,8 +299,6 @@
 
         private Components.TranslucentRoundedPanel translucentRoundedPanel1;
         private System.Windows.Forms.Label label4;
-        private RoundedRichTextBox price;
-        private RoundedRichTextBox tripTitle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
@@ -326,5 +316,7 @@
         private System.Windows.Forms.ComboBox typecombo;
         private System.Windows.Forms.ComboBox destinationCombo;
         private System.Windows.Forms.NumericUpDown cap;
+        private System.Windows.Forms.RichTextBox tripTitle;
+        private System.Windows.Forms.RichTextBox price;
     }
 }

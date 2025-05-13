@@ -26,18 +26,59 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ResponseTimeTableAdapter" GeneratorDataComponentClassName="View_ResponseTimeTableAdapter" Name="View_ResponseTime" UserDataComponentName="View_ResponseTimeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TravelEaseConnectionString (Settings)" DbObjectName="TravelEase.dbo.View_ResponseTime" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM View_ResponseTime</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OperatorID" DataSetColumn="OperatorID" />
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="AvgResponseTimeHrs" DataSetColumn="AvgResponseTimeHrs" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="TourOperatorDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="TourOperatorDataSet" msprop:Generator_DataSetName="TourOperatorDataSet">
+  <xs:element name="TourOperatorDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="TourOperatorDataSet" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TourOperatorDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="View_OperatorEarning" msprop:Generator_RowEvHandlerName="View_OperatorEarningRowChangeEventHandler" msprop:Generator_RowDeletedName="View_OperatorEarningRowDeleted" msprop:Generator_RowDeletingName="View_OperatorEarningRowDeleting" msprop:Generator_RowEvArgName="View_OperatorEarningRowChangeEvent" msprop:Generator_TablePropName="View_OperatorEarning" msprop:Generator_RowChangedName="View_OperatorEarningRowChanged" msprop:Generator_RowChangingName="View_OperatorEarningRowChanging" msprop:Generator_TableClassName="View_OperatorEarningDataTable" msprop:Generator_RowClassName="View_OperatorEarningRow" msprop:Generator_TableVarName="tableView_OperatorEarning" msprop:Generator_UserTableName="View_OperatorEarning">
+        <xs:element name="View_OperatorEarning" msprop:Generator_RowEvHandlerName="View_OperatorEarningRowChangeEventHandler" msprop:Generator_RowDeletedName="View_OperatorEarningRowDeleted" msprop:Generator_RowDeletingName="View_OperatorEarningRowDeleting" msprop:Generator_RowEvArgName="View_OperatorEarningRowChangeEvent" msprop:Generator_TablePropName="View_OperatorEarning" msprop:Generator_RowChangedName="View_OperatorEarningRowChanged" msprop:Generator_UserTableName="View_OperatorEarning" msprop:Generator_RowChangingName="View_OperatorEarningRowChanging" msprop:Generator_RowClassName="View_OperatorEarningRow" msprop:Generator_TableClassName="View_OperatorEarningDataTable" msprop:Generator_TableVarName="tableView_OperatorEarning">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="TourOperatorID" msprop:Generator_ColumnPropNameInRow="TourOperatorID" msprop:Generator_ColumnPropNameInTable="TourOperatorIDColumn" msprop:Generator_ColumnVarNameInTable="columnTourOperatorID" msprop:Generator_UserColumnName="TourOperatorID" type="xs:int" />
+              <xs:element name="TourOperatorID" msprop:Generator_ColumnPropNameInTable="TourOperatorIDColumn" msprop:Generator_ColumnPropNameInRow="TourOperatorID" msprop:Generator_UserColumnName="TourOperatorID" msprop:Generator_ColumnVarNameInTable="columnTourOperatorID" type="xs:int" />
+              <xs:element name="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_UserColumnName="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_UserColumnName="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalRevenue" msprop:Generator_ColumnPropNameInTable="TotalRevenueColumn" msprop:Generator_ColumnPropNameInRow="TotalRevenue" msprop:Generator_UserColumnName="TotalRevenue" msprop:Generator_ColumnVarNameInTable="columnTotalRevenue" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_ResponseTime" msprop:Generator_RowEvHandlerName="View_ResponseTimeRowChangeEventHandler" msprop:Generator_RowDeletedName="View_ResponseTimeRowDeleted" msprop:Generator_RowDeletingName="View_ResponseTimeRowDeleting" msprop:Generator_RowEvArgName="View_ResponseTimeRowChangeEvent" msprop:Generator_TablePropName="View_ResponseTime" msprop:Generator_RowChangedName="View_ResponseTimeRowChanged" msprop:Generator_RowChangingName="View_ResponseTimeRowChanging" msprop:Generator_TableClassName="View_ResponseTimeDataTable" msprop:Generator_RowClassName="View_ResponseTimeRow" msprop:Generator_TableVarName="tableView_ResponseTime" msprop:Generator_UserTableName="View_ResponseTime">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OperatorID" msprop:Generator_ColumnPropNameInRow="OperatorID" msprop:Generator_ColumnPropNameInTable="OperatorIDColumn" msprop:Generator_ColumnVarNameInTable="columnOperatorID" msprop:Generator_UserColumnName="OperatorID" type="xs:int" minOccurs="0" />
               <xs:element name="FirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_UserColumnName="FirstName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -52,7 +93,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TotalRevenue" msprop:Generator_ColumnPropNameInRow="TotalRevenue" msprop:Generator_ColumnPropNameInTable="TotalRevenueColumn" msprop:Generator_ColumnVarNameInTable="columnTotalRevenue" msprop:Generator_UserColumnName="TotalRevenue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AvgResponseTimeHrs" msprop:Generator_ColumnPropNameInRow="AvgResponseTimeHrs" msprop:Generator_ColumnPropNameInTable="AvgResponseTimeHrsColumn" msprop:Generator_ColumnVarNameInTable="columnAvgResponseTimeHrs" msprop:Generator_UserColumnName="AvgResponseTimeHrs" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

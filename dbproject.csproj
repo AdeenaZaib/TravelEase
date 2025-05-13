@@ -126,6 +126,12 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Analytics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analytics.Designer.cs">
+      <DependentUpon>Analytics.cs</DependentUpon>
+    </Compile>
     <Compile Include="AssignServices.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -470,6 +476,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analytics.resx">
+      <DependentUpon>Analytics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AssignServices.resx">
       <DependentUpon>AssignServices.cs</DependentUpon>
