@@ -60,12 +60,10 @@ namespace dbproject
             listView1.GridLines = true;
 
             listView1.Columns.Clear();
-            listView1.Columns.Add("GuideID", 50);
-            listView1.Columns.Add("Name", 100);
-            listView1.Columns.Add("Contact", 100);
-            listView1.Columns.Add("Joining Date", 100);
-            listView1.Columns.Add("Avaibility", 100);
-            listView1.Columns.Add("Hourly Rate", 80);
+            listView1.Columns.Add("Meal Name", 50);
+            listView1.Columns.Add("Timings", 100);
+            listView1.Columns.Add("ServiceID", 100);
+            listView1.Columns.Add("MealDesc", 100);
 
         }
 
@@ -92,6 +90,12 @@ namespace dbproject
                     listView1.Columns.Add("Timings", 150);
                     listView1.Columns.Add("Service ID", 100);
                     listView1.Columns.Add("Description", 200);
+
+                    combo.Items.Add("MealName");
+                    combo.Items.Add("Timings");
+                    combo.Items.Add("ServiceID");
+                    combo.Items.Add("Description");
+                    
 
                     // Populate ListView
                     while (reader.Read())
@@ -126,6 +130,120 @@ namespace dbproject
         {
             InitializelistView();
             LoadMeals();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Please select a meal to delete.");
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this meal? This action cannot be undone.",
+                                                  "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                // Get values from selected ListView item
+                string mealName = listView1.SelectedItems[0].SubItems[0].Text;
+                string timingStr = listView1.SelectedItems[0].SubItems[1].Text;
+
+                if (!DateTime.TryParse(timingStr, out DateTime timing))
+                {
+                    MessageBox.Show("Invalid meal timing format.");
+                    return;
+                }
+
+                string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    try
+                    {
+                        conn.Open();
+                        string deleteQuery = "DELETE FROM Meals WHERE MealName = @MealName AND Timings = @Timings";
+                        SqlCommand cmd = new SqlCommand(deleteQuery, conn);
+                        cmd.Parameters.AddWithValue("@MealName", mealName);
+                        cmd.Parameters.AddWithValue("@Timings", timing);
+
+                        int rows = cmd.ExecuteNonQuery();
+
+                        if (rows > 0)
+                        {
+                            MessageBox.Show("Meal deleted successfully.");
+                            LoadMeals(); // Refresh the list
+                        }
+                        else
+                        {
+                            MessageBox.Show("Meal could not be deleted.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0 || combo.SelectedItem == null || string.IsNullOrWhiteSpace(txt.Text))
+            {
+                MessageBox.Show("Please select a meal, a field to update, and provide the new value.");
+                return;
+            }
+
+            var selectedItem = listView1.SelectedItems[0];
+            string mealName = selectedItem.SubItems[0].Text;
+            string timingStr = selectedItem.SubItems[1].Text;
+
+            if (!DateTime.TryParse(timingStr, out DateTime originalTiming))
+            {
+                MessageBox.Show("Invalid original meal timing format.");
+                return;
+            }
+
+            string columnToUpdate = combo.SelectedItem.ToString();
+            string newValue = txt.Text;
+
+            string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = $"UPDATE Meals SET {columnToUpdate} = @newValue WHERE MealName = @MealName AND Timings = @Timings";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    // Handle data type for new value
+                    if (columnToUpdate == "ServiceID")
+                        cmd.Parameters.AddWithValue("@newValue", int.Parse(newValue));
+                    else if (columnToUpdate == "Timings")
+                        cmd.Parameters.AddWithValue("@newValue", DateTime.Parse(newValue));
+                    else
+                        cmd.Parameters.AddWithValue("@newValue", newValue);
+
+                    cmd.Parameters.AddWithValue("@MealName", mealName);
+                    cmd.Parameters.AddWithValue("@Timings", originalTiming);
+
+                    int rows = cmd.ExecuteNonQuery();
+                    if (rows > 0)
+                    {
+                        MessageBox.Show("Meal updated successfully.");
+                        LoadMeals(); // Refresh list
+                    }
+                    else
+                    {
+                        MessageBox.Show("Meal update failed.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
     }
 }

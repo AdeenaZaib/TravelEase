@@ -66,6 +66,11 @@ namespace dbproject
             listView1.Columns.Add("Contact", 100);
             listView1.Columns.Add("TotalRooms", 100);
             listView1.Columns.Add("StayRate", 80);
+
+            combo.Items.Add("HotelName");
+            combo.Items.Add("Contact");
+            combo.Items.Add("TotalRooms");
+            combo.Items.Add("StayRate");
         }
 
         private void LoadHotelData()
@@ -115,6 +120,113 @@ namespace dbproject
         {
             InitializelistView();
             LoadHotelData();
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0 || combo.SelectedItem == null || string.IsNullOrWhiteSpace(txt.Text))
+            {
+                MessageBox.Show("Please select a hotel, field, and provide a new value.");
+                return;
+            }
+
+            var selectedItem = listView1.SelectedItems[0];
+            string hotelID = selectedItem.SubItems[0].Text;
+            string selectedColumn = combo.SelectedItem.ToString();
+            string newValue = txt.Text;
+
+            // Map display column to database column
+            string dbColumn = "";
+
+            if (selectedColumn == "HotelName")
+                dbColumn = "HotelName";
+            else if (selectedColumn == "Contact")
+                dbColumn = "Contact";
+            else if (selectedColumn == "TotalRooms")
+                dbColumn = "TotalRooms";
+            else if (selectedColumn == "StayRate")
+                dbColumn = "StayRate";
+            else
+            {
+                MessageBox.Show("Invalid column selected.");
+                return;
+            }
+
+            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True"))
+            {
+                try
+                {
+                    con.Open();
+                    string query = $"UPDATE Hotel SET {dbColumn} = @NewValue WHERE HotelID = @HotelID";
+                    SqlCommand cmd = new SqlCommand(query, con);
+
+                    if (dbColumn == "TotalRooms")
+                        cmd.Parameters.AddWithValue("@NewValue", int.Parse(newValue));
+                    else if (dbColumn == "StayRate")
+                        cmd.Parameters.AddWithValue("@NewValue", float.Parse(newValue));
+                    else
+                        cmd.Parameters.AddWithValue("@NewValue", newValue);
+
+                    cmd.Parameters.AddWithValue("@HotelID", hotelID);
+
+                    int rows = cmd.ExecuteNonQuery();
+                    if (rows > 0)
+                    {
+                        MessageBox.Show("Hotel updated successfully.");
+                        LoadHotelData(); // Refresh data
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update failed. No matching hotel found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating hotel: " + ex.Message);
+                }
+            }
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Please select a hotel to delete.");
+                return;
+            }
+
+            var selectedItem = listView1.SelectedItems[0];
+            string hotelID = selectedItem.SubItems[0].Text;
+
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this hotel?", "Confirm Delete", MessageBoxButtons.YesNo);
+            if (result != DialogResult.Yes)
+                return;
+
+            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True"))
+            {
+                try
+                {
+                    con.Open();
+                    string query = "DELETE FROM Hotel WHERE HotelID = @HotelID";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@HotelID", hotelID);
+
+                    int rows = cmd.ExecuteNonQuery();
+                    if (rows > 0)
+                    {
+                        MessageBox.Show("Hotel deleted successfully.");
+                        LoadHotelData(); // Refresh data
+                    }
+                    else
+                    {
+                        MessageBox.Show("Delete failed. No matching hotel found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error deleting hotel: " + ex.Message);
+                }
+            }
         }
     }
 }

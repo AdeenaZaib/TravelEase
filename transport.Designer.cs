@@ -232,6 +232,7 @@
             this.delete.TabIndex = 38;
             this.delete.Text = "DELETE";
             this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // update
             // 
@@ -243,6 +244,7 @@
             this.update.TabIndex = 37;
             this.update.Text = "UPDATE";
             this.update.UseVisualStyleBackColor = false;
+            this.update.Click += new System.EventHandler(this.update_Click);
             // 
             // listView1
             // 
