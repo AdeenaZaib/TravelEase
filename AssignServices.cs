@@ -129,26 +129,21 @@ namespace dbproject
         private void LoadScreen()
         {
             string tquery = @"SELECT TripBooking.BookingID, TripBooking.TripID, Trip.TripTitle, TripBooking.TravellerID, TripBooking.NoOfPeople, TripBooking.BookingDate
-                            FROM TripBooking JOIN Trip ON TripBooking.TripID = Trip.TripID
-                            WHERE TripBooking.BookingStatus = 'Confirmed' OR TripBooking.BookingStatus = 'Confirm'
-                            AND Trip,TourOperatorID = Program.Current.UserID";
+            FROM TripBooking JOIN Trip ON TripBooking.TripID = Trip.TripID
+            WHERE TripBooking.BookingStatus = 'Booked' 
+            AND Trip.TourOperatorID = " + Program.CurrentUser.userid;
 
             string squery = @"SELECT 
-                        s.ServiceID, s.ServiceProvider, s.ServicePrice, s.ServiceDescription,
+                        s.ServiceID, s.ServiceProviderID,
                         CASE 
                         WHEN h.ServiceID IS NOT NULL THEN 'Hotel'
                         WHEN tg.ServiceID IS NOT NULL THEN 'TourGuide'
                         WHEN t.ServiceID IS NOT NULL THEN 'Transport'
                         WHEN m.ServiceID IS NOT NULL THEN 'Meals'
                         ELSE 'Unknown'
-                        END AS Role,
-                        r.RoomID,
-                        r.RoomType,
-                        r.RoomPrice
-                        FROM 
-                        Service s
-                        LEFT JOIN Hotel h ON s.ServiceID = h.ServiceID
-                        LEFT JOIN Rooms r ON h.HotelID = r.HotelID
+                        END AS Service
+                        FROM TripServices s
+                        LEFT JOIN Hotel h ON s.ServiceID = h.ServiceID  
                         LEFT JOIN TourGuide tg ON s.ServiceID = tg.ServiceID
                         LEFT JOIN Transport t ON s.ServiceID = t.ServiceID
                         LEFT JOIN Meals m ON s.ServiceID = m.ServiceID";
@@ -161,17 +156,17 @@ namespace dbproject
                     adapter.Fill(dataTable);
 
                     // Clear previous content
-                    serv.Items.Clear();
-                    serv.View = View.Details;
-                    serv.Columns.Clear();
+                    trav.Items.Clear();
+                    trav.View = View.Details;
+                    trav.Columns.Clear();
 
                     // Add columns (only once)
-                    serv.Columns.Add("Booking ID", 100);
-                    serv.Columns.Add("Trip ID", 100);
-                    serv.Columns.Add("Trip Title", 150);
-                    serv.Columns.Add("Traveller ID", 150);
-                    serv.Columns.Add("No Of People", 150);
-                    serv.Columns.Add("Booking Date", 150);
+                    trav.Columns.Add("Booking ID", 100);
+                    trav.Columns.Add("Trip ID", 100);
+                    trav.Columns.Add("Trip Title", 150);
+                    trav.Columns.Add("Traveller ID", 150);
+                    trav.Columns.Add("No Of People", 150);
+                    trav.Columns.Add("Booking Date", 150);
 
                     // Populate the list view
                     foreach (DataRow row in dataTable.Rows)
@@ -182,6 +177,27 @@ namespace dbproject
                         item.SubItems.Add(row["TravellerID"].ToString());
                         item.SubItems.Add(row["NoOfPeople"].ToString());
                         item.SubItems.Add(row["BookingDate"].ToString());
+                        trav.Items.Add(item);
+                    }
+
+                    SqlDataAdapter adapter2 = new SqlDataAdapter(squery, conn);
+                    DataTable dt2 = new DataTable();
+                    adapter2.Fill(dt2);
+
+                    serv.Items.Clear();
+                    serv.View = View.Details;
+                    serv.Columns.Clear();
+
+                    serv.Columns.Add("Service ID", 100);
+                    serv.Columns.Add("Service", 100);
+                    serv.Columns.Add("ProviderID", 150);
+
+                    foreach (DataRow row in dt2.Rows)
+                    {
+                        ListViewItem item = new ListViewItem(row["ServiceID"].ToString());
+                        item.SubItems.Add(row["Service"].ToString());
+                        item.SubItems.Add(row["ServiceProviderID"].ToString());
+                        serv.Items.Add(item); 
                     }
                 }
                 catch (Exception ex)
@@ -228,6 +244,7 @@ namespace dbproject
 
         private void AssignServices_Load(object sender, EventArgs e)
         {
+            LoadFilters();
             LoadScreen();
         }
 

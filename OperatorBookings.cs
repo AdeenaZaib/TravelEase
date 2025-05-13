@@ -66,7 +66,7 @@ namespace dbproject
             this.Hide();
         }
 
-        private void OperatorBookings_Load(object sender, EventArgs e)
+        private void LoadInquiries()
         {
             string query = @"SELECT InquiryID, TravellerID, Inquiry FROM Inquiries";
 
@@ -94,6 +94,8 @@ namespace dbproject
                         ListViewItem item = new ListViewItem(row["InquiryID"].ToString());
                         item.SubItems.Add(row["TravellerID"].ToString());
                         item.SubItems.Add(row["Inquiry"].ToString());
+
+                        inq.Items.Add(item);
                     }
                 }
                 catch (Exception ex)
@@ -102,6 +104,71 @@ namespace dbproject
                 }
 
             }
+        }
+
+        private void LoadUpdates()
+        {
+            string query = @"
+    SELECT 
+        s.ServiceID, 
+        s.TravellerID, 
+        CASE 
+            WHEN h.ServiceID IS NOT NULL THEN 'Hotel'
+            WHEN tg.ServiceID IS NOT NULL THEN 'TourGuide'
+            WHEN t.ServiceID IS NOT NULL THEN 'Transport'
+            WHEN m.ServiceID IS NOT NULL THEN 'Meals'
+            ELSE 'Unknown'
+        END AS Service
+    FROM 
+        ServicesBooked s
+        LEFT JOIN Hotel h ON s.ServiceID = h.ServiceID
+        LEFT JOIN TourGuide tg ON s.ServiceID = tg.ServiceID
+        LEFT JOIN Transport t ON s.ServiceID = t.ServiceID
+        LEFT JOIN Meals m ON s.ServiceID = m.ServiceID
+    WHERE 
+        s.BookingStatus = 'Confirmed'";
+
+
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                try
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Clear previous content
+                    reservation.Items.Clear();
+                    reservation.View = View.Details;
+                    reservation.Columns.Clear();
+
+                    // Add columns (only once)
+                    reservation.Columns.Add("Service ID", 100);
+                    reservation.Columns.Add("Traveller ID", 150);
+                    reservation.Columns.Add("Service", 150);
+
+                    // Populate the list view
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        ListViewItem item = new ListViewItem(row["ServiceID"].ToString());
+                        item.SubItems.Add(row["TravellerID"].ToString());
+                        item.SubItems.Add(row["Service"].ToString());
+
+                        reservation.Items.Add(item);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
+            }
+        }
+
+        private void OperatorBookings_Load(object sender, EventArgs e)
+        {
+            LoadInquiries();
+            LoadUpdates();
         }
 
         private void button1_Click(object sender, EventArgs e)

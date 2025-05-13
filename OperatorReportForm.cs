@@ -23,12 +23,14 @@ namespace dbproject
 
             // Fill each DataTable in the dataset using the respective adapters
             new TourOperatorDataSetTableAdapters.View_OperatorEarningTableAdapter().Fill(ds.View_OperatorEarning);
+            new TourOperatorDataSetTableAdapters.View_ResponseTimeTableAdapter().Fill(ds.View_ResponseTime);
 
             // Clear any previous data sources and bind each dataset to the report
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.ReportEmbeddedResource = "dbproject.TOReport.rdlc";  // Make sure this path is correct
 
             reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("View_OperatorEarning", (DataTable)ds.View_OperatorEarning));
+            reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("View_ResponseTime", (DataTable)ds.View_ResponseTime));
 
 
             this.reportViewer1.RefreshReport();
