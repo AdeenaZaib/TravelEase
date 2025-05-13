@@ -278,6 +278,7 @@
             this.Controls.Add(this.label2);
             this.Name = "guides";
             this.Text = "guides";
+            this.Load += new System.EventHandler(this.guides_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

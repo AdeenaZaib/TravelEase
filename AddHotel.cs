@@ -46,17 +46,11 @@ namespace dbproject
                     cmdService.Parameters.AddWithValue("@spid", providerID);
                     int newServiceID = Convert.ToInt32(cmdService.ExecuteScalar());
 
-                    // 2. Generate a new HotelID
-                    string getHotelIDQuery = "SELECT ISNULL(MAX(HotelID), 0) + 1 FROM Hotel";
-                    SqlCommand cmdGetHotelID = new SqlCommand(getHotelIDQuery, con, transaction);
-                    int newHotelID = Convert.ToInt32(cmdGetHotelID.ExecuteScalar());
-
                     // 3. Insert into Hotel table
                     string insertHotelQuery = @"
-                    INSERT INTO Hotel (HotelID, ServiceID, HotelName, HotelAddress, Contact, JoiningDate, TotalRooms, StayRate)
-                    VALUES (@hid, @sid, @hname, @haddr, @hcontact, @jdate, @rooms, @rate)";
+                    INSERT INTO Hotel ( ServiceID, HotelName, HotelAddress, Contact, JoiningDate, TotalRooms, StayRate)
+                    VALUES (@sid, @hname, @haddr, @hcontact, @jdate, @rooms, @rate)";
                     SqlCommand cmdHotel = new SqlCommand(insertHotelQuery, con, transaction);
-                    cmdHotel.Parameters.AddWithValue("@hid", newHotelID);
                     cmdHotel.Parameters.AddWithValue("@sid", newServiceID);
                     cmdHotel.Parameters.AddWithValue("@hname", hotelName);
                     cmdHotel.Parameters.AddWithValue("@haddr", hotelAddress);

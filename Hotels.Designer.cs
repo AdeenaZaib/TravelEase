@@ -192,8 +192,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 34);
             this.button1.TabIndex = 49;
-            this.button1.Text = "ADD TRIP";
+            this.button1.Text = "ADD HOTEL";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // combo
             // 
@@ -277,6 +278,7 @@
             this.Controls.Add(this.label2);
             this.Name = "Hotels";
             this.Text = "Hotels";
+            this.Load += new System.EventHandler(this.Hotels_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
