@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssignServices));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.circularPictureBox1 = new Components.CircularPictureBox();
             this.labelButton1 = new LabelButton();
@@ -63,17 +63,10 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(20, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 24);
+            this.label1.Size = new System.Drawing.Size(161, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "TravelEase";
+            this.label1.Text = "TRAVELEASE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
-            this.label2.TabIndex = 17;
             // 
             // label3
             // 
@@ -230,11 +223,11 @@
             // 
             // roundedButton1
             // 
-            this.roundedButton1.BackColor = System.Drawing.Color.DarkKhaki;
+            this.roundedButton1.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.roundedButton1.Location = new System.Drawing.Point(363, 352);
+            this.roundedButton1.Location = new System.Drawing.Point(355, 352);
             this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.Size = new System.Drawing.Size(75, 23);
+            this.roundedButton1.Size = new System.Drawing.Size(83, 30);
             this.roundedButton1.TabIndex = 22;
             this.roundedButton1.Text = "ASSIGN";
             this.roundedButton1.UseVisualStyleBackColor = false;
@@ -259,6 +252,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label6.Location = new System.Drawing.Point(294, 242);
@@ -270,6 +264,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label7.Location = new System.Drawing.Point(294, 297);
@@ -293,6 +288,7 @@
             // 
             // serv
             // 
+            this.serv.BackColor = System.Drawing.Color.Linen;
             this.serv.HideSelection = false;
             this.serv.Location = new System.Drawing.Point(4, 3);
             this.serv.Name = "serv";
@@ -314,6 +310,7 @@
             // 
             // trav
             // 
+            this.trav.BackColor = System.Drawing.Color.Linen;
             this.trav.HideSelection = false;
             this.trav.Location = new System.Drawing.Point(3, 3);
             this.trav.Name = "trav";
@@ -323,6 +320,7 @@
             // 
             // combo
             // 
+            this.combo.BackColor = System.Drawing.Color.Wheat;
             this.combo.FormattingEnabled = true;
             this.combo.Location = new System.Drawing.Point(385, 195);
             this.combo.Name = "combo";
@@ -333,6 +331,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label8.Location = new System.Drawing.Point(292, 195);
@@ -345,6 +344,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.combo);
@@ -364,7 +365,6 @@
             this.Controls.Add(this.labelButton1);
             this.Controls.Add(this.circularPictureBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AssignServices";
             this.Text = "AssignServices";
@@ -380,7 +380,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Components.CircularPictureBox circularPictureBox1;
         private LabelButton labelButton1;

@@ -30,6 +30,7 @@ namespace dbproject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             CurrentUser = new UserInfo { userid = 0, bookingid = 0, inqid = 0, fisrtName = "", lastName = "", email = "", password = "" };
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
             Application.Run(new Login());
         }
     }

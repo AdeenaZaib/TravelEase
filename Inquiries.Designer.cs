@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inquiries));
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
+            this.det = new System.Windows.Forms.RichTextBox();
+            this.inqui = new System.Windows.Forms.RichTextBox();
             this.response = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.inqui = new System.Windows.Forms.RichTextBox();
-            this.det = new System.Windows.Forms.RichTextBox();
             this.translucentRoundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,22 @@
             this.translucentRoundedPanel1.Name = "translucentRoundedPanel1";
             this.translucentRoundedPanel1.Size = new System.Drawing.Size(505, 386);
             this.translucentRoundedPanel1.TabIndex = 18;
+            // 
+            // det
+            // 
+            this.det.Location = new System.Drawing.Point(24, 84);
+            this.det.Name = "det";
+            this.det.Size = new System.Drawing.Size(456, 32);
+            this.det.TabIndex = 36;
+            this.det.Text = "";
+            // 
+            // inqui
+            // 
+            this.inqui.Location = new System.Drawing.Point(24, 153);
+            this.inqui.Name = "inqui";
+            this.inqui.Size = new System.Drawing.Size(456, 32);
+            this.inqui.TabIndex = 35;
+            this.inqui.Text = "";
             // 
             // response
             // 
@@ -126,28 +143,15 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "INQUIRY RESPONSE";
             // 
-            // inqui
-            // 
-            this.inqui.Location = new System.Drawing.Point(24, 153);
-            this.inqui.Name = "inqui";
-            this.inqui.Size = new System.Drawing.Size(456, 32);
-            this.inqui.TabIndex = 35;
-            this.inqui.Text = "";
-            // 
-            // det
-            // 
-            this.det.Location = new System.Drawing.Point(24, 84);
-            this.det.Name = "det";
-            this.det.Size = new System.Drawing.Size(456, 32);
-            this.det.TabIndex = 36;
-            this.det.Text = "";
-            // 
             // Inquiries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.translucentRoundedPanel1);
+            this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Name = "Inquiries";
             this.Text = "Inquiries";
             this.Load += new System.EventHandler(this.Inquiries_Load);

@@ -32,7 +32,7 @@ namespace dbproject
             combo.Items.AddRange(new string[] { "Hotel", "Transport", "Meals", "Tour Guides" });
         }
 
-        private void LoadServiceData(string serviceType)
+        /*private void LoadServiceData(string serviceType)
         {
             string query = "";
             switch (serviceType)
@@ -123,8 +123,121 @@ namespace dbproject
 
                 reader.Close();
             }
-        }
+        }*/
 
+        private void LoadServiceData(string serviceType)
+        {
+            string query = "";
+
+            // Build query based on service type
+            switch (serviceType)
+            {
+                case "Hotel":
+                    query = @"
+                SELECT h.HotelID, h.ServiceID, s.ServiceProviderID, u.FirstName, h.HotelName, r.RoomNo, r.ExtraCharges 
+                FROM Hotel h
+                JOIN TripServices s ON h.ServiceID = s.ServiceID
+                JOIN Users u ON u.UserID = s.ServiceProviderID
+                LEFT JOIN Rooms r ON h.HotelID = r.HotelID";
+                    break;
+
+                case "Meals":
+                    query = @"
+                SELECT m.ServiceID, s.ServiceProviderID, u.FirstName, m.MealName, m.Timings, m.MealDesc
+                FROM Meals m
+                JOIN TripServices s ON m.ServiceID = s.ServiceID
+                JOIN Users u ON u.UserID = s.ServiceProviderID";
+                    break;
+
+                case "TourGuide":
+                    query = @"
+                SELECT *, s.ServiceProviderID, u.FirstName
+                FROM TourGuide tg
+                JOIN TripServices s ON tg.ServiceID = s.ServiceID
+                JOIN Users u ON u.UserID = s.ServiceProviderID";
+                    break;
+
+                case "Transport":
+                    query = @"
+                SELECT *, s.ServiceProviderID, u.FirstName
+                FROM Transport t
+                JOIN TripServices s ON t.ServiceID = s.ServiceID
+                JOIN Users u ON u.UserID = s.ServiceProviderID";
+                    break;
+
+                default:
+                    MessageBox.Show("Invalid service type selected.");
+                    return;
+            }
+
+            serv.Items.Clear();
+            serv.Columns.Clear();
+            serv.View = View.Details;
+
+            // Add columns based on the service type
+            switch (serviceType)
+            {
+                case "Hotel":
+                    serv.Columns.Add("Hotel ID", 100);
+                    serv.Columns.Add("Provider", 150);
+                    serv.Columns.Add("Price", 100);
+                    serv.Columns.Add("Hotel Name", 150);
+                    serv.Columns.Add("Room Type", 120);
+                    serv.Columns.Add("Room Price", 100);
+                    break;
+
+                case "Meals":
+                    serv.Columns.Add("Meal ID", 100);
+                    serv.Columns.Add("Provider", 150);
+                    serv.Columns.Add("Price", 100);
+                    serv.Columns.Add("Meal Type", 120);
+                    serv.Columns.Add("Description", 200);
+                    break;
+
+                case "TourGuide":
+                    serv.Columns.Add("Guide ID", 100);
+                    serv.Columns.Add("Provider", 150);
+                    serv.Columns.Add("Price", 100);
+                    serv.Columns.Add("Language", 120);
+                    serv.Columns.Add("Experience (Years)", 150);
+                    break;
+
+                case "Transport":
+                    serv.Columns.Add("Transport ID", 100);
+                    serv.Columns.Add("Provider", 150);
+                    serv.Columns.Add("Price", 100);
+                    serv.Columns.Add("Vehicle Type", 120);
+                    serv.Columns.Add("Capacity", 100);
+                    break;
+            }
+
+            // Execute query and populate list view
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        ListViewItem item = new ListViewItem(reader[0].ToString());
+                        for (int i = 1; i < reader.FieldCount; i++)
+                        {
+                            item.SubItems.Add(reader[i]?.ToString() ?? "");
+                        }
+                        serv.Items.Add(item);
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Query execution failed: " + ex.Message);
+                }
+            }
+        }
 
         private void LoadScreen()
         {
@@ -257,7 +370,7 @@ namespace dbproject
         private void roundedButton1_Click(object sender, EventArgs e)
         {
             string assign = @"INSERT INTO ServicesBooked (ServiceID, TourOperatorID, TravellerID, BookingStatus, BookingDate)
-                             VALUES (@ServiceID, @UserID, @TravellerID, 'Pending', GETDTAE())";
+                             VALUES (@ServiceID, @UserID, @TravellerID, 'Pending', GETDATE())";
 
             using (SqlConnection conn = new SqlConnection(con))
             {

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpeartorTrip));
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.circularPictureBox1 = new Components.CircularPictureBox();
@@ -55,9 +56,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(20, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 24);
+            this.label1.Size = new System.Drawing.Size(161, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "TravelEase";
+            this.label1.Text = "TRAVELEASE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label3
@@ -195,7 +196,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(170, 118);
+            this.label4.Location = new System.Drawing.Point(212, 121);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 29);
             this.label4.TabIndex = 18;
@@ -214,22 +215,24 @@
             // 
             // update
             // 
+            this.update.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.update.Location = new System.Drawing.Point(610, 285);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(92, 34);
             this.update.TabIndex = 22;
             this.update.Text = "UPDATE";
-            this.update.UseVisualStyleBackColor = true;
+            this.update.UseVisualStyleBackColor = false;
             this.update.Click += new System.EventHandler(this.update_Click);
             // 
             // delete
             // 
+            this.delete.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.delete.Location = new System.Drawing.Point(610, 387);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(92, 34);
             this.delete.TabIndex = 24;
             this.delete.Text = "DELETE";
-            this.delete.UseVisualStyleBackColor = true;
+            this.delete.UseVisualStyleBackColor = false;
             this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // txt
@@ -243,6 +246,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(631, 174);
             this.label2.Name = "label2";
@@ -252,6 +256,7 @@
             // 
             // combo
             // 
+            this.combo.BackColor = System.Drawing.Color.Wheat;
             this.combo.FormattingEnabled = true;
             this.combo.Location = new System.Drawing.Point(580, 204);
             this.combo.Name = "combo";
@@ -260,18 +265,20 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.button1.Location = new System.Drawing.Point(610, 337);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 34);
             this.button1.TabIndex = 28;
             this.button1.Text = "ADD TRIP";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // OpeartorTrip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);

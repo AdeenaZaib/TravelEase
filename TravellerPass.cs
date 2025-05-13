@@ -73,6 +73,12 @@ namespace dbproject
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 ap.Items.Clear();
+                ap.View = View.Details;
+                ap.Columns.Clear();
+                ap.Columns.Add("Pass ID");
+                ap.Columns.Add("Description");
+                ap.Columns.Add("Discount");
+                ap.Columns.Add("Valid For (weeks)");
                 if (dt.Rows.Count == 0)
                 {
                     ListViewItem item = new ListViewItem("No Pass");
@@ -85,11 +91,11 @@ namespace dbproject
                 {
                     foreach (DataRow row in dt.Rows)
                     {
-                        ListViewItem item = new ListViewItem(row["ActivityPassID"].ToString());
-                        item.SubItems.Add(row["Activity"].ToString());
-                        item.SubItems.Add(row["Description"].ToString());
+                        ListViewItem item = new ListViewItem(row["PassID"].ToString());
+                        item.SubItems.Add(row["ActivityType"].ToString());
+                        item.SubItems.Add(row["ActivityDesc"].ToString());
                         item.SubItems.Add(row["Discount"].ToString());
-                        item.SubItems.Add(row["Valid For (weeks)"].ToString());
+                        item.SubItems.Add(row["ValidFor"].ToString());
                         ap.Items.Add(item);
                     }
                 }
@@ -98,7 +104,7 @@ namespace dbproject
 
         private void LoadETickets()
         {
-            string query = @"SELECT * FROM ETickets JOIN TripBooking ON TripBooking.BookingID = ActivityPass.BookingID WHERE TripBooking.TravellerID = @UserID";
+            string query = @"SELECT * FROM ETickets JOIN TripBooking ON TripBooking.BookingID = ETickets.BookingID WHERE TripBooking.TravellerID = @UserID";
 
             using (SqlConnection conn = new SqlConnection(con))
             {
@@ -109,6 +115,13 @@ namespace dbproject
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 et.Items.Clear();
+                et.View = View.Details;
+                et.Columns.Clear();
+                et.Columns.Add("Ticket ID");
+                et.Columns.Add("Description");
+                et.Columns.Add("Discount");
+                et.Columns.Add("Valid For (weeks)");
+
                 if (dt.Rows.Count == 0)
                 {
                     ListViewItem item = new ListViewItem("No Tickets");
@@ -122,9 +135,9 @@ namespace dbproject
                     foreach (DataRow row in dt.Rows)
                     {
                         ListViewItem item = new ListViewItem(row["TicketID"].ToString());
-                        item.SubItems.Add(row["Description"].ToString());
+                        item.SubItems.Add(row["Descrip"].ToString());
                         item.SubItems.Add(row["Discount"].ToString());
-                        item.SubItems.Add(row["Valid For (weeks)"].ToString());
+                        item.SubItems.Add(row["ValidFor"].ToString());
                         et.Items.Add(item);
                     }
                 }
@@ -133,7 +146,7 @@ namespace dbproject
 
         private void LoadVouchers()
         {
-            string query = @"SELECT * FROM HotelVoucher JOIN TripBooking ON TripBooking.BookingID = ActivityPass.BookingID WHERE TripBooking.TravellerID = @UserID";
+            string query = @"SELECT * FROM HotelVoucher JOIN TripBooking ON TripBooking.BookingID = HotelVoucher.BookingID WHERE TripBooking.TravellerID = @UserID";
 
             using (SqlConnection conn = new SqlConnection(con))
             {
@@ -144,6 +157,12 @@ namespace dbproject
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 hv.Items.Clear();
+                hv.View = View.Details;
+                hv.Columns.Clear();
+                hv.Columns.Add("Voucher ID");
+                hv.Columns.Add("Description");
+                hv.Columns.Add("Discount");
+                hv.Columns.Add("Valid For (weeks)");
                 if (dt.Rows.Count == 0)
                 {
                     ListViewItem item = new ListViewItem("No Vouchers");
@@ -157,9 +176,9 @@ namespace dbproject
                     foreach (DataRow row in dt.Rows)
                     {
                         ListViewItem item = new ListViewItem(row["VoucherID"].ToString());
-                        item.SubItems.Add(row["Description"].ToString());
+                        item.SubItems.Add(row["Descrip"].ToString());
                         item.SubItems.Add(row["Discount"].ToString());
-                        item.SubItems.Add(row["Valid For (weeks)"].ToString());
+                        item.SubItems.Add(row["ValidFor"].ToString());
                         hv.Items.Add(item);
                     }
                 }
@@ -168,6 +187,7 @@ namespace dbproject
 
         private void TravellerPass_Load(object sender, EventArgs e)
         {
+            nopass.Visible = false;
             LoadActivityPass();
             LoadETickets();
             LoadVouchers();

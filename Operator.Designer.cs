@@ -37,10 +37,8 @@
             this.labelButton4 = new LabelButton();
             this.labelButton5 = new LabelButton();
             this.labelButton6 = new LabelButton();
-            this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
-            this.translucentRoundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -185,30 +183,17 @@
             this.labelButton6.UseVisualStyleBackColor = false;
             this.labelButton6.Click += new System.EventHandler(this.labelButton6_Click);
             // 
-            // translucentRoundedPanel1
-            // 
-            this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.translucentRoundedPanel1.BorderWidth = 1;
-            this.translucentRoundedPanel1.Controls.Add(this.label4);
-            this.translucentRoundedPanel1.CornerRadius = 10;
-            this.translucentRoundedPanel1.Location = new System.Drawing.Point(568, 119);
-            this.translucentRoundedPanel1.Name = "translucentRoundedPanel1";
-            this.translucentRoundedPanel1.Size = new System.Drawing.Size(220, 309);
-            this.translucentRoundedPanel1.TabIndex = 16;
-            this.translucentRoundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.translucentRoundedPanel1_Paint);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(57, 23);
+            this.label4.Location = new System.Drawing.Point(251, 233);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 29);
+            this.label4.Size = new System.Drawing.Size(277, 48);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Updates";
+            this.label4.Text = "WELCOME!";
             // 
             // Operator
             // 
@@ -217,7 +202,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.translucentRoundedPanel1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.labelButton6);
             this.Controls.Add(this.labelButton5);
             this.Controls.Add(this.labelButton4);
@@ -230,8 +215,6 @@
             this.Text = "Operator";
             this.Load += new System.EventHandler(this.Operator_Load);
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
-            this.translucentRoundedPanel1.ResumeLayout(false);
-            this.translucentRoundedPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,7 +230,6 @@
         private LabelButton labelButton4;
         private LabelButton labelButton5;
         private LabelButton labelButton6;
-        private Components.TranslucentRoundedPanel translucentRoundedPanel1;
         private System.Windows.Forms.Label label4;
     }
 }

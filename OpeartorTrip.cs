@@ -80,7 +80,7 @@ namespace dbproject
 
         private void labelButton6_Click(object sender, EventArgs e)
         {
-            OpeartorAnalytics oa = new OpeartorAnalytics();
+            Analytics oa = new Analytics();
             oa.Show();
             this.Hide();
         }

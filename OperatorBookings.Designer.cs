@@ -204,6 +204,7 @@
             // 
             // inq
             // 
+            this.inq.BackColor = System.Drawing.Color.Linen;
             this.inq.HideSelection = false;
             this.inq.Location = new System.Drawing.Point(3, 3);
             this.inq.Name = "inq";
@@ -226,13 +227,14 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(596, 399);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 28);
             this.button1.TabIndex = 45;
             this.button1.Text = "RESPOND";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
@@ -249,6 +251,7 @@
             // 
             // reservation
             // 
+            this.reservation.BackColor = System.Drawing.Color.Linen;
             this.reservation.HideSelection = false;
             this.reservation.Location = new System.Drawing.Point(24, 164);
             this.reservation.Name = "reservation";
@@ -258,13 +261,15 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Location = new System.Drawing.Point(148, 399);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(126, 28);
             this.button2.TabIndex = 47;
             this.button2.Text = "SEND REMINDER";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // OperatorBookings
             // 
