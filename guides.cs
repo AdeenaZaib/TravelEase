@@ -112,5 +112,11 @@ namespace dbproject
             home.Show();
             this.Hide();
         }
+
+        private void guides_Load(object sender, EventArgs e)
+        {
+            InitializelistView();
+            LoadGuides();
+        }
     }
 }
