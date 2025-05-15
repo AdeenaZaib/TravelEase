@@ -31,17 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TravelHistory));
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.history = new System.Windows.Forms.ListView();
+            this.add = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.labelButton2 = new LabelButton();
             this.labelButton5 = new LabelButton();
             this.labelButton4 = new LabelButton();
             this.labelButton3 = new LabelButton();
             this.labelButton1 = new LabelButton();
             this.circularPictureBox1 = new Components.CircularPictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.history = new System.Windows.Forms.ListView();
-            this.labelButton2 = new LabelButton();
-            this.add = new System.Windows.Forms.Button();
-            this.viewbut = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +69,69 @@
             this.label3.Text = "_________________________________________________________________________________" +
     "_____________________________________________________";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(266, 133);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(273, 29);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Your Travel History";
+            // 
+            // history
+            // 
+            this.history.HideSelection = false;
+            this.history.Location = new System.Drawing.Point(44, 188);
+            this.history.Name = "history";
+            this.history.Size = new System.Drawing.Size(493, 227);
+            this.history.TabIndex = 14;
+            this.history.UseCompatibleStateImageBehavior = false;
+            this.history.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // add
+            // 
+            this.add.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.add.Location = new System.Drawing.Point(622, 212);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(109, 42);
+            this.add.TabIndex = 30;
+            this.add.Text = "ADD REVIEW";
+            this.add.UseVisualStyleBackColor = false;
+            this.add.Click += new System.EventHandler(this.add_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(558, 272);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(230, 143);
+            this.listView1.TabIndex = 32;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_1);
+            // 
+            // labelButton2
+            // 
+            this.labelButton2.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton2.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton2.BorderThickness = 2;
+            this.labelButton2.CornerRadius = 10;
+            this.labelButton2.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton2.FlatAppearance.BorderSize = 0;
+            this.labelButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton2.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelButton2.Location = new System.Drawing.Point(487, 64);
+            this.labelButton2.Name = "labelButton2";
+            this.labelButton2.Size = new System.Drawing.Size(120, 23);
+            this.labelButton2.TabIndex = 29;
+            this.labelButton2.Text = "DIGITAL PASSES";
+            this.labelButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton2.UseVisualStyleBackColor = false;
+            this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
             // 
             // labelButton5
             // 
@@ -166,77 +228,6 @@
             this.circularPictureBox1.TabIndex = 1;
             this.circularPictureBox1.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(266, 133);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(273, 29);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Your Travel History";
-            // 
-            // history
-            // 
-            this.history.HideSelection = false;
-            this.history.Location = new System.Drawing.Point(44, 188);
-            this.history.Name = "history";
-            this.history.Size = new System.Drawing.Size(493, 227);
-            this.history.TabIndex = 14;
-            this.history.UseCompatibleStateImageBehavior = false;
-            this.history.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // labelButton2
-            // 
-            this.labelButton2.BackColor = System.Drawing.Color.Transparent;
-            this.labelButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.labelButton2.BorderThickness = 2;
-            this.labelButton2.CornerRadius = 10;
-            this.labelButton2.FillColor = System.Drawing.Color.Transparent;
-            this.labelButton2.FlatAppearance.BorderSize = 0;
-            this.labelButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelButton2.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelButton2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelButton2.Location = new System.Drawing.Point(487, 64);
-            this.labelButton2.Name = "labelButton2";
-            this.labelButton2.Size = new System.Drawing.Size(120, 23);
-            this.labelButton2.TabIndex = 29;
-            this.labelButton2.Text = "DIGITAL PASSES";
-            this.labelButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.labelButton2.UseVisualStyleBackColor = false;
-            this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
-            // 
-            // add
-            // 
-            this.add.Location = new System.Drawing.Point(558, 204);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(109, 42);
-            this.add.TabIndex = 30;
-            this.add.Text = "ADD REVIEW";
-            this.add.UseVisualStyleBackColor = true;
-            this.add.Click += new System.EventHandler(this.add_Click);
-            // 
-            // viewbut
-            // 
-            this.viewbut.Location = new System.Drawing.Point(673, 204);
-            this.viewbut.Name = "viewbut";
-            this.viewbut.Size = new System.Drawing.Size(109, 42);
-            this.viewbut.TabIndex = 31;
-            this.viewbut.Text = "VIEW REVIEW";
-            this.viewbut.UseVisualStyleBackColor = true;
-            this.viewbut.Click += new System.EventHandler(this.viewbut_Click);
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(558, 272);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(230, 143);
-            this.listView1.TabIndex = 32;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // TravelHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,7 +236,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.viewbut);
             this.Controls.Add(this.add);
             this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.history);
@@ -278,7 +268,6 @@
         private System.Windows.Forms.ListView history;
         private LabelButton labelButton2;
         private System.Windows.Forms.Button add;
-        private System.Windows.Forms.Button viewbut;
         private System.Windows.Forms.ListView listView1;
     }
 }

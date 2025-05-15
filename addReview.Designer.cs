@@ -28,7 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addReview));
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
+            this.or = new System.Windows.Forms.RichTextBox();
+            this.gr = new System.Windows.Forms.RichTextBox();
+            this.hr = new System.Windows.Forms.RichTextBox();
+            this.tr = new System.Windows.Forms.RichTextBox();
+            this.hotel = new System.Windows.Forms.RichTextBox();
+            this.guide = new System.Windows.Forms.RichTextBox();
+            this.op = new System.Windows.Forms.RichTextBox();
+            this.trip = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -39,14 +48,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.trip = new System.Windows.Forms.RichTextBox();
-            this.op = new System.Windows.Forms.RichTextBox();
-            this.guide = new System.Windows.Forms.RichTextBox();
-            this.hotel = new System.Windows.Forms.RichTextBox();
-            this.tr = new System.Windows.Forms.RichTextBox();
-            this.hr = new System.Windows.Forms.RichTextBox();
-            this.gr = new System.Windows.Forms.RichTextBox();
-            this.or = new System.Windows.Forms.RichTextBox();
             this.translucentRoundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +79,70 @@
             this.translucentRoundedPanel1.Name = "translucentRoundedPanel1";
             this.translucentRoundedPanel1.Size = new System.Drawing.Size(505, 386);
             this.translucentRoundedPanel1.TabIndex = 17;
+            // 
+            // or
+            // 
+            this.or.Location = new System.Drawing.Point(193, 302);
+            this.or.Name = "or";
+            this.or.Size = new System.Drawing.Size(287, 34);
+            this.or.TabIndex = 39;
+            this.or.Text = "";
+            // 
+            // gr
+            // 
+            this.gr.Location = new System.Drawing.Point(193, 229);
+            this.gr.Name = "gr";
+            this.gr.Size = new System.Drawing.Size(287, 34);
+            this.gr.TabIndex = 38;
+            this.gr.Text = "";
+            // 
+            // hr
+            // 
+            this.hr.Location = new System.Drawing.Point(193, 160);
+            this.hr.Name = "hr";
+            this.hr.Size = new System.Drawing.Size(287, 34);
+            this.hr.TabIndex = 37;
+            this.hr.Text = "";
+            // 
+            // tr
+            // 
+            this.tr.Location = new System.Drawing.Point(193, 84);
+            this.tr.Name = "tr";
+            this.tr.Size = new System.Drawing.Size(287, 34);
+            this.tr.TabIndex = 36;
+            this.tr.Text = "";
+            // 
+            // hotel
+            // 
+            this.hotel.Location = new System.Drawing.Point(34, 160);
+            this.hotel.Name = "hotel";
+            this.hotel.Size = new System.Drawing.Size(82, 34);
+            this.hotel.TabIndex = 35;
+            this.hotel.Text = "";
+            // 
+            // guide
+            // 
+            this.guide.Location = new System.Drawing.Point(34, 232);
+            this.guide.Name = "guide";
+            this.guide.Size = new System.Drawing.Size(82, 34);
+            this.guide.TabIndex = 34;
+            this.guide.Text = "";
+            // 
+            // op
+            // 
+            this.op.Location = new System.Drawing.Point(34, 302);
+            this.op.Name = "op";
+            this.op.Size = new System.Drawing.Size(82, 34);
+            this.op.TabIndex = 33;
+            this.op.Text = "";
+            // 
+            // trip
+            // 
+            this.trip.Location = new System.Drawing.Point(34, 84);
+            this.trip.Name = "trip";
+            this.trip.Size = new System.Drawing.Size(82, 34);
+            this.trip.TabIndex = 18;
+            this.trip.Text = "";
             // 
             // button1
             // 
@@ -193,74 +258,11 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "GIVE YOUR REVIEW";
             // 
-            // trip
-            // 
-            this.trip.Location = new System.Drawing.Point(34, 84);
-            this.trip.Name = "trip";
-            this.trip.Size = new System.Drawing.Size(82, 34);
-            this.trip.TabIndex = 18;
-            this.trip.Text = "";
-            // 
-            // op
-            // 
-            this.op.Location = new System.Drawing.Point(34, 302);
-            this.op.Name = "op";
-            this.op.Size = new System.Drawing.Size(82, 34);
-            this.op.TabIndex = 33;
-            this.op.Text = "";
-            // 
-            // guide
-            // 
-            this.guide.Location = new System.Drawing.Point(34, 232);
-            this.guide.Name = "guide";
-            this.guide.Size = new System.Drawing.Size(82, 34);
-            this.guide.TabIndex = 34;
-            this.guide.Text = "";
-            // 
-            // hotel
-            // 
-            this.hotel.Location = new System.Drawing.Point(34, 160);
-            this.hotel.Name = "hotel";
-            this.hotel.Size = new System.Drawing.Size(82, 34);
-            this.hotel.TabIndex = 35;
-            this.hotel.Text = "";
-            // 
-            // tr
-            // 
-            this.tr.Location = new System.Drawing.Point(193, 84);
-            this.tr.Name = "tr";
-            this.tr.Size = new System.Drawing.Size(287, 34);
-            this.tr.TabIndex = 36;
-            this.tr.Text = "";
-            // 
-            // hr
-            // 
-            this.hr.Location = new System.Drawing.Point(193, 160);
-            this.hr.Name = "hr";
-            this.hr.Size = new System.Drawing.Size(287, 34);
-            this.hr.TabIndex = 37;
-            this.hr.Text = "";
-            // 
-            // gr
-            // 
-            this.gr.Location = new System.Drawing.Point(193, 229);
-            this.gr.Name = "gr";
-            this.gr.Size = new System.Drawing.Size(287, 34);
-            this.gr.TabIndex = 38;
-            this.gr.Text = "";
-            // 
-            // or
-            // 
-            this.or.Location = new System.Drawing.Point(193, 302);
-            this.or.Name = "or";
-            this.or.Size = new System.Drawing.Size(287, 34);
-            this.or.TabIndex = 39;
-            this.or.Text = "";
-            // 
             // addReview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.translucentRoundedPanel1);

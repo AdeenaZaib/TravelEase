@@ -140,13 +140,59 @@ namespace dbproject
 
         private void viewbut_Click(object sender, EventArgs e)
         {
-            //string con = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
+            listView1.Items.Clear();
 
-            //int id = Program.CurrentUser.userid;
+            using (SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True"))
+            {
+                string query = @"
+                SELECT R.ReviewID, U.FirstName, U.LastName, 'Trip' AS Category, TR.TripRating AS Rating, TR.TripReview AS Review
+                FROM Reviews R
+                INNER JOIN TripReviews TR ON R.TravellerID = TR.TravellerID AND R.TripID = TR.TripID
+                INNER JOIN Users U ON R.TravellerID = U.UserID
 
-            //string query = @"SELECT TripBooking.TripID, Trip.TripTitle, Destination.DestinationName, Trip.StartDate, Trip.EndDate FROM TripBooking
-            //JOIN Trip ON Trip.TripID = TripBooking.TripID JOIN Destination ON Trip.DestinationID = Destination.DestinationID WHERE Trip.TravellerID = @UserID";
+                UNION
+
+                SELECT R.ReviewID, U.FirstName, U.LastName, 'Tour Operator' AS Category, TOR.TourOperatorRating, TOR.TourOperatorReview
+                FROM Reviews R
+                INNER JOIN TourOperatorReviews TOR ON R.TravellerID = TOR.TravellerID AND R.TourOperatorID = TOR.TourOperatorID
+                INNER JOIN Users U ON R.TravellerID = U.UserID
+
+                UNION
+
+                SELECT R.ReviewID, U.FirstName, U.LastName, 'Guide' AS Category, GR.GuideRating, GR.GuideReview
+                FROM Reviews R
+                INNER JOIN GuideReviews GR ON R.TravellerID = GR.TravellerID AND R.GuideID = GR.GuideID
+                INNER JOIN Users U ON R.TravellerID = U.UserID
+
+                UNION
+
+                SELECT R.ReviewID, U.FirstName, U.LastName, 'Hotel' AS Category, HR.HotelRating, HR.HotelReview
+                FROM Reviews R
+                INNER JOIN HotelReviews HR ON R.TravellerID = HR.TravellerID AND R.HotelID = HR.HotelID
+                INNER JOIN Users U ON R.TravellerID = U.UserID";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    ListViewItem item = new ListViewItem(reader["ReviewID"].ToString());
+                    item.SubItems.Add(reader["FirstName"].ToString());
+                    item.SubItems.Add(reader["LastName"].ToString());
+                    item.SubItems.Add(reader["Category"].ToString());
+                    item.SubItems.Add(reader["Rating"].ToString());
+                    item.SubItems.Add(reader["Review"].ToString());
+
+                    listView1.Items.Add(item);
+                }
+            }
+        }
+
+        private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
 
         }
     }
 }
+

@@ -43,6 +43,7 @@
             this.labelButton2 = new LabelButton();
             this.listView1 = new System.Windows.Forms.ListView();
             this.label6 = new System.Windows.Forms.Label();
+            this.updates = new System.Windows.Forms.ListView();
             this.translucentRoundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,9 +56,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(20, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 24);
+            this.label1.Size = new System.Drawing.Size(161, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "TravelEase";
+            this.label1.Text = "TRAVELEASE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label3
@@ -78,7 +79,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(19, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(222, 29);
@@ -91,6 +92,7 @@
             this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderWidth = 1;
+            this.translucentRoundedPanel1.Controls.Add(this.updates);
             this.translucentRoundedPanel1.Controls.Add(this.label4);
             this.translucentRoundedPanel1.CornerRadius = 10;
             this.translucentRoundedPanel1.Location = new System.Drawing.Point(544, 112);
@@ -211,7 +213,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(19, 311);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(178, 29);
@@ -240,6 +242,7 @@
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(24, 154);
             this.listView1.Name = "listView1";
@@ -250,16 +253,29 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(21, 340);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(495, 104);
+            this.label6.Size = new System.Drawing.Size(477, 75);
             this.label6.TabIndex = 31;
             this.label6.Text = resources.GetString("label6.Text");
+            // 
+            // updates
+            // 
+            this.updates.HideSelection = false;
+            this.updates.Location = new System.Drawing.Point(24, 75);
+            this.updates.Name = "updates";
+            this.updates.Size = new System.Drawing.Size(191, 210);
+            this.updates.TabIndex = 16;
+            this.updates.UseCompatibleStateImageBehavior = false;
             // 
             // TravellerHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.listView1);
@@ -301,5 +317,6 @@
         private LabelButton labelButton2;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ListView updates;
     }
 }

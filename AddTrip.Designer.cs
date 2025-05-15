@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTrip));
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
+            this.price = new System.Windows.Forms.RichTextBox();
+            this.tripTitle = new System.Windows.Forms.RichTextBox();
             this.cap = new System.Windows.Forms.NumericUpDown();
             this.end = new System.Windows.Forms.DateTimePicker();
             this.start = new System.Windows.Forms.DateTimePicker();
@@ -47,8 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tripTitle = new System.Windows.Forms.RichTextBox();
-            this.price = new System.Windows.Forms.RichTextBox();
             this.translucentRoundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cap)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +84,22 @@
             this.translucentRoundedPanel1.Name = "translucentRoundedPanel1";
             this.translucentRoundedPanel1.Size = new System.Drawing.Size(579, 426);
             this.translucentRoundedPanel1.TabIndex = 0;
+            // 
+            // price
+            // 
+            this.price.Location = new System.Drawing.Point(28, 259);
+            this.price.Name = "price";
+            this.price.Size = new System.Drawing.Size(219, 25);
+            this.price.TabIndex = 55;
+            this.price.Text = "";
+            // 
+            // tripTitle
+            // 
+            this.tripTitle.Location = new System.Drawing.Point(172, 98);
+            this.tripTitle.Name = "tripTitle";
+            this.tripTitle.Size = new System.Drawing.Size(219, 25);
+            this.tripTitle.TabIndex = 54;
+            this.tripTitle.Text = "";
             // 
             // cap
             // 
@@ -261,27 +278,12 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "ADD A TRIP";
             // 
-            // tripTitle
-            // 
-            this.tripTitle.Location = new System.Drawing.Point(172, 98);
-            this.tripTitle.Name = "tripTitle";
-            this.tripTitle.Size = new System.Drawing.Size(219, 25);
-            this.tripTitle.TabIndex = 54;
-            this.tripTitle.Text = "";
-            // 
-            // price
-            // 
-            this.price.Location = new System.Drawing.Point(28, 259);
-            this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(219, 25);
-            this.price.TabIndex = 55;
-            this.price.Text = "";
-            // 
             // AddTrip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.translucentRoundedPanel1);

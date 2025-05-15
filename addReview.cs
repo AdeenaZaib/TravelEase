@@ -18,31 +18,32 @@ namespace dbproject
             InitializeComponent();
         }
 
+        string con = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-            string connectionString = "your_connection_string_here";
-
             string tripReview = tr.Text;
             string hotelReview = hr.Text;
             string guideReview = gr.Text;
             string operatorReview = or.Text;
 
             int tripRating = Convert.ToInt32(trip.Text);
-            int hotelRating = Convert.ToInt32(hotel.Text);
-            int guideRating = Convert.ToInt32(guide.Text);
-            int operatorRating = Convert.ToInt32(op.Text);
+            //int hotelRating = Convert.ToInt32(hotel.Text);
+            //int guideRating = Convert.ToInt32(guide.Text);
+            //int operatorRating = Convert.ToInt32(op.Text);
 
             int travellerID = Program.CurrentUser.userid;
             int tripID = 2;
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(con))
             {
                 conn.Open();
 
                 // Trip Review
                 if (!string.IsNullOrEmpty(tripReview))
                 {
-                    string query = @"INSERT INTO TripReviews (TripID, TravellerID, Review, Rating)
+                    string query = @"INSERT INTO TripReviews (TripID, TravellerID, TripReview, TripRating)
                              VALUES (@TripID, @TravellerID, @Review, @Rating)";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {

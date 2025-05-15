@@ -33,34 +33,37 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.circularPictureBox1 = new Components.CircularPictureBox();
-            this.labelButton1 = new LabelButton();
-            this.labelButton3 = new LabelButton();
-            this.labelButton4 = new LabelButton();
-            this.labelButton5 = new LabelButton();
             this.destinationComboBox = new System.Windows.Forms.ComboBox();
             this.minPriceUpDown = new System.Windows.Forms.NumericUpDown();
             this.apply = new System.Windows.Forms.Button();
             this.tripview = new System.Windows.Forms.ListView();
-            this.labelButton2 = new LabelButton();
             this.typecombo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.price = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.labelButton2 = new LabelButton();
+            this.labelButton5 = new LabelButton();
+            this.labelButton4 = new LabelButton();
+            this.labelButton3 = new LabelButton();
+            this.labelButton1 = new LabelButton();
+            this.circularPictureBox1 = new Components.CircularPictureBox();
+            this.viewbut = new System.Windows.Forms.Button();
+            this.reviewview = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minPriceUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Black;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(328, 106);
@@ -87,7 +90,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(84, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(238, 29);
@@ -102,106 +105,10 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(20, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 24);
+            this.label1.Size = new System.Drawing.Size(161, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "TravelEase";
+            this.label1.Text = "TRAVELEASE";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // circularPictureBox1
-            // 
-            this.circularPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.circularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.circularPictureBox1.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.circularPictureBox1.BorderColor2 = System.Drawing.Color.DarkGreen;
-            this.circularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.circularPictureBox1.BorderSize = 2;
-            this.circularPictureBox1.GradientAngle = 50F;
-            this.circularPictureBox1.Location = new System.Drawing.Point(745, 12);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(43, 43);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.circularPictureBox1.TabIndex = 1;
-            this.circularPictureBox1.TabStop = false;
-            // 
-            // labelButton1
-            // 
-            this.labelButton1.BackColor = System.Drawing.Color.Transparent;
-            this.labelButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.labelButton1.BorderThickness = 2;
-            this.labelButton1.CornerRadius = 10;
-            this.labelButton1.FillColor = System.Drawing.Color.Transparent;
-            this.labelButton1.FlatAppearance.BorderSize = 0;
-            this.labelButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelButton1.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelButton1.Location = new System.Drawing.Point(44, 64);
-            this.labelButton1.Name = "labelButton1";
-            this.labelButton1.Size = new System.Drawing.Size(60, 23);
-            this.labelButton1.TabIndex = 10;
-            this.labelButton1.Text = "HOME";
-            this.labelButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.labelButton1.UseVisualStyleBackColor = false;
-            this.labelButton1.Click += new System.EventHandler(this.labelButton1_Click);
-            // 
-            // labelButton3
-            // 
-            this.labelButton3.BackColor = System.Drawing.Color.Transparent;
-            this.labelButton3.BorderColor = System.Drawing.Color.Transparent;
-            this.labelButton3.BorderThickness = 2;
-            this.labelButton3.CornerRadius = 10;
-            this.labelButton3.FillColor = System.Drawing.Color.Transparent;
-            this.labelButton3.FlatAppearance.BorderSize = 0;
-            this.labelButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelButton3.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelButton3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelButton3.Location = new System.Drawing.Point(237, 64);
-            this.labelButton3.Name = "labelButton3";
-            this.labelButton3.Size = new System.Drawing.Size(85, 23);
-            this.labelButton3.TabIndex = 11;
-            this.labelButton3.Text = "BOOKINGS";
-            this.labelButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.labelButton3.UseVisualStyleBackColor = false;
-            this.labelButton3.Click += new System.EventHandler(this.labelButton3_Click_1);
-            // 
-            // labelButton4
-            // 
-            this.labelButton4.BackColor = System.Drawing.Color.Transparent;
-            this.labelButton4.BorderColor = System.Drawing.Color.Transparent;
-            this.labelButton4.BorderThickness = 2;
-            this.labelButton4.CornerRadius = 10;
-            this.labelButton4.FillColor = System.Drawing.Color.Transparent;
-            this.labelButton4.FlatAppearance.BorderSize = 0;
-            this.labelButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelButton4.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelButton4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelButton4.Location = new System.Drawing.Point(115, 64);
-            this.labelButton4.Name = "labelButton4";
-            this.labelButton4.Size = new System.Drawing.Size(104, 23);
-            this.labelButton4.TabIndex = 12;
-            this.labelButton4.Text = "TRIP SEARCH";
-            this.labelButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.labelButton4.UseVisualStyleBackColor = false;
-            this.labelButton4.Click += new System.EventHandler(this.labelButton4_Click_1);
-            // 
-            // labelButton5
-            // 
-            this.labelButton5.BackColor = System.Drawing.Color.Transparent;
-            this.labelButton5.BorderColor = System.Drawing.Color.Transparent;
-            this.labelButton5.BorderThickness = 2;
-            this.labelButton5.CornerRadius = 10;
-            this.labelButton5.FillColor = System.Drawing.Color.Transparent;
-            this.labelButton5.FlatAppearance.BorderSize = 0;
-            this.labelButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelButton5.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelButton5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelButton5.Location = new System.Drawing.Point(346, 64);
-            this.labelButton5.Name = "labelButton5";
-            this.labelButton5.Size = new System.Drawing.Size(120, 23);
-            this.labelButton5.TabIndex = 13;
-            this.labelButton5.Text = "TRAVEL HISTORY";
-            this.labelButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.labelButton5.UseVisualStyleBackColor = false;
-            this.labelButton5.Click += new System.EventHandler(this.labelButton5_Click_1);
             // 
             // destinationComboBox
             // 
@@ -221,41 +128,24 @@
             // 
             // apply
             // 
-            this.apply.Location = new System.Drawing.Point(576, 395);
+            this.apply.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.apply.Location = new System.Drawing.Point(508, 393);
             this.apply.Name = "apply";
             this.apply.Size = new System.Drawing.Size(96, 31);
             this.apply.TabIndex = 22;
             this.apply.Text = "APPLY";
-            this.apply.UseVisualStyleBackColor = true;
+            this.apply.UseVisualStyleBackColor = false;
+            this.apply.Click += new System.EventHandler(this.apply_Click);
             // 
             // tripview
             // 
+            this.tripview.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tripview.HideSelection = false;
             this.tripview.Location = new System.Drawing.Point(44, 175);
             this.tripview.Name = "tripview";
-            this.tripview.Size = new System.Drawing.Size(402, 212);
+            this.tripview.Size = new System.Drawing.Size(402, 232);
             this.tripview.TabIndex = 24;
             this.tripview.UseCompatibleStateImageBehavior = false;
-            // 
-            // labelButton2
-            // 
-            this.labelButton2.BackColor = System.Drawing.Color.Transparent;
-            this.labelButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.labelButton2.BorderThickness = 2;
-            this.labelButton2.CornerRadius = 10;
-            this.labelButton2.FillColor = System.Drawing.Color.Transparent;
-            this.labelButton2.FlatAppearance.BorderSize = 0;
-            this.labelButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelButton2.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelButton2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelButton2.Location = new System.Drawing.Point(487, 64);
-            this.labelButton2.Name = "labelButton2";
-            this.labelButton2.Size = new System.Drawing.Size(120, 23);
-            this.labelButton2.TabIndex = 29;
-            this.labelButton2.Text = "DIGITAL PASSES";
-            this.labelButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.labelButton2.UseVisualStyleBackColor = false;
-            this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
             // 
             // typecombo
             // 
@@ -309,13 +199,13 @@
             this.label9.TabIndex = 36;
             this.label9.Text = "Group Size:";
             // 
-            // richTextBox1
+            // price
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(621, 320);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(142, 25);
-            this.richTextBox1.TabIndex = 37;
-            this.richTextBox1.Text = "";
+            this.price.Location = new System.Drawing.Point(621, 320);
+            this.price.Name = "price";
+            this.price.Size = new System.Drawing.Size(142, 25);
+            this.price.TabIndex = 37;
+            this.price.Text = "";
             // 
             // label10
             // 
@@ -367,17 +257,158 @@
             this.label8.TabIndex = 42;
             this.label8.Text = "Accessibility:";
             // 
+            // labelButton2
+            // 
+            this.labelButton2.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton2.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton2.BorderThickness = 2;
+            this.labelButton2.CornerRadius = 10;
+            this.labelButton2.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton2.FlatAppearance.BorderSize = 0;
+            this.labelButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton2.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelButton2.Location = new System.Drawing.Point(487, 64);
+            this.labelButton2.Name = "labelButton2";
+            this.labelButton2.Size = new System.Drawing.Size(120, 23);
+            this.labelButton2.TabIndex = 29;
+            this.labelButton2.Text = "DIGITAL PASSES";
+            this.labelButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton2.UseVisualStyleBackColor = false;
+            this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
+            // 
+            // labelButton5
+            // 
+            this.labelButton5.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton5.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton5.BorderThickness = 2;
+            this.labelButton5.CornerRadius = 10;
+            this.labelButton5.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton5.FlatAppearance.BorderSize = 0;
+            this.labelButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton5.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelButton5.Location = new System.Drawing.Point(346, 64);
+            this.labelButton5.Name = "labelButton5";
+            this.labelButton5.Size = new System.Drawing.Size(120, 23);
+            this.labelButton5.TabIndex = 13;
+            this.labelButton5.Text = "TRAVEL HISTORY";
+            this.labelButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton5.UseVisualStyleBackColor = false;
+            this.labelButton5.Click += new System.EventHandler(this.labelButton5_Click_1);
+            // 
+            // labelButton4
+            // 
+            this.labelButton4.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton4.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton4.BorderThickness = 2;
+            this.labelButton4.CornerRadius = 10;
+            this.labelButton4.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton4.FlatAppearance.BorderSize = 0;
+            this.labelButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton4.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelButton4.Location = new System.Drawing.Point(115, 64);
+            this.labelButton4.Name = "labelButton4";
+            this.labelButton4.Size = new System.Drawing.Size(104, 23);
+            this.labelButton4.TabIndex = 12;
+            this.labelButton4.Text = "TRIP SEARCH";
+            this.labelButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton4.UseVisualStyleBackColor = false;
+            this.labelButton4.Click += new System.EventHandler(this.labelButton4_Click_1);
+            // 
+            // labelButton3
+            // 
+            this.labelButton3.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton3.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton3.BorderThickness = 2;
+            this.labelButton3.CornerRadius = 10;
+            this.labelButton3.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton3.FlatAppearance.BorderSize = 0;
+            this.labelButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton3.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelButton3.Location = new System.Drawing.Point(237, 64);
+            this.labelButton3.Name = "labelButton3";
+            this.labelButton3.Size = new System.Drawing.Size(85, 23);
+            this.labelButton3.TabIndex = 11;
+            this.labelButton3.Text = "BOOKINGS";
+            this.labelButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton3.UseVisualStyleBackColor = false;
+            this.labelButton3.Click += new System.EventHandler(this.labelButton3_Click_1);
+            // 
+            // labelButton1
+            // 
+            this.labelButton1.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton1.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton1.BorderThickness = 2;
+            this.labelButton1.CornerRadius = 10;
+            this.labelButton1.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton1.FlatAppearance.BorderSize = 0;
+            this.labelButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton1.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelButton1.Location = new System.Drawing.Point(44, 64);
+            this.labelButton1.Name = "labelButton1";
+            this.labelButton1.Size = new System.Drawing.Size(60, 23);
+            this.labelButton1.TabIndex = 10;
+            this.labelButton1.Text = "HOME";
+            this.labelButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton1.UseVisualStyleBackColor = false;
+            this.labelButton1.Click += new System.EventHandler(this.labelButton1_Click);
+            // 
+            // circularPictureBox1
+            // 
+            this.circularPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.circularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.circularPictureBox1.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.circularPictureBox1.BorderColor2 = System.Drawing.Color.DarkGreen;
+            this.circularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.circularPictureBox1.BorderSize = 2;
+            this.circularPictureBox1.GradientAngle = 50F;
+            this.circularPictureBox1.Location = new System.Drawing.Point(745, 12);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(43, 43);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.circularPictureBox1.TabIndex = 1;
+            this.circularPictureBox1.TabStop = false;
+            // 
+            // viewbut
+            // 
+            this.viewbut.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.viewbut.Location = new System.Drawing.Point(644, 393);
+            this.viewbut.Name = "viewbut";
+            this.viewbut.Size = new System.Drawing.Size(96, 31);
+            this.viewbut.TabIndex = 43;
+            this.viewbut.Text = "VIEW REVIEW";
+            this.viewbut.UseVisualStyleBackColor = false;
+            this.viewbut.Click += new System.EventHandler(this.viewbut_Click);
+            // 
+            // reviewview
+            // 
+            this.reviewview.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.reviewview.HideSelection = false;
+            this.reviewview.Location = new System.Drawing.Point(44, 175);
+            this.reviewview.Name = "reviewview";
+            this.reviewview.Size = new System.Drawing.Size(402, 232);
+            this.reviewview.TabIndex = 44;
+            this.reviewview.UseCompatibleStateImageBehavior = false;
+            // 
             // TripSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.reviewview);
+            this.Controls.Add(this.viewbut);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.price);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -401,8 +432,8 @@
             this.Text = "TripSearch";
             this.Load += new System.EventHandler(this.TripSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minPriceUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,11 +459,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox price;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button viewbut;
+        private System.Windows.Forms.ListView reviewview;
     }
 }

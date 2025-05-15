@@ -63,8 +63,42 @@ namespace dbproject
             this.Hide();
         }
 
+        private void updates_Load(object sender, EventArgs e)
+        {
+            string con = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
+            int userId = Program.CurrentUser.userid;
+
+            string reminderQuery = "SELECT Rem FROM Reminders WHERE TravellerID = @TravellerID";
+
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(reminderQuery, conn);
+                    cmd.Parameters.AddWithValue("@TravellerID", userId);
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    updates.Items.Clear();
+                    updates.View = View.List; // This makes each item appear on a separate line
+                    while (reader.Read())
+                    {
+                        updates.Items.Add(reader["Rem"].ToString());
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading reminders: " + ex.Message);
+                }
+            }
+        }
+
+
         private void TravellerHome_Load(object sender, EventArgs e)
         {
+            updates_Load(sender, e);
+
             string con = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
 
             string query = @"SELECT TripID, TripTitle, Destination.DestinationName FROM Trip JOIN Destination ON Trip.DestinationID = Destination.DestinationID WHERE Trip.StartDate > GETDATE()";
