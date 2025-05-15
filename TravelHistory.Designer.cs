@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.history = new System.Windows.Forms.ListView();
             this.add = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.labelButton2 = new LabelButton();
             this.labelButton5 = new LabelButton();
             this.labelButton4 = new LabelButton();
@@ -87,7 +86,7 @@
             this.history.HideSelection = false;
             this.history.Location = new System.Drawing.Point(44, 188);
             this.history.Name = "history";
-            this.history.Size = new System.Drawing.Size(493, 227);
+            this.history.Size = new System.Drawing.Size(519, 227);
             this.history.TabIndex = 14;
             this.history.UseCompatibleStateImageBehavior = false;
             this.history.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
@@ -95,23 +94,13 @@
             // add
             // 
             this.add.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.add.Location = new System.Drawing.Point(622, 212);
+            this.add.Location = new System.Drawing.Point(599, 283);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(109, 42);
             this.add.TabIndex = 30;
             this.add.Text = "ADD REVIEW";
             this.add.UseVisualStyleBackColor = false;
             this.add.Click += new System.EventHandler(this.add_Click);
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(558, 272);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(230, 143);
-            this.listView1.TabIndex = 32;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_1);
             // 
             // labelButton2
             // 
@@ -235,7 +224,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.add);
             this.Controls.Add(this.labelButton2);
             this.Controls.Add(this.history);
@@ -268,6 +256,5 @@
         private System.Windows.Forms.ListView history;
         private LabelButton labelButton2;
         private System.Windows.Forms.Button add;
-        private System.Windows.Forms.ListView listView1;
     }
 }

@@ -37,6 +37,8 @@
             this.labelButton1 = new LabelButton();
             this.labelButton3 = new LabelButton();
             this.labelButton4 = new LabelButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -177,6 +179,26 @@
             this.labelButton4.UseVisualStyleBackColor = false;
             this.labelButton4.Click += new System.EventHandler(this.labelButton4_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(285, 180);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.TabIndex = 47;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.Window;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.CadetBlue;
+            this.label5.Location = new System.Drawing.Point(340, 190);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(180, 33);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "WELCOME!";
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +206,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.labelButton4);
             this.Controls.Add(this.labelButton3);
             this.Controls.Add(this.labelButton2);
@@ -210,5 +234,7 @@
         private System.Windows.Forms.Label label2;
         private LabelButton labelButton3;
         private LabelButton labelButton4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -202,5 +202,12 @@ namespace dbproject
             manageReviews.Show();
             this.Hide();
         }
+
+        private void labelButton4_Click(object sender, EventArgs e)
+        {
+            Analytics ana = new Analytics();
+            ana.Show();
+            this.Hide();
+        }
     }
 }

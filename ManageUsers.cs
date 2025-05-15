@@ -184,5 +184,19 @@ namespace dbproject
         {
             UpdateUserStatus("Rejected");
         }
+
+        private void labelButton3_Click(object sender, EventArgs e)
+        {
+            ManageReviews mr = new ManageReviews();
+            mr.Show();
+            this.Hide();
+        }
+
+        private void labelButton4_Click(object sender, EventArgs e)
+        {
+            Analytics ana = new Analytics();
+            ana.Show();
+            this.Hide();
+        }
     }
 }

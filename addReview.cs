@@ -13,9 +13,13 @@ namespace dbproject
 {
     public partial class addReview : Form
     {
-        public addReview()
+        int tripID = 0;
+        int travellerID = 0;
+        public addReview(int TripID)
         {
             InitializeComponent();
+            this.tripID = TripID;
+            this.travellerID = Program.CurrentUser.userid;
         }
 
         string con = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
@@ -23,90 +27,141 @@ namespace dbproject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string tripReview = tr.Text;
-            string hotelReview = hr.Text;
-            string guideReview = gr.Text;
-            string operatorReview = or.Text;
 
-            int tripRating = Convert.ToInt32(trip.Text);
-            //int hotelRating = Convert.ToInt32(hotel.Text);
-            //int guideRating = Convert.ToInt32(guide.Text);
-            //int operatorRating = Convert.ToInt32(op.Text);
+            int tripRating = Convert.ToInt32(triptb.Text);
+            int hotelRating = Convert.ToInt32(hotel.Text);
+            int guideRating = Convert.ToInt32(guide.Text);
+            int operatorRating = Convert.ToInt32(op.Text);
 
-            int travellerID = Program.CurrentUser.userid;
-            int tripID = 2;
-
+            int? tourOperatorID = null;
+            int? guideID = null;
+            int? hotelID = null;
+            
             using (SqlConnection conn = new SqlConnection(con))
             {
                 conn.Open();
 
-                // Trip Review
-                if (!string.IsNullOrEmpty(tripReview))
+                // Get TourOperatorID from Trip
+                using (SqlCommand cmd = new SqlCommand("SELECT TourOperatorID FROM Trip WHERE TripID = @TripID", conn))
                 {
-                    string query = @"INSERT INTO TripReviews (TripID, TravellerID, TripReview, TripRating)
-                             VALUES (@TripID, @TravellerID, @Review, @Rating)";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    cmd.Parameters.AddWithValue("@TripID", tripID);
+                    tourOperatorID = (int?)cmd.ExecuteScalar();
+                }
+
+                // Get ServiceIDs from ServicesBooked
+                List<int> serviceIDs = new List<int>();
+                using (SqlCommand cmd = new SqlCommand(
+                    "SELECT ServiceID FROM ServicesBooked WHERE TourOperatorID = @TourOperatorID AND TravellerID = @TravellerID", conn))
+                {
+                    cmd.Parameters.AddWithValue("@TourOperatorID", tourOperatorID);
+                    cmd.Parameters.AddWithValue("@TravellerID", travellerID);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        cmd.Parameters.AddWithValue("@TripID", tripID);
+                        while (reader.Read())
+                            serviceIDs.Add(reader.GetInt32(0));
+                    }
+                }
+
+                // Find GuideID
+                foreach (int serviceID in serviceIDs)
+                {
+                    using (SqlCommand cmd = new SqlCommand("SELECT GuideID FROM TourGuide WHERE ServiceID = @ServiceID", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@ServiceID", serviceID);
+                        var result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            guideID = (int?)result;
+                            break;
+                        }
+                    }
+                }
+
+                // Find HotelID
+                foreach (int serviceID in serviceIDs)
+                {
+                    using (SqlCommand cmd = new SqlCommand("SELECT HotelID FROM Hotel WHERE ServiceID = @ServiceID", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@ServiceID", serviceID);
+                        var result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            hotelID = (int?)result;
+                            break;
+                        }
+                    }
+                }
+
+                // Insert into Reviews
+                using (SqlCommand cmd = new SqlCommand(@"INSERT INTO Reviews 
+            ( TravellerID, TripID, TourOperatorID, GuideID, HotelID) 
+            VALUES ( @TravellerID, @TripID, @TourOperatorID, @GuideID, @HotelID)", conn))
+                {
+                    
+                    cmd.Parameters.AddWithValue("@TravellerID", travellerID);
+                    cmd.Parameters.AddWithValue("@TripID", tripID);
+                    cmd.Parameters.AddWithValue("@TourOperatorID", tourOperatorID);
+                    cmd.Parameters.AddWithValue("@GuideID", (object)guideID ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@HotelID", (object)hotelID ?? DBNull.Value);
+                    cmd.ExecuteNonQuery();
+                }
+
+                // Insert into TripReviews
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO TripReviews VALUES (@TravellerID, @TripID, @Rating, @Review)", conn))
+                {
+                    cmd.Parameters.AddWithValue("@TravellerID", travellerID);
+                    cmd.Parameters.AddWithValue("@TripID", tripID);
+                    cmd.Parameters.AddWithValue("@Rating", tripRating);
+                    cmd.Parameters.AddWithValue("@Review", tr.Text);
+                    cmd.ExecuteNonQuery();
+                }
+
+                // Insert into TourOperatorReviews
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO TourOperatorReviews VALUES (@TravellerID, @TripID, @OperatorID, @Rating, @Review)", conn))
+                {
+                    cmd.Parameters.AddWithValue("@TravellerID", travellerID);
+                    cmd.Parameters.AddWithValue("@TripID", tripID);
+                    cmd.Parameters.AddWithValue("@OperatorID", tourOperatorID);
+                    cmd.Parameters.AddWithValue("@Rating", operatorRating);
+                    cmd.Parameters.AddWithValue("@Review", or.Text);
+                    cmd.ExecuteNonQuery();
+                }
+
+                // Insert into GuideReviews
+                if (guideID != null)
+                {
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO GuideReviews VALUES (@TravellerID, @TripID, @GuideID, @Rating, @Review)", conn))
+                    {
                         cmd.Parameters.AddWithValue("@TravellerID", travellerID);
-                        cmd.Parameters.AddWithValue("@Review", tripReview);
-                        cmd.Parameters.AddWithValue("@Rating", tripRating);
+                        cmd.Parameters.AddWithValue("@TripID", tripID);
+                        cmd.Parameters.AddWithValue("@GuideID", guideID);
+                        cmd.Parameters.AddWithValue("@Rating", guideRating);
+                        cmd.Parameters.AddWithValue("@Review", gr.Text);
                         cmd.ExecuteNonQuery();
                     }
                 }
 
-                // Hotel Review
-                /*if (!string.IsNullOrEmpty(hotelReview))
+                // Insert into HotelReviews
+                if (hotelID != null)
                 {
-                    string query = @"INSERT INTO HotelReviews (HotelID, TravellerID, Review, Rating)
-                             VALUES (@HotelID, @TravellerID, @Review, @Rating)";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO HotelReviews VALUES (@TravellerID, @TripID, @HotelID, @Rating, @Review)", conn))
                     {
+                        cmd.Parameters.AddWithValue("@TravellerID", travellerID);
+                        cmd.Parameters.AddWithValue("@TripID", tripID);
                         cmd.Parameters.AddWithValue("@HotelID", hotelID);
-                        cmd.Parameters.AddWithValue("@TravellerID", travellerID);
-                        cmd.Parameters.AddWithValue("@Review", hotelReview);
                         cmd.Parameters.AddWithValue("@Rating", hotelRating);
+                        cmd.Parameters.AddWithValue("@Review", hr.Text);
                         cmd.ExecuteNonQuery();
                     }
-                }*/
+                }
 
-                // Guide Review
-                /*if (!string.IsNullOrEmpty(guideReview))
-                {
-                    string query = @"INSERT INTO GuideReviews (GuideID, TravellerID, Review, Rating)
-                             VALUES (@GuideID, @TravellerID, @Review, @Rating)";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@GuideID", guideID);
-                        cmd.Parameters.AddWithValue("@TravellerID", travellerID);
-                        cmd.Parameters.AddWithValue("@Review", guideReview);
-                        cmd.Parameters.AddWithValue("@Rating", guideRating);
-                        cmd.ExecuteNonQuery();
-                    }
-                }*/
 
-                // Operator Review
-                /*if (!string.IsNullOrEmpty(operatorReview))
-                {
-                    string query = @"INSERT INTO OperatorReviews (OperatorID, TravellerID, Review, Rating)
-                             VALUES (@OperatorID, @TravellerID, @Review, @Rating)";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@OperatorID", operatorID);
-                        cmd.Parameters.AddWithValue("@TravellerID", travellerID);
-                        cmd.Parameters.AddWithValue("@Review", operatorReview);
-                        cmd.Parameters.AddWithValue("@Rating", operatorRating);
-                        cmd.ExecuteNonQuery();
-                    }
-                }*/
 
-                conn.Close();
+                MessageBox.Show("Reviews and ratings submitted successfully (if any).");
+                TravelHistory history = new TravelHistory();
+                history.Show();
+                this.Hide();
             }
-
-            MessageBox.Show("Reviews and ratings submitted successfully (if any).");
-            TravelHistory history = new TravelHistory();
-            history.Show();
-            this.Hide();
         }
 
         private void label10_Click(object sender, EventArgs e)

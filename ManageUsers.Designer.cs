@@ -29,36 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageUsers));
-            this.labelButton2 = new LabelButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.labelButton5 = new LabelButton();
-            this.labelButton1 = new LabelButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pendingView = new System.Windows.Forms.ListView();
             this.approve = new System.Windows.Forms.Button();
             this.reject = new System.Windows.Forms.Button();
+            this.labelButton2 = new LabelButton();
+            this.labelButton5 = new LabelButton();
+            this.labelButton1 = new LabelButton();
+            this.labelButton3 = new LabelButton();
+            this.labelButton4 = new LabelButton();
             this.SuspendLayout();
-            // 
-            // labelButton2
-            // 
-            this.labelButton2.BackColor = System.Drawing.Color.Transparent;
-            this.labelButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.labelButton2.BorderThickness = 2;
-            this.labelButton2.CornerRadius = 10;
-            this.labelButton2.FillColor = System.Drawing.Color.Transparent;
-            this.labelButton2.FlatAppearance.BorderSize = 0;
-            this.labelButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelButton2.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelButton2.Location = new System.Drawing.Point(141, 64);
-            this.labelButton2.Name = "labelButton2";
-            this.labelButton2.Size = new System.Drawing.Size(120, 23);
-            this.labelButton2.TabIndex = 50;
-            this.labelButton2.Text = "MANAGE USERS";
-            this.labelButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.labelButton2.UseVisualStyleBackColor = false;
-            this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
             // 
             // label3
             // 
@@ -72,46 +54,6 @@
             this.label3.TabIndex = 49;
             this.label3.Text = "TRAVELEASE";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // labelButton5
-            // 
-            this.labelButton5.BackColor = System.Drawing.Color.Transparent;
-            this.labelButton5.BorderColor = System.Drawing.Color.Transparent;
-            this.labelButton5.BorderThickness = 2;
-            this.labelButton5.CornerRadius = 10;
-            this.labelButton5.FillColor = System.Drawing.Color.Transparent;
-            this.labelButton5.FlatAppearance.BorderSize = 0;
-            this.labelButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelButton5.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelButton5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelButton5.Location = new System.Drawing.Point(298, 64);
-            this.labelButton5.Name = "labelButton5";
-            this.labelButton5.Size = new System.Drawing.Size(188, 23);
-            this.labelButton5.TabIndex = 48;
-            this.labelButton5.Text = "MANAGE DESTINATIONS";
-            this.labelButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.labelButton5.UseVisualStyleBackColor = false;
-            this.labelButton5.Click += new System.EventHandler(this.labelButton5_Click);
-            // 
-            // labelButton1
-            // 
-            this.labelButton1.BackColor = System.Drawing.Color.Transparent;
-            this.labelButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.labelButton1.BorderThickness = 2;
-            this.labelButton1.CornerRadius = 10;
-            this.labelButton1.FillColor = System.Drawing.Color.Transparent;
-            this.labelButton1.FlatAppearance.BorderSize = 0;
-            this.labelButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelButton1.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelButton1.Location = new System.Drawing.Point(44, 64);
-            this.labelButton1.Name = "labelButton1";
-            this.labelButton1.Size = new System.Drawing.Size(60, 23);
-            this.labelButton1.TabIndex = 47;
-            this.labelButton1.Text = "HOME";
-            this.labelButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.labelButton1.UseVisualStyleBackColor = false;
-            this.labelButton1.Click += new System.EventHandler(this.labelButton1_Click);
             // 
             // label1
             // 
@@ -174,6 +116,106 @@
             this.reject.UseVisualStyleBackColor = false;
             this.reject.Click += new System.EventHandler(this.reject_Click);
             // 
+            // labelButton2
+            // 
+            this.labelButton2.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton2.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton2.BorderThickness = 2;
+            this.labelButton2.CornerRadius = 10;
+            this.labelButton2.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton2.FlatAppearance.BorderSize = 0;
+            this.labelButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton2.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelButton2.Location = new System.Drawing.Point(141, 64);
+            this.labelButton2.Name = "labelButton2";
+            this.labelButton2.Size = new System.Drawing.Size(120, 23);
+            this.labelButton2.TabIndex = 50;
+            this.labelButton2.Text = "MANAGE USERS";
+            this.labelButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton2.UseVisualStyleBackColor = false;
+            this.labelButton2.Click += new System.EventHandler(this.labelButton2_Click);
+            // 
+            // labelButton5
+            // 
+            this.labelButton5.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton5.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton5.BorderThickness = 2;
+            this.labelButton5.CornerRadius = 10;
+            this.labelButton5.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton5.FlatAppearance.BorderSize = 0;
+            this.labelButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton5.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelButton5.Location = new System.Drawing.Point(298, 64);
+            this.labelButton5.Name = "labelButton5";
+            this.labelButton5.Size = new System.Drawing.Size(188, 23);
+            this.labelButton5.TabIndex = 48;
+            this.labelButton5.Text = "MANAGE DESTINATIONS";
+            this.labelButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton5.UseVisualStyleBackColor = false;
+            this.labelButton5.Click += new System.EventHandler(this.labelButton5_Click);
+            // 
+            // labelButton1
+            // 
+            this.labelButton1.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton1.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton1.BorderThickness = 2;
+            this.labelButton1.CornerRadius = 10;
+            this.labelButton1.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton1.FlatAppearance.BorderSize = 0;
+            this.labelButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton1.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelButton1.Location = new System.Drawing.Point(44, 64);
+            this.labelButton1.Name = "labelButton1";
+            this.labelButton1.Size = new System.Drawing.Size(60, 23);
+            this.labelButton1.TabIndex = 47;
+            this.labelButton1.Text = "HOME";
+            this.labelButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton1.UseVisualStyleBackColor = false;
+            this.labelButton1.Click += new System.EventHandler(this.labelButton1_Click);
+            // 
+            // labelButton3
+            // 
+            this.labelButton3.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton3.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton3.BorderThickness = 2;
+            this.labelButton3.CornerRadius = 10;
+            this.labelButton3.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton3.FlatAppearance.BorderSize = 0;
+            this.labelButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton3.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelButton3.Location = new System.Drawing.Point(492, 64);
+            this.labelButton3.Name = "labelButton3";
+            this.labelButton3.Size = new System.Drawing.Size(167, 23);
+            this.labelButton3.TabIndex = 55;
+            this.labelButton3.Text = "MANAGE REVIEWS";
+            this.labelButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton3.UseVisualStyleBackColor = false;
+            this.labelButton3.Click += new System.EventHandler(this.labelButton3_Click);
+            // 
+            // labelButton4
+            // 
+            this.labelButton4.BackColor = System.Drawing.Color.Transparent;
+            this.labelButton4.BorderColor = System.Drawing.Color.Transparent;
+            this.labelButton4.BorderThickness = 2;
+            this.labelButton4.CornerRadius = 10;
+            this.labelButton4.FillColor = System.Drawing.Color.Transparent;
+            this.labelButton4.FlatAppearance.BorderSize = 0;
+            this.labelButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelButton4.Font = new System.Drawing.Font("Creato Display", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelButton4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelButton4.Location = new System.Drawing.Point(641, 64);
+            this.labelButton4.Name = "labelButton4";
+            this.labelButton4.Size = new System.Drawing.Size(167, 23);
+            this.labelButton4.TabIndex = 56;
+            this.labelButton4.Text = "ANALYTICS";
+            this.labelButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.labelButton4.UseVisualStyleBackColor = false;
+            this.labelButton4.Click += new System.EventHandler(this.labelButton4_Click);
+            // 
             // ManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,6 +223,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelButton4);
+            this.Controls.Add(this.labelButton3);
             this.Controls.Add(this.reject);
             this.Controls.Add(this.approve);
             this.Controls.Add(this.pendingView);
@@ -209,5 +253,7 @@
         private System.Windows.Forms.ListView pendingView;
         private System.Windows.Forms.Button approve;
         private System.Windows.Forms.Button reject;
+        private LabelButton labelButton3;
+        private LabelButton labelButton4;
     }
 }

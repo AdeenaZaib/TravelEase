@@ -122,5 +122,12 @@ namespace dbproject
                 MessageBox.Show("Destination deleted successfully.");
             }
         }
+
+        private void labelButton4_Click(object sender, EventArgs e)
+        {
+            Analytics ana = new Analytics();
+            ana.Show();
+            this.Hide();
+        }
     }
 }

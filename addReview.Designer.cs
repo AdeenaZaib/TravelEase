@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addReview));
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
+            this.label10 = new System.Windows.Forms.Label();
             this.or = new System.Windows.Forms.RichTextBox();
             this.gr = new System.Windows.Forms.RichTextBox();
             this.hr = new System.Windows.Forms.RichTextBox();
@@ -37,7 +38,7 @@
             this.hotel = new System.Windows.Forms.RichTextBox();
             this.guide = new System.Windows.Forms.RichTextBox();
             this.op = new System.Windows.Forms.RichTextBox();
-            this.trip = new System.Windows.Forms.RichTextBox();
+            this.triptb = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.translucentRoundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             this.translucentRoundedPanel1.Controls.Add(this.hotel);
             this.translucentRoundedPanel1.Controls.Add(this.guide);
             this.translucentRoundedPanel1.Controls.Add(this.op);
-            this.translucentRoundedPanel1.Controls.Add(this.trip);
+            this.translucentRoundedPanel1.Controls.Add(this.triptb);
             this.translucentRoundedPanel1.Controls.Add(this.button1);
             this.translucentRoundedPanel1.Controls.Add(this.label8);
             this.translucentRoundedPanel1.Controls.Add(this.label9);
@@ -81,6 +81,18 @@
             this.translucentRoundedPanel1.Name = "translucentRoundedPanel1";
             this.translucentRoundedPanel1.Size = new System.Drawing.Size(505, 386);
             this.translucentRoundedPanel1.TabIndex = 17;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Unageo", 9.749998F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Location = new System.Drawing.Point(18, 17);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 18);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "< back";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // or
             // 
@@ -138,13 +150,13 @@
             this.op.TabIndex = 33;
             this.op.Text = "";
             // 
-            // trip
+            // triptb
             // 
-            this.trip.Location = new System.Drawing.Point(34, 84);
-            this.trip.Name = "trip";
-            this.trip.Size = new System.Drawing.Size(82, 34);
-            this.trip.TabIndex = 18;
-            this.trip.Text = "";
+            this.triptb.Location = new System.Drawing.Point(34, 84);
+            this.triptb.Name = "triptb";
+            this.triptb.Size = new System.Drawing.Size(82, 34);
+            this.triptb.TabIndex = 18;
+            this.triptb.Text = "";
             // 
             // button1
             // 
@@ -260,18 +272,6 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "GIVE YOUR REVIEW";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Unageo", 9.749998F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(18, 17);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 18);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "< back";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
             // addReview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,7 +305,7 @@
         private System.Windows.Forms.RichTextBox hotel;
         private System.Windows.Forms.RichTextBox guide;
         private System.Windows.Forms.RichTextBox op;
-        private System.Windows.Forms.RichTextBox trip;
+        private System.Windows.Forms.RichTextBox triptb;
         private System.Windows.Forms.RichTextBox or;
         private System.Windows.Forms.RichTextBox gr;
         private System.Windows.Forms.RichTextBox hr;
