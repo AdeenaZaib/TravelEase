@@ -43,6 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.rate = new System.Windows.Forms.RichTextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.translucentRoundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderWidth = 1;
+            this.translucentRoundedPanel1.Controls.Add(this.label9);
             this.translucentRoundedPanel1.Controls.Add(this.contact);
             this.translucentRoundedPanel1.Controls.Add(this.guideName);
             this.translucentRoundedPanel1.Controls.Add(this.label8);
@@ -127,7 +129,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.NavajoWhite;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("DejaVu Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(352, 287);
             this.button1.Name = "button1";
@@ -201,6 +203,18 @@
             this.rate.TabIndex = 42;
             this.rate.Text = "";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Unageo", 9.749998F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label9.Location = new System.Drawing.Point(14, 14);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 18);
+            this.label9.TabIndex = 43;
+            this.label9.Text = "< back";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // AddGuide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,5 +251,6 @@
         private System.Windows.Forms.RichTextBox contact;
         private System.Windows.Forms.RichTextBox guideName;
         private System.Windows.Forms.RichTextBox rate;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -350,6 +350,59 @@ namespace dbproject
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (tripview.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Please select a trip to book.");
+                return;
+            }
+
+            int selectedTripID = int.Parse(tripview.SelectedItems[0].SubItems[0].Text);
+            int travellerID = Program.CurrentUser.userid;
+            // Get the capacity from the selected ListView row (index 4 for "Capacity" column)
+            int capacity = int.Parse(tripview.SelectedItems[0].SubItems[4].Text);
+
+            string con = "Data Source=.\\SQLEXPRESS;Initial Catalog=TravelEase;Integrated Security=True";
+            string insertQuery = "INSERT INTO TripBooking (TripID, TravellerID, BookingStatus, NoOfPeople, BookingDate) VALUES (@TripID, @TravellerID, @BookingStatus, @Capacity, GETDATE())";
+
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(insertQuery, conn);
+                    cmd.Parameters.AddWithValue("@TripID", selectedTripID);
+                    cmd.Parameters.AddWithValue("@TravellerID", travellerID);
+                    cmd.Parameters.AddWithValue("@BookingStatus", "InProcess");
+                    cmd.Parameters.AddWithValue("@Capacity", capacity);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Trip booked successfully!");
+                        TravellerBooking tb = new TravellerBooking();
+                        tb.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Booking failed. Please try again.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error booking trip: " + ex.Message);
+                }
+            }
+        }
+
+        private void bookTripButton_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+
 
     }
 }

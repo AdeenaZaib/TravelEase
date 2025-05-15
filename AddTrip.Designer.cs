@@ -50,6 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.translucentRoundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cap)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +60,7 @@
             this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderWidth = 1;
+            this.translucentRoundedPanel1.Controls.Add(this.label3);
             this.translucentRoundedPanel1.Controls.Add(this.price);
             this.translucentRoundedPanel1.Controls.Add(this.tripTitle);
             this.translucentRoundedPanel1.Controls.Add(this.cap);
@@ -174,9 +176,9 @@
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label11.Location = new System.Drawing.Point(36, 238);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(89, 18);
+            this.label11.Size = new System.Drawing.Size(42, 18);
             this.label11.TabIndex = 44;
-            this.label11.Text = "Price Range";
+            this.label11.Text = "Price";
             // 
             // label10
             // 
@@ -278,6 +280,18 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "ADD A TRIP";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Unageo", 9.749998F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(12, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 18);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "< back";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // AddTrip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,5 +334,6 @@
         private System.Windows.Forms.NumericUpDown cap;
         private System.Windows.Forms.RichTextBox tripTitle;
         private System.Windows.Forms.RichTextBox price;
+        private System.Windows.Forms.Label label3;
     }
 }

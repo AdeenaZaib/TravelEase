@@ -81,5 +81,12 @@ namespace dbproject
                 this.Hide();
             }
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            transport ts = new transport();
+            ts.Show();
+            this.Hide();
+        }
     }
 }

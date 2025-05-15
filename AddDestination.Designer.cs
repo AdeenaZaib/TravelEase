@@ -30,12 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddDestination));
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
+            this.country = new System.Windows.Forms.RichTextBox();
+            this.name = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.name = new System.Windows.Forms.RichTextBox();
-            this.country = new System.Windows.Forms.RichTextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.translucentRoundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@
             this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderWidth = 1;
+            this.translucentRoundedPanel1.Controls.Add(this.label9);
             this.translucentRoundedPanel1.Controls.Add(this.country);
             this.translucentRoundedPanel1.Controls.Add(this.name);
             this.translucentRoundedPanel1.Controls.Add(this.button1);
@@ -56,11 +58,27 @@
             this.translucentRoundedPanel1.Size = new System.Drawing.Size(505, 332);
             this.translucentRoundedPanel1.TabIndex = 19;
             // 
+            // country
+            // 
+            this.country.Location = new System.Drawing.Point(107, 218);
+            this.country.Name = "country";
+            this.country.Size = new System.Drawing.Size(286, 33);
+            this.country.TabIndex = 34;
+            this.country.Text = "";
+            // 
+            // name
+            // 
+            this.name.Location = new System.Drawing.Point(107, 146);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(286, 33);
+            this.name.TabIndex = 33;
+            this.name.Text = "";
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Chocolate;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("DejaVu Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(180, 282);
             this.button1.Name = "button1";
@@ -104,21 +122,17 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "ADD DESTINATION";
             // 
-            // name
+            // label9
             // 
-            this.name.Location = new System.Drawing.Point(107, 146);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(286, 33);
-            this.name.TabIndex = 33;
-            this.name.Text = "";
-            // 
-            // country
-            // 
-            this.country.Location = new System.Drawing.Point(107, 218);
-            this.country.Name = "country";
-            this.country.Size = new System.Drawing.Size(286, 33);
-            this.country.TabIndex = 34;
-            this.country.Text = "";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Unageo", 9.749998F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label9.Location = new System.Drawing.Point(12, 14);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 18);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "< back";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // AddDestination
             // 
@@ -145,5 +159,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox country;
         private System.Windows.Forms.RichTextBox name;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -40,5 +40,12 @@ namespace dbproject
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Analytics analytics = new Analytics();
+            analytics.Show();
+            this.Hide();
+        }
     }
 }

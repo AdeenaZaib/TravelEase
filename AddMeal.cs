@@ -59,6 +59,16 @@ namespace dbproject
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+            meals m = new meals();
+            m.Show();
+            this.Hide();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            meals m = new meals();
+            m.Show();
+            this.Hide();
         }
     }
 }

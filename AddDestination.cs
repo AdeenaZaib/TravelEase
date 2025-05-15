@@ -58,5 +58,12 @@ namespace dbproject
                 this.Hide();
             }
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            ManageDestinations d = new ManageDestinations();
+            d.Show();
+            this.Hide();
+        }
     }
 }

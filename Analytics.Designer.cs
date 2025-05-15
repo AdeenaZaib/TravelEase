@@ -30,19 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Analytics));
             this.translucentRoundedPanel1 = new Components.TranslucentRoundedPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.translucentRoundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderWidth = 1;
+            this.translucentRoundedPanel1.Controls.Add(this.label9);
             this.translucentRoundedPanel1.Controls.Add(this.label7);
             this.translucentRoundedPanel1.Controls.Add(this.button6);
             this.translucentRoundedPanel1.Controls.Add(this.button5);
@@ -70,76 +72,73 @@
             this.translucentRoundedPanel1.Size = new System.Drawing.Size(442, 389);
             this.translucentRoundedPanel1.TabIndex = 0;
             // 
-            // button1
+            // label7
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkSalmon;
-            this.button1.Location = new System.Drawing.Point(308, 56);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 36);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "GENERATE REPORT";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Orange;
+            this.label7.Location = new System.Drawing.Point(137, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(174, 29);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "ANALYTICS";
             // 
-            // label1
+            // button6
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(76, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 36);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Trip Booking, Destination and\r\nRevenue Report";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.button6.BackColor = System.Drawing.Color.DarkSalmon;
+            this.button6.Location = new System.Drawing.Point(308, 314);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(84, 36);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "GENERATE REPORT";
+            this.button6.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // button5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(88, 112);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 36);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Traveler Demographics and\r\nPreferences Report";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button5.BackColor = System.Drawing.Color.DarkSalmon;
+            this.button5.Location = new System.Drawing.Point(308, 269);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(84, 36);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "GENERATE REPORT";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button2
+            // label6
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkSalmon;
-            this.button2.Location = new System.Drawing.Point(308, 113);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 36);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "GENERATE REPORT";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(88, 322);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(170, 18);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Platform Growth Report ";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // label5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(43, 228);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(259, 18);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Service Provider Performance Report ";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(43, 277);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(252, 18);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Abandoned Booking Analysis Report ";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button3
+            // button4
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkSalmon;
-            this.button3.Location = new System.Drawing.Point(308, 168);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 36);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "GENERATE REPORT";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button4.BackColor = System.Drawing.Color.DarkSalmon;
+            this.button4.Location = new System.Drawing.Point(308, 220);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(84, 36);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "GENERATE REPORT";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label4
             // 
@@ -154,73 +153,88 @@
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // button4
+            // button3
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkSalmon;
-            this.button4.Location = new System.Drawing.Point(308, 220);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 36);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "GENERATE REPORT";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button3.BackColor = System.Drawing.Color.DarkSalmon;
+            this.button3.Location = new System.Drawing.Point(308, 168);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(84, 36);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "GENERATE REPORT";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(43, 277);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(252, 18);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Abandoned Booking Analysis Report ";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(43, 228);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(259, 18);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Service Provider Performance Report ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label6
+            // button2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(88, 322);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(170, 18);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Platform Growth Report ";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button2.BackColor = System.Drawing.Color.DarkSalmon;
+            this.button2.Location = new System.Drawing.Point(308, 113);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(84, 36);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "GENERATE REPORT";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button5
+            // label2
             // 
-            this.button5.BackColor = System.Drawing.Color.DarkSalmon;
-            this.button5.Location = new System.Drawing.Point(308, 269);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(84, 36);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "GENERATE REPORT";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(88, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(190, 36);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Traveler Demographics and\r\nPreferences Report";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button6
+            // label1
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkSalmon;
-            this.button6.Location = new System.Drawing.Point(308, 314);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(84, 36);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "GENERATE REPORT";
-            this.button6.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(76, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 36);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Trip Booking, Destination and\r\nRevenue Report";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label7
+            // button1
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Daminga PERSONAL USE ONLY Mediu", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Orange;
-            this.label7.Location = new System.Drawing.Point(168, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 29);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "ADMIN";
+            this.button1.BackColor = System.Drawing.Color.DarkSalmon;
+            this.button1.Location = new System.Drawing.Point(308, 56);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(84, 36);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "GENERATE REPORT";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Unageo", 9.749998F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label9.Location = new System.Drawing.Point(18, 12);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 18);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "< back";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // Analytics
             // 
@@ -254,5 +268,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
     }
 }

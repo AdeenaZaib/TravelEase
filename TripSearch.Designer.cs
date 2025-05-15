@@ -56,6 +56,7 @@
             this.circularPictureBox1 = new Components.CircularPictureBox();
             this.viewbut = new System.Windows.Forms.Button();
             this.reviewview = new System.Windows.Forms.ListView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minPriceUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
@@ -143,7 +144,7 @@
             this.tripview.HideSelection = false;
             this.tripview.Location = new System.Drawing.Point(44, 175);
             this.tripview.Name = "tripview";
-            this.tripview.Size = new System.Drawing.Size(402, 232);
+            this.tripview.Size = new System.Drawing.Size(402, 199);
             this.tripview.TabIndex = 24;
             this.tripview.UseCompatibleStateImageBehavior = false;
             // 
@@ -390,9 +391,20 @@
             this.reviewview.HideSelection = false;
             this.reviewview.Location = new System.Drawing.Point(44, 175);
             this.reviewview.Name = "reviewview";
-            this.reviewview.Size = new System.Drawing.Size(402, 232);
+            this.reviewview.Size = new System.Drawing.Size(402, 199);
             this.reviewview.TabIndex = 44;
             this.reviewview.UseCompatibleStateImageBehavior = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button1.Location = new System.Drawing.Point(187, 393);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 31);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "BOOK";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TripSearch
             // 
@@ -401,6 +413,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.reviewview);
             this.Controls.Add(this.viewbut);
             this.Controls.Add(this.label8);
@@ -467,5 +480,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button viewbut;
         private System.Windows.Forms.ListView reviewview;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -104,6 +104,16 @@ namespace dbproject
             }
 
             MessageBox.Show("Reviews and ratings submitted successfully (if any).");
+            TravelHistory history = new TravelHistory();
+            history.Show();
+            this.Hide();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            TravelHistory history = new TravelHistory();
+            history.Show();
+            this.Hide();
         }
     }
 }

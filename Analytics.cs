@@ -66,5 +66,12 @@ namespace dbproject
             abf.Show();
             this.Hide();
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Admin ah = new Admin();
+            ah.Show();
+            this.Hide();
+        }
     }
 }

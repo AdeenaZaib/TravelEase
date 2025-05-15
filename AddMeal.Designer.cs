@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.translucentRoundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderWidth = 1;
+            this.translucentRoundedPanel1.Controls.Add(this.label9);
             this.translucentRoundedPanel1.Controls.Add(this.description);
             this.translucentRoundedPanel1.Controls.Add(this.timing);
             this.translucentRoundedPanel1.Controls.Add(this.Mname);
@@ -143,6 +145,18 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "ADD MEAL";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Unageo", 9.749998F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label9.Location = new System.Drawing.Point(15, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 18);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "< back";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // AddMeal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,5 +184,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label9;
     }
 }

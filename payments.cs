@@ -176,5 +176,12 @@ namespace dbproject
             cvv.Visible = false;
             method.SelectedIndexChanged += method_SelectedIndexChanged;
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            TravellerBooking travellerBooking = new TravellerBooking();
+            travellerBooking.Show();
+            this.Hide();
+        }
     }
 }

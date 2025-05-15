@@ -48,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.translucentRoundedPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             this.translucentRoundedPanel1.BackColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.translucentRoundedPanel1.BorderWidth = 1;
+            this.translucentRoundedPanel1.Controls.Add(this.label10);
             this.translucentRoundedPanel1.Controls.Add(this.or);
             this.translucentRoundedPanel1.Controls.Add(this.gr);
             this.translucentRoundedPanel1.Controls.Add(this.hr);
@@ -258,6 +260,18 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "GIVE YOUR REVIEW";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Unageo", 9.749998F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Location = new System.Drawing.Point(18, 17);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 18);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "< back";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
             // addReview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,5 +310,6 @@
         private System.Windows.Forms.RichTextBox gr;
         private System.Windows.Forms.RichTextBox hr;
         private System.Windows.Forms.RichTextBox tr;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -133,8 +133,8 @@ namespace dbproject
                     if (rows > 0)
                     {
                         MessageBox.Show("Trip added successfully.");
-                        OpeartorTrip otp = new OpeartorTrip();
-                        otp.Show();
+                        OpeartorTrip ot = new OpeartorTrip();
+                        ot.Show();
                         this.Hide();
                     }
                     else
@@ -147,6 +147,13 @@ namespace dbproject
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            OpeartorTrip otp = new OpeartorTrip();
+            otp.Show();
+            this.Hide();
         }
     }
 }
